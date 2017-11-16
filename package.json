@@ -1,0 +1,11 @@
+{
+  "name": "superfit-shared-js",
+  "version": "1.0.0",
+  "description": "shared resources between superfit-api and superfit-website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
