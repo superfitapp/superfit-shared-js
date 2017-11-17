@@ -3,7 +3,7 @@ import BaseExerciseDefinition from './BaseExerciseDefinition';
 import ExerciseBlock from './ExerciseBlock';
 import ExerciseGoal from './ExerciseGoal';
 
-class BaseExerciseCatalog {
+export class BaseExerciseCatalog {
   id: number;
   protected block: string;
   getBlock(): ExerciseBlock {
@@ -26,5 +26,3 @@ class BaseExerciseCatalog {
   workoutCatalog: BaseWorkoutCatalog;
   definition: BaseExerciseDefinition;
 }
-
-export default BaseExerciseCatalog
