@@ -1,5 +1,5 @@
 {
-  "name": "@superfit/superfit-shared-js",
+  "name": "superfit-shared-js",
   "version": "1.0.0",
   "description": "shared resources between superfit-api and superfit-website",
   "main": "dist/index.js",
