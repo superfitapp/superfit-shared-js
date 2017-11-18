@@ -1,4 +1,4 @@
-import ActiveExerciseInput from './ActiveExerciseInput';
+import ActiveExerciseInput from './active-exercise-input';
 
 class ExerciseGoal {
   slug: string;

@@ -6,4 +6,4 @@ enum ExerciseBlock {
   Conditioning = "Conditioning"
 }
 
-export default ExerciseBlock
+export default ExerciseBlock;
