@@ -47,7 +47,7 @@ export class BaseProgramCatalog {
   slug: string;
   version: number;
   coach: BaseCoach;
-  workoutCatalogs: BaseProgramCatalog[]
+  workoutCatalogs: IWorkoutCatalog[]
 
   getLevel(): Level {
     return Level[this.level]
@@ -73,8 +73,8 @@ export class BaseWorkoutCatalog {
   slug: string;
   title: string;
   type: string;
-  programCatalog?: BaseProgramCatalog;
-  exerciseCatalogs: BaseExerciseCatalog[]
+  programCatalog?: IProgramCatalog;
+  exerciseCatalogs: IExerciseCatalog[]
 
   getType(): WorkoutType {
     return WorkoutType[this.type]
@@ -122,8 +122,8 @@ export class BaseExerciseCatalog {
   percentBodyweight?: number;
   percentMaxWeight: number;
   duration?: number;
-  workoutCatalog: BaseWorkoutCatalog;
-  definition: BaseExerciseDefinition;
+  workoutCatalog: IWorkoutCatalog;
+  definition: IExerciseDefinition;
 }
 
 export interface IExerciseDefinition {
