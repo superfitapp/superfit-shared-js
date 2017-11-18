@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@4.1.2
+3 info using node@v7.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/leokwan/Development/superfit-shared-js',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/leokwan/.npm correctMkdir not in flight; initializing
+10 info lifecycle superfit-shared-js@1.0.0~prepublish: superfit-shared-js@1.0.0
+11 silly lifecycle superfit-shared-js@1.0.0~prepublish: no script for prepublish, continuing
+12 info lifecycle superfit-shared-js@1.0.0~prepare: superfit-shared-js@1.0.0
+13 silly lifecycle superfit-shared-js@1.0.0~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz',
+14 verbose tar pack   '/Users/leokwan/Development/superfit-shared-js' ]
+15 verbose tarball /Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz
+16 verbose folder /Users/leokwan/Development/superfit-shared-js
+17 verbose addLocalTarball adding from inside cache /Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz
+18 verbose correctMkdir /Users/leokwan/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd superfit-shared-js@1.0.0
+20 verbose afterAdd /Users/leokwan/.npm/superfit-shared-js/1.0.0/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/leokwan/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/leokwan/.npm/superfit-shared-js/1.0.0/package/package.json written
+23 silly publish { name: 'superfit-shared-js',
+23 silly publish   version: '1.0.0',
+23 silly publish   description: 'shared resources between superfit-api and superfit-website',
+23 silly publish   main: 'dist/index.js',
+23 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+23 silly publish   author: '',
+23 silly publish   license: 'ISC',
+23 silly publish   private: true,
+23 silly publish   types: 'dist/index.d.ts',
+23 silly publish   gitHead: 'b0bbf6a03e9a6edca6835f0f5a786d6267bf9aa6',
+23 silly publish   readme: 'ERROR: No README data found!',
+23 silly publish   _id: 'superfit-shared-js@1.0.0',
+23 silly publish   _shasum: 'daa60de16018dfafe6847a9af304f39f481fa984',
+23 silly publish   _from: '.' }
+24 info lifecycle superfit-shared-js@1.0.0~prepublishOnly: superfit-shared-js@1.0.0
+25 silly lifecycle superfit-shared-js@1.0.0~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 verbose stack Error: This package has been marked as private
+27 verbose stack Remove the 'private' field from the package.json to publish it.
+27 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:102:15)
+27 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+27 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+27 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+27 verbose stack     at done (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:132:5)
+27 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:7:26)
+27 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
+27 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:318:20
+27 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:284:29
+27 verbose stack     at FSReqWrap.oncomplete (fs.js:112:15)
+28 verbose cwd /Users/leokwan/Development/superfit-shared-js
+29 error Darwin 17.0.0
+30 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+31 error node v7.5.0
+32 error npm  v4.1.2
+33 error This package has been marked as private
+33 error Remove the 'private' field from the package.json to publish it.
+34 error If you need help, you may report this error at:
+34 error     <https://github.com/npm/npm/issues>
+35 verbose exit [ 1, true ]
