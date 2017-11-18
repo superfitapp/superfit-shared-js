@@ -40,7 +40,7 @@ export declare class BaseProgramCatalog {
     slug: string;
     version: number;
     coach: BaseCoach;
-    workoutCatalogs: BaseProgramCatalog[];
+    workoutCatalogs: IWorkoutCatalog[];
     getLevel(): Level;
     setLevel(level: Level): void;
 }
@@ -57,8 +57,8 @@ export declare class BaseWorkoutCatalog {
     slug: string;
     title: string;
     type: string;
-    programCatalog?: BaseProgramCatalog;
-    exerciseCatalogs: BaseExerciseCatalog[];
+    programCatalog?: IProgramCatalog;
+    exerciseCatalogs: IExerciseCatalog[];
     getType(): WorkoutType;
     setType(type: WorkoutType): void;
 }
@@ -93,8 +93,8 @@ export declare class BaseExerciseCatalog {
     percentBodyweight?: number;
     percentMaxWeight: number;
     duration?: number;
-    workoutCatalog: BaseWorkoutCatalog;
-    definition: BaseExerciseDefinition;
+    workoutCatalog: IWorkoutCatalog;
+    definition: IExerciseDefinition;
 }
 export interface IExerciseDefinition {
     id: number;
