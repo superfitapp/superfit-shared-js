@@ -13,58 +13,101 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/Users/leokwan/Development/superfit-shared-js',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz not in flight; packing
+8 verbose addLocalDirectory /Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package.tgz not in flight; packing
 9 verbose correctMkdir /Users/leokwan/.npm correctMkdir not in flight; initializing
-10 info lifecycle superfit-shared-js@1.0.0~prepublish: superfit-shared-js@1.0.0
-11 silly lifecycle superfit-shared-js@1.0.0~prepublish: no script for prepublish, continuing
-12 info lifecycle superfit-shared-js@1.0.0~prepare: superfit-shared-js@1.0.0
-13 silly lifecycle superfit-shared-js@1.0.0~prepare: no script for prepare, continuing
-14 verbose tar pack [ '/Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz',
+10 info lifecycle @superfit/superfit-shared-js@1.0.0~prepublish: @superfit/superfit-shared-js@1.0.0
+11 silly lifecycle @superfit/superfit-shared-js@1.0.0~prepublish: no script for prepublish, continuing
+12 info lifecycle @superfit/superfit-shared-js@1.0.0~prepare: @superfit/superfit-shared-js@1.0.0
+13 silly lifecycle @superfit/superfit-shared-js@1.0.0~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package.tgz',
 14 verbose tar pack   '/Users/leokwan/Development/superfit-shared-js' ]
-15 verbose tarball /Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz
+15 verbose tarball /Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package.tgz
 16 verbose folder /Users/leokwan/Development/superfit-shared-js
-17 verbose addLocalTarball adding from inside cache /Users/leokwan/.npm/superfit-shared-js/1.0.0/package.tgz
+17 verbose addLocalTarball adding from inside cache /Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package.tgz
 18 verbose correctMkdir /Users/leokwan/.npm correctMkdir not in flight; initializing
-19 silly cache afterAdd superfit-shared-js@1.0.0
-20 verbose afterAdd /Users/leokwan/.npm/superfit-shared-js/1.0.0/package/package.json not in flight; writing
+19 silly cache afterAdd @superfit/superfit-shared-js@1.0.0
+20 verbose afterAdd /Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package/package.json not in flight; writing
 21 verbose correctMkdir /Users/leokwan/.npm correctMkdir not in flight; initializing
-22 verbose afterAdd /Users/leokwan/.npm/superfit-shared-js/1.0.0/package/package.json written
-23 silly publish { name: 'superfit-shared-js',
+22 verbose afterAdd /Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package/package.json written
+23 silly publish { name: '@superfit/superfit-shared-js',
 23 silly publish   version: '1.0.0',
 23 silly publish   description: 'shared resources between superfit-api and superfit-website',
 23 silly publish   main: 'dist/index.js',
 23 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
 23 silly publish   author: '',
 23 silly publish   license: 'ISC',
-23 silly publish   private: true,
 23 silly publish   types: 'dist/index.d.ts',
-23 silly publish   gitHead: 'b0bbf6a03e9a6edca6835f0f5a786d6267bf9aa6',
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/leojkwan/superfit-shared-js.git' },
+23 silly publish   bugs: { url: 'https://github.com/leojkwan/superfit-shared-js/issues' },
+23 silly publish   homepage: 'https://github.com/leojkwan/superfit-shared-js#readme',
+23 silly publish   gitHead: 'e53ab03b47583463727da7f7418efbd4f28f4335',
 23 silly publish   readme: 'ERROR: No README data found!',
-23 silly publish   _id: 'superfit-shared-js@1.0.0',
-23 silly publish   _shasum: 'daa60de16018dfafe6847a9af304f39f481fa984',
+23 silly publish   _id: '@superfit/superfit-shared-js@1.0.0',
+23 silly publish   _shasum: '06f0f15b8ffe010de5cd736875866a2020610221',
 23 silly publish   _from: '.' }
-24 info lifecycle superfit-shared-js@1.0.0~prepublishOnly: superfit-shared-js@1.0.0
-25 silly lifecycle superfit-shared-js@1.0.0~prepublishOnly: no script for prepublishOnly, continuing
+24 info lifecycle @superfit/superfit-shared-js@1.0.0~prepublishOnly: @superfit/superfit-shared-js@1.0.0
+25 silly lifecycle @superfit/superfit-shared-js@1.0.0~prepublishOnly: no script for prepublishOnly, continuing
 26 verbose getPublishConfig undefined
-27 verbose stack Error: This package has been marked as private
-27 verbose stack Remove the 'private' field from the package.json to publish it.
-27 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:102:15)
-27 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-27 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-27 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
-27 verbose stack     at done (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:132:5)
-27 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:7:26)
-27 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:18:7
-27 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:318:20
-27 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:284:29
-27 verbose stack     at FSReqWrap.oncomplete (fs.js:112:15)
-28 verbose cwd /Users/leokwan/Development/superfit-shared-js
-29 error Darwin 17.0.0
-30 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-31 error node v7.5.0
-32 error npm  v4.1.2
-33 error This package has been marked as private
-33 error Remove the 'private' field from the package.json to publish it.
-34 error If you need help, you may report this error at:
-34 error     <https://github.com/npm/npm/issues>
-35 verbose exit [ 1, true ]
+27 silly mapToRegistry name @superfit/superfit-shared-js
+28 silly mapToRegistry scope (from package name) @superfit
+29 verbose mapToRegistry no registry URL found in name for scope @superfit
+30 silly mapToRegistry scope (from config) @superfit
+31 verbose mapToRegistry no registry URL found in config for scope @superfit
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry data Result {
+34 silly mapToRegistry   raw: '@superfit/superfit-shared-js',
+34 silly mapToRegistry   scope: '@superfit',
+34 silly mapToRegistry   escapedName: '@superfit%2fsuperfit-shared-js',
+34 silly mapToRegistry   name: '@superfit/superfit-shared-js',
+34 silly mapToRegistry   rawSpec: '',
+34 silly mapToRegistry   spec: 'latest',
+34 silly mapToRegistry   type: 'tag' }
+35 silly mapToRegistry uri https://registry.npmjs.org/@superfit%2fsuperfit-shared-js
+36 verbose publish registryBase https://registry.npmjs.org/
+37 silly publish uploading /Users/leokwan/.npm/@superfit/superfit-shared-js/1.0.0/package.tgz
+38 verbose request uri https://registry.npmjs.org/@superfit%2fsuperfit-shared-js
+39 verbose request sending authorization for write operation
+40 info attempt registry request try #1 at 2:48:22 PM
+41 verbose request using bearer token for auth
+42 verbose request id bf05e81d329889a2
+43 http request PUT https://registry.npmjs.org/@superfit%2fsuperfit-shared-js
+44 http 402 https://registry.npmjs.org/@superfit%2fsuperfit-shared-js
+45 verbose headers { 'content-type': 'application/json',
+45 verbose headers   'cache-control': 'max-age=0',
+45 verbose headers   'content-length': '49',
+45 verbose headers   'accept-ranges': 'bytes',
+45 verbose headers   date: 'Sat, 18 Nov 2017 19:48:23 GMT',
+45 verbose headers   via: '1.1 varnish',
+45 verbose headers   connection: 'keep-alive',
+45 verbose headers   'x-served-by': 'cache-ewr18126-EWR',
+45 verbose headers   'x-cache': 'MISS',
+45 verbose headers   'x-cache-hits': '0',
+45 verbose headers   'x-timer': 'S1511034503.903366,VS0,VE373' }
+46 verbose request invalidating /Users/leokwan/.npm/registry.npmjs.org/_40superfit_252fsuperfit-shared-js on PUT
+47 error publish Failed PUT 402
+48 verbose stack Error: You must sign up for private packages : @superfit/superfit-shared-js
+48 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:304:12)
+48 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:292:14)
+48 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:14)
+48 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+48 verbose stack     at emitTwo (events.js:106:13)
+48 verbose stack     at Request.emit (events.js:192:7)
+48 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+48 verbose stack     at emitOne (events.js:96:13)
+48 verbose stack     at Request.emit (events.js:189:7)
+48 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+49 verbose statusCode 402
+50 verbose pkgid @superfit/superfit-shared-js
+51 verbose cwd /Users/leokwan/Development/superfit-shared-js
+52 error Darwin 17.0.0
+53 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+54 error node v7.5.0
+55 error npm  v4.1.2
+56 error code E402
+57 error You must sign up for private packages : @superfit/superfit-shared-js
+58 error If you need help, you may report this error at:
+58 error     <https://github.com/npm/npm/issues>
+59 verbose exit [ 1, true ]
