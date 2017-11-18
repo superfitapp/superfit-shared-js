@@ -4,6 +4,7 @@
   "description": "shared resources between superfit-api and superfit-website",
   "main": "dist/index.js",
   "scripts": {
+    "publish": "tsc && git commit -am 'updating library' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
