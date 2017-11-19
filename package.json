@@ -2,14 +2,14 @@
   "name": "superfit-shared-js",
   "version": "1.0.0",
   "description": "shared resources between superfit-api and superfit-website",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "publish": "tsc && git commit -am 'updating library' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leojkwan/superfit-shared-js.git"
