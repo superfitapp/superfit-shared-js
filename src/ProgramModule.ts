@@ -5,6 +5,10 @@ import WorkoutType from './WorkoutType'
 import Level from './Level'
 import BaseCoach from './BaseCoach'
 
+export interface JSONDict {
+  [key: string]: any
+}
+
 export class IProgramCatalog {
   id: number;
   title: string;
@@ -13,6 +17,7 @@ export class IProgramCatalog {
   numberOfWeeks: number;
   tagline: string;
   level: string;
+  season: string;
   revisionDate: Date;
   publishDate: Date;
   isLive: boolean;
@@ -39,6 +44,7 @@ export class BaseProgramCatalog {
   numberOfWeeks: number;
   tagline: string;
   level: string;
+  season: string;
   revisionDate: Date;
   publishDate: Date;
   isLive: boolean;
@@ -54,6 +60,46 @@ export class BaseProgramCatalog {
   }
   setLevel(level: Level) {
     this.level = Level[level]
+  }
+
+  static async fromJson(json: JSONDict): Promise<BaseProgramCatalog> {
+    let newProgramCatalog = new BaseProgramCatalog()
+    newProgramCatalog.title = json["title"]
+    newProgramCatalog.sport = json["sport"]
+    newProgramCatalog.summary = json["summary"]
+    newProgramCatalog.tagline = json["tagline"]
+    newProgramCatalog.level = json["level"]
+    newProgramCatalog.numberOfWeeks = json["numberOfWeeks"]
+    newProgramCatalog.season = json["season"]
+    newProgramCatalog.isLive = json["isLive"] || false
+    newProgramCatalog.seriesOrder = json["seriesOrder"]
+    newProgramCatalog.slug = json["slug"]
+    newProgramCatalog.version = json["version"]
+
+    let workoutCatalogsJson = json["workoutCatalogs"] as [JSONDict]
+    var workoutCatalogs: BaseWorkoutCatalog[] = []
+
+    // parse workouts 
+    // NOT DONE YET
+    if (workoutCatalogsJson) {
+
+      for (let workoutCatalogJson of workoutCatalogsJson) {
+        let workoutCatalog = new BaseWorkoutCatalog()
+        workoutCatalogs.push(workoutCatalog)
+      }
+
+      newProgramCatalog.workoutCatalogs = workoutCatalogs
+    }
+
+    // parse coach
+    let coachJson = json["coach"]
+
+    if (coachJson) {
+      let coachSlug = coachJson["slug"]
+      if (coachSlug) {
+      }
+    }
+    return newProgramCatalog
   }
 }
 
@@ -172,5 +218,20 @@ export class BaseExerciseDefinition {
   }
   setCategory(category: MovementCategory) {
     this.category = MovementCategory[category]
+  }
+
+  static async fromJson(json: JSONDict): Promise<BaseExerciseDefinition> {
+    let newExerciseDefinition = new BaseExerciseDefinition
+    newExerciseDefinition.title = json['title']
+    newExerciseDefinition.slug = json['slug']
+    newExerciseDefinition.movementType = json['movementType']
+    newExerciseDefinition.category = json['category']
+    newExerciseDefinition.plane = json['plane']
+    newExerciseDefinition.isBodyweight = json['isBodyweight']
+    newExerciseDefinition.athleticIndex = json['athleticIndex']
+    newExerciseDefinition.demoUrl = json['demoUrl']
+    newExerciseDefinition.unilateral = json['unilateral']
+
+    return newExerciseDefinition
   }
 }
