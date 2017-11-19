@@ -4,6 +4,9 @@ import ExerciseGoal from './ExerciseGoal';
 import WorkoutType from './WorkoutType';
 import Level from './Level';
 import BaseCoach from './BaseCoach';
+export interface JSONDict {
+    [key: string]: any;
+}
 export declare class IProgramCatalog {
     id: number;
     title: string;
@@ -12,6 +15,7 @@ export declare class IProgramCatalog {
     numberOfWeeks: number;
     tagline: string;
     level: string;
+    season: string;
     revisionDate: Date;
     publishDate: Date;
     isLive: boolean;
@@ -32,6 +36,7 @@ export declare class BaseProgramCatalog {
     numberOfWeeks: number;
     tagline: string;
     level: string;
+    season: string;
     revisionDate: Date;
     publishDate: Date;
     isLive: boolean;
@@ -43,6 +48,7 @@ export declare class BaseProgramCatalog {
     workoutCatalogs: IWorkoutCatalog[];
     getLevel(): Level;
     setLevel(level: Level): void;
+    static fromJson(json: JSONDict): Promise<BaseProgramCatalog>;
 }
 export interface IWorkoutCatalog {
     id: number;
@@ -125,4 +131,5 @@ export declare class BaseExerciseDefinition {
     setPlane(plane: MovementPlane): void;
     getCategory(): MovementCategory;
     setCategory(category: MovementCategory): void;
+    static fromJson(json: JSONDict): Promise<BaseExerciseDefinition>;
 }
