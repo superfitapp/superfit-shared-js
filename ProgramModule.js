@@ -1,12 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const MovementModule_1 = require("./MovementModule");
 const ExerciseBlock_1 = require("./ExerciseBlock");
@@ -29,39 +21,37 @@ class BaseProgramCatalog {
         this.level = Level_1.default[level];
     }
     static fromJson(json) {
-        return __awaiter(this, void 0, void 0, function* () {
-            let newProgramCatalog = new BaseProgramCatalog();
-            newProgramCatalog.title = json["title"];
-            newProgramCatalog.sport = json["sport"];
-            newProgramCatalog.summary = json["summary"];
-            newProgramCatalog.tagline = json["tagline"];
-            newProgramCatalog.level = json["level"];
-            newProgramCatalog.numberOfWeeks = json["numberOfWeeks"];
-            newProgramCatalog.season = json["season"];
-            newProgramCatalog.isLive = json["isLive"] || false;
-            newProgramCatalog.seriesOrder = json["seriesOrder"];
-            newProgramCatalog.slug = json["slug"];
-            newProgramCatalog.version = json["version"];
-            let workoutCatalogsJson = json["workoutCatalogs"];
-            var workoutCatalogs = [];
-            // parse workouts 
-            // NOT DONE YET
-            if (workoutCatalogsJson) {
-                for (let workoutCatalogJson of workoutCatalogsJson) {
-                    let workoutCatalog = new BaseWorkoutCatalog();
-                    workoutCatalogs.push(workoutCatalog);
-                }
-                newProgramCatalog.workoutCatalogs = workoutCatalogs;
+        let newProgramCatalog = new BaseProgramCatalog();
+        newProgramCatalog.title = json["title"];
+        newProgramCatalog.sport = json["sport"];
+        newProgramCatalog.summary = json["summary"];
+        newProgramCatalog.tagline = json["tagline"];
+        newProgramCatalog.level = json["level"];
+        newProgramCatalog.numberOfWeeks = json["numberOfWeeks"];
+        newProgramCatalog.season = json["season"];
+        newProgramCatalog.isLive = json["isLive"] || false;
+        newProgramCatalog.seriesOrder = json["seriesOrder"];
+        newProgramCatalog.slug = json["slug"];
+        newProgramCatalog.version = json["version"];
+        let workoutCatalogsJson = json["workoutCatalogs"];
+        var workoutCatalogs = [];
+        // parse workouts 
+        // NOT DONE YET
+        if (workoutCatalogsJson) {
+            for (let workoutCatalogJson of workoutCatalogsJson) {
+                let workoutCatalog = new BaseWorkoutCatalog();
+                workoutCatalogs.push(workoutCatalog);
             }
-            // parse coach
-            let coachJson = json["coach"];
-            if (coachJson) {
-                let coachSlug = coachJson["slug"];
-                if (coachSlug) {
-                }
+            newProgramCatalog.workoutCatalogs = workoutCatalogs;
+        }
+        // parse coach
+        let coachJson = json["coach"];
+        if (coachJson) {
+            let coachSlug = coachJson["slug"];
+            if (coachSlug) {
             }
-            return newProgramCatalog;
-        });
+        }
+        return newProgramCatalog;
     }
 }
 exports.BaseProgramCatalog = BaseProgramCatalog;
@@ -103,19 +93,17 @@ class BaseExerciseDefinition {
         this.category = MovementModule_1.MovementCategory[category];
     }
     static fromJson(json) {
-        return __awaiter(this, void 0, void 0, function* () {
-            let newExerciseDefinition = new BaseExerciseDefinition;
-            newExerciseDefinition.title = json['title'];
-            newExerciseDefinition.slug = json['slug'];
-            newExerciseDefinition.movementType = json['movementType'];
-            newExerciseDefinition.category = json['category'];
-            newExerciseDefinition.plane = json['plane'];
-            newExerciseDefinition.isBodyweight = json['isBodyweight'];
-            newExerciseDefinition.athleticIndex = json['athleticIndex'];
-            newExerciseDefinition.demoUrl = json['demoUrl'];
-            newExerciseDefinition.unilateral = json['unilateral'];
-            return newExerciseDefinition;
-        });
+        let newExerciseDefinition = new BaseExerciseDefinition();
+        newExerciseDefinition.title = json['title'];
+        newExerciseDefinition.slug = json['slug'];
+        newExerciseDefinition.movementType = json['movementType'];
+        newExerciseDefinition.category = json['category'];
+        newExerciseDefinition.plane = json['plane'];
+        newExerciseDefinition.isBodyweight = json['isBodyweight'];
+        newExerciseDefinition.athleticIndex = json['athleticIndex'];
+        newExerciseDefinition.demoUrl = json['demoUrl'];
+        newExerciseDefinition.unilateral = json['unilateral'];
+        return newExerciseDefinition;
     }
 }
 exports.BaseExerciseDefinition = BaseExerciseDefinition;

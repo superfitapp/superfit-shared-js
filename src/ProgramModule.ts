@@ -62,7 +62,8 @@ export class BaseProgramCatalog {
     this.level = Level[level]
   }
 
-  static async fromJson(json: JSONDict): Promise<BaseProgramCatalog> {
+  static fromJson(json: JSONDict): BaseProgramCatalog {
+    
     let newProgramCatalog = new BaseProgramCatalog()
     newProgramCatalog.title = json["title"]
     newProgramCatalog.sport = json["sport"]
@@ -220,8 +221,8 @@ export class BaseExerciseDefinition {
     this.category = MovementCategory[category]
   }
 
-  static async fromJson(json: JSONDict): Promise<BaseExerciseDefinition> {
-    let newExerciseDefinition = new BaseExerciseDefinition
+  static fromJson(json: JSONDict): BaseExerciseDefinition {
+    let newExerciseDefinition = new BaseExerciseDefinition()
     newExerciseDefinition.title = json['title']
     newExerciseDefinition.slug = json['slug']
     newExerciseDefinition.movementType = json['movementType']

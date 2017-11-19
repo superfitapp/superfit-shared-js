@@ -48,7 +48,7 @@ export declare class BaseProgramCatalog {
     workoutCatalogs: IWorkoutCatalog[];
     getLevel(): Level;
     setLevel(level: Level): void;
-    static fromJson(json: JSONDict): Promise<BaseProgramCatalog>;
+    static fromJson(json: JSONDict): BaseProgramCatalog;
 }
 export interface IWorkoutCatalog {
     id: number;
@@ -131,5 +131,5 @@ export declare class BaseExerciseDefinition {
     setPlane(plane: MovementPlane): void;
     getCategory(): MovementCategory;
     setCategory(category: MovementCategory): void;
-    static fromJson(json: JSONDict): Promise<BaseExerciseDefinition>;
+    static fromJson(json: JSONDict): BaseExerciseDefinition;
 }
