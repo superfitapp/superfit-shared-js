@@ -4,6 +4,10 @@ var MovementModule_1 = require("./MovementModule");
 var ExerciseBlock_1 = require("./ExerciseBlock");
 var WorkoutType_1 = require("./WorkoutType");
 var Level_1 = require("./Level");
+function sayHi() {
+    console.log("saying Hi");
+}
+exports.sayHi = sayHi;
 var IProgramCatalog = /** @class */ (function () {
     function IProgramCatalog() {
     }

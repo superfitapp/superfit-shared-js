@@ -9,6 +9,10 @@ export interface JSONDict {
   [key: string]: any
 }
 
+export function sayHi() {
+  console.log("saying Hi");
+}
+
 export class IProgramCatalog {
   id: number;
   title: string;

@@ -7,6 +7,7 @@ import BaseCoach from './BaseCoach';
 export interface JSONDict {
     [key: string]: any;
 }
+export declare function sayHi(): void;
 export declare class IProgramCatalog {
     id: number;
     title: string;

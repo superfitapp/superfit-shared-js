@@ -1,1 +1,3 @@
-// export ActiveExerciseInput from './active-exercise-input';
+import * as ProgramModule from './ProgramModule';
+
+export default ProgramModule;
