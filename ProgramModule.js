@@ -1,33 +1,38 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const MovementModule_1 = require("./MovementModule");
-const ExerciseBlock_1 = require("./ExerciseBlock");
-const WorkoutType_1 = require("./WorkoutType");
-const Level_1 = require("./Level");
-class IProgramCatalog {
-    getLevel() {
+var MovementModule_1 = require("./MovementModule");
+var ExerciseBlock_1 = require("./ExerciseBlock");
+var WorkoutType_1 = require("./WorkoutType");
+var Level_1 = require("./Level");
+var IProgramCatalog = /** @class */ (function () {
+    function IProgramCatalog() {
+    }
+    IProgramCatalog.prototype.getLevel = function () {
         return Level_1.default[this.level];
-    }
-    setLevel(level) {
+    };
+    IProgramCatalog.prototype.setLevel = function (level) {
         this.level = Level_1.default[level];
-    }
-}
+    };
+    return IProgramCatalog;
+}());
 exports.IProgramCatalog = IProgramCatalog;
-class BaseProgramCatalog {
-    getLevel() {
+var BaseProgramCatalog = /** @class */ (function () {
+    function BaseProgramCatalog() {
+    }
+    BaseProgramCatalog.prototype.getLevel = function () {
         return Level_1.default[this.level];
-    }
-    setLevel(level) {
+    };
+    BaseProgramCatalog.prototype.setLevel = function (level) {
         this.level = Level_1.default[level];
-    }
-    hi() {
+    };
+    BaseProgramCatalog.prototype.hi = function () {
         console.log("hi instance");
-    }
-    static hi() {
+    };
+    BaseProgramCatalog.hi = function () {
         console.log("hi static");
-    }
-    static fromJson(json) {
-        let newProgramCatalog = new BaseProgramCatalog();
+    };
+    BaseProgramCatalog.fromJson = function (json) {
+        var newProgramCatalog = new BaseProgramCatalog();
         newProgramCatalog.title = json["title"];
         newProgramCatalog.sport = json["sport"];
         newProgramCatalog.summary = json["summary"];
@@ -39,67 +44,77 @@ class BaseProgramCatalog {
         newProgramCatalog.seriesOrder = json["seriesOrder"];
         newProgramCatalog.slug = json["slug"];
         newProgramCatalog.version = json["version"];
-        let workoutCatalogsJson = json["workoutCatalogs"];
+        var workoutCatalogsJson = json["workoutCatalogs"];
         var workoutCatalogs = [];
         // parse workouts 
         // NOT DONE YET
         if (workoutCatalogsJson) {
-            for (let workoutCatalogJson of workoutCatalogsJson) {
-                let workoutCatalog = new BaseWorkoutCatalog();
+            for (var _i = 0, workoutCatalogsJson_1 = workoutCatalogsJson; _i < workoutCatalogsJson_1.length; _i++) {
+                var workoutCatalogJson = workoutCatalogsJson_1[_i];
+                var workoutCatalog = new BaseWorkoutCatalog();
                 workoutCatalogs.push(workoutCatalog);
             }
             newProgramCatalog.workoutCatalogs = workoutCatalogs;
         }
         // parse coach
-        let coachJson = json["coach"];
+        var coachJson = json["coach"];
         if (coachJson) {
-            let coachSlug = coachJson["slug"];
+            var coachSlug = coachJson["slug"];
             if (coachSlug) {
             }
         }
         return newProgramCatalog;
-    }
-}
+    };
+    return BaseProgramCatalog;
+}());
 exports.BaseProgramCatalog = BaseProgramCatalog;
-class BaseWorkoutCatalog {
-    getType() {
+var BaseWorkoutCatalog = /** @class */ (function () {
+    function BaseWorkoutCatalog() {
+    }
+    BaseWorkoutCatalog.prototype.getType = function () {
         return WorkoutType_1.default[this.type];
-    }
-    setType(type) {
+    };
+    BaseWorkoutCatalog.prototype.setType = function (type) {
         this.type = WorkoutType_1.default[type];
-    }
-}
+    };
+    return BaseWorkoutCatalog;
+}());
 exports.BaseWorkoutCatalog = BaseWorkoutCatalog;
-class BaseExerciseCatalog {
-    getBlock() {
+var BaseExerciseCatalog = /** @class */ (function () {
+    function BaseExerciseCatalog() {
+    }
+    BaseExerciseCatalog.prototype.getBlock = function () {
         return ExerciseBlock_1.default[this.block];
-    }
-    setBlock(block) {
+    };
+    BaseExerciseCatalog.prototype.setBlock = function (block) {
         this.block = ExerciseBlock_1.default[block];
-    }
-}
+    };
+    return BaseExerciseCatalog;
+}());
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
-class BaseExerciseDefinition {
-    getBlock() {
+var BaseExerciseDefinition = /** @class */ (function () {
+    function BaseExerciseDefinition() {
+    }
+    BaseExerciseDefinition.prototype.getBlock = function () {
         return MovementModule_1.MovementType[this.movementType];
-    }
-    setBlock(movementType) {
+    };
+    BaseExerciseDefinition.prototype.setBlock = function (movementType) {
         this.movementType = MovementModule_1.MovementType[movementType];
-    }
-    getPlane() {
+    };
+    BaseExerciseDefinition.prototype.getPlane = function () {
         return MovementModule_1.MovementPlane[this.plane];
-    }
-    setPlane(plane) {
+    };
+    BaseExerciseDefinition.prototype.setPlane = function (plane) {
         this.plane = MovementModule_1.MovementPlane[plane];
-    }
-    getCategory() {
+    };
+    BaseExerciseDefinition.prototype.getCategory = function () {
         return MovementModule_1.MovementCategory[this.category];
-    }
-    setCategory(category) {
+    };
+    BaseExerciseDefinition.prototype.setCategory = function (category) {
         this.category = MovementModule_1.MovementCategory[category];
-    }
-    static fromJson(json) {
-        let newExerciseDefinition = new BaseExerciseDefinition();
+    };
+    BaseExerciseDefinition.fromJson = function (json) {
+        var newExerciseDefinition = new BaseExerciseDefinition();
         newExerciseDefinition.title = json['title'];
         newExerciseDefinition.slug = json['slug'];
         newExerciseDefinition.movementType = json['movementType'];
@@ -110,6 +125,7 @@ class BaseExerciseDefinition {
         newExerciseDefinition.demoUrl = json['demoUrl'];
         newExerciseDefinition.unilateral = json['unilateral'];
         return newExerciseDefinition;
-    }
-}
+    };
+    return BaseExerciseDefinition;
+}());
 exports.BaseExerciseDefinition = BaseExerciseDefinition;

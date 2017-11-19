@@ -1,5 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class ExerciseGoal {
-}
+var ExerciseGoal = /** @class */ (function () {
+    function ExerciseGoal() {
+    }
+    return ExerciseGoal;
+}());
 exports.default = ExerciseGoal;

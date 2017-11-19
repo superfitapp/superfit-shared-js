@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class BaseCoach {
-}
+var BaseCoach = /** @class */ (function () {
+    function BaseCoach() {
+    }
+    return BaseCoach;
+}());
 exports.BaseCoach = BaseCoach;
 exports.default = BaseCoach;
