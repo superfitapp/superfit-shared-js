@@ -48,6 +48,8 @@ export declare class BaseProgramCatalog {
     workoutCatalogs: IWorkoutCatalog[];
     getLevel(): Level;
     setLevel(level: Level): void;
+    hi(): void;
+    static hi(): void;
     static fromJson(json: JSONDict): BaseProgramCatalog;
 }
 export interface IWorkoutCatalog {

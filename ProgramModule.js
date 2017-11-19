@@ -20,6 +20,12 @@ class BaseProgramCatalog {
     setLevel(level) {
         this.level = Level_1.default[level];
     }
+    hi() {
+        console.log("hi instance");
+    }
+    static hi() {
+        console.log("hi static");
+    }
     static fromJson(json) {
         let newProgramCatalog = new BaseProgramCatalog();
         newProgramCatalog.title = json["title"];

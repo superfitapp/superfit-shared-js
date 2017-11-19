@@ -62,8 +62,16 @@ export class BaseProgramCatalog {
     this.level = Level[level]
   }
 
+  hi() {
+    console.log("hi instance");
+  }
+
+  static hi() {
+    console.log("hi static");
+  }
+
   static fromJson(json: JSONDict): BaseProgramCatalog {
-    
+
     let newProgramCatalog = new BaseProgramCatalog()
     newProgramCatalog.title = json["title"]
     newProgramCatalog.sport = json["sport"]
