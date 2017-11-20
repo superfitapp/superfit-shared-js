@@ -178,6 +178,18 @@ var BaseExerciseCatalog = /** @class */ (function (_super) {
     return BaseExerciseCatalog;
 }(ExerciseCatalogType));
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
+// export interface IExerciseDefinition {
+//   id: number;
+//   title: string;
+//   slug: string;
+//   movementType: string
+//   category: string;
+//   plane: string;
+//   isBodyweight: boolean;
+//   athleticIndex: number;
+//   demoUrl: string;
+//   unilateral: boolean
+// }
 var ExerciseDefinitionType = /** @class */ (function () {
     function ExerciseDefinitionType() {
     }

@@ -162,19 +162,8 @@ export declare class BaseExerciseCatalog extends ExerciseCatalogType {
     workoutCatalog: WorkoutCatalogType;
     definition: ExerciseDefinitionType;
 }
-export interface IExerciseDefinition {
-    id: number;
-    title: string;
-    slug: string;
-    movementType: string;
-    category: string;
-    plane: string;
-    isBodyweight: boolean;
-    athleticIndex: number;
-    demoUrl: string;
-    unilateral: boolean;
-}
 export declare abstract class ExerciseDefinitionType {
+    constructor();
     id: number;
     title: string;
     slug: string;
