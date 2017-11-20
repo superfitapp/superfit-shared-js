@@ -1,6 +1,6 @@
 {
   "name": "superfitjs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "shared resources between superfit-api and superfit-website",
   "main": "dist/index.js",
   "scripts": {
