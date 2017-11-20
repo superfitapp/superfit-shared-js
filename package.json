@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/leojkwan/superfit-shared-js/issues"
   },
-  "homepage": "https://github.com/leojkwan/superfit-shared-js#readme",
-  "devDependencies": {
-    "typescript": "^2.6.1"
-  }
+  "homepage": "https://github.com/leojkwan/superfit-shared-js#readme"
 }
