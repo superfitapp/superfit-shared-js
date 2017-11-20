@@ -73,33 +73,23 @@ var MovementCategory;
     MovementCategory["Movement"] = "Movement";
     MovementCategory["Condition"] = "Condition";
 })(MovementCategory = exports.MovementCategory || (exports.MovementCategory = {}));
-var IProgramCatalog = /** @class */ (function () {
-    function IProgramCatalog() {
+var ProgramCatalogType = /** @class */ (function () {
+    function ProgramCatalogType() {
     }
-    IProgramCatalog.prototype.getLevel = function () {
+    ProgramCatalogType.prototype.getLevel = function () {
         return Level[this.level];
     };
-    IProgramCatalog.prototype.setLevel = function (level) {
+    ProgramCatalogType.prototype.setLevel = function (level) {
         this.level = Level[level];
     };
-    return IProgramCatalog;
+    return ProgramCatalogType;
 }());
-exports.IProgramCatalog = IProgramCatalog;
-var BaseProgramCatalog = /** @class */ (function () {
+exports.ProgramCatalogType = ProgramCatalogType;
+var BaseProgramCatalog = /** @class */ (function (_super) {
+    __extends(BaseProgramCatalog, _super);
     function BaseProgramCatalog() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    BaseProgramCatalog.prototype.getLevel = function () {
-        return Level[this.level];
-    };
-    BaseProgramCatalog.prototype.setLevel = function (level) {
-        this.level = Level[level];
-    };
-    BaseProgramCatalog.prototype.hi = function () {
-        console.log("hi instance");
-    };
-    BaseProgramCatalog.hi = function () {
-        console.log("hi static");
-    };
     BaseProgramCatalog.fromJson = function (json) {
         var newProgramCatalog = new BaseProgramCatalog();
         newProgramCatalog.title = json["title"];
@@ -135,7 +125,7 @@ var BaseProgramCatalog = /** @class */ (function () {
         return newProgramCatalog;
     };
     return BaseProgramCatalog;
-}());
+}(ProgramCatalogType));
 exports.BaseProgramCatalog = BaseProgramCatalog;
 var WorkoutType;
 (function (WorkoutType) {
@@ -162,17 +152,25 @@ var BaseWorkoutCatalog = /** @class */ (function () {
     return BaseWorkoutCatalog;
 }());
 exports.BaseWorkoutCatalog = BaseWorkoutCatalog;
-var BaseExerciseCatalog = /** @class */ (function () {
-    function BaseExerciseCatalog() {
+var ExerciseCatalogType = /** @class */ (function () {
+    function ExerciseCatalogType() {
     }
-    BaseExerciseCatalog.prototype.getBlock = function () {
+    ExerciseCatalogType.prototype.getBlock = function () {
         return ExerciseBlock[this.block];
     };
-    BaseExerciseCatalog.prototype.setBlock = function (block) {
+    ExerciseCatalogType.prototype.setBlock = function (block) {
         this.block = ExerciseBlock[block];
     };
-    return BaseExerciseCatalog;
+    return ExerciseCatalogType;
 }());
+exports.ExerciseCatalogType = ExerciseCatalogType;
+var BaseExerciseCatalog = /** @class */ (function (_super) {
+    __extends(BaseExerciseCatalog, _super);
+    function BaseExerciseCatalog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return BaseExerciseCatalog;
+}(ExerciseCatalogType));
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
 var ExerciseDefinitionType = /** @class */ (function () {
     function ExerciseDefinitionType() {

@@ -8,8 +8,6 @@ export class BaseCoach {
   slug: string;
 }
 
-
-
 export enum ExerciseBlock {
   Warmup = "Warmup",
   Drills = "Drills",
@@ -68,7 +66,7 @@ export enum MovementCategory {
   Condition = "Condition"
 }
 
-export class IProgramCatalog {
+export abstract class ProgramCatalogType {
   id: number;
   title: string;
   sport: string;
@@ -93,9 +91,10 @@ export class IProgramCatalog {
   setLevel(level: Level) {
     this.level = Level[level]
   }
+
 }
 
-export class BaseProgramCatalog {
+export class BaseProgramCatalog extends ProgramCatalogType {
   id: number;
   title: string;
   sport: string;
@@ -113,21 +112,6 @@ export class BaseProgramCatalog {
   version: number;
   coach: BaseCoach;
   workoutCatalogs: IWorkoutCatalog[]
-
-  getLevel(): Level {
-    return Level[this.level]
-  }
-  setLevel(level: Level) {
-    this.level = Level[level]
-  }
-
-  hi() {
-    console.log("hi instance");
-  }
-
-  static hi() {
-    console.log("hi static");
-  }
 
   static fromJson(json: JSONDict): BaseProgramCatalog {
 
@@ -177,7 +161,7 @@ export interface IWorkoutCatalog {
   slug: string;
   title: string;
   type: string;
-  programCatalog?: IProgramCatalog;
+  programCatalog?: ProgramCatalogType;
   exerciseCatalogs: IExerciseCatalog[]
 }
 
@@ -199,7 +183,7 @@ export class BaseWorkoutCatalog {
   slug: string;
   title: string;
   type: string;
-  programCatalog?: IProgramCatalog;
+  programCatalog?: ProgramCatalogType;
   exerciseCatalogs: IExerciseCatalog[]
 
   getType(): WorkoutType {
@@ -228,15 +212,34 @@ export interface IExerciseCatalog {
   definition: IExerciseDefinition;
 }
 
-export class BaseExerciseCatalog implements IExerciseCatalog{
+export abstract class ExerciseCatalogType {
   id: number;
-  block: string;
+  protected block: string;
+
   getBlock(): ExerciseBlock {
     return ExerciseBlock[this.block]
   }
   setBlock(block: ExerciseBlock) {
     this.block = ExerciseBlock[block]
   }
+
+  goal: ExerciseGoal;
+  sets: number;
+  rpe: number;
+  blockOrder: number;
+  priority: number;
+  reps?: number;
+  manualWeight?: number;
+  percentBodyweight?: number;
+  percentMaxWeight: number;
+  duration?: number;
+  workoutCatalog: IWorkoutCatalog;
+  definition: IExerciseDefinition;
+}
+
+export class BaseExerciseCatalog extends ExerciseCatalogType {
+  id: number;
+  protected block: string;
 
   goal: ExerciseGoal;
   sets: number;
