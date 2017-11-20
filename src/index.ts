@@ -306,6 +306,7 @@ export class BaseExerciseDefinition extends CategoryType {
 
   static fromJson(json: JSONDict): BaseExerciseDefinition {
     let newExerciseDefinition = new BaseExerciseDefinition()
+    newExerciseDefinition.id = json['id']
     newExerciseDefinition.title = json['title']
     newExerciseDefinition.slug = json['slug']
     newExerciseDefinition.movementType = json['movementType']
