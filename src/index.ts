@@ -269,7 +269,7 @@ export class BaseExerciseDefinition {
   id: number;
   title: string;
   slug: string;
-  movementType: string
+  protected movementType: string
 
   category: string;
 
