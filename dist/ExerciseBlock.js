@@ -7,5 +7,4 @@ var ExerciseBlock;
     ExerciseBlock["Cooldown"] = "Cooldown";
     ExerciseBlock["PowerStrength"] = "PowerStrength";
     ExerciseBlock["Conditioning"] = "Conditioning";
-})(ExerciseBlock || (ExerciseBlock = {}));
-exports.default = ExerciseBlock;
+})(ExerciseBlock = exports.ExerciseBlock || (exports.ExerciseBlock = {}));

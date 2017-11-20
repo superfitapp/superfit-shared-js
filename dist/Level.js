@@ -6,5 +6,4 @@ var Level;
     Level["Intermediate"] = "Intermediate";
     Level["Advanced"] = "Advanced";
     Level["Pro"] = "Pro";
-})(Level || (Level = {}));
-exports.default = Level;
+})(Level = exports.Level || (exports.Level = {}));

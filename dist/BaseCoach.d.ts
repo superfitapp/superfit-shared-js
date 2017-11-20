@@ -7,4 +7,3 @@ export declare class BaseCoach {
     revisionDate: Date;
     slug: string;
 }
-export default BaseCoach;

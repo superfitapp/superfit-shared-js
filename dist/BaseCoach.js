@@ -6,4 +6,3 @@ var BaseCoach = /** @class */ (function () {
     return BaseCoach;
 }());
 exports.BaseCoach = BaseCoach;
-exports.default = BaseCoach;

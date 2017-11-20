@@ -5,4 +5,4 @@ var ExerciseGoal = /** @class */ (function () {
     }
     return ExerciseGoal;
 }());
-exports.default = ExerciseGoal;
+exports.ExerciseGoal = ExerciseGoal;
