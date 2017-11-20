@@ -1,4 +1,14 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseCoach = /** @class */ (function () {
     function BaseCoach() {
@@ -164,15 +174,23 @@ var BaseExerciseCatalog = /** @class */ (function () {
     return BaseExerciseCatalog;
 }());
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
-var BaseExerciseDefinition = /** @class */ (function () {
-    function BaseExerciseDefinition() {
+var CategoryType = /** @class */ (function () {
+    function CategoryType() {
     }
-    BaseExerciseDefinition.prototype.getBlock = function () {
+    CategoryType.prototype.getBlock = function () {
         return MovementType[this.movementType];
     };
-    BaseExerciseDefinition.prototype.setBlock = function (movementType) {
+    CategoryType.prototype.setBlock = function (movementType) {
         this.movementType = MovementType[movementType];
     };
+    return CategoryType;
+}());
+exports.CategoryType = CategoryType;
+var BaseExerciseDefinition = /** @class */ (function (_super) {
+    __extends(BaseExerciseDefinition, _super);
+    function BaseExerciseDefinition() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     BaseExerciseDefinition.prototype.getPlane = function () {
         return MovementPlane[this.plane];
     };
@@ -199,5 +217,5 @@ var BaseExerciseDefinition = /** @class */ (function () {
         return newExerciseDefinition;
     };
     return BaseExerciseDefinition;
-}());
+}(CategoryType));
 exports.BaseExerciseDefinition = BaseExerciseDefinition;

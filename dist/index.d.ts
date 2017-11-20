@@ -148,7 +148,7 @@ export interface IExerciseCatalog {
     workoutCatalog: IWorkoutCatalog;
     definition: IExerciseDefinition;
 }
-export declare class BaseExerciseCatalog {
+export declare class BaseExerciseCatalog implements IExerciseCatalog {
     id: number;
     block: string;
     getBlock(): ExerciseBlock;
@@ -178,7 +178,12 @@ export interface IExerciseDefinition {
     demoUrl: string;
     unilateral: boolean;
 }
-export declare class BaseExerciseDefinition {
+export declare abstract class CategoryType {
+    protected movementType: string;
+    getBlock(): MovementType;
+    setBlock(movementType: MovementType): void;
+}
+export declare class BaseExerciseDefinition extends CategoryType {
     id: number;
     title: string;
     slug: string;
@@ -189,8 +194,6 @@ export declare class BaseExerciseDefinition {
     athleticIndex: number;
     demoUrl: string;
     unilateral: boolean;
-    getBlock(): MovementType;
-    setBlock(movementType: MovementType): void;
     getPlane(): MovementPlane;
     setPlane(plane: MovementPlane): void;
     getCategory(): MovementCategory;

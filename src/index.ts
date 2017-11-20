@@ -228,7 +228,7 @@ export interface IExerciseCatalog {
   definition: IExerciseDefinition;
 }
 
-export class BaseExerciseCatalog {
+export class BaseExerciseCatalog implements IExerciseCatalog{
   id: number;
   block: string;
   getBlock(): ExerciseBlock {
@@ -265,7 +265,18 @@ export interface IExerciseDefinition {
   unilateral: boolean
 }
 
-export class BaseExerciseDefinition {
+export abstract class CategoryType {
+  protected movementType: string
+  
+  getBlock(): MovementType {
+    return MovementType[this.movementType]
+  }
+  setBlock(movementType: MovementType) {
+    this.movementType = MovementType[movementType]
+  }
+}
+
+export class BaseExerciseDefinition extends CategoryType {
   id: number;
   title: string;
   slug: string;
@@ -278,13 +289,6 @@ export class BaseExerciseDefinition {
   athleticIndex: number;
   demoUrl: string;
   unilateral: boolean
-
-  getBlock(): MovementType {
-    return MovementType[this.movementType]
-  }
-  setBlock(movementType: MovementType) {
-    this.movementType = MovementType[movementType]
-  }
 
   getPlane(): MovementPlane {
     return MovementPlane[this.plane]
