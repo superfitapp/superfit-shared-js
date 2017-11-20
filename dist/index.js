@@ -127,6 +127,12 @@ var BaseProgramCatalog = /** @class */ (function (_super) {
     return BaseProgramCatalog;
 }(ProgramCatalogType));
 exports.BaseProgramCatalog = BaseProgramCatalog;
+var WorkoutCatalogType = /** @class */ (function () {
+    function WorkoutCatalogType() {
+    }
+    return WorkoutCatalogType;
+}());
+exports.WorkoutCatalogType = WorkoutCatalogType;
 var WorkoutType;
 (function (WorkoutType) {
     WorkoutType["Addon"] = "Addon";

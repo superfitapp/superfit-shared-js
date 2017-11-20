@@ -83,7 +83,7 @@ export abstract class ProgramCatalogType {
   slug: string;
   version: number;
   coach: BaseCoach;
-  workoutCatalogs: IWorkoutCatalog[]
+  workoutCatalogs: WorkoutCatalogType[]
 
   getLevel(): Level {
     return Level[this.level]
@@ -92,26 +92,6 @@ export abstract class ProgramCatalogType {
     this.level = Level[level]
   }
 
-}
-
-export interface IProgramCatalog {
-  id: number;
-  title: string;
-  sport: string;
-  summary: string;
-  numberOfWeeks: number;
-  tagline: string;
-  level: string;
-  season: string;
-  revisionDate: Date;
-  publishDate: Date;
-  isLive: boolean;
-  creationDate: Date;
-  seriesOrder: number;
-  slug: string;
-  version: number;
-  coach: BaseCoach;
-  workoutCatalogs: IWorkoutCatalog[]
 }
 
 export class BaseProgramCatalog extends ProgramCatalogType {
@@ -131,7 +111,7 @@ export class BaseProgramCatalog extends ProgramCatalogType {
   slug: string;
   version: number;
   coach: BaseCoach;
-  workoutCatalogs: IWorkoutCatalog[]
+  workoutCatalogs: WorkoutCatalogType[]
 
   static fromJson(json: JSONDict): BaseProgramCatalog {
 
@@ -176,13 +156,13 @@ export class BaseProgramCatalog extends ProgramCatalogType {
 }
 
 
-export interface IWorkoutCatalog {
+export abstract class WorkoutCatalogType {
   id: number;
   slug: string;
   title: string;
   type: string;
-  programCatalog?: IProgramCatalog;
-  exerciseCatalogs: IExerciseCatalog[]
+  programCatalog?: ProgramCatalogType;
+  exerciseCatalogs: ExerciseCatalogType[]
 }
 
 export enum WorkoutType {
@@ -203,8 +183,8 @@ export class BaseWorkoutCatalog {
   slug: string;
   title: string;
   type: string;
-  programCatalog?: IProgramCatalog;
-  exerciseCatalogs: IExerciseCatalog[]
+  programCatalog?: ProgramCatalogType;
+  exerciseCatalogs: ExerciseCatalogType[]
 
   getType(): WorkoutType {
     return WorkoutType[this.type]
@@ -213,23 +193,6 @@ export class BaseWorkoutCatalog {
   setType(type: WorkoutType) {
     this.type = WorkoutType[type]
   }
-}
-
-export interface IExerciseCatalog {
-  id: number;
-  block: string;
-  goal: ExerciseGoal;
-  sets: number;
-  rpe: number;
-  blockOrder: number;
-  priority: number;
-  reps?: number;
-  manualWeight?: number;
-  percentBodyweight?: number;
-  percentMaxWeight: number;
-  duration?: number;
-  workoutCatalog: IWorkoutCatalog;
-  definition: IExerciseDefinition;
 }
 
 export abstract class ExerciseCatalogType {
@@ -253,8 +216,8 @@ export abstract class ExerciseCatalogType {
   percentBodyweight?: number;
   percentMaxWeight: number;
   duration?: number;
-  workoutCatalog: IWorkoutCatalog;
-  definition: IExerciseDefinition;
+  workoutCatalog: WorkoutCatalogType;
+  definition: ExerciseDefinitionType;
 }
 
 export class BaseExerciseCatalog extends ExerciseCatalogType {
@@ -271,8 +234,8 @@ export class BaseExerciseCatalog extends ExerciseCatalogType {
   percentBodyweight?: number;
   percentMaxWeight: number;
   duration?: number;
-  workoutCatalog: IWorkoutCatalog;
-  definition: IExerciseDefinition;
+  workoutCatalog: WorkoutCatalogType;
+  definition: ExerciseDefinitionType;
 }
 
 export interface IExerciseDefinition {
