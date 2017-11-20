@@ -65,7 +65,7 @@ export declare abstract class ProgramCatalogType {
     summary: string;
     numberOfWeeks: number;
     tagline: string;
-    level: string;
+    protected level: string;
     season: string;
     revisionDate: Date;
     publishDate: Date;
@@ -78,6 +78,25 @@ export declare abstract class ProgramCatalogType {
     workoutCatalogs: IWorkoutCatalog[];
     getLevel(): Level;
     setLevel(level: Level): void;
+}
+export interface IProgramCatalog {
+    id: number;
+    title: string;
+    sport: string;
+    summary: string;
+    numberOfWeeks: number;
+    tagline: string;
+    level: string;
+    season: string;
+    revisionDate: Date;
+    publishDate: Date;
+    isLive: boolean;
+    creationDate: Date;
+    seriesOrder: number;
+    slug: string;
+    version: number;
+    coach: BaseCoach;
+    workoutCatalogs: IWorkoutCatalog[];
 }
 export declare class BaseProgramCatalog extends ProgramCatalogType {
     id: number;
@@ -104,7 +123,7 @@ export interface IWorkoutCatalog {
     slug: string;
     title: string;
     type: string;
-    programCatalog?: ProgramCatalogType;
+    programCatalog?: IProgramCatalog;
     exerciseCatalogs: IExerciseCatalog[];
 }
 export declare enum WorkoutType {
@@ -123,7 +142,7 @@ export declare class BaseWorkoutCatalog {
     slug: string;
     title: string;
     type: string;
-    programCatalog?: ProgramCatalogType;
+    programCatalog?: IProgramCatalog;
     exerciseCatalogs: IExerciseCatalog[];
     getType(): WorkoutType;
     setType(type: WorkoutType): void;

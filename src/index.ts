@@ -73,7 +73,7 @@ export abstract class ProgramCatalogType {
   summary: string;
   numberOfWeeks: number;
   tagline: string;
-  level: string;
+  protected level: string;
   season: string;
   revisionDate: Date;
   publishDate: Date;
@@ -92,6 +92,26 @@ export abstract class ProgramCatalogType {
     this.level = Level[level]
   }
 
+}
+
+export interface IProgramCatalog {
+  id: number;
+  title: string;
+  sport: string;
+  summary: string;
+  numberOfWeeks: number;
+  tagline: string;
+  level: string;
+  season: string;
+  revisionDate: Date;
+  publishDate: Date;
+  isLive: boolean;
+  creationDate: Date;
+  seriesOrder: number;
+  slug: string;
+  version: number;
+  coach: BaseCoach;
+  workoutCatalogs: IWorkoutCatalog[]
 }
 
 export class BaseProgramCatalog extends ProgramCatalogType {
@@ -161,7 +181,7 @@ export interface IWorkoutCatalog {
   slug: string;
   title: string;
   type: string;
-  programCatalog?: ProgramCatalogType;
+  programCatalog?: IProgramCatalog;
   exerciseCatalogs: IExerciseCatalog[]
 }
 
@@ -183,7 +203,7 @@ export class BaseWorkoutCatalog {
   slug: string;
   title: string;
   type: string;
-  programCatalog?: ProgramCatalogType;
+  programCatalog?: IProgramCatalog;
   exerciseCatalogs: IExerciseCatalog[]
 
   getType(): WorkoutType {
