@@ -174,35 +174,35 @@ var BaseExerciseCatalog = /** @class */ (function () {
     return BaseExerciseCatalog;
 }());
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
-var CategoryType = /** @class */ (function () {
-    function CategoryType() {
+var ExerciseDefinitionType = /** @class */ (function () {
+    function ExerciseDefinitionType() {
     }
-    CategoryType.prototype.getBlock = function () {
+    ExerciseDefinitionType.prototype.getMovementType = function () {
         return MovementType[this.movementType];
     };
-    CategoryType.prototype.setBlock = function (movementType) {
+    ExerciseDefinitionType.prototype.setMovementType = function (movementType) {
         this.movementType = MovementType[movementType];
     };
-    return CategoryType;
+    ExerciseDefinitionType.prototype.getPlane = function () {
+        return MovementPlane[this.plane];
+    };
+    ExerciseDefinitionType.prototype.setPlane = function (plane) {
+        this.plane = MovementPlane[plane];
+    };
+    ExerciseDefinitionType.prototype.getCategory = function () {
+        return MovementCategory[this.category];
+    };
+    ExerciseDefinitionType.prototype.setCategory = function (category) {
+        this.category = MovementCategory[category];
+    };
+    return ExerciseDefinitionType;
 }());
-exports.CategoryType = CategoryType;
+exports.ExerciseDefinitionType = ExerciseDefinitionType;
 var BaseExerciseDefinition = /** @class */ (function (_super) {
     __extends(BaseExerciseDefinition, _super);
     function BaseExerciseDefinition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    BaseExerciseDefinition.prototype.getPlane = function () {
-        return MovementPlane[this.plane];
-    };
-    BaseExerciseDefinition.prototype.setPlane = function (plane) {
-        this.plane = MovementPlane[plane];
-    };
-    BaseExerciseDefinition.prototype.getCategory = function () {
-        return MovementCategory[this.category];
-    };
-    BaseExerciseDefinition.prototype.setCategory = function (category) {
-        this.category = MovementCategory[category];
-    };
     BaseExerciseDefinition.fromJson = function (json) {
         var newExerciseDefinition = new BaseExerciseDefinition();
         newExerciseDefinition.id = json['id'];
@@ -218,5 +218,5 @@ var BaseExerciseDefinition = /** @class */ (function (_super) {
         return newExerciseDefinition;
     };
     return BaseExerciseDefinition;
-}(CategoryType));
+}(ExerciseDefinitionType));
 exports.BaseExerciseDefinition = BaseExerciseDefinition;

@@ -178,26 +178,35 @@ export interface IExerciseDefinition {
     demoUrl: string;
     unilateral: boolean;
 }
-export declare abstract class CategoryType {
-    protected movementType: string;
-    getBlock(): MovementType;
-    setBlock(movementType: MovementType): void;
-}
-export declare class BaseExerciseDefinition extends CategoryType {
+export declare abstract class ExerciseDefinitionType {
     id: number;
     title: string;
     slug: string;
     protected movementType: string;
-    category: string;
-    plane: string;
+    protected category: string;
+    protected plane: string;
     isBodyweight: boolean;
     athleticIndex: number;
     demoUrl: string;
     unilateral: boolean;
+    getMovementType(): MovementType;
+    setMovementType(movementType: MovementType): void;
     getPlane(): MovementPlane;
     setPlane(plane: MovementPlane): void;
     getCategory(): MovementCategory;
     setCategory(category: MovementCategory): void;
+}
+export declare class BaseExerciseDefinition extends ExerciseDefinitionType {
+    id: number;
+    title: string;
+    slug: string;
+    protected movementType: string;
+    protected category: string;
+    protected plane: string;
+    isBodyweight: boolean;
+    athleticIndex: number;
+    demoUrl: string;
+    unilateral: boolean;
     static fromJson(json: JSONDict): BaseExerciseDefinition;
 }
 export interface JSONDict {

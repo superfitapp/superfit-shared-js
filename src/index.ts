@@ -265,30 +265,24 @@ export interface IExerciseDefinition {
   unilateral: boolean
 }
 
-export abstract class CategoryType {
-  protected movementType: string
-  
-  getBlock(): MovementType {
-    return MovementType[this.movementType]
-  }
-  setBlock(movementType: MovementType) {
-    this.movementType = MovementType[movementType]
-  }
-}
-
-export class BaseExerciseDefinition extends CategoryType {
+export abstract class ExerciseDefinitionType {
   id: number;
   title: string;
   slug: string;
   protected movementType: string
-
-  category: string;
-
-  plane: string;
+  protected category: string;
+  protected plane: string;
   isBodyweight: boolean;
   athleticIndex: number;
   demoUrl: string;
   unilateral: boolean
+  
+  getMovementType(): MovementType {
+    return MovementType[this.movementType]
+  }
+  setMovementType(movementType: MovementType) {
+    this.movementType = MovementType[movementType]
+  }
 
   getPlane(): MovementPlane {
     return MovementPlane[this.plane]
@@ -303,6 +297,21 @@ export class BaseExerciseDefinition extends CategoryType {
   setCategory(category: MovementCategory) {
     this.category = MovementCategory[category]
   }
+}
+
+export class BaseExerciseDefinition extends ExerciseDefinitionType {
+  id: number;
+  title: string;
+  slug: string;
+  protected movementType: string
+
+  protected category: string;
+
+  protected plane: string;
+  isBodyweight: boolean;
+  athleticIndex: number;
+  demoUrl: string;
+  unilateral: boolean
 
   static fromJson(json: JSONDict): BaseExerciseDefinition {
     let newExerciseDefinition = new BaseExerciseDefinition()
