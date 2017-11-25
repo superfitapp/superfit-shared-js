@@ -178,7 +178,7 @@ export enum Season {
   AllSeason = "AllSeason"
 }
 
-export class BaseWorkoutCatalog {
+export class BaseWorkoutCatalog extends WorkoutCatalogType {
   id: number;
   slug: string;
   title: string;
@@ -255,7 +255,7 @@ export abstract class ExerciseDefinitionType {
   constructor() {
 
   }
-  
+
   id: number;
   title: string;
   slug: string;
@@ -266,7 +266,7 @@ export abstract class ExerciseDefinitionType {
   athleticIndex: number;
   demoUrl: string;
   unilateral: boolean
-  
+
   getMovementType(): MovementType {
     return MovementType[this.movementType]
   }
