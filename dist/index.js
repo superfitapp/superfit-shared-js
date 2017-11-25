@@ -146,8 +146,10 @@ var Season;
     Season["PostSeason"] = "PostSeason";
     Season["AllSeason"] = "AllSeason";
 })(Season = exports.Season || (exports.Season = {}));
-var BaseWorkoutCatalog = /** @class */ (function () {
+var BaseWorkoutCatalog = /** @class */ (function (_super) {
+    __extends(BaseWorkoutCatalog, _super);
     function BaseWorkoutCatalog() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     BaseWorkoutCatalog.prototype.getType = function () {
         return WorkoutType[this.type];
@@ -156,7 +158,7 @@ var BaseWorkoutCatalog = /** @class */ (function () {
         this.type = WorkoutType[type];
     };
     return BaseWorkoutCatalog;
-}());
+}(WorkoutCatalogType));
 exports.BaseWorkoutCatalog = BaseWorkoutCatalog;
 var ExerciseCatalogType = /** @class */ (function () {
     function ExerciseCatalogType() {

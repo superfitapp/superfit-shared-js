@@ -118,7 +118,7 @@ export declare enum Season {
     PostSeason = "PostSeason",
     AllSeason = "AllSeason",
 }
-export declare class BaseWorkoutCatalog {
+export declare class BaseWorkoutCatalog extends WorkoutCatalogType {
     id: number;
     slug: string;
     title: string;
