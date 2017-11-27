@@ -161,6 +161,7 @@ export abstract class WorkoutCatalogType {
   publishDate?: Date;
   revisionDate: Date;
   creationDate: Date;
+  version: number;
   programCatalog?: ProgramCatalogType;
   exerciseCatalogs: ExerciseCatalogType[]
 
