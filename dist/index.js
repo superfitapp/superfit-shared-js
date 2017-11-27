@@ -90,6 +90,20 @@ var BaseProgramCatalog = /** @class */ (function (_super) {
     function BaseProgramCatalog() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    // id: number;
+    // title: string;
+    // sport: string;
+    // summary: string;
+    // numberOfWeeks: number;
+    // tagline: string;
+    // level: string;
+    // season: string;
+    // isLive: boolean;
+    // seriesOrder: number;
+    // slug: string;
+    // version: number;
+    // coach: BaseCoach;
+    // workoutCatalogs: WorkoutCatalogType[]
     BaseProgramCatalog.fromJson = function (json) {
         var newProgramCatalog = new BaseProgramCatalog();
         newProgramCatalog.title = json["title"];
@@ -130,6 +144,12 @@ exports.BaseProgramCatalog = BaseProgramCatalog;
 var WorkoutCatalogType = /** @class */ (function () {
     function WorkoutCatalogType() {
     }
+    WorkoutCatalogType.prototype.getType = function () {
+        return WorkoutType[this.type];
+    };
+    WorkoutCatalogType.prototype.setType = function (type) {
+        this.type = WorkoutType[type];
+    };
     return WorkoutCatalogType;
 }());
 exports.WorkoutCatalogType = WorkoutCatalogType;
@@ -180,18 +200,6 @@ var BaseExerciseCatalog = /** @class */ (function (_super) {
     return BaseExerciseCatalog;
 }(ExerciseCatalogType));
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
-// export interface IExerciseDefinition {
-//   id: number;
-//   title: string;
-//   slug: string;
-//   movementType: string
-//   category: string;
-//   plane: string;
-//   isBodyweight: boolean;
-//   athleticIndex: number;
-//   demoUrl: string;
-//   unilateral: boolean
-// }
 var ExerciseDefinitionType = /** @class */ (function () {
     function ExerciseDefinitionType() {
     }

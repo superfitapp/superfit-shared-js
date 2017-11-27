@@ -76,9 +76,9 @@ export abstract class ProgramCatalogType {
   protected level: string;
   season: string;
   revisionDate: Date;
-  publishDate: Date;
-  isLive: boolean;
+  publishDate?: Date;
   creationDate: Date;
+  isLive: boolean;
   seriesOrder: number;
   slug: string;
   version: number;
@@ -95,23 +95,20 @@ export abstract class ProgramCatalogType {
 }
 
 export class BaseProgramCatalog extends ProgramCatalogType {
-  id: number;
-  title: string;
-  sport: string;
-  summary: string;
-  numberOfWeeks: number;
-  tagline: string;
-  level: string;
-  season: string;
-  revisionDate: Date;
-  publishDate: Date;
-  isLive: boolean;
-  creationDate: Date;
-  seriesOrder: number;
-  slug: string;
-  version: number;
-  coach: BaseCoach;
-  workoutCatalogs: WorkoutCatalogType[]
+  // id: number;
+  // title: string;
+  // sport: string;
+  // summary: string;
+  // numberOfWeeks: number;
+  // tagline: string;
+  // level: string;
+  // season: string;
+  // isLive: boolean;
+  // seriesOrder: number;
+  // slug: string;
+  // version: number;
+  // coach: BaseCoach;
+  // workoutCatalogs: WorkoutCatalogType[]
 
   static fromJson(json: JSONDict): BaseProgramCatalog {
 
@@ -161,8 +158,19 @@ export abstract class WorkoutCatalogType {
   slug: string;
   title: string;
   type: string;
+  publishDate?: Date;
+  revisionDate: Date;
+  creationDate: Date;
   programCatalog?: ProgramCatalogType;
   exerciseCatalogs: ExerciseCatalogType[]
+
+  getType(): WorkoutType {
+    return WorkoutType[this.type]
+  }
+
+  setType(type: WorkoutType) {
+    this.type = WorkoutType[type]
+  }
 }
 
 export enum WorkoutType {
@@ -179,12 +187,6 @@ export enum Season {
 }
 
 export class BaseWorkoutCatalog extends WorkoutCatalogType {
-  id: number;
-  slug: string;
-  title: string;
-  type: string;
-  programCatalog?: ProgramCatalogType;
-  exerciseCatalogs: ExerciseCatalogType[]
 
   getType(): WorkoutType {
     return WorkoutType[this.type]
@@ -237,19 +239,6 @@ export class BaseExerciseCatalog extends ExerciseCatalogType {
   workoutCatalog: WorkoutCatalogType;
   definition: ExerciseDefinitionType;
 }
-
-// export interface IExerciseDefinition {
-//   id: number;
-//   title: string;
-//   slug: string;
-//   movementType: string
-//   category: string;
-//   plane: string;
-//   isBodyweight: boolean;
-//   athleticIndex: number;
-//   demoUrl: string;
-//   unilateral: boolean
-// }
 
 export abstract class ExerciseDefinitionType {
   constructor() {

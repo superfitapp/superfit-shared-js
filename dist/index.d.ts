@@ -68,9 +68,9 @@ export declare abstract class ProgramCatalogType {
     protected level: string;
     season: string;
     revisionDate: Date;
-    publishDate: Date;
-    isLive: boolean;
+    publishDate?: Date;
     creationDate: Date;
+    isLive: boolean;
     seriesOrder: number;
     slug: string;
     version: number;
@@ -80,23 +80,6 @@ export declare abstract class ProgramCatalogType {
     setLevel(level: Level): void;
 }
 export declare class BaseProgramCatalog extends ProgramCatalogType {
-    id: number;
-    title: string;
-    sport: string;
-    summary: string;
-    numberOfWeeks: number;
-    tagline: string;
-    level: string;
-    season: string;
-    revisionDate: Date;
-    publishDate: Date;
-    isLive: boolean;
-    creationDate: Date;
-    seriesOrder: number;
-    slug: string;
-    version: number;
-    coach: BaseCoach;
-    workoutCatalogs: WorkoutCatalogType[];
     static fromJson(json: JSONDict): BaseProgramCatalog;
 }
 export declare abstract class WorkoutCatalogType {
@@ -104,8 +87,13 @@ export declare abstract class WorkoutCatalogType {
     slug: string;
     title: string;
     type: string;
+    publishDate?: Date;
+    revisionDate: Date;
+    creationDate: Date;
     programCatalog?: ProgramCatalogType;
     exerciseCatalogs: ExerciseCatalogType[];
+    getType(): WorkoutType;
+    setType(type: WorkoutType): void;
 }
 export declare enum WorkoutType {
     Addon = "Addon",
@@ -119,12 +107,6 @@ export declare enum Season {
     AllSeason = "AllSeason",
 }
 export declare class BaseWorkoutCatalog extends WorkoutCatalogType {
-    id: number;
-    slug: string;
-    title: string;
-    type: string;
-    programCatalog?: ProgramCatalogType;
-    exerciseCatalogs: ExerciseCatalogType[];
     getType(): WorkoutType;
     setType(type: WorkoutType): void;
 }
