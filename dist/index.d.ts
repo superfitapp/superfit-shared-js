@@ -14,6 +14,17 @@ export declare enum ExerciseBlock {
     PowerStrength = "PowerStrength",
     Conditioning = "Conditioning",
 }
+export declare enum WorkoutType {
+    Addon = "Addon",
+    PowerStrength = "PowerStrength",
+    Conditioning = "Conditioning",
+}
+export declare enum Season {
+    OffSeason = "OffSeason",
+    InSeason = "InSeason",
+    PostSeason = "PostSeason",
+    AllSeason = "AllSeason",
+}
 export declare class ExerciseGoal {
     slug: string;
     title: string;
@@ -58,14 +69,14 @@ export declare enum MovementCategory {
     Movement = "Movement",
     Condition = "Condition",
 }
-export declare abstract class ProgramCatalogType {
+export interface IProgramCatalog {
     id: number;
     title: string;
     sport: string;
     summary: string;
     numberOfWeeks: number;
     tagline: string;
-    protected level: string;
+    level: string;
     season: string;
     revisionDate: Date;
     publishDate?: Date;
@@ -75,14 +86,31 @@ export declare abstract class ProgramCatalogType {
     slug: string;
     version: number;
     coach: BaseCoach;
-    workoutCatalogs: WorkoutCatalogType[];
+    workoutCatalogs: IWorkoutCatalog[];
+}
+export declare class BaseProgramCatalog implements IProgramCatalog {
+    id: number;
+    title: string;
+    sport: string;
+    summary: string;
+    numberOfWeeks: number;
+    tagline: string;
+    level: string;
+    season: string;
+    revisionDate: Date;
+    publishDate?: Date;
+    creationDate: Date;
+    isLive: boolean;
+    seriesOrder: number;
+    slug: string;
+    version: number;
+    coach: BaseCoach;
+    workoutCatalogs: IWorkoutCatalog[];
     getLevel(): Level;
     setLevel(level: Level): void;
-}
-export declare class BaseProgramCatalog extends ProgramCatalogType {
     static fromJson(json: JSONDict): BaseProgramCatalog;
 }
-export declare abstract class WorkoutCatalogType {
+export declare abstract class IWorkoutCatalog {
     id: number;
     slug: string;
     title: string;
@@ -91,68 +119,76 @@ export declare abstract class WorkoutCatalogType {
     revisionDate: Date;
     creationDate: Date;
     version: number;
-    programCatalog?: ProgramCatalogType;
-    exerciseCatalogs: ExerciseCatalogType[];
-    getType(): WorkoutType;
-    setType(type: WorkoutType): void;
+    programCatalog?: IProgramCatalog;
+    exerciseCatalogs: IExerciseCatalog[];
 }
-export declare enum WorkoutType {
-    Addon = "Addon",
-    PowerStrength = "PowerStrength",
-    Conditioning = "Conditioning",
-}
-export declare enum Season {
-    OffSeason = "OffSeason",
-    InSeason = "InSeason",
-    PostSeason = "PostSeason",
-    AllSeason = "AllSeason",
-}
-export declare class BaseWorkoutCatalog extends WorkoutCatalogType {
-    getType(): WorkoutType;
-    setType(type: WorkoutType): void;
-}
-export declare abstract class ExerciseCatalogType {
+export declare class BaseWorkoutCatalog implements IWorkoutCatalog {
     id: number;
-    protected block: string;
+    slug: string;
+    title: string;
+    type: string;
+    publishDate?: Date;
+    revisionDate: Date;
+    creationDate: Date;
+    version: number;
+    programCatalog?: IProgramCatalog;
+    exerciseCatalogs: IExerciseCatalog[];
+    getType(): WorkoutType;
+    setType(type: WorkoutType): void;
+}
+export interface IExerciseCatalog {
+    id: number;
+    block: string;
+    goal: ExerciseGoal;
+    sets: number;
+    rpe: number;
+    blockOrder: number;
+    priority: number;
+    reps?: number;
+    manualWeight?: number;
+    percentBodyweight?: number;
+    percentMaxWeight: number;
+    duration?: number;
+    workoutCatalog: IWorkoutCatalog;
+    definition: IExerciseDefinition;
+}
+export declare class BaseExerciseCatalog implements IExerciseCatalog {
+    block: string;
+    id: number;
+    goal: ExerciseGoal;
+    sets: number;
+    rpe: number;
+    blockOrder: number;
+    priority: number;
+    reps?: number;
+    manualWeight?: number;
+    percentBodyweight?: number;
+    percentMaxWeight: number;
+    duration?: number;
+    workoutCatalog: IWorkoutCatalog;
+    definition: IExerciseDefinition;
     getBlock(): ExerciseBlock;
     setBlock(block: ExerciseBlock): void;
-    goal: ExerciseGoal;
-    sets: number;
-    rpe: number;
-    blockOrder: number;
-    priority: number;
-    reps?: number;
-    manualWeight?: number;
-    percentBodyweight?: number;
-    percentMaxWeight: number;
-    duration?: number;
-    workoutCatalog: WorkoutCatalogType;
-    definition: ExerciseDefinitionType;
 }
-export declare class BaseExerciseCatalog extends ExerciseCatalogType {
-    id: number;
-    protected block: string;
-    goal: ExerciseGoal;
-    sets: number;
-    rpe: number;
-    blockOrder: number;
-    priority: number;
-    reps?: number;
-    manualWeight?: number;
-    percentBodyweight?: number;
-    percentMaxWeight: number;
-    duration?: number;
-    workoutCatalog: WorkoutCatalogType;
-    definition: ExerciseDefinitionType;
-}
-export declare abstract class ExerciseDefinitionType {
-    constructor();
+export interface IExerciseDefinition {
     id: number;
     title: string;
     slug: string;
-    protected movementType: string;
-    protected category: string;
-    protected plane: string;
+    movementType: string;
+    category: string;
+    plane: string;
+    isBodyweight: boolean;
+    athleticIndex: number;
+    demoUrl: string;
+    unilateral: boolean;
+}
+export declare class BaseExerciseDefinition implements IExerciseDefinition {
+    id: number;
+    title: string;
+    slug: string;
+    movementType: string;
+    category: string;
+    plane: string;
     isBodyweight: boolean;
     athleticIndex: number;
     demoUrl: string;
@@ -163,18 +199,6 @@ export declare abstract class ExerciseDefinitionType {
     setPlane(plane: MovementPlane): void;
     getCategory(): MovementCategory;
     setCategory(category: MovementCategory): void;
-}
-export declare class BaseExerciseDefinition extends ExerciseDefinitionType {
-    id: number;
-    title: string;
-    slug: string;
-    protected movementType: string;
-    protected category: string;
-    protected plane: string;
-    isBodyweight: boolean;
-    athleticIndex: number;
-    demoUrl: string;
-    unilateral: boolean;
     static fromJson(json: JSONDict): BaseExerciseDefinition;
 }
 export interface JSONDict {

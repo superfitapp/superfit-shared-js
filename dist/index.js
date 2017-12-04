@@ -1,14 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var BaseCoach = /** @class */ (function () {
     function BaseCoach() {
@@ -24,6 +14,19 @@ var ExerciseBlock;
     ExerciseBlock["PowerStrength"] = "PowerStrength";
     ExerciseBlock["Conditioning"] = "Conditioning";
 })(ExerciseBlock = exports.ExerciseBlock || (exports.ExerciseBlock = {}));
+var WorkoutType;
+(function (WorkoutType) {
+    WorkoutType["Addon"] = "Addon";
+    WorkoutType["PowerStrength"] = "PowerStrength";
+    WorkoutType["Conditioning"] = "Conditioning";
+})(WorkoutType = exports.WorkoutType || (exports.WorkoutType = {}));
+var Season;
+(function (Season) {
+    Season["OffSeason"] = "OffSeason";
+    Season["InSeason"] = "InSeason";
+    Season["PostSeason"] = "PostSeason";
+    Season["AllSeason"] = "AllSeason";
+})(Season = exports.Season || (exports.Season = {}));
 var ExerciseGoal = /** @class */ (function () {
     function ExerciseGoal() {
     }
@@ -73,37 +76,15 @@ var MovementCategory;
     MovementCategory["Movement"] = "Movement";
     MovementCategory["Condition"] = "Condition";
 })(MovementCategory = exports.MovementCategory || (exports.MovementCategory = {}));
-var ProgramCatalogType = /** @class */ (function () {
-    function ProgramCatalogType() {
+var BaseProgramCatalog = /** @class */ (function () {
+    function BaseProgramCatalog() {
     }
-    ProgramCatalogType.prototype.getLevel = function () {
+    BaseProgramCatalog.prototype.getLevel = function () {
         return Level[this.level];
     };
-    ProgramCatalogType.prototype.setLevel = function (level) {
+    BaseProgramCatalog.prototype.setLevel = function (level) {
         this.level = Level[level];
     };
-    return ProgramCatalogType;
-}());
-exports.ProgramCatalogType = ProgramCatalogType;
-var BaseProgramCatalog = /** @class */ (function (_super) {
-    __extends(BaseProgramCatalog, _super);
-    function BaseProgramCatalog() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    // id: number;
-    // title: string;
-    // sport: string;
-    // summary: string;
-    // numberOfWeeks: number;
-    // tagline: string;
-    // level: string;
-    // season: string;
-    // isLive: boolean;
-    // seriesOrder: number;
-    // slug: string;
-    // version: number;
-    // coach: BaseCoach;
-    // workoutCatalogs: WorkoutCatalogType[]
     BaseProgramCatalog.fromJson = function (json) {
         var newProgramCatalog = new BaseProgramCatalog();
         newProgramCatalog.title = json["title"];
@@ -139,37 +120,16 @@ var BaseProgramCatalog = /** @class */ (function (_super) {
         return newProgramCatalog;
     };
     return BaseProgramCatalog;
-}(ProgramCatalogType));
-exports.BaseProgramCatalog = BaseProgramCatalog;
-var WorkoutCatalogType = /** @class */ (function () {
-    function WorkoutCatalogType() {
-    }
-    WorkoutCatalogType.prototype.getType = function () {
-        return WorkoutType[this.type];
-    };
-    WorkoutCatalogType.prototype.setType = function (type) {
-        this.type = WorkoutType[type];
-    };
-    return WorkoutCatalogType;
 }());
-exports.WorkoutCatalogType = WorkoutCatalogType;
-var WorkoutType;
-(function (WorkoutType) {
-    WorkoutType["Addon"] = "Addon";
-    WorkoutType["PowerStrength"] = "PowerStrength";
-    WorkoutType["Conditioning"] = "Conditioning";
-})(WorkoutType = exports.WorkoutType || (exports.WorkoutType = {}));
-var Season;
-(function (Season) {
-    Season["OffSeason"] = "OffSeason";
-    Season["InSeason"] = "InSeason";
-    Season["PostSeason"] = "PostSeason";
-    Season["AllSeason"] = "AllSeason";
-})(Season = exports.Season || (exports.Season = {}));
-var BaseWorkoutCatalog = /** @class */ (function (_super) {
-    __extends(BaseWorkoutCatalog, _super);
+exports.BaseProgramCatalog = BaseProgramCatalog;
+var IWorkoutCatalog = /** @class */ (function () {
+    function IWorkoutCatalog() {
+    }
+    return IWorkoutCatalog;
+}());
+exports.IWorkoutCatalog = IWorkoutCatalog;
+var BaseWorkoutCatalog = /** @class */ (function () {
     function BaseWorkoutCatalog() {
-        return _super !== null && _super.apply(this, arguments) || this;
     }
     BaseWorkoutCatalog.prototype.getType = function () {
         return WorkoutType[this.type];
@@ -178,57 +138,41 @@ var BaseWorkoutCatalog = /** @class */ (function (_super) {
         this.type = WorkoutType[type];
     };
     return BaseWorkoutCatalog;
-}(WorkoutCatalogType));
+}());
 exports.BaseWorkoutCatalog = BaseWorkoutCatalog;
-var ExerciseCatalogType = /** @class */ (function () {
-    function ExerciseCatalogType() {
+var BaseExerciseCatalog = /** @class */ (function () {
+    function BaseExerciseCatalog() {
     }
-    ExerciseCatalogType.prototype.getBlock = function () {
+    BaseExerciseCatalog.prototype.getBlock = function () {
         return ExerciseBlock[this.block];
     };
-    ExerciseCatalogType.prototype.setBlock = function (block) {
+    BaseExerciseCatalog.prototype.setBlock = function (block) {
         this.block = ExerciseBlock[block];
     };
-    return ExerciseCatalogType;
-}());
-exports.ExerciseCatalogType = ExerciseCatalogType;
-var BaseExerciseCatalog = /** @class */ (function (_super) {
-    __extends(BaseExerciseCatalog, _super);
-    function BaseExerciseCatalog() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
     return BaseExerciseCatalog;
-}(ExerciseCatalogType));
+}());
 exports.BaseExerciseCatalog = BaseExerciseCatalog;
-var ExerciseDefinitionType = /** @class */ (function () {
-    function ExerciseDefinitionType() {
+var BaseExerciseDefinition = /** @class */ (function () {
+    function BaseExerciseDefinition() {
     }
-    ExerciseDefinitionType.prototype.getMovementType = function () {
+    BaseExerciseDefinition.prototype.getMovementType = function () {
         return MovementType[this.movementType];
     };
-    ExerciseDefinitionType.prototype.setMovementType = function (movementType) {
+    BaseExerciseDefinition.prototype.setMovementType = function (movementType) {
         this.movementType = MovementType[movementType];
     };
-    ExerciseDefinitionType.prototype.getPlane = function () {
+    BaseExerciseDefinition.prototype.getPlane = function () {
         return MovementPlane[this.plane];
     };
-    ExerciseDefinitionType.prototype.setPlane = function (plane) {
+    BaseExerciseDefinition.prototype.setPlane = function (plane) {
         this.plane = MovementPlane[plane];
     };
-    ExerciseDefinitionType.prototype.getCategory = function () {
+    BaseExerciseDefinition.prototype.getCategory = function () {
         return MovementCategory[this.category];
     };
-    ExerciseDefinitionType.prototype.setCategory = function (category) {
+    BaseExerciseDefinition.prototype.setCategory = function (category) {
         this.category = MovementCategory[category];
     };
-    return ExerciseDefinitionType;
-}());
-exports.ExerciseDefinitionType = ExerciseDefinitionType;
-var BaseExerciseDefinition = /** @class */ (function (_super) {
-    __extends(BaseExerciseDefinition, _super);
-    function BaseExerciseDefinition() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
     BaseExerciseDefinition.fromJson = function (json) {
         var newExerciseDefinition = new BaseExerciseDefinition();
         newExerciseDefinition.id = json['id'];
@@ -244,5 +188,5 @@ var BaseExerciseDefinition = /** @class */ (function (_super) {
         return newExerciseDefinition;
     };
     return BaseExerciseDefinition;
-}(ExerciseDefinitionType));
+}());
 exports.BaseExerciseDefinition = BaseExerciseDefinition;

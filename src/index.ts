@@ -16,6 +16,18 @@ export enum ExerciseBlock {
   Conditioning = "Conditioning"
 }
 
+export enum WorkoutType {
+  Addon = "Addon",
+  PowerStrength = "PowerStrength",
+  Conditioning = "Conditioning"
+}
+
+export enum Season {
+  OffSeason = "OffSeason",
+  InSeason = "InSeason",
+  PostSeason = "PostSeason",
+  AllSeason = "AllSeason"
+}
 
 export class ExerciseGoal {
   slug: string;
@@ -66,14 +78,14 @@ export enum MovementCategory {
   Condition = "Condition"
 }
 
-export abstract class ProgramCatalogType {
+export interface IProgramCatalog {
   id: number;
   title: string;
   sport: string;
   summary: string;
   numberOfWeeks: number;
   tagline: string;
-  protected level: string;
+  level: string;
   season: string;
   revisionDate: Date;
   publishDate?: Date;
@@ -83,7 +95,28 @@ export abstract class ProgramCatalogType {
   slug: string;
   version: number;
   coach: BaseCoach;
-  workoutCatalogs: WorkoutCatalogType[]
+  workoutCatalogs: IWorkoutCatalog[]
+}
+
+export class BaseProgramCatalog implements IProgramCatalog {
+
+  id: number;
+  title: string;
+  sport: string;
+  summary: string;
+  numberOfWeeks: number;
+  tagline: string;
+  level: string;
+  season: string;
+  revisionDate: Date;
+  publishDate?: Date;
+  creationDate: Date;
+  isLive: boolean;
+  seriesOrder: number;
+  slug: string;
+  version: number;
+  coach: BaseCoach;
+  workoutCatalogs: IWorkoutCatalog[]
 
   getLevel(): Level {
     return Level[this.level]
@@ -91,24 +124,6 @@ export abstract class ProgramCatalogType {
   setLevel(level: Level) {
     this.level = Level[level]
   }
-
-}
-
-export class BaseProgramCatalog extends ProgramCatalogType {
-  // id: number;
-  // title: string;
-  // sport: string;
-  // summary: string;
-  // numberOfWeeks: number;
-  // tagline: string;
-  // level: string;
-  // season: string;
-  // isLive: boolean;
-  // seriesOrder: number;
-  // slug: string;
-  // version: number;
-  // coach: BaseCoach;
-  // workoutCatalogs: WorkoutCatalogType[]
 
   static fromJson(json: JSONDict): BaseProgramCatalog {
 
@@ -153,7 +168,7 @@ export class BaseProgramCatalog extends ProgramCatalogType {
 }
 
 
-export abstract class WorkoutCatalogType {
+export abstract class IWorkoutCatalog {
   id: number;
   slug: string;
   title: string;
@@ -162,45 +177,65 @@ export abstract class WorkoutCatalogType {
   revisionDate: Date;
   creationDate: Date;
   version: number;
-  programCatalog?: ProgramCatalogType;
-  exerciseCatalogs: ExerciseCatalogType[]
-
-  getType(): WorkoutType {
-    return WorkoutType[this.type]
-  }
-
-  setType(type: WorkoutType) {
-    this.type = WorkoutType[type]
-  }
+  programCatalog?: IProgramCatalog;
+  exerciseCatalogs: IExerciseCatalog[]
 }
 
-export enum WorkoutType {
-  Addon = "Addon",
-  PowerStrength = "PowerStrength",
-  Conditioning = "Conditioning"
-}
+export class BaseWorkoutCatalog implements IWorkoutCatalog {
 
-export enum Season {
-  OffSeason = "OffSeason",
-  InSeason = "InSeason",
-  PostSeason = "PostSeason",
-  AllSeason = "AllSeason"
-}
-
-export class BaseWorkoutCatalog extends WorkoutCatalogType {
-
-  getType(): WorkoutType {
-    return WorkoutType[this.type]
-  }
-
-  setType(type: WorkoutType) {
-    this.type = WorkoutType[type]
-  }
-}
-
-export abstract class ExerciseCatalogType {
   id: number;
-  protected block: string;
+  slug: string;
+  title: string;
+  type: string;
+  publishDate?: Date;
+  revisionDate: Date;
+  creationDate: Date;
+  version: number;
+  programCatalog?: IProgramCatalog;
+  exerciseCatalogs: IExerciseCatalog[]
+
+  getType(): WorkoutType {
+    return WorkoutType[this.type]
+  }
+
+  setType(type: WorkoutType) {
+    this.type = WorkoutType[type]
+  }
+}
+
+export interface IExerciseCatalog {
+  id: number;
+  block: string;
+  goal: ExerciseGoal;
+  sets: number;
+  rpe: number;
+  blockOrder: number;
+  priority: number;
+  reps?: number;
+  manualWeight?: number;
+  percentBodyweight?: number;
+  percentMaxWeight: number;
+  duration?: number;
+  workoutCatalog: IWorkoutCatalog;
+  definition: IExerciseDefinition;
+}
+
+export class BaseExerciseCatalog implements IExerciseCatalog {
+
+  block: string;
+  id: number;
+  goal: ExerciseGoal;
+  sets: number;
+  rpe: number;
+  blockOrder: number;
+  priority: number;
+  reps?: number;
+  manualWeight?: number;
+  percentBodyweight?: number;
+  percentMaxWeight: number;
+  duration?: number;
+  workoutCatalog: IWorkoutCatalog;
+  definition: IExerciseDefinition;
 
   getBlock(): ExerciseBlock {
     return ExerciseBlock[this.block]
@@ -208,50 +243,31 @@ export abstract class ExerciseCatalogType {
   setBlock(block: ExerciseBlock) {
     this.block = ExerciseBlock[block]
   }
-
-  goal: ExerciseGoal;
-  sets: number;
-  rpe: number;
-  blockOrder: number;
-  priority: number;
-  reps?: number;
-  manualWeight?: number;
-  percentBodyweight?: number;
-  percentMaxWeight: number;
-  duration?: number;
-  workoutCatalog: WorkoutCatalogType;
-  definition: ExerciseDefinitionType;
 }
 
-export class BaseExerciseCatalog extends ExerciseCatalogType {
-  id: number;
-  protected block: string;
-
-  goal: ExerciseGoal;
-  sets: number;
-  rpe: number;
-  blockOrder: number;
-  priority: number;
-  reps?: number;
-  manualWeight?: number;
-  percentBodyweight?: number;
-  percentMaxWeight: number;
-  duration?: number;
-  workoutCatalog: WorkoutCatalogType;
-  definition: ExerciseDefinitionType;
-}
-
-export abstract class ExerciseDefinitionType {
-  constructor() {
-
-  }
+export interface IExerciseDefinition {
 
   id: number;
   title: string;
   slug: string;
-  protected movementType: string
-  protected category: string;
-  protected plane: string;
+  movementType: string
+  category: string;
+  plane: string;
+  isBodyweight: boolean;
+  athleticIndex: number;
+  demoUrl: string;
+  unilateral: boolean;
+
+}
+
+export class BaseExerciseDefinition implements IExerciseDefinition {
+
+  id: number;
+  title: string;
+  slug: string;
+  movementType: string
+  category: string;
+  plane: string;
   isBodyweight: boolean;
   athleticIndex: number;
   demoUrl: string;
@@ -277,21 +293,6 @@ export abstract class ExerciseDefinitionType {
   setCategory(category: MovementCategory) {
     this.category = MovementCategory[category]
   }
-}
-
-export class BaseExerciseDefinition extends ExerciseDefinitionType {
-  id: number;
-  title: string;
-  slug: string;
-  protected movementType: string
-
-  protected category: string;
-
-  protected plane: string;
-  isBodyweight: boolean;
-  athleticIndex: number;
-  demoUrl: string;
-  unilateral: boolean
 
   static fromJson(json: JSONDict): BaseExerciseDefinition {
     let newExerciseDefinition = new BaseExerciseDefinition()
