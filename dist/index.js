@@ -166,7 +166,7 @@ var BaseExerciseCatalog = /** @class */ (function () {
     BaseExerciseCatalog.prototype.setBlock = function (block) {
         this.block = ExerciseBlock[block];
     };
-    BaseExerciseCatalog.fromJson = function (json) {
+    BaseExerciseCatalog.fromJson = function (json, workoutCatalog) {
         var newExerciseCatalog = new BaseExerciseCatalog();
         newExerciseCatalog.block = json["block"];
         newExerciseCatalog.goal = json["goal"];
@@ -180,6 +180,7 @@ var BaseExerciseCatalog = /** @class */ (function () {
         newExerciseCatalog.percentMaxWeight = json['percentMaxWeight'];
         newExerciseCatalog.duration = json['duration'];
         newExerciseCatalog.exerciseDefinitionSlug = json['exerciseDefinitionSlug'];
+        newExerciseCatalog.workoutCatalog = workoutCatalog;
         return newExerciseCatalog;
     };
     return BaseExerciseCatalog;

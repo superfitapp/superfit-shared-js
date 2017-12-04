@@ -172,7 +172,7 @@ export declare class BaseExerciseCatalog implements IExerciseCatalog {
     definition: IExerciseDefinition;
     getBlock(): ExerciseBlock;
     setBlock(block: ExerciseBlock): void;
-    static fromJson(json: JSONDict): BaseExerciseCatalog;
+    static fromJson(json: JSONDict, workoutCatalog?: IWorkoutCatalog): BaseExerciseCatalog;
 }
 export interface IExerciseDefinition {
     id: number;
