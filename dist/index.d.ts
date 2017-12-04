@@ -150,12 +150,14 @@ export interface IExerciseCatalog {
     percentBodyweight?: number;
     percentMaxWeight: number;
     duration?: number;
+    exerciseDefinitionSlug: string;
     workoutCatalog: IWorkoutCatalog;
     definition: IExerciseDefinition;
 }
 export declare class BaseExerciseCatalog implements IExerciseCatalog {
     block: string;
     id: number;
+    exerciseDefinitionSlug: string;
     goal: ExerciseGoal;
     sets: number;
     rpe: number;
@@ -170,6 +172,7 @@ export declare class BaseExerciseCatalog implements IExerciseCatalog {
     definition: IExerciseDefinition;
     getBlock(): ExerciseBlock;
     setBlock(block: ExerciseBlock): void;
+    static fromJson(json: JSONDict): BaseExerciseCatalog;
 }
 export interface IExerciseDefinition {
     id: number;

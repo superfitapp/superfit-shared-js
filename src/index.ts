@@ -143,8 +143,6 @@ export class BaseProgramCatalog implements IProgramCatalog {
     let workoutCatalogsJson = json["workoutCatalogs"] as [JSONDict]
     var workoutCatalogs: BaseWorkoutCatalog[] = []
 
-    // parse workouts 
-    // NOT DONE YET
     if (workoutCatalogsJson) {
 
       for (let workoutCatalogJson of workoutCatalogsJson) {
@@ -214,12 +212,10 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
     let exerciseCatalogsJson = json["exerciseCatalogs"] as [JSONDict]
     var exerciseCatalogs: BaseExerciseCatalog[] = []
 
-    // parse exercise 
-    // NOT DONE YET
     if (exerciseCatalogsJson) {
 
       for (let exerciseCatalogJson of exerciseCatalogsJson) {
-        let exerciseCatalog = new BaseExerciseCatalog()
+        let exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson)
         exerciseCatalogs.push(exerciseCatalog)
       }
 
@@ -243,6 +239,7 @@ export interface IExerciseCatalog {
   percentBodyweight?: number;
   percentMaxWeight: number;
   duration?: number;
+  exerciseDefinitionSlug: string
   workoutCatalog: IWorkoutCatalog;
   definition: IExerciseDefinition;
 }
@@ -251,6 +248,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
 
   block: string;
   id: number;
+  exerciseDefinitionSlug: string
   goal: ExerciseGoal;
   sets: number;
   rpe: number;
@@ -269,6 +267,25 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
   }
   setBlock(block: ExerciseBlock) {
     this.block = ExerciseBlock[block]
+  }
+
+  static fromJson(json: JSONDict): BaseExerciseCatalog {
+
+    let newExerciseCatalog = new BaseExerciseCatalog()
+    newExerciseCatalog.block = json["block"]
+    newExerciseCatalog.goal = json["goal"]
+    newExerciseCatalog.sets = json["sets"]
+    newExerciseCatalog.rpe = json["rpe"]
+    newExerciseCatalog.blockOrder = json["blockOrder"]
+    newExerciseCatalog.priority = json["priority"]
+    newExerciseCatalog.reps = json["reps"]
+    newExerciseCatalog.manualWeight = json["manualWeight"]
+    newExerciseCatalog.percentBodyweight = json['percentBodyweight']
+    newExerciseCatalog.percentMaxWeight = json['percentMaxWeight']
+    newExerciseCatalog.duration = json['duration']
+    newExerciseCatalog.exerciseDefinitionSlug = json['exerciseDefinitionSlug']
+
+    return newExerciseCatalog;
   }
 }
 

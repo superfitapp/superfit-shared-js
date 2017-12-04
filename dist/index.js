@@ -100,8 +100,6 @@ var BaseProgramCatalog = /** @class */ (function () {
         newProgramCatalog.version = json["version"];
         var workoutCatalogsJson = json["workoutCatalogs"];
         var workoutCatalogs = [];
-        // parse workouts 
-        // NOT DONE YET
         if (workoutCatalogsJson) {
             for (var _i = 0, workoutCatalogsJson_1 = workoutCatalogsJson; _i < workoutCatalogsJson_1.length; _i++) {
                 var workoutCatalogJson = workoutCatalogsJson_1[_i];
@@ -146,12 +144,10 @@ var BaseWorkoutCatalog = /** @class */ (function () {
         newWorkoutCatalog.type = json["type"];
         var exerciseCatalogsJson = json["exerciseCatalogs"];
         var exerciseCatalogs = [];
-        // parse exercise 
-        // NOT DONE YET
         if (exerciseCatalogsJson) {
             for (var _i = 0, exerciseCatalogsJson_1 = exerciseCatalogsJson; _i < exerciseCatalogsJson_1.length; _i++) {
                 var exerciseCatalogJson = exerciseCatalogsJson_1[_i];
-                var exerciseCatalog = new BaseExerciseCatalog();
+                var exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson);
                 exerciseCatalogs.push(exerciseCatalog);
             }
             newWorkoutCatalog.exerciseCatalogs = exerciseCatalogs;
@@ -169,6 +165,22 @@ var BaseExerciseCatalog = /** @class */ (function () {
     };
     BaseExerciseCatalog.prototype.setBlock = function (block) {
         this.block = ExerciseBlock[block];
+    };
+    BaseExerciseCatalog.fromJson = function (json) {
+        var newExerciseCatalog = new BaseExerciseCatalog();
+        newExerciseCatalog.block = json["block"];
+        newExerciseCatalog.goal = json["goal"];
+        newExerciseCatalog.sets = json["sets"];
+        newExerciseCatalog.rpe = json["rpe"];
+        newExerciseCatalog.blockOrder = json["blockOrder"];
+        newExerciseCatalog.priority = json["priority"];
+        newExerciseCatalog.reps = json["reps"];
+        newExerciseCatalog.manualWeight = json["manualWeight"];
+        newExerciseCatalog.percentBodyweight = json['percentBodyweight'];
+        newExerciseCatalog.percentMaxWeight = json['percentMaxWeight'];
+        newExerciseCatalog.duration = json['duration'];
+        newExerciseCatalog.exerciseDefinitionSlug = json['exerciseDefinitionSlug'];
+        return newExerciseCatalog;
     };
     return BaseExerciseCatalog;
 }());
