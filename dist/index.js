@@ -105,7 +105,7 @@ var BaseProgramCatalog = /** @class */ (function () {
         if (workoutCatalogsJson) {
             for (var _i = 0, workoutCatalogsJson_1 = workoutCatalogsJson; _i < workoutCatalogsJson_1.length; _i++) {
                 var workoutCatalogJson = workoutCatalogsJson_1[_i];
-                var workoutCatalog = new BaseWorkoutCatalog();
+                var workoutCatalog = BaseWorkoutCatalog.fromJson(workoutCatalogJson);
                 workoutCatalogs.push(workoutCatalog);
             }
             newProgramCatalog.workoutCatalogs = workoutCatalogs;

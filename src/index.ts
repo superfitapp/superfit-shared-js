@@ -148,7 +148,7 @@ export class BaseProgramCatalog implements IProgramCatalog {
     if (workoutCatalogsJson) {
 
       for (let workoutCatalogJson of workoutCatalogsJson) {
-        let workoutCatalog = new BaseWorkoutCatalog()
+        let workoutCatalog = BaseWorkoutCatalog.fromJson(workoutCatalogJson)
         workoutCatalogs.push(workoutCatalog)
       }
 
