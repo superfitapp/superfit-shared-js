@@ -215,7 +215,10 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
     if (exerciseCatalogsJson) {
 
       for (let exerciseCatalogJson of exerciseCatalogsJson) {
-        let exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson)
+        let exerciseCatalog = BaseExerciseCatalog.fromJson(
+          exerciseCatalogJson,
+          newWorkoutCatalog
+        )
         exerciseCatalogs.push(exerciseCatalog)
       }
 
