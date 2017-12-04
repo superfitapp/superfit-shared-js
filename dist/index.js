@@ -137,6 +137,27 @@ var BaseWorkoutCatalog = /** @class */ (function () {
     BaseWorkoutCatalog.prototype.setType = function (type) {
         this.type = WorkoutType[type];
     };
+    BaseWorkoutCatalog.fromJson = function (json) {
+        var newWorkoutCatalog = new BaseWorkoutCatalog();
+        newWorkoutCatalog.publishDate = json["publishDate"];
+        newWorkoutCatalog.version = json["version"];
+        newWorkoutCatalog.slug = json["slug"];
+        newWorkoutCatalog.title = json["title"];
+        newWorkoutCatalog.type = json["type"];
+        var exerciseCatalogsJson = json["exerciseCatalogs"];
+        var exerciseCatalogs = [];
+        // parse exercise 
+        // NOT DONE YET
+        if (exerciseCatalogsJson) {
+            for (var _i = 0, exerciseCatalogsJson_1 = exerciseCatalogsJson; _i < exerciseCatalogsJson_1.length; _i++) {
+                var exerciseCatalogJson = exerciseCatalogsJson_1[_i];
+                var exerciseCatalog = new BaseExerciseCatalog();
+                exerciseCatalogs.push(exerciseCatalog);
+            }
+            newWorkoutCatalog.exerciseCatalogs = exerciseCatalogs;
+        }
+        return newWorkoutCatalog;
+    };
     return BaseWorkoutCatalog;
 }());
 exports.BaseWorkoutCatalog = BaseWorkoutCatalog;

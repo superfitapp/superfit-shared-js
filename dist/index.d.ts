@@ -135,6 +135,7 @@ export declare class BaseWorkoutCatalog implements IWorkoutCatalog {
     exerciseCatalogs: IExerciseCatalog[];
     getType(): WorkoutType;
     setType(type: WorkoutType): void;
+    static fromJson(json: JSONDict): BaseWorkoutCatalog;
 }
 export interface IExerciseCatalog {
     id: number;

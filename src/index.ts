@@ -201,6 +201,33 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
   setType(type: WorkoutType) {
     this.type = WorkoutType[type]
   }
+
+  static fromJson(json: JSONDict): BaseWorkoutCatalog {
+
+    let newWorkoutCatalog = new BaseWorkoutCatalog()
+    newWorkoutCatalog.publishDate = json["publishDate"]
+    newWorkoutCatalog.version = json["version"]
+    newWorkoutCatalog.slug = json["slug"]
+    newWorkoutCatalog.title = json["title"]
+    newWorkoutCatalog.type = json["type"]
+
+    let exerciseCatalogsJson = json["exerciseCatalogs"] as [JSONDict]
+    var exerciseCatalogs: BaseExerciseCatalog[] = []
+
+    // parse exercise 
+    // NOT DONE YET
+    if (exerciseCatalogsJson) {
+
+      for (let exerciseCatalogJson of exerciseCatalogsJson) {
+        let exerciseCatalog = new BaseExerciseCatalog()
+        exerciseCatalogs.push(exerciseCatalog)
+      }
+
+      newWorkoutCatalog.exerciseCatalogs = exerciseCatalogs
+    }
+
+    return newWorkoutCatalog;
+  }
 }
 
 export interface IExerciseCatalog {
