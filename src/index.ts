@@ -133,6 +133,7 @@ export class BaseProgramCatalog implements IProgramCatalog {
     newProgramCatalog.summary = json["summary"]
     newProgramCatalog.tagline = json["tagline"]
     newProgramCatalog.level = json["level"]
+    newProgramCatalog.publishDate = json["publishDate"]
     newProgramCatalog.numberOfWeeks = json["numberOfWeeks"]
     newProgramCatalog.season = json["season"]
     newProgramCatalog.isLive = json["isLive"] || false
