@@ -204,6 +204,8 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
 
     let newWorkoutCatalog = new BaseWorkoutCatalog()
     newWorkoutCatalog.publishDate = json["publishDate"]
+    newWorkoutCatalog.revisionDate = json["revisionDate"]
+    newWorkoutCatalog.creationDate = json["creationDate"]
     newWorkoutCatalog.version = json["version"]
     newWorkoutCatalog.slug = json["slug"]
     newWorkoutCatalog.title = json["title"]
