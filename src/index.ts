@@ -215,10 +215,7 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
     if (exerciseCatalogsJson) {
 
       for (let exerciseCatalogJson of exerciseCatalogsJson) {
-        let exerciseCatalog = BaseExerciseCatalog.fromJson(
-          exerciseCatalogJson,
-          newWorkoutCatalog
-        )
+        let exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson)
         exerciseCatalogs.push(exerciseCatalog)
       }
 
@@ -272,7 +269,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
     this.block = ExerciseBlock[block]
   }
 
-  static fromJson(json: JSONDict, workoutCatalog?: IWorkoutCatalog): BaseExerciseCatalog {
+  static fromJson(json: JSONDict): BaseExerciseCatalog {
 
     let newExerciseCatalog = new BaseExerciseCatalog()
     newExerciseCatalog.block = json["block"]
@@ -287,7 +284,6 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
     newExerciseCatalog.percentMaxWeight = json['percentMaxWeight']
     newExerciseCatalog.duration = json['duration']
     newExerciseCatalog.exerciseDefinitionSlug = json['exerciseDefinitionSlug']
-    newExerciseCatalog.workoutCatalog = workoutCatalog
 
     return newExerciseCatalog;
   }

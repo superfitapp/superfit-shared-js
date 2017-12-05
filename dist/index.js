@@ -147,7 +147,7 @@ var BaseWorkoutCatalog = /** @class */ (function () {
         if (exerciseCatalogsJson) {
             for (var _i = 0, exerciseCatalogsJson_1 = exerciseCatalogsJson; _i < exerciseCatalogsJson_1.length; _i++) {
                 var exerciseCatalogJson = exerciseCatalogsJson_1[_i];
-                var exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson, newWorkoutCatalog);
+                var exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson);
                 exerciseCatalogs.push(exerciseCatalog);
             }
             newWorkoutCatalog.exerciseCatalogs = exerciseCatalogs;
@@ -166,7 +166,7 @@ var BaseExerciseCatalog = /** @class */ (function () {
     BaseExerciseCatalog.prototype.setBlock = function (block) {
         this.block = ExerciseBlock[block];
     };
-    BaseExerciseCatalog.fromJson = function (json, workoutCatalog) {
+    BaseExerciseCatalog.fromJson = function (json) {
         var newExerciseCatalog = new BaseExerciseCatalog();
         newExerciseCatalog.block = json["block"];
         newExerciseCatalog.goal = json["goal"];
@@ -180,7 +180,6 @@ var BaseExerciseCatalog = /** @class */ (function () {
         newExerciseCatalog.percentMaxWeight = json['percentMaxWeight'];
         newExerciseCatalog.duration = json['duration'];
         newExerciseCatalog.exerciseDefinitionSlug = json['exerciseDefinitionSlug'];
-        newExerciseCatalog.workoutCatalog = workoutCatalog;
         return newExerciseCatalog;
     };
     return BaseExerciseCatalog;
