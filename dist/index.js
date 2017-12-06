@@ -171,6 +171,7 @@ var BaseExerciseCatalog = /** @class */ (function () {
     };
     BaseExerciseCatalog.fromJson = function (json) {
         var newExerciseCatalog = new BaseExerciseCatalog();
+        newExerciseCatalog.id = json["id"];
         newExerciseCatalog.block = json["block"];
         newExerciseCatalog.goal = json["goal"];
         newExerciseCatalog.sets = json["sets"];

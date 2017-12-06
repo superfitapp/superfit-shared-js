@@ -275,6 +275,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
   static fromJson(json: JSONDict): BaseExerciseCatalog {
 
     let newExerciseCatalog = new BaseExerciseCatalog()
+    newExerciseCatalog.id = json["id"]
     newExerciseCatalog.block = json["block"]
     newExerciseCatalog.goal = json["goal"]
     newExerciseCatalog.sets = json["sets"]
@@ -293,7 +294,6 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
 }
 
 export interface IExerciseDefinition {
-
   id: number;
   title: string;
   slug: string;
