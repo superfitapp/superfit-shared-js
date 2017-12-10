@@ -360,35 +360,22 @@ export interface JSONDict {
 }
 
 enum ExerciseGoalType {
-    // Weight
-    case MoreWeight = "more-weight"
-    case LessWeight = 'less-weight'
-    
-    // Reps
-    case MoreReps
-    case LessReps
-    case MorePower
-    case SpeedQuickness
-    case DynamicMobility
-    case DynamicStability
-    
-    // Weight or Reps
-    case MoreRepsWeighted
-    case LessRepsWeighted
-    case StaticStabilityWeighted
-    case DynamicStabilityWeighted
-    case TechniqueWeighted
-    
-    // As many good reps as possible
-    case AMGRAP
-    
-    // Duration
-    case LongerDuration
-    case ShorterDuration
-    case SlowerPace
-    case FasterPace
-    case StaticMobility
-    case StaticStability
-    
-    case Technique
+  // Weight
+  MoreWeight = "more-weight",
+  LessWeight = 'less-weight',
+  MoreReps = 'more-reps',
+  LessReps = 'less-reps',
+  MorePower = 'more-power',
+  SpeedQuickness = 'speed-and-quickness',
+  DynamicMobility = 'dynamic-mobility',
+  DynamicStability = 'dynamic-stability',
+  AMGRAP = 'amgrap',
+  LongerDuration = 'longer-duration',
+  ShorterDuration = 'shorter-duration',
+  SlowerPace = 'slower-pace',
+  FasterPace = 'faster-pace',
+  StaticMobility = 'static-mobility',
+  StaticStability = 'static-stability',
+  Technique = 'technique',
+  Custom = 'custom'
 }

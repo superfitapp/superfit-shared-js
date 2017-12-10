@@ -223,3 +223,24 @@ var BaseExerciseDefinition = /** @class */ (function () {
     return BaseExerciseDefinition;
 }());
 exports.BaseExerciseDefinition = BaseExerciseDefinition;
+var ExerciseGoalType;
+(function (ExerciseGoalType) {
+    // Weight
+    ExerciseGoalType["MoreWeight"] = "more-weight";
+    ExerciseGoalType["LessWeight"] = "less-weight";
+    ExerciseGoalType["MoreReps"] = "more-reps";
+    ExerciseGoalType["LessReps"] = "less-reps";
+    ExerciseGoalType["MorePower"] = "more-power";
+    ExerciseGoalType["SpeedQuickness"] = "speed-and-quickness";
+    ExerciseGoalType["DynamicMobility"] = "dynamic-mobility";
+    ExerciseGoalType["DynamicStability"] = "dynamic-stability";
+    ExerciseGoalType["AMGRAP"] = "amgrap";
+    ExerciseGoalType["LongerDuration"] = "longer-duration";
+    ExerciseGoalType["ShorterDuration"] = "shorter-duration";
+    ExerciseGoalType["SlowerPace"] = "slower-pace";
+    ExerciseGoalType["FasterPace"] = "faster-pace";
+    ExerciseGoalType["StaticMobility"] = "static-mobility";
+    ExerciseGoalType["StaticStability"] = "static-stability";
+    ExerciseGoalType["Technique"] = "technique";
+    ExerciseGoalType["Custom"] = "custom";
+})(ExerciseGoalType || (ExerciseGoalType = {}));
