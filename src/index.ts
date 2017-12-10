@@ -133,6 +133,7 @@ export class BaseProgramCatalog implements IProgramCatalog {
     newProgramCatalog.summary = json["summary"]
     newProgramCatalog.tagline = json["tagline"]
     newProgramCatalog.level = json["level"]
+    newProgramCatalog.publishDate = json["publishDate"]
     newProgramCatalog.numberOfWeeks = json["numberOfWeeks"]
     newProgramCatalog.season = json["season"]
     newProgramCatalog.isLive = json["isLive"] || false
@@ -204,6 +205,8 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
 
     let newWorkoutCatalog = new BaseWorkoutCatalog()
     newWorkoutCatalog.publishDate = json["publishDate"]
+    newWorkoutCatalog.revisionDate = json["revisionDate"]
+    newWorkoutCatalog.creationDate = json["creationDate"]
     newWorkoutCatalog.version = json["version"]
     newWorkoutCatalog.slug = json["slug"]
     newWorkoutCatalog.title = json["title"]
@@ -272,6 +275,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
   static fromJson(json: JSONDict): BaseExerciseCatalog {
 
     let newExerciseCatalog = new BaseExerciseCatalog()
+    newExerciseCatalog.id = json["id"]
     newExerciseCatalog.block = json["block"]
     newExerciseCatalog.goal = json["goal"]
     newExerciseCatalog.sets = json["sets"]
@@ -290,7 +294,6 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
 }
 
 export interface IExerciseDefinition {
-
   id: number;
   title: string;
   slug: string;
