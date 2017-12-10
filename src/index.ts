@@ -362,8 +362,8 @@ export interface JSONDict {
   [key: string]: any
 }
 
-enum ExerciseGoalType {
-  // Weight
+export enum ExerciseGoalType {
+
   MoreWeight = "more-weight",
   LessWeight = 'less-weight',
   MoreReps = 'more-reps',

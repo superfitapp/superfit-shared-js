@@ -229,7 +229,6 @@ var BaseExerciseDefinition = /** @class */ (function () {
 exports.BaseExerciseDefinition = BaseExerciseDefinition;
 var ExerciseGoalType;
 (function (ExerciseGoalType) {
-    // Weight
     ExerciseGoalType["MoreWeight"] = "more-weight";
     ExerciseGoalType["LessWeight"] = "less-weight";
     ExerciseGoalType["MoreReps"] = "more-reps";
@@ -247,4 +246,4 @@ var ExerciseGoalType;
     ExerciseGoalType["StaticStability"] = "static-stability";
     ExerciseGoalType["Technique"] = "technique";
     ExerciseGoalType["Custom"] = "custom";
-})(ExerciseGoalType || (ExerciseGoalType = {}));
+})(ExerciseGoalType = exports.ExerciseGoalType || (exports.ExerciseGoalType = {}));

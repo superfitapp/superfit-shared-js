@@ -208,3 +208,22 @@ export declare class BaseExerciseDefinition implements IExerciseDefinition {
 export interface JSONDict {
     [key: string]: any;
 }
+export declare enum ExerciseGoalType {
+    MoreWeight = "more-weight",
+    LessWeight = "less-weight",
+    MoreReps = "more-reps",
+    LessReps = "less-reps",
+    MorePower = "more-power",
+    SpeedQuickness = "speed-and-quickness",
+    DynamicMobility = "dynamic-mobility",
+    DynamicStability = "dynamic-stability",
+    AMGRAP = "amgrap",
+    LongerDuration = "longer-duration",
+    ShorterDuration = "shorter-duration",
+    SlowerPace = "slower-pace",
+    FasterPace = "faster-pace",
+    StaticMobility = "static-mobility",
+    StaticStability = "static-stability",
+    Technique = "technique",
+    Custom = "custom",
+}
