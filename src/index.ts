@@ -295,6 +295,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
 
 export interface IExerciseDefinition {
   id: number;
+  external_id: string
   title: string;
   slug: string;
   movementType: string
@@ -310,6 +311,7 @@ export interface IExerciseDefinition {
 export class BaseExerciseDefinition implements IExerciseDefinition {
 
   id: number;
+  external_id: string
   title: string;
   slug: string;
   movementType: string
@@ -344,6 +346,7 @@ export class BaseExerciseDefinition implements IExerciseDefinition {
   static fromJson(json: JSONDict): BaseExerciseDefinition {
     let newExerciseDefinition = new BaseExerciseDefinition()
     newExerciseDefinition.id = json['id']
+    newExerciseDefinition.external_id = json['external_id']
     newExerciseDefinition.title = json['title']
     newExerciseDefinition.slug = json['slug']
     newExerciseDefinition.movementType = json['movementType']

@@ -213,6 +213,7 @@ var BaseExerciseDefinition = /** @class */ (function () {
     BaseExerciseDefinition.fromJson = function (json) {
         var newExerciseDefinition = new BaseExerciseDefinition();
         newExerciseDefinition.id = json['id'];
+        newExerciseDefinition.external_id = json['external_id'];
         newExerciseDefinition.title = json['title'];
         newExerciseDefinition.slug = json['slug'];
         newExerciseDefinition.movementType = json['movementType'];

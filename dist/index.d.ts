@@ -176,6 +176,7 @@ export declare class BaseExerciseCatalog implements IExerciseCatalog {
 }
 export interface IExerciseDefinition {
     id: number;
+    external_id: string;
     title: string;
     slug: string;
     movementType: string;
@@ -188,6 +189,7 @@ export interface IExerciseDefinition {
 }
 export declare class BaseExerciseDefinition implements IExerciseDefinition {
     id: number;
+    external_id: string;
     title: string;
     slug: string;
     movementType: string;
