@@ -140,6 +140,7 @@ export declare class BaseWorkoutCatalog implements IWorkoutCatalog {
 export interface IExerciseCatalog {
     id: number;
     block: string;
+    external_id: string;
     goal: ExerciseGoal;
     sets: number;
     rpe: number;
@@ -157,6 +158,7 @@ export interface IExerciseCatalog {
 export declare class BaseExerciseCatalog implements IExerciseCatalog {
     block: string;
     id: number;
+    external_id: string;
     exerciseDefinitionSlug: string;
     goal: ExerciseGoal;
     sets: number;
@@ -176,7 +178,6 @@ export declare class BaseExerciseCatalog implements IExerciseCatalog {
 }
 export interface IExerciseDefinition {
     id: number;
-    external_id: string;
     title: string;
     slug: string;
     movementType: string;
@@ -189,7 +190,6 @@ export interface IExerciseDefinition {
 }
 export declare class BaseExerciseDefinition implements IExerciseDefinition {
     id: number;
-    external_id: string;
     title: string;
     slug: string;
     movementType: string;

@@ -232,6 +232,7 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
 export interface IExerciseCatalog {
   id: number;
   block: string;
+  external_id: string;
   goal: ExerciseGoal;
   sets: number;
   rpe: number;
@@ -251,6 +252,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
 
   block: string;
   id: number;
+  external_id: string
   exerciseDefinitionSlug: string
   goal: ExerciseGoal;
   sets: number;
@@ -277,6 +279,7 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
     let newExerciseCatalog = new BaseExerciseCatalog()
     newExerciseCatalog.id = json["id"]
     newExerciseCatalog.block = json["block"]
+    newExerciseCatalog.external_id = json["external_id"]
     newExerciseCatalog.goal = json["goal"]
     newExerciseCatalog.sets = json["sets"]
     newExerciseCatalog.rpe = json["rpe"]
@@ -295,7 +298,6 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
 
 export interface IExerciseDefinition {
   id: number;
-  external_id: string
   title: string;
   slug: string;
   movementType: string
@@ -311,7 +313,6 @@ export interface IExerciseDefinition {
 export class BaseExerciseDefinition implements IExerciseDefinition {
 
   id: number;
-  external_id: string
   title: string;
   slug: string;
   movementType: string
@@ -346,7 +347,6 @@ export class BaseExerciseDefinition implements IExerciseDefinition {
   static fromJson(json: JSONDict): BaseExerciseDefinition {
     let newExerciseDefinition = new BaseExerciseDefinition()
     newExerciseDefinition.id = json['id']
-    newExerciseDefinition.external_id = json['external_id']
     newExerciseDefinition.title = json['title']
     newExerciseDefinition.slug = json['slug']
     newExerciseDefinition.movementType = json['movementType']
