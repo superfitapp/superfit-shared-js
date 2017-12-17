@@ -245,7 +245,7 @@ export interface IExerciseCatalog {
   percentMaxWeight: number;
   duration?: number;
   exerciseDefinitionSlug: string
-  workoutCatalog: IWorkoutCatalog;
+  workoutCatalog?: IWorkoutCatalog;
 }
 
 export class BaseExerciseCatalog implements IExerciseCatalog {
