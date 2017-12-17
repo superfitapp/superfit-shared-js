@@ -78,6 +78,7 @@ export interface IProgramCatalog {
     title: string;
     sport: string;
     summary: string;
+    availability: string;
     numberOfWeeks: number;
     tagline: string;
     level: string;
