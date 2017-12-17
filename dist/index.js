@@ -6,6 +6,11 @@ var BaseCoach = /** @class */ (function () {
     return BaseCoach;
 }());
 exports.BaseCoach = BaseCoach;
+var ProgramCatalogAvailability;
+(function (ProgramCatalogAvailability) {
+    ProgramCatalogAvailability["Pro"] = "Pro";
+    ProgramCatalogAvailability["Free"] = "Free";
+})(ProgramCatalogAvailability = exports.ProgramCatalogAvailability || (exports.ProgramCatalogAvailability = {}));
 var ExerciseBlock;
 (function (ExerciseBlock) {
     ExerciseBlock["Warmup"] = "Warmup";
@@ -92,6 +97,7 @@ var BaseProgramCatalog = /** @class */ (function () {
         newProgramCatalog.summary = json["summary"];
         newProgramCatalog.tagline = json["tagline"];
         newProgramCatalog.level = json["level"];
+        newProgramCatalog.availability = json["availability"];
         newProgramCatalog.publishDate = json["publishDate"];
         newProgramCatalog.numberOfWeeks = json["numberOfWeeks"];
         newProgramCatalog.season = json["season"];

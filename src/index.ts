@@ -8,6 +8,11 @@ export class BaseCoach {
   slug: string;
 }
 
+export enum ProgramCatalogAvailability {
+  Pro = "Pro",
+  Free = "Free"
+}
+
 export enum ExerciseBlock {
   Warmup = "Warmup",
   Drills = "Drills",
@@ -104,6 +109,7 @@ export class BaseProgramCatalog implements IProgramCatalog {
   title: string;
   sport: string;
   summary: string;
+  availability: string;
   numberOfWeeks: number;
   tagline: string;
   level: string;
@@ -133,6 +139,7 @@ export class BaseProgramCatalog implements IProgramCatalog {
     newProgramCatalog.summary = json["summary"]
     newProgramCatalog.tagline = json["tagline"]
     newProgramCatalog.level = json["level"]
+    newProgramCatalog.availability = json["availability"]
     newProgramCatalog.publishDate = json["publishDate"]
     newProgramCatalog.numberOfWeeks = json["numberOfWeeks"]
     newProgramCatalog.season = json["season"]

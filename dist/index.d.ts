@@ -7,6 +7,10 @@ export declare class BaseCoach {
     revisionDate: Date;
     slug: string;
 }
+export declare enum ProgramCatalogAvailability {
+    Pro = "Pro",
+    Free = "Free",
+}
 export declare enum ExerciseBlock {
     Warmup = "Warmup",
     Drills = "Drills",
@@ -93,6 +97,7 @@ export declare class BaseProgramCatalog implements IProgramCatalog {
     title: string;
     sport: string;
     summary: string;
+    availability: string;
     numberOfWeeks: number;
     tagline: string;
     level: string;
