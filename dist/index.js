@@ -177,7 +177,6 @@ var BaseExerciseCatalog = /** @class */ (function () {
     };
     BaseExerciseCatalog.fromJson = function (json) {
         var newExerciseCatalog = new BaseExerciseCatalog();
-        newExerciseCatalog.id = json["id"];
         newExerciseCatalog.block = json["block"];
         newExerciseCatalog.external_id = json["external_id"];
         newExerciseCatalog.goal = json["goal"];
