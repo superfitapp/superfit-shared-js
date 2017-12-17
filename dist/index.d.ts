@@ -8,8 +8,8 @@ export declare class BaseCoach {
     slug: string;
 }
 export declare enum ProgramCatalogAvailability {
-    Pro = "Pro",
-    Free = "Free",
+    Pro = "pro",
+    Free = "free",
 }
 export declare enum ExerciseBlock {
     Warmup = "Warmup",

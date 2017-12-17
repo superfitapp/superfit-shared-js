@@ -9,8 +9,8 @@ export class BaseCoach {
 }
 
 export enum ProgramCatalogAvailability {
-  Pro = "Pro",
-  Free = "Free"
+  Pro = "pro",
+  Free = "free"
 }
 
 export enum ExerciseBlock {

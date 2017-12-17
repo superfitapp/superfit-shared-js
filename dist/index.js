@@ -8,8 +8,8 @@ var BaseCoach = /** @class */ (function () {
 exports.BaseCoach = BaseCoach;
 var ProgramCatalogAvailability;
 (function (ProgramCatalogAvailability) {
-    ProgramCatalogAvailability["Pro"] = "Pro";
-    ProgramCatalogAvailability["Free"] = "Free";
+    ProgramCatalogAvailability["Pro"] = "pro";
+    ProgramCatalogAvailability["Free"] = "free";
 })(ProgramCatalogAvailability = exports.ProgramCatalogAvailability || (exports.ProgramCatalogAvailability = {}));
 var ExerciseBlock;
 (function (ExerciseBlock) {
