@@ -32,6 +32,7 @@ export declare enum Season {
 export declare class ExerciseGoal {
     slug: string;
     title: string;
+    revisionDate?: Date;
     inputs: [ActiveExerciseInput];
     primaryInput: ActiveExerciseInput;
 }

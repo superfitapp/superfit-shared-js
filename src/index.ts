@@ -37,6 +37,7 @@ export enum Season {
 export class ExerciseGoal {
   slug: string;
   title: string;
+  revisionDate?: Date;
   inputs: [ActiveExerciseInput];
   primaryInput: ActiveExerciseInput;
 }
