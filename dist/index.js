@@ -221,6 +221,8 @@ var BaseExerciseDefinition = /** @class */ (function () {
         newExerciseDefinition.isBodyweight = json['isBodyweight'];
         newExerciseDefinition.athleticIndex = json['athleticIndex'];
         newExerciseDefinition.demoUrl = json['demoUrl'];
+        newExerciseDefinition.demo_youtube_id = json['demo_youtube_id'];
+        newExerciseDefinition.demo_preview_url = json['demo_preview_url'];
         newExerciseDefinition.unilateral = json['unilateral'];
         return newExerciseDefinition;
     };

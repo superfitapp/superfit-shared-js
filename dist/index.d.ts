@@ -184,6 +184,8 @@ export interface IExerciseDefinition {
     isBodyweight: boolean;
     athleticIndex: number;
     demoUrl: string;
+    demo_preview_url?: string;
+    demo_youtube_id?: string;
     unilateral: boolean;
 }
 export declare class BaseExerciseDefinition implements IExerciseDefinition {
@@ -197,6 +199,8 @@ export declare class BaseExerciseDefinition implements IExerciseDefinition {
     athleticIndex: number;
     demoUrl: string;
     unilateral: boolean;
+    demo_preview_url?: string;
+    demo_youtube_id?: string;
     getMovementType(): MovementType;
     setMovementType(movementType: MovementType): void;
     getPlane(): MovementPlane;

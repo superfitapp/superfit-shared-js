@@ -303,8 +303,9 @@ export interface IExerciseDefinition {
   isBodyweight: boolean;
   athleticIndex: number;
   demoUrl: string;
+  demo_preview_url?: string;
+  demo_youtube_id?: string;
   unilateral: boolean;
-
 }
 
 export class BaseExerciseDefinition implements IExerciseDefinition {
@@ -318,7 +319,9 @@ export class BaseExerciseDefinition implements IExerciseDefinition {
   isBodyweight: boolean;
   athleticIndex: number;
   demoUrl: string;
-  unilateral: boolean
+  unilateral: boolean;
+  demo_preview_url?: string;
+  demo_youtube_id?: string;
 
   getMovementType(): MovementType {
     return MovementType[this.movementType]
@@ -352,6 +355,8 @@ export class BaseExerciseDefinition implements IExerciseDefinition {
     newExerciseDefinition.isBodyweight = json['isBodyweight']
     newExerciseDefinition.athleticIndex = json['athleticIndex']
     newExerciseDefinition.demoUrl = json['demoUrl']
+    newExerciseDefinition.demo_youtube_id = json['demo_youtube_id']
+    newExerciseDefinition.demo_preview_url = json['demo_preview_url']
     newExerciseDefinition.unilateral = json['unilateral']
 
     return newExerciseDefinition
