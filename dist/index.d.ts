@@ -7,6 +7,10 @@ export declare class BaseCoach {
     revisionDate: Date;
     slug: string;
 }
+export declare enum ProgramCatalogAvailability {
+    Pro = "pro",
+    Free = "free",
+}
 export declare enum ExerciseBlock {
     Warmup = "Warmup",
     Drills = "Drills",
@@ -28,6 +32,7 @@ export declare enum Season {
 export declare class ExerciseGoal {
     slug: string;
     title: string;
+    revisionDate: number;
     inputs: [ActiveExerciseInput];
     primaryInput: ActiveExerciseInput;
 }
@@ -70,10 +75,10 @@ export declare enum MovementCategory {
     Condition = "Condition",
 }
 export interface IProgramCatalog {
-    id: number;
     title: string;
     sport: string;
     summary: string;
+    availability: string;
     numberOfWeeks: number;
     tagline: string;
     level: string;
@@ -89,10 +94,10 @@ export interface IProgramCatalog {
     workoutCatalogs: IWorkoutCatalog[];
 }
 export declare class BaseProgramCatalog implements IProgramCatalog {
-    id: number;
     title: string;
     sport: string;
     summary: string;
+    availability: string;
     numberOfWeeks: number;
     tagline: string;
     level: string;
@@ -111,7 +116,6 @@ export declare class BaseProgramCatalog implements IProgramCatalog {
     static fromJson(json: JSONDict): BaseProgramCatalog;
 }
 export declare abstract class IWorkoutCatalog {
-    id: number;
     slug: string;
     title: string;
     type: string;
@@ -123,7 +127,6 @@ export declare abstract class IWorkoutCatalog {
     exerciseCatalogs: IExerciseCatalog[];
 }
 export declare class BaseWorkoutCatalog implements IWorkoutCatalog {
-    id: number;
     slug: string;
     title: string;
     type: string;
@@ -138,8 +141,8 @@ export declare class BaseWorkoutCatalog implements IWorkoutCatalog {
     static fromJson(json: JSONDict): BaseWorkoutCatalog;
 }
 export interface IExerciseCatalog {
-    id: number;
     block: string;
+    external_id?: string;
     goal: ExerciseGoal;
     sets: number;
     rpe: number;
@@ -151,12 +154,11 @@ export interface IExerciseCatalog {
     percentMaxWeight: number;
     duration?: number;
     exerciseDefinitionSlug: string;
-    workoutCatalog: IWorkoutCatalog;
-    definition: IExerciseDefinition;
+    workoutCatalog?: IWorkoutCatalog;
 }
 export declare class BaseExerciseCatalog implements IExerciseCatalog {
     block: string;
-    id: number;
+    external_id: string;
     exerciseDefinitionSlug: string;
     goal: ExerciseGoal;
     sets: number;
@@ -169,7 +171,6 @@ export declare class BaseExerciseCatalog implements IExerciseCatalog {
     percentMaxWeight: number;
     duration?: number;
     workoutCatalog: IWorkoutCatalog;
-    definition: IExerciseDefinition;
     getBlock(): ExerciseBlock;
     setBlock(block: ExerciseBlock): void;
     static fromJson(json: JSONDict): BaseExerciseCatalog;
@@ -211,4 +212,23 @@ export declare class BaseExerciseDefinition implements IExerciseDefinition {
 }
 export interface JSONDict {
     [key: string]: any;
+}
+export declare enum ExerciseGoalType {
+    MoreWeight = "more-weight",
+    LessWeight = "less-weight",
+    MoreReps = "more-reps",
+    LessReps = "less-reps",
+    MorePower = "more-power",
+    SpeedQuickness = "speed-and-quickness",
+    DynamicMobility = "dynamic-mobility",
+    DynamicStability = "dynamic-stability",
+    AMGRAP = "amgrap",
+    LongerDuration = "longer-duration",
+    ShorterDuration = "shorter-duration",
+    SlowerPace = "slower-pace",
+    FasterPace = "faster-pace",
+    StaticMobility = "static-mobility",
+    StaticStability = "static-stability",
+    Technique = "technique",
+    Custom = "custom",
 }

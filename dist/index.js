@@ -6,6 +6,11 @@ var BaseCoach = /** @class */ (function () {
     return BaseCoach;
 }());
 exports.BaseCoach = BaseCoach;
+var ProgramCatalogAvailability;
+(function (ProgramCatalogAvailability) {
+    ProgramCatalogAvailability["Pro"] = "pro";
+    ProgramCatalogAvailability["Free"] = "free";
+})(ProgramCatalogAvailability = exports.ProgramCatalogAvailability || (exports.ProgramCatalogAvailability = {}));
 var ExerciseBlock;
 (function (ExerciseBlock) {
     ExerciseBlock["Warmup"] = "Warmup";
@@ -92,6 +97,7 @@ var BaseProgramCatalog = /** @class */ (function () {
         newProgramCatalog.summary = json["summary"];
         newProgramCatalog.tagline = json["tagline"];
         newProgramCatalog.level = json["level"];
+        newProgramCatalog.availability = json["availability"];
         newProgramCatalog.publishDate = json["publishDate"];
         newProgramCatalog.numberOfWeeks = json["numberOfWeeks"];
         newProgramCatalog.season = json["season"];
@@ -171,8 +177,8 @@ var BaseExerciseCatalog = /** @class */ (function () {
     };
     BaseExerciseCatalog.fromJson = function (json) {
         var newExerciseCatalog = new BaseExerciseCatalog();
-        newExerciseCatalog.id = json["id"];
         newExerciseCatalog.block = json["block"];
+        newExerciseCatalog.external_id = json["external_id"];
         newExerciseCatalog.goal = json["goal"];
         newExerciseCatalog.sets = json["sets"];
         newExerciseCatalog.rpe = json["rpe"];
@@ -229,3 +235,23 @@ var BaseExerciseDefinition = /** @class */ (function () {
     return BaseExerciseDefinition;
 }());
 exports.BaseExerciseDefinition = BaseExerciseDefinition;
+var ExerciseGoalType;
+(function (ExerciseGoalType) {
+    ExerciseGoalType["MoreWeight"] = "more-weight";
+    ExerciseGoalType["LessWeight"] = "less-weight";
+    ExerciseGoalType["MoreReps"] = "more-reps";
+    ExerciseGoalType["LessReps"] = "less-reps";
+    ExerciseGoalType["MorePower"] = "more-power";
+    ExerciseGoalType["SpeedQuickness"] = "speed-and-quickness";
+    ExerciseGoalType["DynamicMobility"] = "dynamic-mobility";
+    ExerciseGoalType["DynamicStability"] = "dynamic-stability";
+    ExerciseGoalType["AMGRAP"] = "amgrap";
+    ExerciseGoalType["LongerDuration"] = "longer-duration";
+    ExerciseGoalType["ShorterDuration"] = "shorter-duration";
+    ExerciseGoalType["SlowerPace"] = "slower-pace";
+    ExerciseGoalType["FasterPace"] = "faster-pace";
+    ExerciseGoalType["StaticMobility"] = "static-mobility";
+    ExerciseGoalType["StaticStability"] = "static-stability";
+    ExerciseGoalType["Technique"] = "technique";
+    ExerciseGoalType["Custom"] = "custom";
+})(ExerciseGoalType = exports.ExerciseGoalType || (exports.ExerciseGoalType = {}));
