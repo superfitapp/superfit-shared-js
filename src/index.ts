@@ -388,3 +388,19 @@ export enum ExerciseGoalType {
   Technique = 'technique',
   Custom = 'custom'
 }
+
+export interface IProgramCatalogProgramSeries {
+  id: number
+  order: number
+  programCatalog: IProgramCatalog
+  programSeries: IProgramSeries
+}
+
+export interface IProgramSeries {
+  bannerImageUrl: string;
+  title: string;
+  slug: string;
+  description: string;
+  catalogSeries: IProgramCatalogProgramSeries[];
+  coach: BaseCoach;
+}
