@@ -413,5 +413,5 @@ export interface IProgramCatalogSection {
   is_live: boolean;
   main_image_url: string;
   badge_image_url: string;
-  catalogSeries: IProgramCatalogProgramSeries[];
+  catalogSeries: IProgramSeries[];
 }
