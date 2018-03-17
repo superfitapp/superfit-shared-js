@@ -404,3 +404,14 @@ export interface IProgramSeries {
   catalogSeries: IProgramCatalogProgramSeries[];
   coach: BaseCoach;
 }
+
+export interface IProgramCatalogSection {
+  created_at: Date;
+  updated_at: Date;
+  title: string;
+  description: string;
+  is_live: boolean;
+  main_image_url: string;
+  badge_image_url: string;
+  catalogSeries: IProgramCatalogProgramSeries[];
+}
