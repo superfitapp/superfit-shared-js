@@ -235,15 +235,15 @@ export declare enum ExerciseGoalType {
 export interface IProgramCatalogCatalogSeries {
     id: number;
     order: number;
-    programCatalog: IProgramCatalog;
-    catalogSeries: ICatalogSeries;
+    program_catalog: IProgramCatalog;
+    catalog_series: ICatalogSeries;
 }
 export interface ICatalogSeries {
-    bannerImageUrl: string;
+    banner_image_url: string;
     title: string;
     slug: string;
     description: string;
-    programCatalogCatalogSeries: IProgramCatalogCatalogSeries[];
+    program_catalog_catalog_series: IProgramCatalogCatalogSeries[];
     coach: BaseCoach;
 }
 export interface ICatalogSection {
@@ -255,5 +255,5 @@ export interface ICatalogSection {
     is_live: boolean;
     main_image_url: string;
     badge_image_url: string;
-    catalogSeries: ICatalogSeries[];
+    catalog_series: ICatalogSeries[];
 }
