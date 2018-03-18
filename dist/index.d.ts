@@ -236,9 +236,9 @@ export interface IProgramCatalogProgramSeries {
     id: number;
     order: number;
     programCatalog: IProgramCatalog;
-    programSeries: IProgramSeries;
+    catalogSeries: ICatalogSeries;
 }
-export interface IProgramSeries {
+export interface ICatalogSeries {
     bannerImageUrl: string;
     title: string;
     slug: string;
@@ -255,5 +255,5 @@ export interface ICatalogSection {
     is_live: boolean;
     main_image_url: string;
     badge_image_url: string;
-    catalogSeries: IProgramSeries[];
+    catalogSeries: ICatalogSeries[];
 }
