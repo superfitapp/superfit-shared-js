@@ -389,14 +389,14 @@ export enum ExerciseGoalType {
 }
 
 export interface IProgramCatalogCatalogSeries {
-  id: number
-  order: number
+  id: string;
+  order: number;
   program_catalog: IProgramCatalog
   catalog_series: ICatalogSeries
 }
 
 export interface ICatalogSeries {
-  id: number;
+  id: string;
   banner_image_url: string;
   title: string;
   description: string;
