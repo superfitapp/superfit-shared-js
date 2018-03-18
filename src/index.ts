@@ -401,7 +401,7 @@ export interface ICatalogSeries {
   title: string;
   slug: string;
   description: string;
-  programCatalogProgramSeries: IProgramCatalogCatalogSeries[];
+  programCatalogCatalogSeries: IProgramCatalogCatalogSeries[];
   coach: BaseCoach;
 }
 
