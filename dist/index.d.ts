@@ -239,6 +239,7 @@ export interface IProgramCatalogCatalogSeries {
     catalog_series: ICatalogSeries;
 }
 export interface ICatalogSeries {
+    id: number;
     banner_image_url: string;
     title: string;
     description: string;

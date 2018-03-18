@@ -396,6 +396,7 @@ export interface IProgramCatalogCatalogSeries {
 }
 
 export interface ICatalogSeries {
+  id: number;
   banner_image_url: string;
   title: string;
   description: string;
