@@ -389,7 +389,7 @@ export enum ExerciseGoalType {
   Custom = 'custom'
 }
 
-export interface IProgramCatalogProgramSeries {
+export interface IProgramCatalogCatalogSeries {
   id: number
   order: number
   programCatalog: IProgramCatalog
@@ -401,7 +401,7 @@ export interface ICatalogSeries {
   title: string;
   slug: string;
   description: string;
-  catalogSeries: IProgramCatalogProgramSeries[];
+  catalogSeries: IProgramCatalogCatalogSeries[];
   coach: BaseCoach;
 }
 
