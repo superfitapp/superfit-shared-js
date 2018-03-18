@@ -246,7 +246,8 @@ export interface IProgramSeries {
     catalogSeries: IProgramCatalogProgramSeries[];
     coach: BaseCoach;
 }
-export interface IProgramCatalogSection {
+export interface ICatalogSection {
+    id: string;
     created_at: Date;
     updated_at: Date;
     title: string;
