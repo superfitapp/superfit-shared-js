@@ -398,7 +398,6 @@ export interface IProgramCatalogCatalogSeries {
 export interface ICatalogSeries {
   banner_image_url: string;
   title: string;
-  slug: string;
   description: string;
   program_catalog_catalog_series: IProgramCatalogCatalogSeries[];
   coach: BaseCoach;
