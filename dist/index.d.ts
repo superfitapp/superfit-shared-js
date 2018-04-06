@@ -235,12 +235,16 @@ export declare enum ExerciseGoalType {
 export interface IProgramCatalogCatalogSeries {
     id: string;
     order: number;
+    creation_date: Date;
+    revision_date: Date;
     program_catalog: IProgramCatalog;
     catalog_series: ICatalogSeries;
 }
 export interface ICatalogSeries {
     id: string;
     banner_image_url: string;
+    creation_date: Date;
+    revision_date: Date;
     title: string;
     description: string;
     program_catalog_catalog_series: IProgramCatalogCatalogSeries[];
@@ -248,8 +252,8 @@ export interface ICatalogSeries {
 }
 export interface ICatalogSection {
     id: string;
-    created_at: Date;
-    updated_at: Date;
+    creation_date: Date;
+    revision_date: Date;
     title: string;
     description: string;
     is_live: boolean;
