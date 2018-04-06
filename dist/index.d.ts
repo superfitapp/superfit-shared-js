@@ -86,6 +86,7 @@ export interface IProgramCatalog {
     revisionDate: Date;
     publishDate?: Date;
     creationDate: Date;
+    main_image_url?: string;
     isLive: boolean;
     seriesOrder: number;
     slug: string;
@@ -99,6 +100,7 @@ export declare class BaseProgramCatalog implements IProgramCatalog {
     summary: string;
     availability: string;
     numberOfWeeks: number;
+    main_image_url?: string;
     tagline: string;
     level: string;
     season: string;
@@ -242,7 +244,7 @@ export interface IProgramCatalogCatalogSeries {
 }
 export interface ICatalogSeries {
     id: string;
-    banner_image_url: string;
+    main_image_url: string;
     creation_date: Date;
     revision_date: Date;
     title: string;

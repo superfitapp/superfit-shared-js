@@ -96,6 +96,7 @@ export interface IProgramCatalog {
   revisionDate: Date;
   publishDate?: Date;
   creationDate: Date;
+  main_image_url?: string;
   isLive: boolean;
   seriesOrder: number;
   slug: string;
@@ -110,6 +111,7 @@ export class BaseProgramCatalog implements IProgramCatalog {
   summary: string;
   availability: string;
   numberOfWeeks: number;
+  main_image_url?: string;
   tagline: string;
   level: string;
   season: string;
@@ -131,7 +133,6 @@ export class BaseProgramCatalog implements IProgramCatalog {
   }
 
   static fromJson(json: JSONDict): BaseProgramCatalog {
-
     let newProgramCatalog = new BaseProgramCatalog()
     newProgramCatalog.title = json["title"]
     newProgramCatalog.sport = json["sport"]
@@ -224,7 +225,6 @@ export class BaseWorkoutCatalog implements IWorkoutCatalog {
         let exerciseCatalog = BaseExerciseCatalog.fromJson(exerciseCatalogJson)
         exerciseCatalogs.push(exerciseCatalog)
       }
-
       newWorkoutCatalog.exerciseCatalogs = exerciseCatalogs
     }
 
@@ -250,7 +250,6 @@ export interface IExerciseCatalog {
 }
 
 export class BaseExerciseCatalog implements IExerciseCatalog {
-
   block: string;
   external_id: string
   exerciseDefinitionSlug: string
@@ -274,7 +273,6 @@ export class BaseExerciseCatalog implements IExerciseCatalog {
   }
 
   static fromJson(json: JSONDict): BaseExerciseCatalog {
-
     let newExerciseCatalog = new BaseExerciseCatalog()
     newExerciseCatalog.block = json["block"]
     newExerciseCatalog.external_id = json["external_id"]
@@ -310,7 +308,6 @@ export interface IExerciseDefinition {
 }
 
 export class BaseExerciseDefinition implements IExerciseDefinition {
-
   id: number;
   title: string;
   slug: string;
@@ -399,7 +396,7 @@ export interface IProgramCatalogCatalogSeries {
 
 export interface ICatalogSeries {
   id: string;
-  banner_image_url: string;
+  main_image_url: string;
   creation_date: Date;
   revision_date: Date;
   title: string;
