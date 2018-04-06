@@ -88,7 +88,6 @@ export interface IProgramCatalog {
     creationDate: Date;
     main_image_url?: string;
     isLive: boolean;
-    seriesOrder: number;
     slug: string;
     version: number;
     coach: BaseCoach;
@@ -108,7 +107,6 @@ export declare class BaseProgramCatalog implements IProgramCatalog {
     publishDate?: Date;
     creationDate: Date;
     isLive: boolean;
-    seriesOrder: number;
     slug: string;
     version: number;
     coach: BaseCoach;

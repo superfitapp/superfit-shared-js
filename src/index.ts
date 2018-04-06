@@ -98,7 +98,6 @@ export interface IProgramCatalog {
   creationDate: Date;
   main_image_url?: string;
   isLive: boolean;
-  seriesOrder: number;
   slug: string;
   version: number;
   coach: BaseCoach;
@@ -119,7 +118,6 @@ export class BaseProgramCatalog implements IProgramCatalog {
   publishDate?: Date;
   creationDate: Date;
   isLive: boolean;
-  seriesOrder: number;
   slug: string;
   version: number;
   coach: BaseCoach;
@@ -144,7 +142,6 @@ export class BaseProgramCatalog implements IProgramCatalog {
     newProgramCatalog.numberOfWeeks = json["numberOfWeeks"]
     newProgramCatalog.season = json["season"]
     newProgramCatalog.isLive = json["isLive"] || false
-    newProgramCatalog.seriesOrder = json["seriesOrder"]
     newProgramCatalog.slug = json["slug"]
     newProgramCatalog.version = json["version"]
 

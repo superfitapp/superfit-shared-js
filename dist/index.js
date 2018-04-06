@@ -102,7 +102,6 @@ var BaseProgramCatalog = /** @class */ (function () {
         newProgramCatalog.numberOfWeeks = json["numberOfWeeks"];
         newProgramCatalog.season = json["season"];
         newProgramCatalog.isLive = json["isLive"] || false;
-        newProgramCatalog.seriesOrder = json["seriesOrder"];
         newProgramCatalog.slug = json["slug"];
         newProgramCatalog.version = json["version"];
         var workoutCatalogsJson = json["workoutCatalogs"];
