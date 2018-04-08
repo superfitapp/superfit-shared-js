@@ -97,6 +97,7 @@ var BaseProgramCatalog = /** @class */ (function () {
         newProgramCatalog.summary = json["summary"];
         newProgramCatalog.tagline = json["tagline"];
         newProgramCatalog.level = json["level"];
+        newProgramCatalog.main_image_url = json["main_image_url"];
         newProgramCatalog.availability = json["availability"];
         newProgramCatalog.publishDate = json["publishDate"];
         newProgramCatalog.numberOfWeeks = json["numberOfWeeks"];
