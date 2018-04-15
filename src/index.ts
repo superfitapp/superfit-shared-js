@@ -397,6 +397,7 @@ export interface ICatalogSeries {
   creation_date: Date;
   revision_date: Date;
   title: string;
+  catalog_section?: ICatalogSection;
   description: string;
   program_catalog_catalog_series: IProgramCatalogCatalogSeries[];
   coach: BaseCoach;
