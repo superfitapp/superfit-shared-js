@@ -4,7 +4,7 @@ export interface IProfessional {
   shortDescription: string;
   fullDescription: string;
   title: string;
-  revisionDate: Date;
+  revision_date: Date;
 }
 
 export enum ProgramCatalogAvailability {
