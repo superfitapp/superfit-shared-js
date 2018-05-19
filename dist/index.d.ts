@@ -1,5 +1,5 @@
 export declare class BaseCoach {
-    id: number;
+    id: string;
     name: string;
     shortDescription: string;
     fullDescription: string;
