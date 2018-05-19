@@ -1,11 +1,10 @@
-export declare class BaseCoach {
+export interface IProfessional {
     id: string;
     name: string;
     shortDescription: string;
     fullDescription: string;
     title: string;
     revisionDate: Date;
-    slug: string;
 }
 export declare enum ProgramCatalogAvailability {
     Pro = "pro",
@@ -90,32 +89,10 @@ export interface IProgramCatalog {
     isLive: boolean;
     slug: string;
     version: number;
-    coach: BaseCoach;
+    author: IProfessional;
     workoutCatalogs: IWorkoutCatalog[];
 }
-export declare class BaseProgramCatalog implements IProgramCatalog {
-    title: string;
-    sport: string;
-    summary: string;
-    availability: string;
-    numberOfWeeks: number;
-    main_image_url?: string;
-    tagline: string;
-    level: string;
-    season: string;
-    revisionDate: Date;
-    publishDate?: Date;
-    creationDate: Date;
-    isLive: boolean;
-    slug: string;
-    version: number;
-    coach: BaseCoach;
-    workoutCatalogs: IWorkoutCatalog[];
-    getLevel(): Level;
-    setLevel(level: Level): void;
-    static fromJson(json: JSONDict): BaseProgramCatalog;
-}
-export declare abstract class IWorkoutCatalog {
+export interface IWorkoutCatalog {
     slug: string;
     title: string;
     type: string;
@@ -125,20 +102,6 @@ export declare abstract class IWorkoutCatalog {
     version: number;
     programCatalog?: IProgramCatalog;
     exerciseCatalogs: IExerciseCatalog[];
-}
-export declare class BaseWorkoutCatalog implements IWorkoutCatalog {
-    slug: string;
-    title: string;
-    type: string;
-    publishDate?: Date;
-    revisionDate: Date;
-    creationDate: Date;
-    version: number;
-    programCatalog?: IProgramCatalog;
-    exerciseCatalogs: IExerciseCatalog[];
-    getType(): WorkoutType;
-    setType(type: WorkoutType): void;
-    static fromJson(json: JSONDict): BaseWorkoutCatalog;
 }
 export interface IExerciseCatalog {
     block: string;
@@ -156,25 +119,6 @@ export interface IExerciseCatalog {
     exerciseDefinitionSlug: string;
     workoutCatalog?: IWorkoutCatalog;
 }
-export declare class BaseExerciseCatalog implements IExerciseCatalog {
-    block: string;
-    external_id: string;
-    exerciseDefinitionSlug: string;
-    goal: ExerciseGoal;
-    sets: number;
-    rpe: number;
-    blockOrder: number;
-    priority: number;
-    reps?: number;
-    manualWeight?: number;
-    percentBodyweight?: number;
-    percentMaxWeight: number;
-    duration?: number;
-    workoutCatalog: IWorkoutCatalog;
-    getBlock(): ExerciseBlock;
-    setBlock(block: ExerciseBlock): void;
-    static fromJson(json: JSONDict): BaseExerciseCatalog;
-}
 export interface IExerciseDefinition {
     id: number;
     title: string;
@@ -188,27 +132,6 @@ export interface IExerciseDefinition {
     demo_preview_url?: string;
     demo_youtube_id?: string;
     unilateral: boolean;
-}
-export declare class BaseExerciseDefinition implements IExerciseDefinition {
-    id: number;
-    title: string;
-    slug: string;
-    movementType: string;
-    category: string;
-    plane: string;
-    isBodyweight: boolean;
-    athleticIndex: number;
-    demoUrl: string;
-    unilateral: boolean;
-    demo_preview_url?: string;
-    demo_youtube_id?: string;
-    getMovementType(): MovementType;
-    setMovementType(movementType: MovementType): void;
-    getPlane(): MovementPlane;
-    setPlane(plane: MovementPlane): void;
-    getCategory(): MovementCategory;
-    setCategory(category: MovementCategory): void;
-    static fromJson(json: JSONDict): BaseExerciseDefinition;
 }
 export interface JSONDict {
     [key: string]: any;
