@@ -249,7 +249,6 @@ export interface ICatalogSeries {
     catalog_section?: ICatalogSection;
     description: string;
     program_catalog_catalog_series: IProgramCatalogCatalogSeries[];
-    coach: BaseCoach;
 }
 export interface ICatalogSection {
     id: string;
