@@ -1,10 +1,10 @@
 export interface IProfessional {
     id: string;
     name: string;
-    shortDescription: string;
-    fullDescription: string;
+    short_description: string;
+    full_description: string;
     title: string;
-    pictureUrl: string;
+    picture_url: string;
     revision_date: Date;
 }
 export declare enum ProgramCatalogAvailability {
