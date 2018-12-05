@@ -1,3 +1,77 @@
+export interface IProgram {
+    name: String;
+    catalogId: String;
+    startDate: Date;
+    programId: String;
+    markedDeleted: Boolean;
+    revisionDate: Date;
+    finishDate?: Date;
+    coverImage?: String;
+    athlete?: IAthlete;
+    workouts: IWorkout[];
+}
+export interface IExerciseGoal {
+    inputs: [String];
+    primaryInput: String;
+    title: String;
+    slug: String;
+}
+export interface IExerciseSet {
+    status: String;
+    rpe: Number;
+    setNumber: Number;
+    reps?: Number;
+    duration?: Number;
+    weight?: Number;
+    percentBodyweight?: Number;
+    percentMaxWeight?: Number;
+}
+export interface IExercise {
+    block: String;
+    blockOrder: Number;
+    goal: IExerciseGoal;
+    name: String;
+    catalogId: String;
+    sets: IExerciseSet[];
+    priority?: Number;
+}
+export interface IWorkout {
+    id: String;
+    revisionDate: Date;
+    type: String;
+    name: String;
+    day: Number;
+    week: Number;
+    startDate?: Date;
+    finishDate?: Date;
+    exercises: IExercise[];
+}
+export interface IAthleteWeight {
+    weight: Number;
+    unit: String;
+    date: Date;
+    id: String;
+    markedDeleted: Boolean;
+    revisionDate: Date;
+}
+export interface IAthlete {
+    email: string;
+    userId: string;
+    username: string;
+    revisionDate: Date;
+    profileImageUrl?: string;
+    facebookId?: string;
+    subscriptionEndDate?: Date;
+    subscriptionTier?: string;
+    programs: [IProgram];
+    weightUnit: string;
+    primarySport: string;
+    gender: string;
+    currentProgramId: string;
+    firstName: string;
+    lastName: string;
+    bodyweights: [IAthleteWeight];
+}
 export interface IProfessional {
     id: string;
     name: string;
@@ -9,25 +83,25 @@ export interface IProfessional {
 }
 export declare enum ProgramCatalogAvailability {
     Pro = "pro",
-    Free = "free",
+    Free = "free"
 }
 export declare enum ExerciseBlock {
     Warmup = "Warmup",
     Drills = "Drills",
     Cooldown = "Cooldown",
     PowerStrength = "PowerStrength",
-    Conditioning = "Conditioning",
+    Conditioning = "Conditioning"
 }
 export declare enum WorkoutType {
     Addon = "Addon",
     PowerStrength = "PowerStrength",
-    Conditioning = "Conditioning",
+    Conditioning = "Conditioning"
 }
 export declare enum Season {
     OffSeason = "OffSeason",
     InSeason = "InSeason",
     PostSeason = "PostSeason",
-    AllSeason = "AllSeason",
+    AllSeason = "AllSeason"
 }
 export declare class ExerciseGoal {
     slug: string;
@@ -40,12 +114,12 @@ export declare enum Level {
     Beginner = "Beginner",
     Intermediate = "Intermediate",
     Advanced = "Advanced",
-    Pro = "Pro",
+    Pro = "Pro"
 }
 export declare enum ActiveExerciseInput {
     Reps = "Reps",
     Weight = "Weight",
-    Duration = "Duration",
+    Duration = "Duration"
 }
 export declare enum MovementType {
     Static = "Static",
@@ -57,13 +131,13 @@ export declare enum MovementType {
     LPushPull = "LPushPull",
     HPushPull = "HPushPull",
     VPull = "VPull",
-    VPush = "VPush",
+    VPush = "VPush"
 }
 export declare enum MovementPlane {
     Saggital = "Saggital",
     Transverse = "Transverse",
     Frontal = "Frontal",
-    Multi = "Multi",
+    Multi = "Multi"
 }
 export declare enum MovementCategory {
     Mobility = "Mobility",
@@ -72,7 +146,7 @@ export declare enum MovementCategory {
     Power = "Power",
     Strength = "Strength",
     Movement = "Movement",
-    Condition = "Condition",
+    Condition = "Condition"
 }
 export interface IProgramCatalog {
     title: string;
@@ -154,7 +228,7 @@ export declare enum ExerciseGoalType {
     StaticMobility = "static-mobility",
     StaticStability = "static-stability",
     Technique = "technique",
-    Custom = "custom",
+    Custom = "custom"
 }
 export interface IProgramCatalogCatalogSeries {
     id: string;

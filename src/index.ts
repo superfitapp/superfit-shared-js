@@ -1,3 +1,84 @@
+export interface IProgram {
+  name: String;
+  catalogId: String;
+  startDate: Date;
+  programId: String;
+  markedDeleted: Boolean;
+  revisionDate: Date;
+  finishDate?: Date;
+  coverImage?: String;
+  athlete?: IAthlete;
+  workouts: IWorkout[];
+}
+
+export interface IExerciseGoal {
+  inputs: [String];
+  primaryInput: String;
+  title: String;
+  slug: String;
+}
+
+export interface IExerciseSet {
+  status: String;
+  rpe: Number;
+  setNumber: Number;
+  reps?: Number;
+  duration?: Number;
+  weight?: Number;
+  percentBodyweight?: Number;
+  percentMaxWeight?: Number;
+}
+
+export interface IExercise {
+  block: String;
+  blockOrder: Number;
+  goal: IExerciseGoal;
+  name: String;
+  catalogId: String;
+  sets: IExerciseSet[];
+  priority?: Number;
+}
+
+export interface IWorkout {
+  id: String;
+  revisionDate: Date;
+  type: String;
+  name: String;
+  day: Number;
+  week: Number;
+  startDate?: Date;
+  finishDate?: Date;
+  exercises: IExercise[];
+}
+
+export interface IAthleteWeight {
+  weight: Number;
+  unit: String;
+  date: Date;
+  id: String;
+  markedDeleted: Boolean;
+  revisionDate: Date;
+}
+
+export interface IAthlete {
+  email: string;
+  userId: string;
+  username: string;
+  revisionDate: Date;
+  profileImageUrl?: string;
+  facebookId?: string;
+  subscriptionEndDate?: Date;
+  subscriptionTier?: string;
+  programs: [IProgram];
+  weightUnit: string;
+  primarySport: string;
+  gender: string;
+  currentProgramId: string;
+  firstName: string;
+  lastName: string;
+  bodyweights: [IAthleteWeight];
+}
+
 export interface IProfessional {
   id: string;
   name: string;
@@ -101,7 +182,7 @@ export interface IProgramCatalog {
   slug: string;
   version: number;
   author: IProfessional;
-  workoutCatalogs: IWorkoutCatalog[]
+  workoutCatalogs: IWorkoutCatalog[];
 }
 
 export interface IWorkoutCatalog {
@@ -113,7 +194,7 @@ export interface IWorkoutCatalog {
   creationDate: Date;
   version: number;
   programCatalog?: IProgramCatalog;
-  exerciseCatalogs: IExerciseCatalog[]
+  exerciseCatalogs: IExerciseCatalog[];
 }
 
 export interface IExerciseCatalog {
@@ -129,7 +210,7 @@ export interface IExerciseCatalog {
   percentBodyweight?: number;
   percentMaxWeight: number;
   duration?: number;
-  exerciseDefinitionSlug: string
+  exerciseDefinitionSlug: string;
   workoutCatalog?: IWorkoutCatalog;
 }
 
@@ -137,7 +218,7 @@ export interface IExerciseDefinition {
   id: number;
   title: string;
   slug: string;
-  movementType: string
+  movementType: string;
   category: string;
   plane: string;
   isBodyweight: boolean;
@@ -149,27 +230,27 @@ export interface IExerciseDefinition {
 }
 
 export interface JSONDict {
-  [key: string]: any
+  [key: string]: any;
 }
 
 export enum ExerciseGoalType {
   MoreWeight = "more-weight",
-  LessWeight = 'less-weight',
-  MoreReps = 'more-reps',
-  LessReps = 'less-reps',
-  MorePower = 'more-power',
-  SpeedQuickness = 'speed-and-quickness',
-  DynamicMobility = 'dynamic-mobility',
-  DynamicStability = 'dynamic-stability',
-  AMGRAP = 'amgrap',
-  LongerDuration = 'longer-duration',
-  ShorterDuration = 'shorter-duration',
-  SlowerPace = 'slower-pace',
-  FasterPace = 'faster-pace',
-  StaticMobility = 'static-mobility',
-  StaticStability = 'static-stability',
-  Technique = 'technique',
-  Custom = 'custom'
+  LessWeight = "less-weight",
+  MoreReps = "more-reps",
+  LessReps = "less-reps",
+  MorePower = "more-power",
+  SpeedQuickness = "speed-and-quickness",
+  DynamicMobility = "dynamic-mobility",
+  DynamicStability = "dynamic-stability",
+  AMGRAP = "amgrap",
+  LongerDuration = "longer-duration",
+  ShorterDuration = "shorter-duration",
+  SlowerPace = "slower-pace",
+  FasterPace = "faster-pace",
+  StaticMobility = "static-mobility",
+  StaticStability = "static-stability",
+  Technique = "technique",
+  Custom = "custom"
 }
 
 export interface IProgramCatalogCatalogSeries {
@@ -177,8 +258,8 @@ export interface IProgramCatalogCatalogSeries {
   order: number;
   creation_date: Date;
   revision_date: Date;
-  program_catalog: IProgramCatalog
-  catalog_series: ICatalogSeries
+  program_catalog: IProgramCatalog;
+  catalog_series: ICatalogSeries;
 }
 
 export interface ICatalogSeries {
