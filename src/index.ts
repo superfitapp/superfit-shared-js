@@ -199,7 +199,7 @@ export interface IWorkoutCatalog {
 
 export interface IExerciseCatalog {
   block: string;
-  external_id?: string;
+  external_id: string;
   goal: ExerciseGoal;
   sets: number;
   rpe: number;
