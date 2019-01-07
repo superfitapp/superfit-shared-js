@@ -198,6 +198,7 @@ export interface IWorkoutCatalog {
 }
 
 export interface IExerciseCatalog {
+  title?: string;
   block: string;
   external_id: string;
   goal: ExerciseGoal;
