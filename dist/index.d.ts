@@ -297,6 +297,7 @@ export interface MongoProgram {
     workouts: MongoWorkout[];
 }
 export interface MongoWorkout {
+    id: string;
     revisionDate: Date;
     type: string;
     name: string;
