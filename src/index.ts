@@ -337,14 +337,15 @@ export interface MongoWorkout {
   exercises: MongoExercise[];
 }
 
+
+
 export interface MongoExercise {
   name: string;
   goal: MongoGoal;
   blockOrder: number;
   catalogId: string;
   block: string;
-  priority;
-  number;
+  priority: number;
   sets: MongoSet[];
 }
 

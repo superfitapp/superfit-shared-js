@@ -313,8 +313,7 @@ export interface MongoExercise {
     blockOrder: number;
     catalogId: string;
     block: string;
-    priority: any;
-    number: any;
+    priority: number;
     sets: MongoSet[];
 }
 export interface MongoSet {
