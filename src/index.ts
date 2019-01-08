@@ -198,7 +198,7 @@ export interface IWorkoutCatalog {
 }
 
 export interface IExerciseCatalog {
-  title?: string;
+  title: string;
   block: string;
   external_id: string;
   goal: ExerciseGoal;
@@ -209,9 +209,9 @@ export interface IExerciseCatalog {
   reps?: number;
   manualWeight?: number;
   percentBodyweight?: number;
-  percentMaxWeight: number;
+  percentMaxWeight?: number;
   duration?: number;
-  exerciseDefinitionSlug: string;
+  exerciseDefinitionSlug?: string;
   workoutCatalog?: IWorkoutCatalog;
 }
 
