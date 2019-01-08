@@ -292,3 +292,82 @@ export interface ICatalogSection {
   badge_image_url: string;
   catalog_series: ICatalogSeries[];
 }
+
+export interface MongoAthlete {
+  email: string;
+  userId?: string;
+  username: string;
+  revisionDate: Date;
+  profileImageUrl?: string;
+  facebookId?: string;
+  subscriptionEndDate?: Date;
+  subscriptionTier?: string;
+  programs: MongoProgram[];
+  weightUnit: string;
+  primarySport: string;
+  gender: string;
+  currentProgramId?: string;
+  firstName: string;
+  lastName: string;
+  bodyweights: MongoAthleteWeight[];
+}
+
+export interface MongoProgram {
+  name: String;
+  catalogId: String;
+  startDate: Date;
+  programId: String;
+  markedDeleted: Boolean;
+  revisionDate: Date;
+  finishDate?: Date;
+  coverImage?: String;
+  athlete?: MongoAthlete;
+  workouts: MongoWorkout[];
+}
+
+export interface MongoWorkout {
+  revisionDate: Date;
+  type: string;
+  name: string;
+  day: number;
+  week: number;
+  startDate?: Date;
+  finishDate?: Date;
+  exercises: MongoExercise[];
+}
+
+export interface MongoExercise {
+  name: string;
+  goal: MongoGoal;
+  blockOrder: number;
+  catalogId: string;
+  block: string;
+  priority;
+  number;
+  sets: MongoSet[];
+}
+
+export interface MongoSet {
+  rpe: number;
+  status: string;
+  setNumber: number;
+  weight: number;
+  reps: number;
+  duration: number;
+}
+
+export interface MongoGoal {
+  primaryInput: string;
+  title: string;
+  slug: string;
+  inputs: string[];
+}
+
+export interface MongoAthleteWeight {
+  weight: Number;
+  unit: String;
+  date: Date;
+  id: String;
+  markedDeleted: Boolean;
+  revisionDate: Date;
+}
