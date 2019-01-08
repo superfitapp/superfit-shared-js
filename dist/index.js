@@ -19,6 +19,11 @@ var WorkoutType;
     WorkoutType["PowerStrength"] = "PowerStrength";
     WorkoutType["Conditioning"] = "Conditioning";
 })(WorkoutType = exports.WorkoutType || (exports.WorkoutType = {}));
+var MassUnit;
+(function (MassUnit) {
+    MassUnit["pound"] = "pound";
+    MassUnit["kilogram"] = "kilogram";
+})(MassUnit = exports.MassUnit || (exports.MassUnit = {}));
 var Season;
 (function (Season) {
     Season["OffSeason"] = "OffSeason";
