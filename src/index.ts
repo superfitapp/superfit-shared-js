@@ -351,9 +351,9 @@ export interface MongoSet {
   rpe: number;
   status: string;
   setNumber: number;
-  weight: number;
+  weight?: number;
   reps: number;
-  duration: number;
+  duration?: number;
 }
 
 export interface MongoGoal {
