@@ -55,6 +55,7 @@ export interface IAthleteWeight {
     revisionDate: Date;
 }
 export interface IAthlete {
+    id: string;
     email: string;
     userId?: string;
     username: string;

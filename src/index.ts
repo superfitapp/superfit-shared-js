@@ -61,6 +61,7 @@ export interface IAthleteWeight {
 }
 
 export interface IAthlete {
+  id: string;
   email: string;
   userId?: string;
   username: string;
