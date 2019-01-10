@@ -64,12 +64,11 @@ export interface IAthlete {
     facebookId?: string;
     subscriptionEndDate?: Date;
     subscriptionTier?: string;
-    weightUnit: string;
+    preferredMassUnit: string;
     primarySport: string;
     gender: string;
     currentProgramId?: string;
     firstName: string;
-    lastName: string;
     programs?: [IProgram];
     workouts?: [IWorkout];
     bodyweights?: [IAthleteWeight];
