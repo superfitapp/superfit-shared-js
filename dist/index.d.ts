@@ -63,15 +63,15 @@ export interface IAthlete {
     facebookId?: string;
     subscriptionEndDate?: Date;
     subscriptionTier?: string;
-    programs?: [IProgram];
-    workouts?: [IWorkout];
     weightUnit: string;
     primarySport: string;
     gender: string;
     currentProgramId?: string;
     firstName: string;
     lastName: string;
-    bodyweights: [IAthleteWeight];
+    programs?: [IProgram];
+    workouts?: [IWorkout];
+    bodyweights?: [IAthleteWeight];
 }
 export interface IProfessional {
     id: string;
