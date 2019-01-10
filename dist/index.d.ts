@@ -69,6 +69,7 @@ export interface IAthlete {
     gender: string;
     currentProgramId?: string;
     firstName: string;
+    lastName?: string;
     programs?: [IProgram];
     workouts?: [IWorkout];
     bodyweights?: [IAthleteWeight];
