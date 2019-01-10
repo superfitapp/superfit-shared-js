@@ -63,7 +63,8 @@ export interface IAthlete {
     facebookId?: string;
     subscriptionEndDate?: Date;
     subscriptionTier?: string;
-    programs: [IProgram];
+    programs?: [IProgram];
+    workouts?: [IWorkout];
     weightUnit: string;
     primarySport: string;
     gender: string;

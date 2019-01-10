@@ -69,7 +69,8 @@ export interface IAthlete {
   facebookId?: string;
   subscriptionEndDate?: Date;
   subscriptionTier?: string;
-  programs: [IProgram];
+  programs?: [IProgram];
+  workouts?: [IWorkout];
   weightUnit: string;
   primarySport: string;
   gender: string;
@@ -336,8 +337,6 @@ export interface MongoWorkout {
   finishDate?: Date;
   exercises: MongoExercise[];
 }
-
-
 
 export interface MongoExercise {
   name: string;
