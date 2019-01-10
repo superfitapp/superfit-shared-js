@@ -62,7 +62,7 @@ export interface IAthleteWeight {
 
 export interface IAthlete {
   email: string;
-  userId: string;
+  userId?: string;
   username: string;
   revisionDate: Date;
   profileImageUrl?: string;
@@ -73,7 +73,7 @@ export interface IAthlete {
   weightUnit: string;
   primarySport: string;
   gender: string;
-  currentProgramId: string;
+  currentProgramId?: string;
   firstName: string;
   lastName: string;
   bodyweights: [IAthleteWeight];
