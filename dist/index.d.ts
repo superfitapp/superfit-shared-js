@@ -1,23 +1,23 @@
 export interface IProgram {
-    name: String;
-    catalogId: String;
+    name: string;
+    catalogId: string;
     startDate: Date;
-    programId: String;
+    programId: string;
     markedDeleted: Boolean;
     revisionDate: Date;
     finishDate?: Date;
-    coverImage?: String;
+    coverImage?: string;
     athlete?: IAthlete;
     workouts: IWorkout[];
 }
 export interface IExerciseGoal {
-    inputs: [String];
-    primaryInput: String;
-    title: String;
-    slug: String;
+    inputs: [string];
+    primaryInput: string;
+    title: string;
+    slug: string;
 }
 export interface IExerciseSet {
-    status: String;
+    status: string;
     rpe: Number;
     setNumber: Number;
     reps?: Number;
@@ -27,19 +27,19 @@ export interface IExerciseSet {
     percentMaxWeight?: Number;
 }
 export interface IExercise {
-    block: String;
+    block: string;
     blockOrder: Number;
     goal: IExerciseGoal;
-    name: String;
-    catalogId: String;
+    name: string;
+    catalogId: string;
     sets: IExerciseSet[];
     priority?: Number;
 }
 export interface IWorkout {
-    id: String;
+    id: string;
     revisionDate: Date;
-    type: String;
-    name: String;
+    type: string;
+    name: string;
     day: Number;
     week: Number;
     startDate?: Date;
@@ -48,9 +48,9 @@ export interface IWorkout {
 }
 export interface IAthleteWeight {
     weight: Number;
-    unit: String;
+    unit: string;
     date: Date;
-    id: String;
+    id: string;
     markedDeleted: Boolean;
     revisionDate: Date;
 }
@@ -280,14 +280,14 @@ export interface MongoAthlete {
     bodyweights: MongoAthleteWeight[];
 }
 export interface MongoProgram {
-    name: String;
-    catalogId: String;
+    name: string;
+    catalogId: string;
     startDate: Date;
-    programId: String;
+    programId: string;
     markedDeleted: Boolean;
     revisionDate: Date;
     finishDate?: Date;
-    coverImage?: String;
+    coverImage?: string;
     athlete?: MongoAthlete;
     workouts: MongoWorkout[];
 }
@@ -327,9 +327,9 @@ export interface MongoGoal {
 }
 export interface MongoAthleteWeight {
     weight: Number;
-    unit: String;
+    unit: string;
     date: Date;
-    id: String;
+    id: string;
     markedDeleted: Boolean;
     revisionDate: Date;
 }
