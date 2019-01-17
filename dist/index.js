@@ -31,12 +31,13 @@ var Season;
     Season["PostSeason"] = "PostSeason";
     Season["AllSeason"] = "AllSeason";
 })(Season = exports.Season || (exports.Season = {}));
-var ExerciseGoal = /** @class */ (function () {
-    function ExerciseGoal() {
-    }
-    return ExerciseGoal;
-}());
-exports.ExerciseGoal = ExerciseGoal;
+// export class ExerciseGoal {
+//   slug: string;
+//   title: string;
+//   revisionDate: number;
+//   inputs: [ActiveExerciseInput];
+//   primaryInput: ActiveExerciseInput;
+// }
 var Level;
 (function (Level) {
     Level["Beginner"] = "Beginner";

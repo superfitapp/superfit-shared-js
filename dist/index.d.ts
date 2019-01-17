@@ -109,13 +109,6 @@ export declare enum Season {
     PostSeason = "PostSeason",
     AllSeason = "AllSeason"
 }
-export declare class ExerciseGoal {
-    slug: string;
-    title: string;
-    revisionDate: number;
-    inputs: [ActiveExerciseInput];
-    primaryInput: ActiveExerciseInput;
-}
 export declare enum Level {
     Beginner = "Beginner",
     Intermediate = "Intermediate",
@@ -188,7 +181,7 @@ export interface IExerciseCatalog {
     title: string;
     block: string;
     external_id: string;
-    goal: ExerciseGoal;
+    goal: IExerciseGoal;
     sets: number;
     rpe: number;
     blockOrder: number;
