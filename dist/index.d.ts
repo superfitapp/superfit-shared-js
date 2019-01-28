@@ -333,3 +333,115 @@ export interface MongoAthleteWeight {
     markedDeleted: Boolean;
     revisionDate: Date;
 }
+export interface ExerciseDefinition_Response {
+    id: number;
+    title: string;
+    slug: string;
+    movementType: string;
+    category: string;
+    plane: string;
+    isBodyweight: boolean;
+    athleticIndex: number;
+    demoUrl: string;
+    demoPreviewUrl?: string;
+    demoYoutubeUrl?: string;
+    unilateral: boolean;
+    primaryWeightedEquipment?: Equipment_Response;
+}
+export interface Equipment_Response {
+    id: string;
+    creationDate: Date;
+    revisionDate: Date;
+    title: string;
+    description: string;
+}
+export interface CatalogSection_Response {
+    id: string;
+    creationDate: Date;
+    revisionDate: Date;
+    title: string;
+    description: string;
+    isLive: boolean;
+    mainImageUrl: string;
+    badgeImageUrl: string;
+    catalogSeries: CatalogSeries_Response[];
+}
+export interface ProgramCatalog_Response {
+    title: string;
+    sport: string;
+    summary: string;
+    availability: string;
+    numberOfWeeks: number;
+    tagline: string;
+    level: string;
+    season: string;
+    revisionDate: Date;
+    publishDate?: Date;
+    creationDate: Date;
+    main_image_url?: string;
+    isLive: boolean;
+    slug: string;
+    version: number;
+    author: Professional_Response;
+    workoutCatalogs: WorkoutCatalog_Response[];
+}
+export interface ProgramCatalogCatalogSeries_Response {
+    id: string;
+    order: number;
+    creationDate: Date;
+    revisionDate: Date;
+    programCatalog: ProgramCatalog_Response;
+    catalogSeries: CatalogSeries_Response;
+}
+export interface CatalogSeries_Response {
+    id: string;
+    mainImageUrl: string;
+    creationDate: Date;
+    revisionDate: Date;
+    title: string;
+    description: string;
+    phases: ProgramCatalog_Response[];
+}
+export interface Professional_Response {
+    id: string;
+    name: string;
+    shortDescription: string;
+    fullDescription: string;
+    title: string;
+    pictureUrl: string;
+    revisionDate: Date;
+}
+export interface ExerciseCatalog_Response {
+    title: string;
+    block: string;
+    externalId: string;
+    goal: ExerciseGoal_Response;
+    sets: number;
+    rpe: number;
+    blockOrder: number;
+    priority: number;
+    reps?: number;
+    mass_unit: string;
+    rep_unit: string;
+    manualWeight?: number;
+    percentBodyweight?: number;
+    percentMaxWeight?: number;
+    duration?: number;
+    definition?: ExerciseDefinition_Response;
+}
+export interface ExerciseGoal_Response {
+    inputs: [String];
+    primaryInput: String;
+    title: String;
+    slug: String;
+}
+export interface WorkoutCatalog_Response {
+    slug: string;
+    title: string;
+    type: string;
+    publishDate?: Date;
+    revisionDate: Date;
+    creationDate: Date;
+    version: number;
+    exerciseCatalogs: ExerciseCatalog_Response[];
+}
