@@ -12,7 +12,7 @@ export interface IProgram {
 }
 
 export interface IExerciseGoal {
-  inputs: [string];
+  inputs: string[];
   primaryInput: string;
   title: string;
   slug: string;

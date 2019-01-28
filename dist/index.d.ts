@@ -11,7 +11,7 @@ export interface IProgram {
     workouts: IWorkout[];
 }
 export interface IExerciseGoal {
-    inputs: [string];
+    inputs: string[];
     primaryInput: string;
     title: string;
     slug: string;
