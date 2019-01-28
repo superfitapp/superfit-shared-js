@@ -347,6 +347,7 @@ export interface ExerciseDefinition_Response {
     demoYoutubeUrl?: string;
     unilateral: boolean;
     primaryWeightedEquipment?: Equipment_Response;
+    weightedEquipmentCount?: number;
 }
 export interface Equipment_Response {
     id: string;
