@@ -480,10 +480,10 @@ export interface ExerciseCatalog_Response {
 }
 
 export interface ExerciseGoal_Response {
-  inputs: [String];
-  primaryInput: String;
-  title: String;
-  slug: String;
+  inputs: [string];
+  primaryInput: string;
+  title: string;
+  slug: string;
 }
 
 export interface WorkoutCatalog_Response {
