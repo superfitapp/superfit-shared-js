@@ -31,13 +31,6 @@ var Season;
     Season["PostSeason"] = "PostSeason";
     Season["AllSeason"] = "AllSeason";
 })(Season = exports.Season || (exports.Season = {}));
-// export class ExerciseGoal {
-//   slug: string;
-//   title: string;
-//   revisionDate: number;
-//   inputs: [ActiveExerciseInput];
-//   primaryInput: ActiveExerciseInput;
-// }
 var Level;
 (function (Level) {
     Level["Beginner"] = "Beginner";

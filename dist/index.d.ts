@@ -47,7 +47,7 @@ export interface IWorkout {
     exercises: IExercise[];
 }
 export interface IAthleteWeight {
-    weight: Number;
+    weight: number;
     unit: string;
     date: Date;
     id: string;
@@ -326,7 +326,7 @@ export interface MongoGoal {
     inputs: string[];
 }
 export interface MongoAthleteWeight {
-    weight: Number;
+    weight: number;
     unit: string;
     date: Date;
     id: string;

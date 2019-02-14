@@ -52,7 +52,7 @@ export interface IWorkout {
 }
 
 export interface IAthleteWeight {
-  weight: Number;
+  weight: number;
   unit: string;
   date: Date;
   id: string;
@@ -122,13 +122,6 @@ export enum Season {
   AllSeason = "AllSeason"
 }
 
-// export class ExerciseGoal {
-//   slug: string;
-//   title: string;
-//   revisionDate: number;
-//   inputs: [ActiveExerciseInput];
-//   primaryInput: ActiveExerciseInput;
-// }
 export enum Level {
   Beginner = "Beginner",
   Intermediate = "Intermediate",
@@ -366,7 +359,7 @@ export interface MongoGoal {
 }
 
 export interface MongoAthleteWeight {
-  weight: Number;
+  weight: number;
   unit: string;
   date: Date;
   id: string;
