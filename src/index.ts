@@ -111,8 +111,8 @@ export enum WorkoutType {
 }
 
 export enum MassUnit {
-  pound = "pound",
-  kilogram = "kilogram"
+  Pound = "pound",
+  Kilogram = "kilogram"
 }
 
 export enum Season {

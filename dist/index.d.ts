@@ -100,8 +100,8 @@ export declare enum WorkoutType {
     Conditioning = "Conditioning"
 }
 export declare enum MassUnit {
-    pound = "pound",
-    kilogram = "kilogram"
+    Pound = "pound",
+    Kilogram = "kilogram"
 }
 export declare enum Season {
     OffSeason = "OffSeason",

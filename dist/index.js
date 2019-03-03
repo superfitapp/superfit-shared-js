@@ -21,8 +21,8 @@ var WorkoutType;
 })(WorkoutType = exports.WorkoutType || (exports.WorkoutType = {}));
 var MassUnit;
 (function (MassUnit) {
-    MassUnit["pound"] = "pound";
-    MassUnit["kilogram"] = "kilogram";
+    MassUnit["Pound"] = "pound";
+    MassUnit["Kilogram"] = "kilogram";
 })(MassUnit = exports.MassUnit || (exports.MassUnit = {}));
 var Season;
 (function (Season) {
