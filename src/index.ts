@@ -469,7 +469,7 @@ export interface ExerciseCatalog_Response {
   percentBodyweight?: number;
   percentMaxWeight?: number;
   duration?: number;
-  definition?: ExerciseDefinition_Response;
+  definition: ExerciseDefinition_Response;
 }
 
 export interface ExerciseGoal_Response {
