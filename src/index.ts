@@ -195,6 +195,7 @@ export interface IWorkoutCatalog {
   version: number;
   programCatalog?: IProgramCatalog;
   exerciseCatalogs: IExerciseCatalog[];
+  dayOfWeek: number;
 }
 
 export interface IExerciseCatalog {
