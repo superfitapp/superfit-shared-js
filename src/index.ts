@@ -209,7 +209,7 @@ export interface IExerciseCatalog {
   priority: number;
   reps?: number;
   mass_unit: string;
-  rep_unit: string;
+  rep_unit?: string;
   manualWeight?: number;
   percentBodyweight?: number;
   percentMaxWeight?: number;
@@ -465,7 +465,7 @@ export interface ExerciseCatalog_Response {
   priority: number;
   reps?: number;
   mass_unit: string;
-  rep_unit: string;
+  rep_unit?: string;
   manualWeight?: number;
   percentBodyweight?: number;
   percentMaxWeight?: number;
