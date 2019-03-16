@@ -403,6 +403,10 @@ export interface CatalogSection_Response {
   mainImageUrl: string;
   badgeImageUrl: string;
   catalogSeries: CatalogSeries_Response[];
+  author?: Professional_Response;
+  level?: string;
+  shortDescription?: string;
+  sport?: string;
 }
 
 export interface ProgramCatalog_Response {
