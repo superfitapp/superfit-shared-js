@@ -164,7 +164,7 @@ export interface Phase_Response_V1 {
     slug: string;
     version: number;
     author: IProfessional;
-    workoutTemplates: IWorkoutCatalog[];
+    workoutTemplates: Workout_Template_Response_V1[];
 }
 export interface IProgramCatalog {
     title: string;
@@ -205,7 +205,7 @@ export interface Workout_Template_Response_V1 {
     revisionDate: Date;
     creationDate: Date;
     version: number;
-    phase?: IProgramCatalog;
+    phase?: Phase_Response_V1;
     exercise_templates: Exercise_Template_Response_V1[];
     dayOfWeek?: number;
 }
