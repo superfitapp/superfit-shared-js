@@ -323,7 +323,7 @@ export interface CatalogSection_Response {
     isLive: boolean;
     mainImageUrl: string;
     badgeImageUrl: string;
-    catalogSeries: CatalogSeries_Response_V1[];
+    journeyTemplates: Journey_Template_Response_V1[];
     author?: Professional_Response;
     level?: string;
     shortDescription?: string;
@@ -354,9 +354,9 @@ export interface ProgramCatalogCatalogSeries_Response_V1 {
     creationDate: Date;
     revisionDate: Date;
     programCatalog: ProgramCatalog_Response;
-    catalogSeries: CatalogSeries_Response_V1;
+    catalogSeries: Journey_Template_Response_V1;
 }
-export interface CatalogSeries_Response_V1 {
+export interface Journey_Template_Response_V1 {
     id: string;
     mainImageUrl: string;
     creationDate: Date;
