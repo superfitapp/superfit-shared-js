@@ -194,7 +194,7 @@ export interface Workout_Template_Response_V1 {
   creationDate: Date;
   version: number;
   phase?: Phase_Response_V1;
-  exercise_templates: Exercise_Template_Response_V1[];
+  exerciseTemplates: Exercise_Template_Response_V1[];
   dayOfWeek?: number;
 }
 
