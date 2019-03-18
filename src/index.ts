@@ -247,6 +247,7 @@ export interface Exercise_Template_Response_V1 {
   percentBodyweight?: number;
   percentMaxWeight?: number;
   duration?: number;
+  definition: ExerciseDefinition_Response;
   workout_template?: Workout_Template_Response_V1;
 }
 
@@ -460,7 +461,6 @@ export interface CatalogSection_Response {
   shortDescription?: string;
   sport?: string;
 }
-
 
 export interface ProgramCatalog_Response {
   title: string;
