@@ -147,6 +147,25 @@ export declare enum MovementCategory {
     Movement = "Movement",
     Condition = "Condition"
 }
+export interface Phase_Response_V1 {
+    title: string;
+    sport: string;
+    summary: string;
+    availability: string;
+    numberOfWeeks: number;
+    tagline: string;
+    level: string;
+    season: string;
+    revisionDate: Date;
+    publishDate?: Date;
+    creationDate: Date;
+    mainImageUrl?: string;
+    isLive: boolean;
+    slug: string;
+    version: number;
+    author: IProfessional;
+    workoutTemplates: IWorkoutCatalog[];
+}
 export interface IProgramCatalog {
     title: string;
     sport: string;
@@ -177,6 +196,36 @@ export interface IWorkoutCatalog {
     programCatalog?: IProgramCatalog;
     exerciseCatalogs: IExerciseCatalog[];
     dayOfWeek?: number;
+}
+export interface Workout_Template_Response_V1 {
+    id: string;
+    title: string;
+    type: string;
+    publishDate?: Date;
+    revisionDate: Date;
+    creationDate: Date;
+    version: number;
+    phase?: IProgramCatalog;
+    exercise_templates: Exercise_Template_Response_V1[];
+    dayOfWeek?: number;
+}
+export interface Exercise_Template_Response_V1 {
+    id: string;
+    title: string;
+    block: string;
+    goal: IExerciseGoal;
+    sets: number;
+    rpe: number;
+    blockOrder: number;
+    priority: number;
+    reps?: number;
+    massUnit: string;
+    repUnit?: string;
+    manualWeight?: number;
+    percentBodyweight?: number;
+    percentMaxWeight?: number;
+    duration?: number;
+    workout_template?: Workout_Template_Response_V1;
 }
 export interface IExerciseCatalog {
     title: string;
