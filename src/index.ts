@@ -346,7 +346,7 @@ export interface Equipment_Response {
   description: string;
 }
 
-export interface Catalog_Section_Response {
+export interface Journey_Templates_Section_Response {
   id: string;
   creationDate: Date;
   revisionDate: Date;
