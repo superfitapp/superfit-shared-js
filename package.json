@@ -9,6 +9,14 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^5.4.0",
+    "@nestjs/core": "^5.4.0",
+    "rxjs": "^6.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.7.1"
+  },
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",

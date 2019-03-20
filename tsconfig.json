@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es2018",
     "declaration": true,
     "outDir": "./dist",
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true
   }
 }
