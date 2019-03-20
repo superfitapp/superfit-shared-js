@@ -1,5 +1,3 @@
-import { ScopesGuard } from "../guards/scope-guard";
-
 export interface IProgram {
   name: string;
   catalogId: string;
