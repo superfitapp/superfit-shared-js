@@ -314,7 +314,7 @@ export interface Equipment_Response {
     title: string;
     description: string;
 }
-export interface CatalogSection_Response {
+export interface Catalog_Section_Response {
     id: string;
     creationDate: Date;
     revisionDate: Date;
