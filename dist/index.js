@@ -1,5 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var ExerciseBlock = /** @class */ (function () {
+    function ExerciseBlock() {
+        this.Warmup = "warmup";
+        this.Drills = "drills";
+        this.Cooldown = "cooldown";
+        this.PowerStrength = "powerstrength";
+        this.Conditioning = "conditioning";
+    }
+    return ExerciseBlock;
+}());
+exports.ExerciseBlock = ExerciseBlock;
+var WorkoutType = /** @class */ (function () {
+    function WorkoutType() {
+    }
+    WorkoutType.Addon = "addon";
+    WorkoutType.PowerStrength = "powerstrength";
+    WorkoutType.Conditioning = "conditioning";
+    return WorkoutType;
+}());
+exports.WorkoutType = WorkoutType;
 var MassUnit = /** @class */ (function () {
     function MassUnit() {
     }

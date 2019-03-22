@@ -87,17 +87,17 @@ export declare enum ProgramCatalogAvailability {
     Pro = "pro",
     Free = "free"
 }
-export declare enum ExerciseBlock {
-    Warmup = "warmup",
-    Drills = "drills",
-    Cooldown = "cooldown",
-    PowerStrength = "powerstrength",
-    Conditioning = "conditioning"
+export declare class ExerciseBlock {
+    Warmup: string;
+    Drills: string;
+    Cooldown: string;
+    PowerStrength: string;
+    Conditioning: string;
 }
-export declare enum WorkoutType {
-    Addon = "addon",
-    PowerStrength = "powerstrength",
-    Conditioning = "conditioning"
+export declare class WorkoutType {
+    static Addon: string;
+    static PowerStrength: string;
+    static Conditioning: string;
 }
 export declare class MassUnit {
     static Pound: string;
