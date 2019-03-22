@@ -83,18 +83,18 @@ export interface IProfessional {
     picture_url: string;
     revision_date: Date;
 }
-export declare const enum ProgramCatalogAvailability {
+export declare enum ProgramCatalogAvailability {
     Pro = "pro",
     Free = "free"
 }
-export declare const enum ExerciseBlock {
+export declare enum ExerciseBlock {
     Warmup = "warmup",
     Drills = "drills",
     Cooldown = "cooldown",
     PowerStrength = "powerstrength",
     Conditioning = "conditioning"
 }
-export declare const enum WorkoutType {
+export declare enum WorkoutType {
     Addon = "addon",
     PowerStrength = "powerstrength",
     Conditioning = "conditioning"
@@ -103,19 +103,19 @@ export declare enum MassUnit {
     Pound = "pound",
     Kilogram = "kilogram"
 }
-export declare const enum Season {
+export declare enum Season {
     OffSeason = "offseason",
     InSeason = "inseason",
     PostSeason = "postseason",
     AllSeason = "allseason"
 }
-export declare const enum Level {
+export declare enum Level {
     Beginner = "beginner",
     Intermediate = "intermediate",
     Advanced = "advanced",
     Pro = "pro"
 }
-export declare const enum ExerciseInput {
+export declare enum ExerciseInput {
     Reps = "reps",
     Weight = "weight",
     Duration = "duration",
@@ -133,13 +133,13 @@ export declare const enum MovementType {
     VPull = "vpull",
     VPush = "vpush"
 }
-export declare const enum MovementPlane {
+export declare enum MovementPlane {
     Saggital = "saggital",
     Transverse = "transverse",
     Frontal = "frontal",
     Multi = "multi"
 }
-export declare const enum MovementCategory {
+export declare enum MovementCategory {
     Mobility = "mobility",
     Stability = "stability",
     Plyometric = "plyometric",
@@ -191,7 +191,7 @@ export interface Exercise_Template_Response_V1 {
 export interface JSONDict {
     [key: string]: any;
 }
-export declare const enum ExerciseGoalType {
+export declare enum ExerciseGoalType {
     MoreWeight = "more-weight",
     LessWeight = "less-weight",
     MoreReps = "more-reps",
@@ -412,7 +412,7 @@ export interface ISignInDTO_V1 {
     userId: string;
     preferredMassUnit: string;
 }
-export declare const enum Gender {
+export declare enum Gender {
     Male = "male",
     Female = "female",
     Neutral = "neutral"
