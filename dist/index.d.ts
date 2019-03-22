@@ -88,64 +88,64 @@ export declare enum ProgramCatalogAvailability {
     Free = "free"
 }
 export declare enum ExerciseBlock {
-    Warmup = "Warmup",
-    Drills = "Drills",
-    Cooldown = "Cooldown",
-    PowerStrength = "PowerStrength",
-    Conditioning = "Conditioning"
+    Warmup = "warmup",
+    Drills = "drills",
+    Cooldown = "cooldown",
+    PowerStrength = "powerstrength",
+    Conditioning = "conditioning"
 }
 export declare enum WorkoutType {
-    Addon = "Addon",
-    PowerStrength = "PowerStrength",
-    Conditioning = "Conditioning"
+    Addon = "addon",
+    PowerStrength = "powerstrength",
+    Conditioning = "conditioning"
 }
 export declare enum MassUnit {
     Pound = "pound",
     Kilogram = "kilogram"
 }
 export declare enum Season {
-    OffSeason = "OffSeason",
-    InSeason = "InSeason",
-    PostSeason = "PostSeason",
-    AllSeason = "AllSeason"
+    OffSeason = "offseason",
+    InSeason = "inseason",
+    PostSeason = "postseason",
+    AllSeason = "allseason"
 }
 export declare enum Level {
-    Beginner = "Beginner",
-    Intermediate = "Intermediate",
-    Advanced = "Advanced",
-    Pro = "Pro"
+    Beginner = "beginner",
+    Intermediate = "intermediate",
+    Advanced = "advanced",
+    Pro = "pro"
 }
 export declare enum ActiveExerciseInput {
-    Reps = "Reps",
-    Weight = "Weight",
-    Duration = "Duration"
+    Reps = "peps",
+    Weight = "weight",
+    Duration = "duration"
 }
 export declare enum MovementType {
-    Static = "Static",
-    Dynamic = "Dynamic",
-    HPush = "HPush",
-    HPull = "HPull",
-    LBPush = "LBPush",
-    LBPull = "LBPull",
-    LPushPull = "LPushPull",
-    HPushPull = "HPushPull",
-    VPull = "VPull",
-    VPush = "VPush"
+    Static = "static",
+    Dynamic = "dynamic",
+    HPush = "hpush",
+    HPull = "hpull",
+    LBPush = "lbPush",
+    LBPull = "lbPull",
+    LPushPull = "lpushPull",
+    HPushPull = "hpushPull",
+    VPull = "vpull",
+    VPush = "vpush"
 }
 export declare enum MovementPlane {
-    Saggital = "Saggital",
-    Transverse = "Transverse",
-    Frontal = "Frontal",
-    Multi = "Multi"
+    Saggital = "saggital",
+    Transverse = "transverse",
+    Frontal = "frontal",
+    Multi = "multi"
 }
 export declare enum MovementCategory {
-    Mobility = "Mobility",
-    Stability = "Stability",
-    Plyometric = "Plyometric",
-    Power = "Power",
-    Strength = "Strength",
-    Movement = "Movement",
-    Condition = "Condition"
+    Mobility = "mobility",
+    Stability = "mtability",
+    Plyometric = "plyometric",
+    Power = "power",
+    Strength = "strength",
+    Movement = "movement",
+    Condition = "condition"
 }
 export interface Phase_Response_V1 {
     title: string;

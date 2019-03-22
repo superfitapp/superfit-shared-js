@@ -10,14 +10,12 @@ export interface IProgram {
   athlete?: IAthlete;
   workouts: IWorkout[];
 }
-
 export interface IExerciseGoal {
   inputs: string[];
   primaryInput: string;
   title: string;
   slug: string;
 }
-
 export interface IExerciseSet {
   status: string;
   rpe: Number;
@@ -28,7 +26,6 @@ export interface IExerciseSet {
   percentBodyweight?: Number;
   percentMaxWeight?: Number;
 }
-
 export interface IExercise {
   block: string;
   blockOrder: Number;
@@ -38,7 +35,6 @@ export interface IExercise {
   sets: IExerciseSet[];
   priority?: Number;
 }
-
 export interface IWorkout {
   id: string;
   revisionDate: Date;
@@ -50,7 +46,6 @@ export interface IWorkout {
   finishDate?: Date;
   exercises: IExercise[];
 }
-
 export interface IAthleteWeight {
   weight: number;
   unit: string;
@@ -59,7 +54,6 @@ export interface IAthleteWeight {
   markedDeleted: Boolean;
   revisionDate: Date;
 }
-
 export interface IAthlete {
   id: string;
   email: string;
@@ -80,7 +74,6 @@ export interface IAthlete {
   workouts?: [IWorkout];
   bodyweights?: [IAthleteWeight];
 }
-
 export interface IProfessional {
   id: string;
   name: string;
@@ -90,81 +83,70 @@ export interface IProfessional {
   picture_url: string;
   revision_date: Date;
 }
-
-export enum ProgramCatalogAvailability {
-  Pro = "pro",
-  Free = "free"
+export declare enum ProgramCatalogAvailability {
+  Pro = 'pro',
+  Free = 'free',
 }
-
-export enum ExerciseBlock {
-  Warmup = "Warmup",
-  Drills = "Drills",
-  Cooldown = "Cooldown",
-  PowerStrength = "PowerStrength",
-  Conditioning = "Conditioning"
+export declare enum ExerciseBlock {
+  Warmup = 'warmup',
+  Drills = 'drills',
+  Cooldown = 'cooldown',
+  PowerStrength = 'powerstrength',
+  Conditioning = 'conditioning',
 }
-
-export enum WorkoutType {
-  Addon = "Addon",
-  PowerStrength = "PowerStrength",
-  Conditioning = "Conditioning"
+export declare enum WorkoutType {
+  Addon = 'addon',
+  PowerStrength = 'powerstrength',
+  Conditioning = 'conditioning',
 }
-
-export enum MassUnit {
-  Pound = "pound",
-  Kilogram = "kilogram"
+export declare enum MassUnit {
+  Pound = 'pound',
+  Kilogram = 'kilogram',
 }
-
-export enum Season {
-  OffSeason = "OffSeason",
-  InSeason = "InSeason",
-  PostSeason = "PostSeason",
-  AllSeason = "AllSeason"
+export declare enum Season {
+  OffSeason = 'offseason',
+  InSeason = 'inseason',
+  PostSeason = 'postseason',
+  AllSeason = 'allseason',
 }
-
-export enum Level {
-  Beginner = "Beginner",
-  Intermediate = "Intermediate",
-  Advanced = "Advanced",
-  Pro = "Pro"
+export declare enum Level {
+  Beginner = 'beginner',
+  Intermediate = 'intermediate',
+  Advanced = 'advanced',
+  Pro = 'pro',
 }
-
-export enum ActiveExerciseInput {
-  Reps = "Reps",
-  Weight = "Weight",
-  Duration = "Duration"
+export declare enum ActiveExerciseInput {
+  Reps = 'peps',
+  Weight = 'weight',
+  Duration = 'duration',
 }
-
-export enum MovementType {
-  Static = "Static",
-  Dynamic = "Dynamic",
-  HPush = "HPush",
-  HPull = "HPull",
-  LBPush = "LBPush",
-  LBPull = "LBPull",
-  LPushPull = "LPushPull",
-  HPushPull = "HPushPull",
-  VPull = "VPull",
-  VPush = "VPush"
+export declare enum MovementType {
+  Static = 'static',
+  Dynamic = 'dynamic',
+  HPush = 'hpush',
+  HPull = 'hpull',
+  LBPush = 'lbPush',
+  LBPull = 'lbPull',
+  LPushPull = 'lpushPull',
+  HPushPull = 'hpushPull',
+  VPull = 'vpull',
+  VPush = 'vpush',
 }
-
-export enum MovementPlane {
-  Saggital = "Saggital",
-  Transverse = "Transverse",
-  Frontal = "Frontal",
-  Multi = "Multi"
+export declare enum MovementPlane {
+  Saggital = 'saggital',
+  Transverse = 'transverse',
+  Frontal = 'frontal',
+  Multi = 'multi',
 }
-
-export enum MovementCategory {
-  Mobility = "Mobility",
-  Stability = "Stability",
-  Plyometric = "Plyometric",
-  Power = "Power",
-  Strength = "Strength",
-  Movement = "Movement",
-  Condition = "Condition"
+export declare enum MovementCategory {
+  Mobility = 'mobility',
+  Stability = 'mtability',
+  Plyometric = 'plyometric',
+  Power = 'power',
+  Strength = 'strength',
+  Movement = 'movement',
+  Condition = 'condition',
 }
-
 export interface Phase_Response_V1 {
   title: string;
   numberOfWeeks: number;
@@ -174,7 +156,6 @@ export interface Phase_Response_V1 {
   mainImageUrl?: string;
   workoutTemplates: Workout_Template_Response_V1[];
 }
-
 export interface Workout_Template_Response_V1 {
   id: string;
   title: string;
@@ -187,7 +168,6 @@ export interface Workout_Template_Response_V1 {
   exerciseTemplates: Exercise_Template_Response_V1[];
   dayOfWeek?: number;
 }
-
 export interface Exercise_Template_Response_V1 {
   id: string;
   title: string;
@@ -207,31 +187,28 @@ export interface Exercise_Template_Response_V1 {
   definition: ExerciseDefinition_Response;
   workout_template?: Workout_Template_Response_V1;
 }
-
 export interface JSONDict {
   [key: string]: any;
 }
-
-export enum ExerciseGoalType {
-  MoreWeight = "more-weight",
-  LessWeight = "less-weight",
-  MoreReps = "more-reps",
-  LessReps = "less-reps",
-  MorePower = "more-power",
-  SpeedQuickness = "speed-and-quickness",
-  DynamicMobility = "dynamic-mobility",
-  DynamicStability = "dynamic-stability",
-  AMGRAP = "amgrap",
-  LongerDuration = "longer-duration",
-  ShorterDuration = "shorter-duration",
-  SlowerPace = "slower-pace",
-  FasterPace = "faster-pace",
-  StaticMobility = "static-mobility",
-  StaticStability = "static-stability",
-  Technique = "technique",
-  Custom = "custom"
+export declare enum ExerciseGoalType {
+  MoreWeight = 'more-weight',
+  LessWeight = 'less-weight',
+  MoreReps = 'more-reps',
+  LessReps = 'less-reps',
+  MorePower = 'more-power',
+  SpeedQuickness = 'speed-and-quickness',
+  DynamicMobility = 'dynamic-mobility',
+  DynamicStability = 'dynamic-stability',
+  AMGRAP = 'amgrap',
+  LongerDuration = 'longer-duration',
+  ShorterDuration = 'shorter-duration',
+  SlowerPace = 'slower-pace',
+  FasterPace = 'faster-pace',
+  StaticMobility = 'static-mobility',
+  StaticStability = 'static-stability',
+  Technique = 'technique',
+  Custom = 'custom',
 }
-
 export interface MongoAthlete {
   email: string;
   userId?: string;
@@ -250,7 +227,6 @@ export interface MongoAthlete {
   lastName: string;
   bodyweights: MongoAthleteWeight[];
 }
-
 export interface MongoProgram {
   name: string;
   catalogId: string;
@@ -263,7 +239,6 @@ export interface MongoProgram {
   athlete?: MongoAthlete;
   workouts: MongoWorkout[];
 }
-
 export interface MongoWorkout {
   id: string;
   revisionDate: Date;
@@ -275,7 +250,6 @@ export interface MongoWorkout {
   finishDate?: Date;
   exercises: MongoExercise[];
 }
-
 export interface MongoExercise {
   name: string;
   goal: MongoGoal;
@@ -285,7 +259,6 @@ export interface MongoExercise {
   priority: number;
   sets: MongoSet[];
 }
-
 export interface MongoSet {
   rpe: number;
   status: string;
@@ -294,14 +267,12 @@ export interface MongoSet {
   reps: number;
   duration?: number;
 }
-
 export interface MongoGoal {
   primaryInput: string;
   title: string;
   slug: string;
   inputs: string[];
 }
-
 export interface MongoAthleteWeight {
   weight: number;
   unit: string;
@@ -310,7 +281,6 @@ export interface MongoAthleteWeight {
   markedDeleted: Boolean;
   revisionDate: Date;
 }
-
 export interface ExerciseDefinition_Response {
   id: number;
   title: string;
@@ -327,7 +297,6 @@ export interface ExerciseDefinition_Response {
   primaryWeightedEquipment?: Equipment_Response;
   weightedEquipmentCount?: number;
 }
-
 export interface Equipment_Response {
   id: string;
   creationDate: Date;
@@ -335,7 +304,6 @@ export interface Equipment_Response {
   title: string;
   description: string;
 }
-
 export interface Create_Journey_Templates_Section_DTO {
   title: string;
   description: string;
@@ -343,7 +311,6 @@ export interface Create_Journey_Templates_Section_DTO {
   badgeImageUrl: string;
   mainImageUrl: string;
 }
-
 export interface Journey_Templates_Section_Response {
   id: string;
   creationDate: Date;
@@ -355,7 +322,6 @@ export interface Journey_Templates_Section_Response {
   mainImageUrl: string;
   journeyTemplates: Journey_Template_Response_V1[];
 }
-
 export interface Journey_Template_Response_V1 {
   id: string;
   mainImageUrl?: string;
@@ -370,7 +336,6 @@ export interface Journey_Template_Response_V1 {
   level: string;
   availability: string;
 }
-
 export interface ProgramCatalog_Response {
   title: string;
   sport: string;
@@ -390,7 +355,6 @@ export interface ProgramCatalog_Response {
   author: Professional_Response;
   workoutCatalogs: WorkoutCatalog_Response[];
 }
-
 export interface ProgramCatalogCatalogSeries_Response_V1 {
   id: string;
   order: number;
@@ -399,7 +363,6 @@ export interface ProgramCatalogCatalogSeries_Response_V1 {
   programCatalog: ProgramCatalog_Response;
   catalogSeries: Journey_Template_Response_V1;
 }
-
 export interface Professional_Response {
   id: string;
   name: string;
@@ -409,7 +372,6 @@ export interface Professional_Response {
   pictureUrl: string;
   revisionDate: Date;
 }
-
 export interface ExerciseCatalog_Response {
   title: string;
   block: string;
@@ -428,14 +390,12 @@ export interface ExerciseCatalog_Response {
   duration?: number;
   definition: ExerciseDefinition_Response;
 }
-
 export interface ExerciseGoal_Response {
   inputs: [string];
   primaryInput: string;
   title: string;
   slug: string;
 }
-
 export interface WorkoutCatalog_Response {
   slug: string;
   title: string;
@@ -446,7 +406,6 @@ export interface WorkoutCatalog_Response {
   version: number;
   exerciseCatalogs: ExerciseCatalog_Response[];
 }
-
 export interface ISignInDTO_V1 {
   email: string;
   userId: string;
