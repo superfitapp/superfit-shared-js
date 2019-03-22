@@ -344,6 +344,7 @@ export interface Journey_Templates_Section_Response {
   description: string;
   isLive: boolean;
   badgeImageUrl: string;
+  mainImageUrl: string;
   journeyTemplates: Journey_Template_Response_V1[];
 }
 
