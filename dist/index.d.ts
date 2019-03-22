@@ -407,3 +407,8 @@ export interface WorkoutCatalog_Response {
     version: number;
     exerciseCatalogs: ExerciseCatalog_Response[];
 }
+export default class SignInDTO_V1 {
+    email: string;
+    userId: string;
+    preferredMassUnit: string;
+}
