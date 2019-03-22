@@ -1,5 +1,3 @@
-import { ApiModelProperty } from "@nestjs/swagger";
-
 export interface IProgram {
   name: string;
   catalogId: string;
@@ -450,23 +448,8 @@ export interface WorkoutCatalog_Response {
   exerciseCatalogs: ExerciseCatalog_Response[];
 }
 
-export default class SignInDTO_V1 {
-  @ApiModelProperty({
-    type: String,
-    description: "email user successfully signed in with."
-  })
+export interface ISignInDTO_V1 {
   email: string;
-
-  @ApiModelProperty({
-    type: String,
-    description:
-      "uuid string created locally by the client- used as an analytics identifier."
-  })
   userId: string;
-
-  @ApiModelProperty({
-    type: MassUnit,
-    description: "mass unit based on client locale or set preference"
-  })
   preferredMassUnit: string;
 }

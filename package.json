@@ -7,14 +7,6 @@
     "update": "tsc && git commit -am 'updating library' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@nestjs/swagger": "^2.5.1",
-    "rxjs": "^6.2.2",
-    "reflect-metadata": "^0.1.12"
-  },
-  "devDependencies": {
-    "@types/node": "^10.7.1"
-  },
   "author": "",
   "license": "ISC",
   "types": "dist/index.d.ts",
