@@ -115,10 +115,11 @@ export declare enum Level {
   Advanced = "advanced",
   Pro = "pro"
 }
-export declare enum ActiveExerciseInput {
+export declare enum ExerciseInput {
   Reps = "reps",
   Weight = "weight",
-  Duration = "duration"
+  Duration = "duration",
+  Distance = "distance"
 }
 export declare enum MovementType {
   Static = "static",
