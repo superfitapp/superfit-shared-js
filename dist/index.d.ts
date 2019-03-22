@@ -109,11 +109,11 @@ export declare enum Season {
     PostSeason = "postseason",
     AllSeason = "allseason"
 }
-export declare enum Level {
-    Beginner = "beginner",
-    Intermediate = "intermediate",
-    Advanced = "advanced",
-    Pro = "pro"
+export declare class Level {
+    static Beginner: string;
+    static Intermediate: string;
+    static Advanced: string;
+    static Pro: string;
 }
 export declare enum ExerciseInput {
     Reps = "reps",

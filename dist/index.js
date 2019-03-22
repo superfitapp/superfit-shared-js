@@ -8,6 +8,16 @@ var MassUnit = /** @class */ (function () {
     return MassUnit;
 }());
 exports.MassUnit = MassUnit;
+var Level = /** @class */ (function () {
+    function Level() {
+    }
+    Level.Beginner = "beginner";
+    Level.Intermediate = "intermediate";
+    Level.Advanced = "advanced";
+    Level.Pro = "pro";
+    return Level;
+}());
+exports.Level = Level;
 var MovementType = /** @class */ (function () {
     function MovementType() {
     }
