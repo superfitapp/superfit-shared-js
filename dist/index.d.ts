@@ -149,21 +149,11 @@ export declare enum MovementCategory {
 }
 export interface Phase_Response_V1 {
     title: string;
-    sport: string;
-    summary: string;
-    availability: string;
     numberOfWeeks: number;
-    tagline: string;
-    level: string;
-    season: string;
     revisionDate: Date;
     publishDate?: Date;
     creationDate: Date;
     mainImageUrl?: string;
-    isLive: boolean;
-    slug: string;
-    version: number;
-    author: IProfessional;
     workoutTemplates: Workout_Template_Response_V1[];
 }
 export interface Workout_Template_Response_V1 {
@@ -321,13 +311,23 @@ export interface Journey_Templates_Section_Response {
     title: string;
     description: string;
     isLive: boolean;
-    mainImageUrl: string;
     badgeImageUrl: string;
     journeyTemplates: Journey_Template_Response_V1[];
+}
+export interface Journey_Template_Response_V1 {
+    id: string;
+    mainImageUrl: string;
+    creationDate: Date;
+    revisionDate: Date;
+    title: string;
+    description: string;
+    phases: Phase_Response_V1[];
     author?: Professional_Response;
-    level?: string;
     shortDescription?: string;
+    fullDescription?: string;
     sport?: string;
+    level?: string;
+    availability: string;
 }
 export interface ProgramCatalog_Response {
     title: string;
@@ -355,15 +355,6 @@ export interface ProgramCatalogCatalogSeries_Response_V1 {
     revisionDate: Date;
     programCatalog: ProgramCatalog_Response;
     catalogSeries: Journey_Template_Response_V1;
-}
-export interface Journey_Template_Response_V1 {
-    id: string;
-    mainImageUrl: string;
-    creationDate: Date;
-    revisionDate: Date;
-    title: string;
-    description: string;
-    phases: Phase_Response_V1[];
 }
 export interface Professional_Response {
     id: string;
