@@ -153,6 +153,7 @@ export interface Phase_Response_V1 {
     numberOfWeeks: number;
     revisionDate: Date;
     publishDate?: Date;
+    order: number;
     creationDate: Date;
     mainImageUrl?: string;
     workoutTemplates: Workout_Template_Response_V1[];
