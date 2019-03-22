@@ -99,9 +99,9 @@ export declare enum WorkoutType {
   PowerStrength = "powerstrength",
   Conditioning = "conditioning"
 }
-export declare enum MassUnit {
-  Pound = "pound",
-  Kilogram = "kilogram"
+export class MassUnit {
+  static Pound = "pound";
+  static Kilogram = "kilogram";
 }
 export declare enum Season {
   OffSeason = "offseason",

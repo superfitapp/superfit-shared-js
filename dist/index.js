@@ -1,5 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var MassUnit = /** @class */ (function () {
+    function MassUnit() {
+    }
+    MassUnit.Pound = "pound";
+    MassUnit.Kilogram = "kilogram";
+    return MassUnit;
+}());
+exports.MassUnit = MassUnit;
 var MovementType = /** @class */ (function () {
     function MovementType() {
     }
