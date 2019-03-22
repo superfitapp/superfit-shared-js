@@ -358,17 +358,16 @@ export interface Journey_Templates_Section_Response {
 
 export interface Journey_Template_Response_V1 {
   id: string;
-  mainImageUrl: string;
+  mainImageUrl?: string;
   creationDate: Date;
   revisionDate: Date;
   title: string;
-  description: string;
   phases: Phase_Response_V1[];
   author?: Professional_Response;
   shortDescription?: string;
   fullDescription?: string;
-  sport?: string;
-  level?: string;
+  sport: string;
+  level: string;
   availability: string;
 }
 
