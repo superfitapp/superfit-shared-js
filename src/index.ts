@@ -125,10 +125,10 @@ export declare enum MovementType {
   Dynamic = "dynamic",
   HPush = "hpush",
   HPull = "hpull",
-  LBPush = "lbPush",
-  LBPull = "lbPull",
-  LPushPull = "lpushPull",
-  HPushPull = "hpushPull",
+  LBPush = "lbpush",
+  LBPull = "lbpull",
+  LPushPull = "lpushpull",
+  HPushPull = "hpushpull",
   VPull = "vpull",
   VPush = "vpush"
 }
@@ -140,7 +140,7 @@ export declare enum MovementPlane {
 }
 export declare enum MovementCategory {
   Mobility = "mobility",
-  Stability = "mtability",
+  Stability = "stability",
   Plyometric = "plyometric",
   Power = "power",
   Strength = "strength",
