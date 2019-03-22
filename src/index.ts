@@ -84,68 +84,68 @@ export interface IProfessional {
   revision_date: Date;
 }
 export declare enum ProgramCatalogAvailability {
-  Pro = 'pro',
-  Free = 'free',
+  Pro = "pro",
+  Free = "free"
 }
 export declare enum ExerciseBlock {
-  Warmup = 'warmup',
-  Drills = 'drills',
-  Cooldown = 'cooldown',
-  PowerStrength = 'powerstrength',
-  Conditioning = 'conditioning',
+  Warmup = "warmup",
+  Drills = "drills",
+  Cooldown = "cooldown",
+  PowerStrength = "powerstrength",
+  Conditioning = "conditioning"
 }
 export declare enum WorkoutType {
-  Addon = 'addon',
-  PowerStrength = 'powerstrength',
-  Conditioning = 'conditioning',
+  Addon = "addon",
+  PowerStrength = "powerstrength",
+  Conditioning = "conditioning"
 }
 export declare enum MassUnit {
-  Pound = 'pound',
-  Kilogram = 'kilogram',
+  Pound = "pound",
+  Kilogram = "kilogram"
 }
 export declare enum Season {
-  OffSeason = 'offseason',
-  InSeason = 'inseason',
-  PostSeason = 'postseason',
-  AllSeason = 'allseason',
+  OffSeason = "offseason",
+  InSeason = "inseason",
+  PostSeason = "postseason",
+  AllSeason = "allseason"
 }
 export declare enum Level {
-  Beginner = 'beginner',
-  Intermediate = 'intermediate',
-  Advanced = 'advanced',
-  Pro = 'pro',
+  Beginner = "beginner",
+  Intermediate = "intermediate",
+  Advanced = "advanced",
+  Pro = "pro"
 }
 export declare enum ActiveExerciseInput {
-  Reps = 'peps',
-  Weight = 'weight',
-  Duration = 'duration',
+  Reps = "peps",
+  Weight = "weight",
+  Duration = "duration"
 }
 export declare enum MovementType {
-  Static = 'static',
-  Dynamic = 'dynamic',
-  HPush = 'hpush',
-  HPull = 'hpull',
-  LBPush = 'lbPush',
-  LBPull = 'lbPull',
-  LPushPull = 'lpushPull',
-  HPushPull = 'hpushPull',
-  VPull = 'vpull',
-  VPush = 'vpush',
+  Static = "static",
+  Dynamic = "dynamic",
+  HPush = "hpush",
+  HPull = "hpull",
+  LBPush = "lbPush",
+  LBPull = "lbPull",
+  LPushPull = "lpushPull",
+  HPushPull = "hpushPull",
+  VPull = "vpull",
+  VPush = "vpush"
 }
 export declare enum MovementPlane {
-  Saggital = 'saggital',
-  Transverse = 'transverse',
-  Frontal = 'frontal',
-  Multi = 'multi',
+  Saggital = "saggital",
+  Transverse = "transverse",
+  Frontal = "frontal",
+  Multi = "multi"
 }
 export declare enum MovementCategory {
-  Mobility = 'mobility',
-  Stability = 'mtability',
-  Plyometric = 'plyometric',
-  Power = 'power',
-  Strength = 'strength',
-  Movement = 'movement',
-  Condition = 'condition',
+  Mobility = "mobility",
+  Stability = "mtability",
+  Plyometric = "plyometric",
+  Power = "power",
+  Strength = "strength",
+  Movement = "movement",
+  Condition = "condition"
 }
 export interface Phase_Response_V1 {
   title: string;
@@ -191,23 +191,23 @@ export interface JSONDict {
   [key: string]: any;
 }
 export declare enum ExerciseGoalType {
-  MoreWeight = 'more-weight',
-  LessWeight = 'less-weight',
-  MoreReps = 'more-reps',
-  LessReps = 'less-reps',
-  MorePower = 'more-power',
-  SpeedQuickness = 'speed-and-quickness',
-  DynamicMobility = 'dynamic-mobility',
-  DynamicStability = 'dynamic-stability',
-  AMGRAP = 'amgrap',
-  LongerDuration = 'longer-duration',
-  ShorterDuration = 'shorter-duration',
-  SlowerPace = 'slower-pace',
-  FasterPace = 'faster-pace',
-  StaticMobility = 'static-mobility',
-  StaticStability = 'static-stability',
-  Technique = 'technique',
-  Custom = 'custom',
+  MoreWeight = "more-weight",
+  LessWeight = "less-weight",
+  MoreReps = "more-reps",
+  LessReps = "less-reps",
+  MorePower = "more-power",
+  SpeedQuickness = "speed-and-quickness",
+  DynamicMobility = "dynamic-mobility",
+  DynamicStability = "dynamic-stability",
+  AMGRAP = "amgrap",
+  LongerDuration = "longer-duration",
+  ShorterDuration = "shorter-duration",
+  SlowerPace = "slower-pace",
+  FasterPace = "faster-pace",
+  StaticMobility = "static-mobility",
+  StaticStability = "static-stability",
+  Technique = "technique",
+  Custom = "custom"
 }
 export interface MongoAthlete {
   email: string;
@@ -410,4 +410,10 @@ export interface ISignInDTO_V1 {
   email: string;
   userId: string;
   preferredMassUnit: string;
+}
+
+export declare enum Gender {
+  Male = "male",
+  Female = "female",
+  Neutral = "neutral"
 }

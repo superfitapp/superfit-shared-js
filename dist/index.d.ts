@@ -411,3 +411,8 @@ export interface ISignInDTO_V1 {
     userId: string;
     preferredMassUnit: string;
 }
+export declare enum Gender {
+    Male = "male",
+    Female = "female",
+    Neutral = "neutral"
+}
