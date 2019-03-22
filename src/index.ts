@@ -122,16 +122,16 @@ export declare enum ExerciseInput {
   Distance = "distance"
 }
 export declare enum MovementType {
-  Static = "static",
-  Dynamic = "dynamic",
-  HPush = "hpush",
-  HPull = "hpull",
-  LBPush = "lbpush",
-  LBPull = "lbpull",
-  LPushPull = "lpushpull",
-  HPushPull = "hpushpull",
-  VPull = "vpull",
-  VPush = "vpush"
+  Static = "Static",
+  Dynamic = "Dynamic",
+  HPush = "Hpush",
+  HPull = "Hpull",
+  LBPush = "Lbpush",
+  LBPull = "Lbpull",
+  LPushPull = "Lpushpull",
+  HPushPull = "Hpushpull",
+  VPull = "Vpull",
+  VPush = "Vpush"
 }
 export declare enum MovementPlane {
   Saggital = "saggital",
