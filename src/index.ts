@@ -336,6 +336,14 @@ export interface Equipment_Response {
   description: string;
 }
 
+export interface Create_Journey_Templates_Section_DTO {
+  title: string;
+  description: string;
+  isLive: boolean;
+  badgeImageUrl: string;
+  mainImageUrl: string;
+}
+
 export interface Journey_Templates_Section_Response {
   id: string;
   creationDate: Date;
