@@ -99,7 +99,7 @@ export declare const enum WorkoutType {
   PowerStrength = "powerstrength",
   Conditioning = "conditioning"
 }
-export declare enum MassUnit {
+export declare const enum MassUnit {
   Pound = "pound",
   Kilogram = "kilogram"
 }
