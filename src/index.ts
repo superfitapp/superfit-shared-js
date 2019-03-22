@@ -88,11 +88,11 @@ export declare enum ProgramCatalogAvailability {
   Free = "free"
 }
 export class ExerciseBlock {
-  Warmup = "warmup";
-  Drills = "drills";
-  Cooldown = "cooldown";
-  PowerStrength = "powerstrength";
-  Conditioning = "conditioning";
+  static Warmup = "warmup";
+  static Drills = "drills";
+  static Cooldown = "cooldown";
+  static PowerStrength = "powerstrength";
+  static Conditioning = "conditioning";
 }
 export class WorkoutType {
   static Addon = "addon";

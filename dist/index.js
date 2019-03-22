@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var ExerciseBlock = /** @class */ (function () {
     function ExerciseBlock() {
-        this.Warmup = "warmup";
-        this.Drills = "drills";
-        this.Cooldown = "cooldown";
-        this.PowerStrength = "powerstrength";
-        this.Conditioning = "conditioning";
     }
+    ExerciseBlock.Warmup = "warmup";
+    ExerciseBlock.Drills = "drills";
+    ExerciseBlock.Cooldown = "cooldown";
+    ExerciseBlock.PowerStrength = "powerstrength";
+    ExerciseBlock.Conditioning = "conditioning";
     return ExerciseBlock;
 }());
 exports.ExerciseBlock = ExerciseBlock;
