@@ -116,7 +116,7 @@ export declare enum Level {
     Pro = "pro"
 }
 export declare enum ActiveExerciseInput {
-    Reps = "peps",
+    Reps = "reps",
     Weight = "weight",
     Duration = "duration"
 }
