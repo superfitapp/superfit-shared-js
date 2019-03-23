@@ -123,7 +123,7 @@ export class ExerciseInput {
   static readonly Distance = "distance";
 }
 export class MovementType {
-  static readonly = "static";
+  static readonly Static = "static";
   static readonly Dynamic = "dynamic";
   static readonly HPush = "hpush";
   static readonly HPull = "hpull";
