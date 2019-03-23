@@ -135,12 +135,13 @@ export class MovementType {
   static readonly VPush = "vpush";
 }
 
-export class MovementPlane {
-  static readonly Saggital = "saggital";
-  static readonly Transverse = "transverse";
-  static readonly Frontal = "frontal";
-  static readonly Multi = "multi";
+export const enum MovementPlane {
+  Saggital = "saggital",
+  Transverse = "transverse",
+  Frontal = "frontal",
+  Multi = "multi"
 }
+
 export class MovementCategory {
   static readonly Mobility = "mobility";
   static readonly Stability = "stability";

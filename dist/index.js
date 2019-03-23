@@ -82,16 +82,6 @@ var MovementType = /** @class */ (function () {
     return MovementType;
 }());
 exports.MovementType = MovementType;
-var MovementPlane = /** @class */ (function () {
-    function MovementPlane() {
-    }
-    MovementPlane.Saggital = "saggital";
-    MovementPlane.Transverse = "transverse";
-    MovementPlane.Frontal = "frontal";
-    MovementPlane.Multi = "multi";
-    return MovementPlane;
-}());
-exports.MovementPlane = MovementPlane;
 var MovementCategory = /** @class */ (function () {
     function MovementCategory() {
     }
