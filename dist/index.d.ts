@@ -83,9 +83,9 @@ export interface IProfessional {
     picture_url: string;
     revision_date: Date;
 }
-export declare enum ProgramCatalogAvailability {
-    Pro = "pro",
-    Free = "free"
+export declare class ProgramCatalogAvailability {
+    static Pro: string;
+    static Free: string;
 }
 export declare class ExerciseBlock {
     static Warmup: string;
@@ -103,11 +103,11 @@ export declare class MassUnit {
     static Pound: string;
     static Kilogram: string;
 }
-export declare enum Season {
-    OffSeason = "offseason",
-    InSeason = "inseason",
-    PostSeason = "postseason",
-    AllSeason = "allseason"
+export declare class Season {
+    static OffSeason: string;
+    static InSeason: string;
+    static PostSeason: string;
+    static AllSeason: string;
 }
 export declare class Level {
     static Beginner: string;
@@ -115,11 +115,11 @@ export declare class Level {
     static Advanced: string;
     static Pro: string;
 }
-export declare enum ExerciseInput {
-    Reps = "reps",
-    Weight = "weight",
-    Duration = "duration",
-    Distance = "distance"
+export declare class ExerciseInput {
+    static Reps: string;
+    static Weight: string;
+    static Duration: string;
+    static Distance: string;
 }
 export declare class MovementType {
     static Static: string;
@@ -139,14 +139,14 @@ export declare class MovementPlane {
     static Frontal: string;
     static Multi: string;
 }
-export declare enum MovementCategory {
-    Mobility = "mobility",
-    Stability = "stability",
-    Plyometric = "plyometric",
-    Power = "power",
-    Strength = "strength",
-    Movement = "movement",
-    Condition = "condition"
+export declare class MovementCategory {
+    static Mobility: string;
+    static Stability: string;
+    static Plyometric: string;
+    static Power: string;
+    static Strength: string;
+    static Movement: string;
+    static Condition: string;
 }
 export interface Phase_Response_V1 {
     id: string;
@@ -207,24 +207,24 @@ export interface Create_Exercise_Template_Dto {
 export interface JSONDict {
     [key: string]: any;
 }
-export declare enum ExerciseGoalType {
-    MoreWeight = "more-weight",
-    LessWeight = "less-weight",
-    MoreReps = "more-reps",
-    LessReps = "less-reps",
-    MorePower = "more-power",
-    SpeedQuickness = "speed-and-quickness",
-    DynamicMobility = "dynamic-mobility",
-    DynamicStability = "dynamic-stability",
-    AMGRAP = "amgrap",
-    LongerDuration = "longer-duration",
-    ShorterDuration = "shorter-duration",
-    SlowerPace = "slower-pace",
-    FasterPace = "faster-pace",
-    StaticMobility = "static-mobility",
-    StaticStability = "static-stability",
-    Technique = "technique",
-    Custom = "custom"
+export declare class ExerciseGoalType {
+    static MoreWeight: string;
+    static LessWeight: string;
+    static MoreReps: string;
+    static LessReps: string;
+    static MorePower: string;
+    static SpeedQuickness: string;
+    static DynamicMobility: string;
+    static DynamicStability: string;
+    static AMGRAP: string;
+    static LongerDuration: string;
+    static ShorterDuration: string;
+    static SlowerPace: string;
+    static FasterPace: string;
+    static StaticMobility: string;
+    static StaticStability: string;
+    static Technique: string;
+    static Custom: string;
 }
 export interface MongoAthlete {
     email: string;
@@ -430,10 +430,10 @@ export interface ISignInDTO_V1 {
     userId: string;
     preferredMassUnit: string;
 }
-export declare enum Gender {
-    Male = "male",
-    Female = "female",
-    Neutral = "neutral"
+export declare class Gender {
+    static Male: string;
+    static Female: string;
+    static Neutral: string;
 }
 export interface ICreatePhaseDto {
     title: string;

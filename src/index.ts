@@ -83,9 +83,9 @@ export interface IProfessional {
   picture_url: string;
   revision_date: Date;
 }
-export declare enum ProgramCatalogAvailability {
-  Pro = "pro",
-  Free = "free"
+export class ProgramCatalogAvailability {
+  static Pro = "pro";
+  static Free = "free";
 }
 
 export class ExerciseBlock {
@@ -104,11 +104,11 @@ export class MassUnit {
   static Pound = "pound";
   static Kilogram = "kilogram";
 }
-export declare enum Season {
-  OffSeason = "offseason",
-  InSeason = "inseason",
-  PostSeason = "postseason",
-  AllSeason = "allseason"
+export class Season {
+  static OffSeason = "offseason";
+  static InSeason = "inseason";
+  static PostSeason = "postseason";
+  static AllSeason = "allseason";
 }
 export class Level {
   static Beginner = "beginner";
@@ -116,11 +116,11 @@ export class Level {
   static Advanced = "advanced";
   static Pro = "pro";
 }
-export declare enum ExerciseInput {
-  Reps = "reps",
-  Weight = "weight",
-  Duration = "duration",
-  Distance = "distance"
+export class ExerciseInput {
+  static Reps = "reps";
+  static Weight = "weight";
+  static Duration = "duration";
+  static Distance = "distance";
 }
 export class MovementType {
   static Static = "static";
@@ -141,14 +141,14 @@ export class MovementPlane {
   static Frontal = "frontal";
   static Multi = "multi";
 }
-export declare enum MovementCategory {
-  Mobility = "mobility",
-  Stability = "stability",
-  Plyometric = "plyometric",
-  Power = "power",
-  Strength = "strength",
-  Movement = "movement",
-  Condition = "condition"
+export class MovementCategory {
+  static Mobility = "mobility";
+  static Stability = "stability";
+  static Plyometric = "plyometric";
+  static Power = "power";
+  static Strength = "strength";
+  static Movement = "movement";
+  static Condition = "condition";
 }
 export interface Phase_Response_V1 {
   id: string;
@@ -210,24 +210,24 @@ export interface Create_Exercise_Template_Dto {
 export interface JSONDict {
   [key: string]: any;
 }
-export declare enum ExerciseGoalType {
-  MoreWeight = "more-weight",
-  LessWeight = "less-weight",
-  MoreReps = "more-reps",
-  LessReps = "less-reps",
-  MorePower = "more-power",
-  SpeedQuickness = "speed-and-quickness",
-  DynamicMobility = "dynamic-mobility",
-  DynamicStability = "dynamic-stability",
-  AMGRAP = "amgrap",
-  LongerDuration = "longer-duration",
-  ShorterDuration = "shorter-duration",
-  SlowerPace = "slower-pace",
-  FasterPace = "faster-pace",
-  StaticMobility = "static-mobility",
-  StaticStability = "static-stability",
-  Technique = "technique",
-  Custom = "custom"
+export class ExerciseGoalType {
+  static MoreWeight = "more-weight";
+  static LessWeight = "less-weight";
+  static MoreReps = "more-reps";
+  static LessReps = "less-reps";
+  static MorePower = "more-power";
+  static SpeedQuickness = "speed-and-quickness";
+  static DynamicMobility = "dynamic-mobility";
+  static DynamicStability = "dynamic-stability";
+  static AMGRAP = "amgrap";
+  static LongerDuration = "longer-duration";
+  static ShorterDuration = "shorter-duration";
+  static SlowerPace = "slower-pace";
+  static FasterPace = "faster-pace";
+  static StaticMobility = "static-mobility";
+  static StaticStability = "static-stability";
+  static Technique = "technique";
+  static Custom = "custom";
 }
 export interface MongoAthlete {
   email: string;
@@ -435,10 +435,10 @@ export interface ISignInDTO_V1 {
   preferredMassUnit: string;
 }
 
-export declare enum Gender {
-  Male = "male",
-  Female = "female",
-  Neutral = "neutral"
+export class Gender {
+  static Male = "male";
+  static Female = "female";
+  static Neutral = "neutral";
 }
 
 export interface ICreatePhaseDto {
