@@ -83,56 +83,55 @@ export interface IProfessional {
   picture_url: string;
   revision_date: Date;
 }
-export class ProgramCatalogAvailability {
-  Pro = "pro";
-  Free = "free";
+export const enum ProgramCatalogAvailability {
+  Pro = "pro",
+  Free = "free"
 }
-
-export class ExerciseBlock {
-  Warmup = "warmup";
-  Drills = "drills";
-  Cooldown = "cooldown";
-  PowerStrength = "powerstrength";
-  Conditioning = "conditioning";
+export const enum ExerciseBlock {
+  Warmup = "warmup",
+  Drills = "drills",
+  Cooldown = "cooldown",
+  PowerStrength = "powerstrength",
+  Conditioning = "conditioning"
 }
-export class WorkoutType {
-  Addon = "addon";
-  PowerStrength = "powerstrength";
-  Conditioning = "conditioning";
+export const enum WorkoutType {
+  Addon = "addon",
+  PowerStrength = "powerstrength",
+  Conditioning = "conditioning"
 }
-export class MassUnit {
-  Pound = "pound";
-  Kilogram = "kilogram";
+export const enum MassUnit {
+  Pound = "pound",
+  Kilogram = "kilogram"
 }
-export class Season {
-  OffSeason = "offseason";
-  InSeason = "inseason";
-  PostSeason = "postseason";
-  AllSeason = "allseason";
+export const enum Season {
+  OffSeason = "offseason",
+  InSeason = "inseason",
+  PostSeason = "postseason",
+  AllSeason = "allseason"
 }
-export class Level {
-  Beginner = "beginner";
-  Intermediate = "intermediate";
-  Advanced = "advanced";
-  Pro = "pro";
+export const enum Level {
+  Beginner = "beginner",
+  Intermediate = "intermediate",
+  Advanced = "advanced",
+  Pro = "pro"
 }
-export class ExerciseInput {
-  Reps = "reps";
-  Weight = "weight";
-  Duration = "duration";
-  Distance = "distance";
+export const enum ExerciseInput {
+  Reps = "reps",
+  Weight = "weight",
+  Duration = "duration",
+  Distance = "distance"
 }
-export class MovementType {
-  Static = "static";
-  Dynamic = "dynamic";
-  HPush = "hpush";
-  HPull = "hpull";
-  LBPush = "lbpush";
-  LBPull = "lbpull";
-  LPushPull = "lpushpull";
-  HPushPull = "hpushpull";
-  VPull = "vpull";
-  VPush = "vpush";
+export const enum MovementType {
+  Static = "static",
+  Dynamic = "dynamic",
+  HPush = "hpush",
+  HPull = "hpull",
+  LBPush = "lbpush",
+  LBPull = "lbpull",
+  LPushPull = "lpushpull",
+  HPushPull = "hpushpull",
+  VPull = "vpull",
+  VPush = "vpush"
 }
 
 export const enum MovementPlane {
@@ -142,14 +141,14 @@ export const enum MovementPlane {
   Multi = "multi"
 }
 
-export class MovementCategory {
-  Mobility = "mobility";
-  Stability = "stability";
-  Plyometric = "plyometric";
-  Power = "power";
-  Strength = "strength";
-  Movement = "movement";
-  Condition = "condition";
+export const enum MovementCategory {
+  Mobility = "mobility",
+  Stability = "stability",
+  Plyometric = "plyometric",
+  Power = "power",
+  Strength = "strength",
+  Movement = "movement",
+  Condition = "condition"
 }
 export interface Phase_Response_V1 {
   id: string;
@@ -211,24 +210,24 @@ export interface Create_Exercise_Template_Dto {
 export interface JSONDict {
   [key: string]: any;
 }
-export class ExerciseGoalType {
-  MoreWeight = "more-weight";
-  LessWeight = "less-weight";
-  MoreReps = "more-reps";
-  LessReps = "less-reps";
-  MorePower = "more-power";
-  SpeedQuickness = "speed-and-quickness";
-  DynamicMobility = "dynamic-mobility";
-  DynamicStability = "dynamic-stability";
-  AMGRAP = "amgrap";
-  LongerDuration = "longer-duration";
-  ShorterDuration = "shorter-duration";
-  SlowerPace = "slower-pace";
-  FasterPace = "faster-pace";
-  StaticMobility = "static-mobility";
-  StaticStability = "static-stability";
-  Technique = "technique";
-  Custom = "custom";
+export const enum ExerciseGoalType {
+  MoreWeight = "more-weight",
+  LessWeight = "less-weight",
+  MoreReps = "more-reps",
+  LessReps = "less-reps",
+  MorePower = "more-power",
+  SpeedQuickness = "speed-and-quickness",
+  DynamicMobility = "dynamic-mobility",
+  DynamicStability = "dynamic-stability",
+  AMGRAP = "amgrap",
+  LongerDuration = "longer-duration",
+  ShorterDuration = "shorter-duration",
+  SlowerPace = "slower-pace",
+  FasterPace = "faster-pace",
+  StaticMobility = "static-mobility",
+  StaticStability = "static-stability",
+  Technique = "technique",
+  Custom = "custom"
 }
 export interface MongoAthlete {
   email: string;
@@ -436,10 +435,10 @@ export interface ISignInDTO_V1 {
   preferredMassUnit: string;
 }
 
-export class Gender {
-  Male = "male";
-  Female = "female";
-  Neutral = "neutral";
+export const enum Gender {
+  Male = "male",
+  Female = "female",
+  Neutral = "neutral"
 }
 
 export interface ICreatePhaseDto {
