@@ -2,7 +2,6 @@
   "name": "superfitjs",
   "version": "1.0.4",
   "description": "shared resources between superfit-api and superfit-website",
-  "main": "dist/index.js",
   "scripts": {
     "update": "tsc && git commit -am 'updating library' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
