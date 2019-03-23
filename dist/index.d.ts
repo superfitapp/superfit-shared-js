@@ -149,6 +149,7 @@ export declare enum MovementCategory {
     Condition = "condition"
 }
 export interface Phase_Response_V1 {
+    id: string;
     title?: string;
     numberOfWeeks: number;
     revisionDate: Date;
