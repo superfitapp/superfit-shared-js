@@ -201,12 +201,15 @@ export interface Exercise_Template_Response_V1 {
   percentBodyweight?: number;
   percentMaxWeight?: number;
   duration?: number;
+  primaryInput: string;
+  secondaryInput?: string;
   workout_template?: Workout_Template_Response_V1;
 }
 export interface Create_Exercise_Template_Dto {
   block: string;
   goalTitle: string;
   goalSlug: string;
+  primaryInput: string;
   sets: number;
   expectedDifficulty: string;
   blockOrder: number;
