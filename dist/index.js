@@ -69,7 +69,7 @@ exports.ExerciseInput = ExerciseInput;
 var MovementType = /** @class */ (function () {
     function MovementType() {
     }
-    MovementType.Static = "static";
+    MovementType.readonly = "static";
     MovementType.Dynamic = "dynamic";
     MovementType.HPush = "hpush";
     MovementType.HPull = "hpull";
