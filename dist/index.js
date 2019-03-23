@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var ExerciseBlock_1 = require("./ExerciseBlock");
+exports.ExerciseBlock2 = ExerciseBlock_1.default;
 var ExerciseBlock = /** @class */ (function () {
     function ExerciseBlock() {
     }
