@@ -417,3 +417,9 @@ export declare enum Gender {
     Female = "female",
     Neutral = "neutral"
 }
+export interface ICreatePhaseDto {
+    title: string;
+    numberOfWeeks: number;
+    order: number;
+    mainImageUrl?: string;
+}
