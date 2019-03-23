@@ -88,9 +88,6 @@ export declare enum ProgramCatalogAvailability {
   Free = "free"
 }
 
-import ExerciseBlock2 from "./ExerciseBlock";
-export { ExerciseBlock2 };
-
 export class ExerciseBlock {
   static Warmup = "warmup";
   static Drills = "drills";
