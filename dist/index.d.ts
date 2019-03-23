@@ -172,13 +172,15 @@ export interface Workout_Template_Response_V1 {
 }
 export interface Exercise_Template_Response_V1 {
     id: string;
-    title: string;
+    title?: string;
     block: string;
-    goal: IExerciseGoal;
+    goalTitle: string;
+    goalSlug: string;
     sets: number;
-    rpe: number;
+    expectedDifficulty: string;
     blockOrder: number;
     priority: number;
+    definition: ExerciseDefinition_Response;
     reps?: number;
     massUnit: string;
     repUnit?: string;
@@ -186,8 +188,18 @@ export interface Exercise_Template_Response_V1 {
     percentBodyweight?: number;
     percentMaxWeight?: number;
     duration?: number;
-    definition: ExerciseDefinition_Response;
     workout_template?: Workout_Template_Response_V1;
+}
+export interface Create_Exercise_Template_Dto {
+    block: string;
+    goalTitle: string;
+    goalSlug: string;
+    sets: number;
+    expectedDifficulty: string;
+    blockOrder: number;
+    priority: number;
+    massUnit: string;
+    definitionId: string;
 }
 export interface JSONDict {
     [key: string]: any;
