@@ -83,7 +83,7 @@ export interface IProfessional {
   picture_url: string;
   revision_date: Date;
 }
-export const enum ProgramCatalogAvailability {
+export const enum ContentAccessLevel {
   Pro = "pro",
   Free = "free"
 }
