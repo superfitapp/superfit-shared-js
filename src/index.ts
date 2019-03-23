@@ -305,9 +305,9 @@ export interface ExerciseDefinition_Response {
   plane: string;
   isBodyweight: boolean;
   athleticIndex: number;
-  demoUrl: string;
-  demoPreviewUrl?: string;
-  demoYoutubeUrl?: string;
+  demoPlaybackUrl: string;
+  infoUrl?: string;
+  youtubeId?: string;
   unilateral: boolean;
   primaryWeightedEquipment?: Equipment_Response;
   weightedEquipmentCount?: number;
