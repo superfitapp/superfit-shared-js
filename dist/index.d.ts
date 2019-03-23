@@ -328,6 +328,7 @@ export interface Journey_Template_Response_V1 {
     mainImageUrl?: string;
     creationDate: Date;
     revisionDate: Date;
+    publishDate?: Date;
     title: string;
     phases: Phase_Response_V1[];
     author?: Professional_Response;
