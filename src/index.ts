@@ -84,55 +84,55 @@ export interface IProfessional {
   revision_date: Date;
 }
 export class ProgramCatalogAvailability {
-  static readonly Pro = "pro";
-  static readonly Free = "free";
+  Pro = "pro";
+  Free = "free";
 }
 
 export class ExerciseBlock {
-  static readonly Warmup = "warmup";
-  static readonly Drills = "drills";
-  static readonly Cooldown = "cooldown";
-  static readonly PowerStrength = "powerstrength";
-  static readonly Conditioning = "conditioning";
+  Warmup = "warmup";
+  Drills = "drills";
+  Cooldown = "cooldown";
+  PowerStrength = "powerstrength";
+  Conditioning = "conditioning";
 }
 export class WorkoutType {
-  static readonly Addon = "addon";
-  static readonly PowerStrength = "powerstrength";
-  static readonly Conditioning = "conditioning";
+  Addon = "addon";
+  PowerStrength = "powerstrength";
+  Conditioning = "conditioning";
 }
 export class MassUnit {
-  static readonly Pound = "pound";
-  static readonly Kilogram = "kilogram";
+  Pound = "pound";
+  Kilogram = "kilogram";
 }
 export class Season {
-  static readonly OffSeason = "offseason";
-  static readonly InSeason = "inseason";
-  static readonly PostSeason = "postseason";
-  static readonly AllSeason = "allseason";
+  OffSeason = "offseason";
+  InSeason = "inseason";
+  PostSeason = "postseason";
+  AllSeason = "allseason";
 }
 export class Level {
-  static readonly Beginner = "beginner";
-  static readonly Intermediate = "intermediate";
-  static readonly Advanced = "advanced";
-  static readonly Pro = "pro";
+  Beginner = "beginner";
+  Intermediate = "intermediate";
+  Advanced = "advanced";
+  Pro = "pro";
 }
 export class ExerciseInput {
-  static readonly Reps = "reps";
-  static readonly Weight = "weight";
-  static readonly Duration = "duration";
-  static readonly Distance = "distance";
+  Reps = "reps";
+  Weight = "weight";
+  Duration = "duration";
+  Distance = "distance";
 }
 export class MovementType {
-  static readonly Static = "static";
-  static readonly Dynamic = "dynamic";
-  static readonly HPush = "hpush";
-  static readonly HPull = "hpull";
-  static readonly LBPush = "lbpush";
-  static readonly LBPull = "lbpull";
-  static readonly LPushPull = "lpushpull";
-  static readonly HPushPull = "hpushpull";
-  static readonly VPull = "vpull";
-  static readonly VPush = "vpush";
+  Static = "static";
+  Dynamic = "dynamic";
+  HPush = "hpush";
+  HPull = "hpull";
+  LBPush = "lbpush";
+  LBPull = "lbpull";
+  LPushPull = "lpushpull";
+  HPushPull = "hpushpull";
+  VPull = "vpull";
+  VPush = "vpush";
 }
 
 export const enum MovementPlane {
@@ -143,13 +143,13 @@ export const enum MovementPlane {
 }
 
 export class MovementCategory {
-  static readonly Mobility = "mobility";
-  static readonly Stability = "stability";
-  static readonly Plyometric = "plyometric";
-  static readonly Power = "power";
-  static readonly Strength = "strength";
-  static readonly Movement = "movement";
-  static readonly Condition = "condition";
+  Mobility = "mobility";
+  Stability = "stability";
+  Plyometric = "plyometric";
+  Power = "power";
+  Strength = "strength";
+  Movement = "movement";
+  Condition = "condition";
 }
 export interface Phase_Response_V1 {
   id: string;
@@ -212,23 +212,23 @@ export interface JSONDict {
   [key: string]: any;
 }
 export class ExerciseGoalType {
-  static readonly MoreWeight = "more-weight";
-  static readonly LessWeight = "less-weight";
-  static readonly MoreReps = "more-reps";
-  static readonly LessReps = "less-reps";
-  static readonly MorePower = "more-power";
-  static readonly SpeedQuickness = "speed-and-quickness";
-  static readonly DynamicMobility = "dynamic-mobility";
-  static readonly DynamicStability = "dynamic-stability";
-  static readonly AMGRAP = "amgrap";
-  static readonly LongerDuration = "longer-duration";
-  static readonly ShorterDuration = "shorter-duration";
-  static readonly SlowerPace = "slower-pace";
-  static readonly FasterPace = "faster-pace";
-  static readonly StaticMobility = "static-mobility";
-  static readonly StaticStability = "static-stability";
-  static readonly Technique = "technique";
-  static readonly Custom = "custom";
+  MoreWeight = "more-weight";
+  LessWeight = "less-weight";
+  MoreReps = "more-reps";
+  LessReps = "less-reps";
+  MorePower = "more-power";
+  SpeedQuickness = "speed-and-quickness";
+  DynamicMobility = "dynamic-mobility";
+  DynamicStability = "dynamic-stability";
+  AMGRAP = "amgrap";
+  LongerDuration = "longer-duration";
+  ShorterDuration = "shorter-duration";
+  SlowerPace = "slower-pace";
+  FasterPace = "faster-pace";
+  StaticMobility = "static-mobility";
+  StaticStability = "static-stability";
+  Technique = "technique";
+  Custom = "custom";
 }
 export interface MongoAthlete {
   email: string;
@@ -437,9 +437,9 @@ export interface ISignInDTO_V1 {
 }
 
 export class Gender {
-  static readonly Male = "male";
-  static readonly Female = "female";
-  static readonly Neutral = "neutral";
+  Male = "male";
+  Female = "female";
+  Neutral = "neutral";
 }
 
 export interface ICreatePhaseDto {
