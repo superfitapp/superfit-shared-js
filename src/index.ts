@@ -357,7 +357,7 @@ export interface Journey_Template_Response_V1 {
   fullDescription?: string;
   sport: string;
   level: string;
-  availability: string;
+  accessLevel: string;
 }
 export interface ProgramCatalog_Response {
   title: string;
