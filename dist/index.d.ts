@@ -133,11 +133,11 @@ export declare class MovementType {
     static VPull: string;
     static VPush: string;
 }
-export declare enum MovementPlane {
-    Saggital = "saggital",
-    Transverse = "transverse",
-    Frontal = "frontal",
-    Multi = "multi"
+export declare class MovementPlane {
+    static Saggital: string;
+    static Transverse: string;
+    static Frontal: string;
+    static Multi: string;
 }
 export declare enum MovementCategory {
     Mobility = "mobility",

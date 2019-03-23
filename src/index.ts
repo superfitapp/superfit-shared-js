@@ -134,23 +134,12 @@ export class MovementType {
   static VPull = "vpull";
   static VPush = "vpush";
 }
-// export const enum MovementType {
-//   Static = "static",
-//   Dynamic = "dynamic",
-//   HPush = "hpush",
-//   HPull = "hpull",
-//   LBPush = "lbpush",
-//   LBPull = "lbpull",
-//   LPushPull = "lpushpull",
-//   HPushPull = "hpushpull",
-//   VPull = "vpull",
-//   VPush = "vpush"
-// }
-export declare enum MovementPlane {
-  Saggital = "saggital",
-  Transverse = "transverse",
-  Frontal = "frontal",
-  Multi = "multi"
+
+export class MovementPlane {
+  static Saggital = "saggital";
+  static Transverse = "transverse";
+  static Frontal = "frontal";
+  static Multi = "multi";
 }
 export declare enum MovementCategory {
   Mobility = "mobility",
