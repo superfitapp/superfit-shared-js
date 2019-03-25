@@ -155,6 +155,7 @@ export interface Phase_Response_V1 {
     revisionDate: Date;
     order: number;
     creationDate: Date;
+    fullDescription?: string;
     mainImageUrl?: string;
     workoutTemplates: Workout_Template_Response_V1[];
 }
