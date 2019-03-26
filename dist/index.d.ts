@@ -316,15 +316,27 @@ export interface MongoAthleteWeight {
 export interface ExerciseDefinition_Response {
     id: number;
     title: string;
-    slug: string;
+    movementType: string;
+    category: string;
+    plane: string;
+    creationDate: Date;
+    revisionDate: Date;
+    publishDate?: Date;
+    isBodyweight: boolean;
+    athleticIndex?: number;
+    demoPlaybackUrl?: string;
+    infoUrl?: string;
+    youtubeId?: string;
+    unilateral: boolean;
+    primaryWeightedEquipment?: Equipment_Response;
+    weightedEquipmentCount?: number;
+}
+export interface ICreate_Exercise_Definition_Dto_V1 {
+    title: string;
     movementType: string;
     category: string;
     plane: string;
     isBodyweight: boolean;
-    athleticIndex: number;
-    demoPlaybackUrl: string;
-    infoUrl?: string;
-    youtubeId?: string;
     unilateral: boolean;
     primaryWeightedEquipment?: Equipment_Response;
     weightedEquipmentCount?: number;
