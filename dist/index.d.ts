@@ -338,8 +338,6 @@ export interface ICreate_Exercise_Definition_Dto_V1 {
     plane: string;
     isBodyweight: boolean;
     unilateral: boolean;
-    primaryWeightedEquipment?: Equipment_Response;
-    weightedEquipmentCount?: number;
 }
 export interface Equipment_Response {
     id: string;
