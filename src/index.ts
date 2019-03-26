@@ -320,7 +320,7 @@ export interface MongoAthleteWeight {
 }
 
 export interface ExerciseDefinition_Response {
-  id: number;
+  id: string;
   title: string;
   movementType: string;
   category: string;
