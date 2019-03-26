@@ -466,3 +466,10 @@ export interface ICreatePhaseDto {
     order: number;
     mainImageUrl?: string;
 }
+export declare const enum Difficulty {
+    easy = "easy",
+    good = "good",
+    challenging = "challenging",
+    veryHard = "veryHard",
+    maxEffort = "maxEffort"
+}
