@@ -200,6 +200,17 @@ export interface Exercise_Template_Response_V1 {
   secondaryInput?: string;
   workout_template?: Workout_Template_Response_V1;
 }
+export interface ICreate_Exercise_Template_V1 {
+  block: string;
+  goalTitle: string;
+  goalSlug: string;
+  sets: number;
+  blockOrder: number;
+  priority: number;
+  definitionId: string;
+  massUnit: string;
+  primaryInput: string;
+}
 export interface Create_Exercise_Template_Dto {
   block: string;
   goalTitle: string;
@@ -420,6 +431,7 @@ export interface ExerciseCatalog_Response {
   duration?: number;
   definition: ExerciseDefinition_Response;
 }
+
 export interface ExerciseGoal_Response {
   inputs: [string];
   primaryInput: string;
