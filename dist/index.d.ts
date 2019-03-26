@@ -161,7 +161,7 @@ export interface Phase_Response_V1 {
 }
 export interface ICreate_Workout_Template_Dto_V1 {
     type: string;
-    dayOfWeek: number;
+    day: number;
 }
 export interface Workout_Template_Response_V1 {
     id: string;
@@ -172,7 +172,7 @@ export interface Workout_Template_Response_V1 {
     creationDate: Date;
     phase?: Phase_Response_V1;
     exerciseTemplates: Exercise_Template_Response_V1[];
-    dayOfWeek?: number;
+    day: number;
 }
 export interface Exercise_Template_Response_V1 {
     id: string;
