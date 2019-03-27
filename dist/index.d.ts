@@ -207,7 +207,7 @@ export interface ICreate_Exercise_Template_V1 {
     massUnit: string;
     primaryInput: string;
 }
-export interface Create_Exercise_Template_Dto {
+export interface ICreate_Exercise_Template_Dto {
     block: string;
     goalTitle: string;
     goalSlug: string;
