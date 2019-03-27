@@ -184,7 +184,7 @@ export interface Exercise_Template_Response_V1 {
     expectedDifficulty: string;
     blockOrder: number;
     priority: number;
-    definition: ExerciseDefinition_Response;
+    definition: Exercise_Definition_Response_V1;
     reps?: number;
     massUnit: string;
     repUnit?: string;
@@ -313,14 +313,14 @@ export interface MongoAthleteWeight {
     markedDeleted: Boolean;
     revisionDate: Date;
 }
-export interface ExerciseDefinition_Response {
+export interface Exercise_Definition_Response_V1 {
     id: string;
     title: string;
-    movementType: string;
     category: string;
-    plane: string;
     creationDate: Date;
     revisionDate: Date;
+    movementType?: string;
+    plane?: string;
     publishDate?: Date;
     isBodyweight: boolean;
     athleticIndex?: number;
@@ -432,7 +432,7 @@ export interface ExerciseCatalog_Response {
     percentBodyweight?: number;
     percentMaxWeight?: number;
     duration?: number;
-    definition: ExerciseDefinition_Response;
+    definition: Exercise_Definition_Response_V1;
 }
 export interface ExerciseGoal_Response {
     inputs: [string];
