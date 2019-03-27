@@ -334,7 +334,7 @@ export interface Exercise_Definition_Response_V1 {
   infoUrl?: string;
   youtubeId?: string;
   unilateral: boolean;
-  primaryWeightedEquipment?: Equipment_Response;
+  primaryWeightedEquipment?: Equipment_Response_V1;
   weightedEquipmentCount?: number;
 }
 export interface ICreate_Exercise_Definition_Dto_V1 {
@@ -345,7 +345,7 @@ export interface ICreate_Exercise_Definition_Dto_V1 {
   isBodyweight: boolean;
   unilateral: boolean;
 }
-export interface Equipment_Response {
+export interface Equipment_Response_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
