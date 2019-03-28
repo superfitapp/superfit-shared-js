@@ -319,6 +319,7 @@ export interface Exercise_Definition_Response_V1 {
     category: string;
     creationDate: Date;
     revisionDate: Date;
+    definitionEquipment?: Definition_Equipment_Response_V1[];
     movementType?: string;
     plane?: string;
     publishDate?: Date;
@@ -330,6 +331,13 @@ export interface Exercise_Definition_Response_V1 {
     unilateral: boolean;
     primaryWeightedEquipment?: Equipment_Response_V1;
     weightedEquipmentCount?: number;
+}
+export interface Definition_Equipment_Response_V1 {
+    id: string;
+    creationDate: Date;
+    revisionDate: Date;
+    equipment?: Equipment_Response_V1;
+    definition?: Equipment_Response_V1;
 }
 export interface ICreate_Exercise_Definition_Dto_V1 {
     title: string;
