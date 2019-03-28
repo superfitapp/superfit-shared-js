@@ -361,6 +361,8 @@ export interface Equipment_Response_V1 {
   revisionDate: Date;
   title: string;
   description: string;
+  mininumWeight?: number;
+  minimumWeightMassUnit?: string;
 }
 
 export interface Create_Journey_Templates_Section_DTO {
