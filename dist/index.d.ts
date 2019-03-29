@@ -385,7 +385,7 @@ export interface Journey_Template_Response_V1 {
     title: string;
     isLive: boolean;
     phases?: Phase_Response_V1[];
-    author?: Professional_Response;
+    owner?: Professional_Response;
     shortDescription?: string;
     fullDescription?: string;
     sport: string;
