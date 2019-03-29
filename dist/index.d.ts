@@ -385,7 +385,7 @@ export interface Journey_Template_Response_V1 {
     title: string;
     isLive: boolean;
     phases?: Phase_Response_V1[];
-    owner?: Professional_Response;
+    owner?: Professional_Response_V1;
     shortDescription?: string;
     fullDescription?: string;
     sport: string;
@@ -408,7 +408,7 @@ export interface ProgramCatalog_Response {
     isLive: boolean;
     slug: string;
     version: number;
-    author: Professional_Response;
+    author: Professional_Response_V1;
     workoutCatalogs: WorkoutCatalog_Response[];
 }
 export interface ProgramCatalogCatalogSeries_Response_V1 {
@@ -419,7 +419,7 @@ export interface ProgramCatalogCatalogSeries_Response_V1 {
     programCatalog: ProgramCatalog_Response;
     catalogSeries: Journey_Template_Response_V1;
 }
-export interface Professional_Response {
+export interface Professional_Response_V1 {
     id: string;
     name: string;
     shortDescription: string;
