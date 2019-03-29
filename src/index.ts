@@ -437,6 +437,8 @@ export interface Professional_Response {
   title: string;
   pictureUrl: string;
   revisionDate: Date;
+  journeyTemplates?: Journey_Template_Response_V1[];
+  workoutTemplates?: Workout_Template_Response_V1[];
 }
 export interface ExerciseCatalog_Response {
   title: string;
