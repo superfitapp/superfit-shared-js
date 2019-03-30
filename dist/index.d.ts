@@ -201,11 +201,11 @@ export interface IJourney_Response_V1 {
     endDate?: Date;
     athlete?: IAthlete_Response_V1;
     workouts: IWorkout_Response_V1[];
-    catalogId: string;
+    journeyTemplateId: string;
 }
 export interface IExercise_Response_V1 {
     title: string;
-    catalogId: string;
+    exerciseTemplateId: string;
     blockOrder: number;
     priority: number;
     block: string;
@@ -236,7 +236,7 @@ export interface IWorkout_Response_V1 {
     type: string;
     creationDate: Date;
     revisionDate: Date;
-    catalogId: string;
+    workoutTemplateId: string;
     finishDate?: Date;
     startDate?: Date;
     scheduledDate: Date;
