@@ -433,9 +433,10 @@ export interface Professional_Response_V1 {
   id: string;
   name: string;
   shortDescription: string;
-  fullDescription: string;
-  title: string;
+  fullDescription?: string;
+  title?: string;
   pictureUrl: string;
+  creationDate: Date;
   revisionDate: Date;
   journeyTemplates?: Journey_Template_Response_V1[];
   workoutTemplates?: Workout_Template_Response_V1[];
