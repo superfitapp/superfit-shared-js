@@ -200,6 +200,91 @@ export interface Exercise_Template_Response_V1 {
   secondaryInput?: string;
   workout_template?: Workout_Template_Response_V1;
 }
+
+export interface IJourney_Response_V1 {
+  startDate?: Date;
+
+  endDate?: Date;
+
+  athlete?: IAthlete_Response_V1;
+
+  workouts: IWorkout_Response_V1[];
+
+  catalogId: string;
+}
+
+export interface IExercise_Response_V1 {
+  title: string;
+  catalogId: string;
+  blockOrder: number;
+  priority: number;
+  block: string;
+  sets: IExercise_Set_Response_V1[];
+  weightedEquipmentName?: string;
+  weightedEquipmentNumber?: number;
+  numberOfSides: number;
+  user_notes?: string;
+}
+
+export interface IExercise_Set_Response_V1 {
+  title: string;
+  repUnit: string;
+  status: string;
+  rpe: number;
+  setOrder: number;
+  reps?: number;
+  difficulty?: string;
+  duration?: number;
+  weight?: number;
+  distance?: number;
+  customResistance?: string;
+  primaryInput: string;
+  secondaryInput?: string;
+}
+
+export interface IWorkout_Response_V1 {
+  id: string;
+  name: string;
+  type: string;
+  creationDate: Date;
+  revisionDate: Date;
+  catalogId: string;
+  finishDate?: Date;
+  startDate?: Date;
+  scheduledDate: Date;
+  exercises: IExercise_Response_V1[];
+}
+
+export interface IAthlete_Response_V1 {
+  id: string;
+  email: string;
+  userId: string;
+  analyticsId: string;
+  username: string;
+  creationDate: Date;
+  revisionDate: Date;
+  currentJourney?: IJourney_Response_V1;
+  bodyweights?: IBodyweight_Response_V1[];
+  preferredMassUnit?: string;
+  primarySport?: string;
+  journeys?: IJourney_Response_V1[];
+  workouts?: IWorkout_Response_V1[];
+  gender?: string;
+  firstName?: string;
+  lastName?: string;
+  profileImageUrl?: string;
+  subscriptionEndDate?: Date;
+  subscriptionTier?: string;
+}
+
+export interface IBodyweight_Response_V1 {
+  id: string;
+  creationDate: Date;
+  revisionDate: Date;
+  weight: number;
+  date: Date;
+}
+
 export interface ICreate_Exercise_Template_V1 {
   block: string;
   goalTitle: string;
@@ -442,6 +527,7 @@ export interface Professional_Response_V1 {
   journeyTemplates?: Journey_Template_Response_V1[];
   workoutTemplates?: Workout_Template_Response_V1[];
 }
+
 export interface ExerciseCatalog_Response {
   title: string;
   block: string;
