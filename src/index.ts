@@ -561,7 +561,7 @@ export interface WorkoutCatalog_Response {
 }
 export interface ISignInDTO_V1 {
   email: string;
-  userId: string;
+  analyticsId: string;
   preferredMassUnit: string;
 }
 
