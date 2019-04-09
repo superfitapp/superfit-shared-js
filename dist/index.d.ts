@@ -523,6 +523,10 @@ export interface ExerciseCatalog_Response {
     duration?: number;
     definition: Exercise_Definition_Response_V1;
 }
+export interface IAthlete_Bodyweight_Response_V1 {
+    weight: number;
+    date: Date;
+}
 export interface ExerciseGoal_Response {
     inputs: [string];
     primaryInput: string;
