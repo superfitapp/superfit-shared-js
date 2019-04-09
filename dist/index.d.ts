@@ -186,7 +186,6 @@ export interface Exercise_Template_Response_V1 {
     priority: number;
     definition: Exercise_Definition_Response_V1;
     reps?: number;
-    massUnit: string;
     repUnit?: string;
     manualWeight?: number;
     percentBodyweight?: number;
