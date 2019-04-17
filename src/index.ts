@@ -280,30 +280,6 @@ export interface IBodyweight_Response_V1 {
   date: Date;
 }
 
-export interface ICreate_Exercise_Template_V1 {
-  block: string;
-  goalTitle: string;
-  goalSlug: string;
-  sets: number;
-  blockOrder: number;
-  priority: number;
-  definitionId: string;
-  massUnit: string;
-  primaryInput: string;
-}
-export interface ICreate_Exercise_Template_Dto {
-  block: string;
-  goalTitle: string;
-  goalSlug: string;
-  primaryInput: string;
-  sets: number;
-  expectedDifficulty: string;
-  blockOrder: number;
-  priority: number;
-  massUnit: string;
-  definitionId: string;
-}
-
 export interface JSONDict {
   [key: string]: any;
 }
