@@ -363,6 +363,10 @@ export interface MongoAthleteWeight {
     markedDeleted: Boolean;
     revisionDate: Date;
 }
+export interface IFetch_Definitions_Response_v1 {
+    definitions: Exercise_Definition_Response_V1[];
+    total: number;
+}
 export interface Exercise_Definition_Response_V1 {
     id: string;
     title: string;
