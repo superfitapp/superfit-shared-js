@@ -551,6 +551,7 @@ export interface ICreate_Journey_Template_Pass_DTO_V1 {
     appleTransactionIdentifier?: string;
     purchaseSource: string;
     journeyTemplatedId: string;
+    notes?: string;
 }
 export interface IJourney_Template_Pass_Response_V1 {
     id: string;
