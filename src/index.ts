@@ -587,3 +587,10 @@ export interface IJourney_Template_Pass_Response_V1 {
   purchaseSource: string;
   notes?: string;
 }
+
+export const enum PurchaseSource {
+  Apple = "apple",
+  Website = "website",
+  T3Website = "t3",
+  Admin = "admin"
+}
