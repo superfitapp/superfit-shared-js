@@ -547,8 +547,17 @@ export declare const enum Difficulty {
     veryHard = "veryHard",
     maxEffort = "maxEffort"
 }
-export interface IJourneyTemplatePass_V1 {
+export interface ICreate_Journey_Template_Pass_DTO_V1 {
     appleTransactionIdentifier?: string;
     purchaseSource: string;
     journeyTemplatedId: string;
+}
+export interface IJourney_Template_Pass_Response_V1 {
+    id: string;
+    revisionDate: Date;
+    creationDate: Date;
+    appleTransactionIdentifier?: string;
+    journeyTemplateId: string;
+    purchaseSource: string;
+    notes?: string;
 }
