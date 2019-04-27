@@ -261,6 +261,8 @@ export interface IAthlete_Response_V1 {
   currentJourney?: IJourney_Response_V1;
   bodyweights?: IBodyweight_Response_V1[];
   preferredMassUnit?: string;
+  currentSubscription?: IAthlete_Subscription_V1;
+  journeyPasses?: IJourney_Template_Pass_V1[];
   primarySport?: string;
   journeys?: IJourney_Response_V1[];
   workouts?: IWorkout_Response_V1[];
@@ -270,6 +272,30 @@ export interface IAthlete_Response_V1 {
   profileImageUrl?: string;
   subscriptionEndDate?: Date;
   subscriptionTier?: string;
+}
+
+export interface IAthlete_Subscription_V1 {
+  id: string;
+  creationDate: Date;
+  revisionDate: Date;
+  latestSubscriptionEndDate?: string;
+  latestAppleProProductId?: string;
+  latestAppleProTransactionId?: string;
+  latestStripeProProductId?: string;
+  latestStripeProSubscriptionId?: string;
+  notes?: string;
+}
+
+export interface IJourney_Template_Pass_V1 {
+  id: string;
+  creationDate: Date;
+  revisionDate: Date;
+  appleTransactionId?: string;
+  appleProductId?: string;
+  stripeTransactionId?: string;
+  stripeProductId?: string;
+  purchaseSource: string;
+  notes?: string;
 }
 
 export interface IBodyweight_Response_V1 {
