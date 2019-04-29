@@ -402,8 +402,8 @@ export interface MongoAthleteWeight {
 }
 
 export interface IFetch_Definitions_Response_v1 {
-  definitions: Exercise_Definition_Response_V1[]
-  total: number
+  definitions: Exercise_Definition_Response_V1[];
+  total: number;
 }
 
 export interface Exercise_Definition_Response_V1 {
@@ -598,9 +598,12 @@ export const enum Difficulty {
 }
 
 export interface ICreate_Journey_Template_Pass_DTO_V1 {
-  appleTransactionIdentifier?: string,
-  purchaseSource: string,
   journeyTemplateId: string;
+  purchaseSource: string;
+  appleTransactionId?: string;
+  appleProductId?: string;
+  stripeTransactionId?: string;
+  stripeProductId?: string;
   notes?: string;
 }
 
@@ -608,9 +611,12 @@ export interface IJourney_Template_Pass_Response_V1 {
   id: string;
   revisionDate: Date;
   creationDate: Date;
-  appleTransactionIdentifier?: string;
   journeyTemplateId: string;
   purchaseSource: string;
+  appleTransactionId?: string;
+  appleProductId?: string;
+  stripeTransactionId?: string;
+  stripeProductId?: string;
   notes?: string;
 }
 
