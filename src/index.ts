@@ -451,7 +451,6 @@ export interface Equipment_Response_V1 {
   title: string;
   description: string;
   mininumWeight?: number;
-  minimumWeightMassUnit?: string;
 }
 
 export interface Create_Journey_Templates_Section_DTO {
