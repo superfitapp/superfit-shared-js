@@ -311,22 +311,54 @@ export interface JSONDict {
 }
 export const enum ExerciseGoalType {
   MoreWeight = "more-weight",
+
+  // deprecated
   LessWeight = "less-weight",
   MoreReps = "more-reps",
+
+  // deprecated
   LessReps = "less-reps",
+
+  // deprecated
   MorePower = "more-power",
+
   SpeedQuickness = "speed-and-quickness",
+
+  // deprecated
   DynamicMobility = "dynamic-mobility",
+
+
   DynamicStability = "dynamic-stability",
-  AMGRAP = "amgrap",
+
+  // deprecated
+  AMfGRAP = "amgrap",
+
   LongerDuration = "longer-duration",
+
+  // deprecated
   ShorterDuration = "shorter-duration",
+
+  // deprecated
   SlowerPace = "slower-pace",
+
   FasterPace = "faster-pace",
+
+  // deprecated
   StaticMobility = "static-mobility",
+
+  // deprecated -> Flexibility
   StaticStability = "static-stability",
+
+  // Technique
   Technique = "technique",
+
+  Flexibility = "flexibility",
+
+  GameTime = "winning-time",
+
   Custom = "custom"
+
+
 }
 export interface MongoAthlete {
   email: string;

@@ -305,7 +305,7 @@ export declare const enum ExerciseGoalType {
     SpeedQuickness = "speed-and-quickness",
     DynamicMobility = "dynamic-mobility",
     DynamicStability = "dynamic-stability",
-    AMGRAP = "amgrap",
+    AMfGRAP = "amgrap",
     LongerDuration = "longer-duration",
     ShorterDuration = "shorter-duration",
     SlowerPace = "slower-pace",
@@ -313,6 +313,8 @@ export declare const enum ExerciseGoalType {
     StaticMobility = "static-mobility",
     StaticStability = "static-stability",
     Technique = "technique",
+    Flexibility = "flexibility",
+    GameTime = "winning-time",
     Custom = "custom"
 }
 export interface MongoAthlete {
