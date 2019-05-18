@@ -305,7 +305,7 @@ export declare const enum ExerciseGoalType {
     SpeedQuickness = "speed-and-quickness",
     DynamicMobility = "dynamic-mobility",
     DynamicStability = "dynamic-stability",
-    AMfGRAP = "amgrap",
+    AMGRAP = "amgrap",
     LongerDuration = "longer-duration",
     ShorterDuration = "shorter-duration",
     SlowerPace = "slower-pace",

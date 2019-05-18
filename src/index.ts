@@ -331,7 +331,7 @@ export const enum ExerciseGoalType {
   DynamicStability = "dynamic-stability",
 
   // deprecated
-  AMfGRAP = "amgrap",
+  AMGRAP = "amgrap",
 
   LongerDuration = "longer-duration",
 
