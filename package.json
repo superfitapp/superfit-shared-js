@@ -4,7 +4,8 @@
   "description": "shared resources between superfit-api and superfit-website",
   "scripts": {
     "build": "tsc",
-    "update": "npm run build && git commit -am 'updating library' && git push",
+    "prepublish": "npm run build",
+    "update": "npm run prepublish && git commit -am 'updating library' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
