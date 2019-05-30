@@ -666,11 +666,13 @@ export const enum ExerciseSetStatus {
   skipped = 'skipped',
 }
 
-export function convertedWeight(
+
+
+export const convertedWeight = (
   unitToConvertFrom: string,
   unitToConvertTo: string,
   weight?: number
-): number | null {
+): number | null => {
   if (!weight) {
     return null
   }

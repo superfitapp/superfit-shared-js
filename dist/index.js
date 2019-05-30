@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var uom_1 = require("uom");
-function convertedWeight(unitToConvertFrom, unitToConvertTo, weight) {
+exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight) {
     if (!weight) {
         return null;
     }
@@ -15,5 +15,4 @@ function convertedWeight(unitToConvertFrom, unitToConvertTo, weight) {
         var toPounds = uom_1.Amount.valueAs(uom_1.Units.PoundLb, amount);
         return toPounds;
     }
-}
-exports.convertedWeight = convertedWeight;
+};

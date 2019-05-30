@@ -604,4 +604,4 @@ export declare const enum ExerciseSetStatus {
     incomplete = "incomplete",
     skipped = "skipped"
 }
-export declare function convertedWeight(unitToConvertFrom: string, unitToConvertTo: string, weight?: number): number | null;
+export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number) => number;
