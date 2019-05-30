@@ -1,3 +1,5 @@
+import { Amount, Units } from "uom";
+
 export interface IProgram {
   name: string;
   catalogId: string;
@@ -656,4 +658,24 @@ export const enum PurchaseSource {
   Website = "website",
   T3Website = "t3",
   Admin = "admin"
+}
+
+export function convertedWeight(
+  unitToConvertFrom: string,
+  unitToConvertTo: string,
+  weight?: number
+): number | null {
+  if (!weight) {
+    return null
+  }
+
+  const unit = (unitToConvertFrom == MassUnit.Kilogram ? Units.Kilogram : Units.PoundLb)
+  const amount = Amount.create(weight, unit)
+  if (unitToConvertTo == MassUnit.Kilogram) {
+    const toKilos = Amount.valueAs(Units.Kilogram, amount);
+    return toKilos
+  } else {
+    const toPounds = Amount.valueAs(Units.PoundLb, amount);
+    return toPounds
+  }
 }

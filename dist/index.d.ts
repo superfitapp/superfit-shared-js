@@ -599,3 +599,4 @@ export declare const enum PurchaseSource {
     T3Website = "t3",
     Admin = "admin"
 }
+export declare function convertedWeight(unitToConvertFrom: string, unitToConvertTo: string, weight?: number): number | null;
