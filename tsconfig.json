@@ -4,9 +4,12 @@
     "target": "es5",
     "declaration": true,
     "outDir": "./dist",
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true
+    "strict": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["**/*.spec.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ]
 }
