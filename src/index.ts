@@ -660,6 +660,12 @@ export const enum PurchaseSource {
   Admin = "admin"
 }
 
+export const enum ExerciseSetStatus {
+  complete = 'complete',
+  incomplete = 'incomplete',
+  skipped = 'skipped',
+}
+
 export function convertedWeight(
   unitToConvertFrom: string,
   unitToConvertTo: string,

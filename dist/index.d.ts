@@ -599,4 +599,9 @@ export declare const enum PurchaseSource {
     T3Website = "t3",
     Admin = "admin"
 }
+export declare const enum ExerciseSetStatus {
+    complete = "complete",
+    incomplete = "incomplete",
+    skipped = "skipped"
+}
 export declare function convertedWeight(unitToConvertFrom: string, unitToConvertTo: string, weight?: number): number | null;
