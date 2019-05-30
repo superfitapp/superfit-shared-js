@@ -16,3 +16,7 @@ exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight) 
         return toPounds;
     }
 };
+function ping() {
+    return 'pong';
+}
+exports.ping = ping;

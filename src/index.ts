@@ -687,3 +687,8 @@ export const convertedWeight = (
     return toPounds
   }
 }
+
+export function ping(
+): string {
+  return 'pong'
+}
