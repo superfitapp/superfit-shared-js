@@ -604,5 +604,4 @@ export declare const enum ExerciseSetStatus {
     incomplete = "incomplete",
     skipped = "skipped"
 }
-export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined) => number | null;
-export declare function ping(): string;
+export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;

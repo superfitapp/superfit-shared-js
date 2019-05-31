@@ -1,4 +1,5 @@
 import { Amount, Units } from "uom";
+import round from 'lodash.round'
 
 export interface IProgram {
   name: string;
@@ -671,7 +672,8 @@ export const enum ExerciseSetStatus {
 export const convertedWeight = (
   unitToConvertFrom: string,
   unitToConvertTo: string,
-  weight?: number
+  weight?: number,
+  levelsOfPrecision: number = 1
 ): number | null => {
   if (!weight) {
     return null
@@ -681,14 +683,9 @@ export const convertedWeight = (
   const amount = Amount.create(weight, unit)
   if (unitToConvertTo == MassUnit.Kilogram) {
     const toKilos = Amount.valueAs(Units.Kilogram, amount);
-    return toKilos
+    return round(toKilos, levelsOfPrecision)
   } else {
     const toPounds = Amount.valueAs(Units.PoundLb, amount);
-    return toPounds
+    return round(toPounds, levelsOfPrecision)
   }
-}
-
-export function ping(
-): string {
-  return 'pong'
 }

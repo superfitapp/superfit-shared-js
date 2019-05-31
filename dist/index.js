@@ -1,7 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var uom_1 = require("uom");
-exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight) {
+var lodash_round_1 = __importDefault(require("lodash.round"));
+exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight, levelsOfPrecision) {
+    if (levelsOfPrecision === void 0) { levelsOfPrecision = 1; }
     if (!weight) {
         return null;
     }
@@ -9,14 +14,10 @@ exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight) 
     var amount = uom_1.Amount.create(weight, unit);
     if (unitToConvertTo == "kilogram" /* Kilogram */) {
         var toKilos = uom_1.Amount.valueAs(uom_1.Units.Kilogram, amount);
-        return toKilos;
+        return lodash_round_1.default(toKilos, levelsOfPrecision);
     }
     else {
         var toPounds = uom_1.Amount.valueAs(uom_1.Units.PoundLb, amount);
-        return toPounds;
+        return lodash_round_1.default(toPounds, levelsOfPrecision);
     }
 };
-function ping() {
-    return 'pong';
-}
-exports.ping = ping;

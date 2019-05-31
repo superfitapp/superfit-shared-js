@@ -9,6 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@types/lodash.round": "^4.0.6",
+    "lodash.round": "^4.0.4",
     "uom": "^2.3.0"
   },
   "author": "",
