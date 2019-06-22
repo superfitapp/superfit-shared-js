@@ -108,7 +108,7 @@ export const enum MassUnit {
 }
 
 export const enum LengthUnit {
-  Foot = "foot",
+  Yard = "yard",
   Meter = "meter"
 }
 

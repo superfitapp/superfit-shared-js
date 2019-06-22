@@ -104,7 +104,7 @@ export declare const enum MassUnit {
     Kilogram = "kilogram"
 }
 export declare const enum LengthUnit {
-    Foot = "foot",
+    Yard = "yard",
     Meter = "meter"
 }
 export declare const enum Season {
