@@ -106,6 +106,12 @@ export const enum MassUnit {
   Pound = "pound",
   Kilogram = "kilogram"
 }
+
+export const enum LengthUnit {
+  Foot = "foot",
+  Meter = "meter"
+}
+
 export const enum Season {
   OffSeason = "offseason",
   InSeason = "inseason",
