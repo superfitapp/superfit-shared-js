@@ -191,6 +191,7 @@ export interface Exercise_Template_Response_V1 {
     percentBodyweight?: number;
     percentMaxWeight?: number;
     duration?: number;
+    distance?: number;
     primaryInput: string;
     secondaryInput?: string;
     workout_template?: Workout_Template_Response_V1;
