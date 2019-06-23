@@ -612,11 +612,6 @@ export interface WorkoutCatalog_Response {
   version: number;
   exerciseCatalogs: ExerciseCatalog_Response[];
 }
-export interface ISignInDTO_V1 {
-  email: string;
-  analyticsId: string;
-  preferredMassUnit: string;
-}
 
 export const enum Gender {
   Male = "male",
@@ -679,7 +674,6 @@ export const enum MeasurementSystem {
   metric = "metric",
   imperial = "imperial"
 }
-
 
 export const convertedWeight = (
   unitToConvertFrom: string,

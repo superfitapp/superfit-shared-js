@@ -555,11 +555,6 @@ export interface WorkoutCatalog_Response {
     version: number;
     exerciseCatalogs: ExerciseCatalog_Response[];
 }
-export interface ISignInDTO_V1 {
-    email: string;
-    analyticsId: string;
-    preferredMassUnit: string;
-}
 export declare const enum Gender {
     Male = "male",
     Female = "female",
