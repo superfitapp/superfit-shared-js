@@ -271,6 +271,7 @@ export interface IAthlete_Response_V1 {
   currentJourney?: IJourney_Response_V1;
   bodyweights?: IBodyweight_Response_V1[];
   preferredMassUnit?: string;
+  preferredLengthUnit?: MeasurementSystem;
   currentSubscription?: IAthlete_Subscription_V1;
   journeyPasses?: IJourney_Template_Pass_V1[];
   primarySport?: string;
@@ -674,6 +675,10 @@ export const enum ExerciseSetStatus {
   skipped = 'skipped',
 }
 
+export const enum MeasurementSystem {
+  metric = "metric",
+  imperial = "imperial"
+}
 
 
 export const convertedWeight = (

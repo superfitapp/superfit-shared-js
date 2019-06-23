@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build",
-    "update": "npm run prepublish && git commit -am 'updating library' && git push",
+    "update": "npm run prepublish && git commit -am ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

@@ -257,6 +257,7 @@ export interface IAthlete_Response_V1 {
     currentJourney?: IJourney_Response_V1;
     bodyweights?: IBodyweight_Response_V1[];
     preferredMassUnit?: string;
+    preferredLengthUnit?: MeasurementSystem;
     currentSubscription?: IAthlete_Subscription_V1;
     journeyPasses?: IJourney_Template_Pass_V1[];
     primarySport?: string;
@@ -608,5 +609,9 @@ export declare const enum ExerciseSetStatus {
     complete = "complete",
     incomplete = "incomplete",
     skipped = "skipped"
+}
+export declare const enum MeasurementSystem {
+    metric = "metric",
+    imperial = "imperial"
 }
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
