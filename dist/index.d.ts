@@ -150,7 +150,8 @@ export declare const enum MovementCategory {
     Power = "power",
     Strength = "strength",
     Movement = "movement",
-    Condition = "condition"
+    Condition = "condition",
+    SportSpecific = "sport-specific"
 }
 export interface Phase_Response_V1 {
     id: string;
