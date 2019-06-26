@@ -143,6 +143,13 @@ export const enum MovementType {
   VPush = "vpush"
 }
 
+export interface ISignInDTO_V1 {
+  email: string;
+  analyticsId: string;
+  preferredMassUnit?: string;
+  preferredLengthUnit?: string;
+}
+
 export const enum MovementPlane {
   Saggital = "saggital",
   Transverse = "transverse",
