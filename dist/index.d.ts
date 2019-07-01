@@ -286,6 +286,8 @@ export interface IAthlete_Subscription_V1 {
     latestAppleProTransactionId?: string;
     latestStripeProProductId?: string;
     latestStripeProSubscriptionId?: string;
+    latestStripeCoachEndDate?: Date;
+    latestStripeCoachSubscriptionId?: string;
     notes?: string;
 }
 export interface IJourney_Template_Pass_V1 {
