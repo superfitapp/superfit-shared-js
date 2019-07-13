@@ -1,18 +1,18 @@
 import { Amount, Units } from "uom";
 import round from 'lodash.round'
 
-export interface IProgram {
-  name: string;
-  catalogId: string;
-  startDate: Date;
-  programId: string;
-  markedDeleted: Boolean;
-  revisionDate: Date;
-  finishDate?: Date;
-  coverImage?: string;
-  athlete?: IAthlete;
-  workouts: IWorkout[];
-}
+// export interface IProgram {
+//   name: string;
+//   catalogId: string;
+//   startDate: Date;
+//   programId: string;
+//   markedDeleted: Boolean;
+//   revisionDate: Date;
+//   finishDate?: Date;
+//   coverImage?: string;
+//   athlete?: IAthlete;
+//   workouts: IWorkout[];
+// }
 export interface IExerciseGoal {
   inputs: string[];
   primaryInput: string;
@@ -29,26 +29,26 @@ export interface IExerciseSet {
   percentBodyweight?: Number;
   percentMaxWeight?: Number;
 }
-export interface IExercise {
-  block: string;
-  blockOrder: Number;
-  goal: IExerciseGoal;
-  name: string;
-  catalogId: string;
-  sets: IExerciseSet[];
-  priority?: Number;
-}
-export interface IWorkout {
-  id: string;
-  revisionDate: Date;
-  type: string;
-  name: string;
-  day: Number;
-  week: Number;
-  startDate?: Date;
-  finishDate?: Date;
-  exercises: IExercise[];
-}
+// export interface IExercise {
+//   block: string;
+//   blockOrder: Number;
+//   goal: IExerciseGoal;
+//   name: string;
+//   catalogId: string;
+//   sets: IExerciseSet[];
+//   priority?: Number;
+// }
+// export interface IWorkout {
+//   id: string;
+//   revisionDate: Date;
+//   type: string;
+//   name: string;
+//   day: Number;
+//   week: Number;
+//   startDate?: Date;
+//   finishDate?: Date;
+//   exercises: IExercise[];
+// }
 export interface IAthleteWeight {
   weight: number;
   unit: string;
@@ -57,26 +57,26 @@ export interface IAthleteWeight {
   markedDeleted: Boolean;
   revisionDate: Date;
 }
-export interface IAthlete {
-  id: string;
-  email: string;
-  userId?: string;
-  username: string;
-  revisionDate: Date;
-  profileImageUrl?: string;
-  facebookId?: string;
-  subscriptionEndDate?: Date;
-  subscriptionTier?: string;
-  preferredMassUnit: string;
-  primarySport: string;
-  gender: string;
-  currentProgramId?: string;
-  firstName: string;
-  lastName?: string;
-  programs?: [IProgram];
-  workouts?: [IWorkout];
-  bodyweights?: [IAthleteWeight];
-}
+// export interface IAthlete {
+//   id: string;
+//   email: string;
+//   userId?: string;
+//   username: string;
+//   revisionDate: Date;
+//   profileImageUrl?: string;
+//   facebookId?: string;
+//   subscriptionEndDate?: Date;
+//   subscriptionTier?: string;
+//   preferredMassUnit: string;
+//   primarySport: string;
+//   gender: string;
+//   currentProgramId?: string;
+//   firstName: string;
+//   lastName?: string;
+//   programs?: [IProgram];
+//   workouts?: [IWorkout];
+//   bodyweights?: [IAthleteWeight];
+// }
 export interface IProfessional {
   id: string;
   name: string;
@@ -235,7 +235,7 @@ export interface IExercise_Response_V1 {
   sets: IExercise_Set_Response_V1[];
   weightedEquipmentName?: string;
   weightedEquipmentNumber?: number;
-  numberOfSides: number;
+  eachSide: boolean;
   user_notes?: string;
 }
 
@@ -381,56 +381,56 @@ export const enum ExerciseGoalType {
 
 
 }
-export interface MongoAthlete {
-  email: string;
-  userId?: string;
-  username: string;
-  revisionDate: Date;
-  profileImageUrl?: string;
-  facebookId?: string;
-  subscriptionEndDate?: Date;
-  subscriptionTier?: string;
-  programs: MongoProgram[];
-  weightUnit: string;
-  primarySport: string;
-  gender: string;
-  currentProgramId?: string;
-  firstName: string;
-  lastName: string;
-  bodyweights: MongoAthleteWeight[];
-}
-export interface MongoProgram {
-  name: string;
-  catalogId: string;
-  startDate: Date;
-  programId: string;
-  markedDeleted: Boolean;
-  revisionDate: Date;
-  finishDate?: Date;
-  coverImage?: string;
-  athlete?: MongoAthlete;
-  workouts: MongoWorkout[];
-}
-export interface MongoWorkout {
-  id: string;
-  revisionDate: Date;
-  type: string;
-  name: string;
-  day: number;
-  week: number;
-  startDate?: Date;
-  finishDate?: Date;
-  exercises: MongoExercise[];
-}
-export interface MongoExercise {
-  name: string;
-  goal: MongoGoal;
-  blockOrder: number;
-  catalogId: string;
-  block: string;
-  priority: number;
-  sets: MongoSet[];
-}
+// export interface MongoAthlete {
+//   email: string;
+//   userId?: string;
+//   username: string;
+//   revisionDate: Date;
+//   profileImageUrl?: string;
+//   facebookId?: string;
+//   subscriptionEndDate?: Date;
+//   subscriptionTier?: string;
+//   programs: MongoProgram[];
+//   weightUnit: string;
+//   primarySport: string;
+//   gender: string;
+//   currentProgramId?: string;
+//   firstName: string;
+//   lastName: string;
+//   bodyweights: MongoAthleteWeight[];
+// }
+// export interface MongoProgram {
+//   name: string;
+//   catalogId: string;
+//   startDate: Date;
+//   programId: string;
+//   markedDeleted: Boolean;
+//   revisionDate: Date;
+//   finishDate?: Date;
+//   coverImage?: string;
+//   athlete?: MongoAthlete;
+//   workouts: MongoWorkout[];
+// }
+// export interface MongoWorkout {
+//   id: string;
+//   revisionDate: Date;
+//   type: string;
+//   name: string;
+//   day: number;
+//   week: number;
+//   startDate?: Date;
+//   finishDate?: Date;
+//   exercises: MongoExercise[];
+// }
+// export interface MongoExercise {
+//   name: string;
+//   goal: MongoGoal;
+//   blockOrder: number;
+//   catalogId: string;
+//   block: string;
+//   priority: number;
+//   sets: MongoSet[];
+// }
 export interface MongoSet {
   rpe: number;
   status: string;
