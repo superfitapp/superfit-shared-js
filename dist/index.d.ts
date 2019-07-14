@@ -172,6 +172,7 @@ export interface IExercise_Response_V1 {
     weightedEquipmentName?: string;
     weightedEquipmentNumber?: number;
     primaryWeightedEquipment?: string;
+    weightedEquipmentCount?: number;
     eachSide: boolean;
     user_notes?: string;
 }
