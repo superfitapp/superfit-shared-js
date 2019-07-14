@@ -238,7 +238,7 @@ export interface IExercise_Response_V1 {
   primaryWeightedEquipment?: string
   weightedEquipmentCount?: number;
   eachSide: boolean;
-  user_notes?: string;
+  userNotes?: string;
 }
 
 export interface IExercise_Set_Response_V1 {
@@ -701,6 +701,7 @@ export const convertedWeight = (
   const amount = Amount.create(weight, unit)
   if (unitToConvertTo == MassUnit.Kilogram) {
     const toKilos = Amount.valueAs(Units.Kilogram, amount);
+
     return round(toKilos, levelsOfPrecision)
   } else {
     const toPounds = Amount.valueAs(Units.PoundLb, amount);
