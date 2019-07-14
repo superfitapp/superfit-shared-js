@@ -171,6 +171,7 @@ export interface IExercise_Response_V1 {
     sets: IExercise_Set_Response_V1[];
     weightedEquipmentName?: string;
     weightedEquipmentNumber?: number;
+    primaryWeightedEquipment?: string;
     eachSide: boolean;
     user_notes?: string;
 }
