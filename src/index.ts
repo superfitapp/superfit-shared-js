@@ -720,4 +720,5 @@ export interface IVideoAsset_Response_V1 {
   creationDate: Date;
   masterUrl: string
   muxPlaybackId?: string
+  muxAssetId?: string
 }
