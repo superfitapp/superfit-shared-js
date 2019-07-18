@@ -708,3 +708,11 @@ export const convertedWeight = (
     return round(toPounds, levelsOfPrecision)
   }
 }
+
+export interface IVideoAsset_Response_V1 {
+  id: string;
+  revisionDate: Date;
+  creationDate: Date;
+  masterUrl: string
+  transcodedUrl?: string
+}

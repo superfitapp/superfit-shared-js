@@ -174,7 +174,7 @@ export interface IExercise_Response_V1 {
     primaryWeightedEquipment?: string;
     weightedEquipmentCount?: number;
     eachSide: boolean;
-    user_notes?: string;
+    userNotes?: string;
 }
 export interface IExercise_Set_Response_V1 {
     title: string;
@@ -519,3 +519,10 @@ export declare const enum MeasurementSystem {
     imperial = "imperial"
 }
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
+export interface IVideoAsset_Response_V1 {
+    id: string;
+    revisionDate: Date;
+    creationDate: Date;
+    masterUrl: string;
+    transcodedUrl?: string;
+}
