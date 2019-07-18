@@ -710,6 +710,10 @@ export const convertedWeight = (
   }
 }
 
+export interface ISaveDemo_Dto_V1 {
+  masterUrl: string;
+}
+
 export interface IVideoAsset_Response_V1 {
   id: string;
   revisionDate: Date;

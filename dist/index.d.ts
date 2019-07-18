@@ -520,6 +520,9 @@ export declare const enum MeasurementSystem {
     imperial = "imperial"
 }
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
+export interface ISaveDemo_Dto_V1 {
+    masterUrl: string;
+}
 export interface IVideoAsset_Response_V1 {
     id: string;
     revisionDate: Date;
