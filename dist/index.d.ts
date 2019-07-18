@@ -528,5 +528,5 @@ export interface IVideoAsset_Response_V1 {
     revisionDate: Date;
     creationDate: Date;
     masterUrl: string;
-    transcodedUrl?: string;
+    muxPlaybackId?: string;
 }
