@@ -193,6 +193,7 @@ export interface Workout_Template_Response_V1 {
   creationDate: Date;
   phase?: Phase_Response_V1;
   exerciseTemplates: Exercise_Template_Response_V1[];
+  author?: Professional_Response_V1;
   day: number;
 }
 export interface Exercise_Template_Response_V1 {
@@ -545,36 +546,37 @@ export interface Journey_Template_Response_V1 {
   accessLevel: string;
 }
 
-export interface ProgramCatalog_Response {
-  title: string;
-  sport: string;
-  summary: string;
-  availability: string;
-  numberOfWeeks: number;
-  tagline: string;
-  level: string;
-  season: string;
-  revisionDate: Date;
-  publishDate?: Date;
-  creationDate: Date;
-  main_image_url?: string;
-  isLive: boolean;
-  slug: string;
-  version: number;
-  author: Professional_Response_V1;
-  workoutCatalogs: WorkoutCatalog_Response[];
-}
-export interface ProgramCatalogCatalogSeries_Response_V1 {
-  id: string;
-  order: number;
-  creationDate: Date;
-  revisionDate: Date;
-  programCatalog: ProgramCatalog_Response;
-  catalogSeries: Journey_Template_Response_V1;
-}
+// export interface ProgramCatalog_Response {
+//   title: string;
+//   sport: string;
+//   summary: string;
+//   availability: string;
+//   numberOfWeeks: number;
+//   tagline: string;
+//   level: string;
+//   season: string;
+//   revisionDate: Date;
+//   publishDate?: Date;
+//   creationDate: Date;
+//   main_image_url?: string;
+//   isLive: boolean;
+//   slug: string;
+//   version: number;
+//   author: Professional_Response_V1;
+//   workoutCatalogs: WorkoutCatalog_Response[];
+// }
+// export interface ProgramCatalogCatalogSeries_Response_V1 {
+//   id: string;
+//   order: number;
+//   creationDate: Date;
+//   revisionDate: Date;
+//   programCatalog: ProgramCatalog_Response;
+//   catalogSeries: Journey_Template_Response_V1;
+// }
 export interface Professional_Response_V1 {
   id: string;
   name: string;
+  athleteUserId?: string;
   shortDescription: string;
   fullDescription?: string;
   title?: string;
@@ -615,16 +617,16 @@ export interface ExerciseGoal_Response {
   title: string;
   slug: string;
 }
-export interface WorkoutCatalog_Response {
-  slug: string;
-  title: string;
-  type: string;
-  publishDate?: Date;
-  revisionDate: Date;
-  creationDate: Date;
-  version: number;
-  exerciseCatalogs: ExerciseCatalog_Response[];
-}
+// export interface WorkoutCatalog_Response {
+//   slug: string;
+//   title: string;
+//   type: string;
+//   publishDate?: Date;
+//   revisionDate: Date;
+//   creationDate: Date;
+//   version: number;
+//   exerciseCatalogs: ExerciseCatalog_Response[];
+// }
 
 export const enum Gender {
   Male = "male",

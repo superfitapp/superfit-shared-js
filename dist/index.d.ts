@@ -418,6 +418,7 @@ export interface ProgramCatalogCatalogSeries_Response_V1 {
 export interface Professional_Response_V1 {
     id: string;
     name: string;
+    athleteUserId?: string;
     shortDescription: string;
     fullDescription?: string;
     title?: string;
