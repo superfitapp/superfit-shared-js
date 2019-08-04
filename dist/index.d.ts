@@ -1,9 +1,3 @@
-export interface IExerciseGoal {
-    inputs: string[];
-    primaryInput: string;
-    title: string;
-    slug: string;
-}
 export interface IExerciseSet {
     status: string;
     rpe: Number;
@@ -21,15 +15,6 @@ export interface IAthleteWeight {
     id: string;
     markedDeleted: Boolean;
     revisionDate: Date;
-}
-export interface IProfessional {
-    id: string;
-    name: string;
-    short_description: string;
-    full_description: string;
-    title: string;
-    picture_url: string;
-    revision_date: Date;
 }
 export declare const enum ContentAccessLevel {
     Pro = "pro",
@@ -291,20 +276,6 @@ export interface MongoSet {
     weight?: number;
     reps: number;
     duration?: number;
-}
-export interface MongoGoal {
-    primaryInput: string;
-    title: string;
-    slug: string;
-    inputs: string[];
-}
-export interface MongoAthleteWeight {
-    weight: number;
-    unit: string;
-    date: Date;
-    id: string;
-    markedDeleted: Boolean;
-    revisionDate: Date;
 }
 export interface IFetch_Definitions_Response_v1 {
     definitions: Exercise_Definition_Response_V1[];
