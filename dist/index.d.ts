@@ -239,6 +239,7 @@ export interface IAthlete_Subscription_V1 {
     latestStripeProSubscriptionId?: string;
     latestStripeCoachEndDate?: Date;
     latestStripeCoachSubscriptionId?: string;
+    stripeCustomerId?: string;
     notes?: string;
 }
 export interface IJourney_Template_Pass_V1 {
