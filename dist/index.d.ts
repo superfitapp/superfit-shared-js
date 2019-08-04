@@ -468,3 +468,15 @@ export interface IVideoAsset_Response_V1 {
     muxPlaybackId?: string;
     muxAssetId?: string;
 }
+export interface IProduct {
+    stripeSubscriptionId: string;
+    subscriptionName: string;
+    plans: IPlan[];
+}
+export interface IPlan {
+    stripePlanId: string;
+    price: string;
+    currency: string;
+    interval: string;
+    features: string[];
+}
