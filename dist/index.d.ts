@@ -469,7 +469,7 @@ export interface IVideoAsset_Response_V1 {
     muxAssetId?: string;
 }
 export interface IProduct {
-    stripeSubscriptionId: string;
+    stripeProductId: string;
     title: string;
     availablePlans: IPlan[];
     features: string[];
