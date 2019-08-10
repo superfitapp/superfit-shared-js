@@ -581,7 +581,8 @@ export interface IProduct {
 export interface IPlan {
   stripePlanId: string
   stripeProductId: string
-  price: string
+  price: number
+  priceWithCurrency: string
   currency: string
   interval: string
 }
