@@ -198,14 +198,10 @@ export interface IAthlete_Response_V1 {
     creationDate: Date;
     revisionDate: Date;
     currentJourney?: IJourney_Response_V1;
-    bodyweights?: IBodyweight_Response_V1[];
-    preferredMassUnit?: string;
+    preferredMassUnit?: MassUnit;
     preferredLengthUnit?: MeasurementSystem;
     currentSubscription?: IAthlete_Subscription_V1;
-    journeyPasses?: IJourney_Template_Pass_V1[];
     primarySport?: string;
-    journeys?: IJourney_Response_V1[];
-    workouts?: IWorkout_Response_V1[];
     gender?: string;
     firstName?: string;
     lastName?: string;
