@@ -579,6 +579,7 @@ export interface IProduct {
   stripeSubscriptionId: string
   title: string
   availablePlans: IPlan[]
+  features: string[]
 }
 
 export interface IPlan {
@@ -587,5 +588,4 @@ export interface IPlan {
   price: string
   currency: string
   interval: string
-  features: string[]
 }
