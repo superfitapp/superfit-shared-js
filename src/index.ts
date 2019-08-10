@@ -577,8 +577,8 @@ export interface IVideoAsset_Response_V1 {
 
 export interface IProduct {
   stripeSubscriptionId: string
-  subscriptionName: string
-  plans: IPlan[]
+  title: string
+  availablePlans: IPlan[]
 }
 
 export interface IPlan {
