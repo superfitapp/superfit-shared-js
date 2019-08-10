@@ -585,3 +585,9 @@ export interface IPlan {
   currency: string
   interval: string
 }
+
+export interface RemoteSubscription {
+  subscriptionTitle: string
+  stripeProductId: string
+  privateSessionsLimit: number
+}
