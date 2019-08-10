@@ -475,6 +475,7 @@ export interface IProduct {
 }
 export interface IPlan {
     stripePlanId: string;
+    stripeProductId: string;
     price: string;
     currency: string;
     interval: string;
