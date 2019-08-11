@@ -593,3 +593,8 @@ export interface RemoteSubscription {
   stripePlanId: string
   privateSessionsLimit: number
 }
+
+export interface StripeSessionResponse_V1 {
+  stripeCustomerId: string
+  stripeSessionId: string
+}
