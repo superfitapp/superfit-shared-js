@@ -488,3 +488,6 @@ export interface StripeSessionResponse_V1 {
     stripeCustomerId: string;
     stripeSessionId: string;
 }
+export interface StripeSessionDTO {
+    planId: string;
+}
