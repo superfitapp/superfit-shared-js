@@ -602,3 +602,7 @@ export interface StripeSessionResponse_V1 {
 export interface StripeSessionDTO {
   planId: string
 }
+
+export interface StripePaymentMethodDTO {
+  paymentMethod: string
+}
