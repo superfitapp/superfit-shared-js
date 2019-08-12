@@ -479,7 +479,7 @@ export interface IPlan {
     interval: string;
 }
 export interface RemoteSubscription {
-    subscriptionTitle: string;
+    planNickname: string;
     stripeProductId: string;
     stripePlanId: string;
     privateSessionsLimit: number;

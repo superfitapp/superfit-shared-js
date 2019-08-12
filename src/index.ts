@@ -588,7 +588,7 @@ export interface IPlan {
 }
 
 export interface RemoteSubscription {
-  subscriptionTitle: string
+  planNickname: string
   stripeProductId: string
   stripePlanId: string
   privateSessionsLimit: number
