@@ -478,7 +478,7 @@ export interface IPlan {
     currency: string;
     interval: string;
 }
-export interface RemoteSubscription {
+export interface IRemoteSubscription {
     planNickname: string;
     stripeProductId: string;
     stripePlanId: string;
