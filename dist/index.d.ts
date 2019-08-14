@@ -488,7 +488,7 @@ export interface StripeSessionResponse_V1 {
     stripeCustomerId: string;
     stripeSessionId: string;
 }
-export interface StripeSessionDTO {
+export interface CurrentRemotePlanDto {
     planId: string;
 }
 export interface StripePaymentMethodDTO {
