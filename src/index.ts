@@ -599,7 +599,7 @@ export interface StripeSessionResponse_V1 {
   stripeSessionId: string
 }
 
-export interface StripeSessionDTO {
+export interface CurrentRemotePlanDto {
   planId: string
 }
 
