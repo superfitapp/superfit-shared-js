@@ -471,6 +471,7 @@ export interface IProduct {
     features: string[];
 }
 export interface IPlan {
+    nickname: string;
     stripePlanId: string;
     stripeProductId: string;
     price: number;
