@@ -606,3 +606,8 @@ export interface CurrentRemotePlanDto {
 export interface StripePaymentMethodDTO {
   paymentMethod: string
 }
+
+export interface SelectPlanDataResponse_V1 {
+  setupIntentSecret?: string
+  plan: IPlan
+}
