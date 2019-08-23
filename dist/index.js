@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var uom_1 = require("uom");
 var lodash_round_1 = __importDefault(require("lodash.round"));
+2;
 exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight, levelsOfPrecision) {
     if (levelsOfPrecision === void 0) { levelsOfPrecision = 1; }
     if (!weight) {

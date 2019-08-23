@@ -494,7 +494,7 @@ export const enum Difficulty {
   veryHard = "veryHard",
   maxEffort = "maxEffort"
 }
-
+2
 export interface ICreate_Journey_Template_Pass_DTO_V1 {
   journeyTemplateId: string;
   purchaseSource: string;
@@ -593,6 +593,7 @@ export interface IRemoteSubscription {
   stripeProductId: string
   stripePlanId: string
   privateSessionsLimit: number
+  isFreePlan: boolean
 }
 
 export interface StripeSessionResponse_V1 {
