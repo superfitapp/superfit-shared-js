@@ -504,6 +504,7 @@ export interface IProPublicInfo {
     name: string;
     title: string;
     description: string;
+    picture_url: string;
     youtubeUrl?: string;
     websiteUrl?: string;
     instagramUrl?: string;
