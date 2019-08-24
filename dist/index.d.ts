@@ -500,3 +500,11 @@ export interface SelectPlanDataResponse_V1 {
     setupIntentSecret?: string;
     plan: IPlan;
 }
+export interface IProPublicInfo {
+    name: string;
+    title: string;
+    description: string;
+    youtubeUrl?: string;
+    websiteUrl?: string;
+    instagramUrl?: string;
+}
