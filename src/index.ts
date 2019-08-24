@@ -622,3 +622,9 @@ export interface IProPublicInfo {
   websiteUrl?: string
   instagramUrl?: string
 }
+
+export interface IAthletePublicInfo {
+  username: string
+  nickname?: string
+  proProfile?: IProPublicInfo
+}
