@@ -31,6 +31,12 @@ export const enum ContentAccessLevel {
   Pro = "pro",
   Free = "free"
 }
+
+export const enum PrivacyStatus {
+  Unlisted = "unlisted",
+  Public = "public"
+}
+
 export const enum ExerciseBlock {
   Warmup = "warmup",
   Drills = "drills",

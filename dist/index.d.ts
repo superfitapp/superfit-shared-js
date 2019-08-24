@@ -20,6 +20,10 @@ export declare const enum ContentAccessLevel {
     Pro = "pro",
     Free = "free"
 }
+export declare const enum PrivacyStatus {
+    Unlisted = "unlisted",
+    Public = "public"
+}
 export declare const enum ExerciseBlock {
     Warmup = "warmup",
     Drills = "drills",
