@@ -360,6 +360,7 @@ export interface Journey_Template_Response_V1 {
     sport: string;
     level: string;
     accessLevel: string;
+    privacyStatus: string;
 }
 export interface Professional_Response_V1 {
     id: string;
