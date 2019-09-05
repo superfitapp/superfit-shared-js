@@ -172,6 +172,7 @@ export interface IJourney_Response_V1 {
   athlete?: IAthlete_Response_V1;
   workouts: IWorkout_Response_V1[];
   journeyTemplateId: string;
+  premiumTier: string
 }
 
 export interface IExercise_Response_V1 {
@@ -216,6 +217,7 @@ export interface IWorkout_Response_V1 {
   startDate?: Date;
   scheduledDate: Date;
   exercises: IExercise_Response_V1[];
+  premiumTier: string;
 }
 
 export interface IAthlete_Response_V1 {
