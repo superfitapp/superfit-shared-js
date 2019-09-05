@@ -543,6 +543,13 @@ export const enum MeasurementSystem {
   imperial = "imperial"
 }
 
+export const enum PremiumTier {
+  free = "free",
+  pro = "pro",
+  sponsored = "sponsored",
+  coaching = "coaching"
+}
+
 export const convertedWeight = (
   unitToConvertFrom: string,
   unitToConvertTo: string,

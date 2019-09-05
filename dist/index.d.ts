@@ -457,6 +457,12 @@ export declare const enum MeasurementSystem {
     metric = "metric",
     imperial = "imperial"
 }
+export declare const enum PremiumTier {
+    free = "free",
+    pro = "pro",
+    sponsored = "sponsored",
+    coaching = "coaching"
+}
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
 export interface ISaveDemo_Dto_V1 {
     masterUrl: string;
