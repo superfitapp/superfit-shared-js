@@ -33,8 +33,9 @@ export const enum ContentAccessLevel {
 }
 
 export const enum PrivacyStatus {
-  Unlisted = "unlisted",
-  Public = "public"
+  unlisted = "unlisted",
+  public = "public",
+  private = "private"
 }
 
 export const enum ExerciseBlock {
