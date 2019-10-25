@@ -254,6 +254,7 @@ export interface IAthlete_Subscription_V1 {
   latestStripeCoachEndDate?: Date;
   latestStripeCoachSubscriptionId?: string;
   stripeCustomerId?: string;
+  stripeConnectId?: string;
   notes?: string;
 }
 
