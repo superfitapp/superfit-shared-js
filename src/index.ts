@@ -647,3 +647,7 @@ export interface IAthletePublicInfo {
   nickname?: string
   proProfile?: IProPublicInfo
 }
+
+export interface FinalizeConnectDTO {
+  authCode: string;
+}
