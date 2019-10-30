@@ -474,16 +474,6 @@ export interface ExerciseGoal_Response {
   title: string;
   slug: string;
 }
-// export interface WorkoutCatalog_Response {
-//   slug: string;
-//   title: string;
-//   type: string;
-//   publishDate?: Date;
-//   revisionDate: Date;
-//   creationDate: Date;
-//   version: number;
-//   exerciseCatalogs: ExerciseCatalog_Response[];
-// }
 
 export const enum Gender {
   Male = "male",
@@ -651,4 +641,24 @@ export interface IAthletePublicInfo {
 
 export interface FinalizeConnectDTO {
   authCode: string;
+}
+
+export interface IVideoResponse_V1 {
+  id: string;
+  masterUrl: string;
+  thumbnail_url?: string;
+  creationDate: Date;
+  revisionDate: Date;
+  muxPlaybackId?: string
+  muxAssetId?: string
+  origin_description?: string
+}
+
+export interface IPhotoResponse_V1 {
+  id: string;
+  masterUrl: string;
+  scaled_image_url?: string;
+  creationDate: Date;
+  revisionDate: Date;
+  origin_description?: string
 }
