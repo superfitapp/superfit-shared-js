@@ -662,3 +662,8 @@ export interface IPhotoResponse_V1 {
   revisionDate: Date;
   origin_description?: string
 }
+
+export interface IUploadVideoDTO_V1 {
+  masterUrl: string
+  originDescription: string
+}
