@@ -155,6 +155,7 @@ export interface IJourney_Response_V1 {
     premiumTier: string;
 }
 export interface IExercise_Response_V1 {
+    id: string;
     title: string;
     exerciseTemplateId: string;
     blockOrder: number;
@@ -169,6 +170,7 @@ export interface IExercise_Response_V1 {
     userNotes?: string;
 }
 export interface IExercise_Set_Response_V1 {
+    id: string;
     title: string;
     repUnit: string;
     status: string;
