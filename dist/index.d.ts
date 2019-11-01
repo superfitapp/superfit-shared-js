@@ -156,6 +156,8 @@ export interface IJourney_Response_V1 {
 }
 export interface IExercise_Response_V1 {
     id: string;
+    creationDate: Date;
+    revisionDate: Date;
     title: string;
     exerciseTemplateId: string;
     blockOrder: number;
@@ -171,6 +173,8 @@ export interface IExercise_Response_V1 {
 }
 export interface IExercise_Set_Response_V1 {
     id: string;
+    creationDate: Date;
+    revisionDate: Date;
     title: string;
     repUnit: string;
     status: string;
