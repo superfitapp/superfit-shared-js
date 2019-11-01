@@ -679,12 +679,8 @@ export interface IUploadVideoDTO_V1 {
 }
 
 export interface ISyncWorkoutsDTO_V1 {
-  workouts: IDirtyWorkoutDto[]
-}
-
-export interface IDirtyWorkoutDto {
-  workoutId: string
-  dirtyWorkout?: IWorkout_Response_V1
+  workoutIds: string[]
+  dirtyWorkouts?: IWorkout_Response_V1[]
   dirtyExercises?: IExercise_Response_V1[]
   dirtySets?: IExercise_Set_Response_V1[]
 }
