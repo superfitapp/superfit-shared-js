@@ -1,12 +1,6 @@
 import { Amount, Units } from "uom";
 import round from 'lodash.round'
 
-// export interface IExerciseGoal {
-//   inputs: string[];
-//   primaryInput: string;
-//   title: string;
-//   slug: string;
-// }
 export interface IExerciseSet {
   status: string;
   rpe: Number;
@@ -683,4 +677,12 @@ export interface ISyncWorkoutsDTO_V1 {
   dirtyWorkouts?: IWorkout_Response_V1[]
   dirtyExercises?: IExercise_Response_V1[]
   dirtySets?: IExercise_Set_Response_V1[]
+}
+
+export interface CoachingPlan_Response_V1 {
+  client: IAthlete_Response_V1
+  professionalId: string,
+  trainingPlan: IJourney_Response_V1
+  stripePaymentIntentId: string
+  firebasePlanId?: string
 }
