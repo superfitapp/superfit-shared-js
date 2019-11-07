@@ -571,8 +571,8 @@ export interface ISyncWorkoutsDTO_V1 {
 }
 export interface CoachingPlan_Response_V1 {
     client: IAthlete_Response_V1;
+    coach: IAthlete_Response_V1;
     trainingPlan: IJourney_Response_V1;
-    professionalId: string;
     stripePaymentIntentId: string;
     firebaseCoachingPlanId?: string;
 }
