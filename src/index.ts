@@ -690,11 +690,11 @@ export interface CoachingPlan_Response_V1 {
 
 
 export interface IStartCoachingPlanDTO_V1 {
-  createJourneyDto: IStartJourneyDTO_V1
+  createJourneyDto: IStartPlanDTO_V1
   paymentMethodId: string
 }
 
-export interface IStartJourneyDTO_V1 {
+export interface IStartPlanDTO_V1 {
   username: string;
   currentBodyweight: number;
   catalogSeriesId: string;
