@@ -240,6 +240,8 @@ export interface IAthlete_Response_V1 {
   profileImageUrl?: string;
   subscriptionEndDate?: Date;
   subscriptionTier?: string;
+  clientPlans: ICoachingPlan_Response_V1[]
+  purchasedCoachingPlans: ICoachingPlan_Response_V1[]
 }
 
 export interface IAthlete_Subscription_V1 {
@@ -679,7 +681,7 @@ export interface ISyncWorkoutsDTO_V1 {
   dirtySets?: IExercise_Set_Response_V1[]
 }
 
-export interface CoachingPlan_Response_V1 {
+export interface ICoachingPlan_Response_V1 {
   client: IAthlete_Response_V1
   coach: IAthlete_Response_V1
   trainingPlan: IJourney_Response_V1
