@@ -544,23 +544,28 @@ export interface FinalizeConnectDTO {
 export interface IVideoResponse_V1 {
     id: string;
     masterUrl: string;
-    thumbnail_url?: string;
+    thumbnailUrl?: string;
     creationDate: Date;
     revisionDate: Date;
     muxPlaybackId?: string;
     muxAssetId?: string;
-    origin_description?: string;
+    originDescription?: string;
 }
 export interface IPhotoResponse_V1 {
     id: string;
     masterUrl: string;
-    scaled_image_url?: string;
+    scaledImageUrl?: string;
     creationDate: Date;
     revisionDate: Date;
-    origin_description?: string;
+    originDescription?: string;
 }
 export interface IUploadImageDTO_V1 {
     masterUrl: string;
+    originDescription: string;
+}
+export interface IUploadVideoDTO_V1 {
+    masterUrl: string;
+    thumbnailUrl?: string;
     originDescription: string;
 }
 export interface ISyncWorkoutsDTO_V1 {
