@@ -669,7 +669,7 @@ export interface IPhotoResponse_V1 {
   origin_description?: string
 }
 
-export interface IUploadVideoDTO_V1 {
+export interface IUploadImageDTO_V1 {
   masterUrl: string
   originDescription: string
 }
