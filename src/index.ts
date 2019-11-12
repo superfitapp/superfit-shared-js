@@ -240,8 +240,6 @@ export interface IAthlete_Response_V1 {
   profileImageUrl?: string;
   subscriptionEndDate?: Date;
   subscriptionTier?: string;
-  clientPlans: ICoachingPlan_Response_V1[]
-  purchasedCoachingPlans: ICoachingPlan_Response_V1[]
 }
 
 export interface IAthlete_Subscription_V1 {
