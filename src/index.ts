@@ -707,7 +707,16 @@ export interface IStartPlanDTO_V1 {
   preferredDaysOfWeek: string;
 }
 
-export interface PlanOfferDTO_V1 {
+export interface CreatePlanOfferDTO_V1 {
+  remoteCoachingEnabled: boolean;
+  trainingPlanPrice?: number;
+  remoteCoachingPrice?: number;
+}
+
+export interface PlanOfferResponse_V1 {
+  id: string;
+  creationDate: Date;
+  revisionDate: Date;
   remoteCoachingEnabled: boolean;
   trainingPlanPrice?: number;
   remoteCoachingPrice?: number;
