@@ -597,6 +597,11 @@ export interface CreatePlanOfferDTO_V1 {
     trainingPlanPrice?: number;
     remoteCoachingPrice?: number;
 }
+export interface CreatePlanItemDTO_V1 {
+    trainingPlanId: string;
+    feature_title?: string;
+    feature_description?: string;
+}
 export interface PlanOfferResponse_V1 {
     id: string;
     creationDate: Date;
