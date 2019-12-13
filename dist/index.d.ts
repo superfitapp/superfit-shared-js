@@ -610,11 +610,21 @@ export interface PlanOfferResponse_V1 {
     trainingPlanPrice?: number;
     remoteCoachingPrice?: number;
 }
-export interface PlanItemResponse_V1 {
+export interface CatalogItemResponse_V1 {
     id: string;
     creationDate: Date;
     revisionDate: Date;
-    trainingPlanId: string;
+    trainingPlanId?: string;
     feature_title?: string;
     feature_description?: string;
+}
+export interface FeatureSectionResponse_V1 {
+    id: string;
+    creation_date: Date;
+    revision_date: Date;
+    title: string;
+    description: string;
+    photoImageId?: string;
+    iconImageId?: string;
+    catalogItems: CatalogItemResponse_V1[];
 }
