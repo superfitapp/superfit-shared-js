@@ -473,6 +473,7 @@ export declare const enum MeasurementSystem {
 export declare const enum PremiumTier {
     free = "free",
     pro = "pro",
+    planPassPurchase = "planPassPurchase",
     sponsored = "sponsored",
     coaching = "coaching"
 }

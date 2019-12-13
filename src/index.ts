@@ -21,6 +21,7 @@ export interface IAthleteWeight {
   revisionDate: Date;
 }
 
+// This should be deprecated, use 'PremiumTier'
 export const enum ContentAccessLevel {
   Pro = "pro",
   Free = "free"
@@ -545,6 +546,7 @@ export const enum MeasurementSystem {
 export const enum PremiumTier {
   free = "free",
   pro = "pro",
+  planPassPurchase = "planPassPurchase",
   sponsored = "sponsored",
   coaching = "coaching"
 }
