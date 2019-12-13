@@ -592,3 +592,8 @@ export interface IStartPlanDTO_V1 {
     catalogSeriesId: string;
     preferredDaysOfWeek: string;
 }
+export interface PlanOfferDTO_V1 {
+    remoteCoachingEnabled: boolean;
+    trainingPlanPrice?: number;
+    remoteCoachingPrice?: number;
+}
