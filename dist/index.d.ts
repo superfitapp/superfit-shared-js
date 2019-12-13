@@ -602,6 +602,10 @@ export interface CreatePlanItemDTO_V1 {
     feature_title?: string;
     feature_description?: string;
 }
+export interface CreateFeatureSectionDTO_V1 {
+    title: string;
+    description?: string;
+}
 export interface PlanOfferResponse_V1 {
     id: string;
     creationDate: Date;
@@ -623,7 +627,7 @@ export interface FeatureSectionResponse_V1 {
     creation_date: Date;
     revision_date: Date;
     title: string;
-    description: string;
+    description?: string;
     photoImageId?: string;
     iconImageId?: string;
     catalogItems: CatalogItemResponse_V1[];
