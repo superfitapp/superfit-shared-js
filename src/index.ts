@@ -728,3 +728,13 @@ export interface PlanOfferResponse_V1 {
   remoteCoachingPrice?: number;
 }
 
+
+export interface PlanItemResponse_V1 {
+  id: string;
+  creationDate: Date;
+  revisionDate: Date;
+  trainingPlanId: string
+  feature_title?: string
+  feature_description?: string
+}
+
