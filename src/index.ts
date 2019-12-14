@@ -268,7 +268,8 @@ export interface IJourney_Template_Pass_V1 {
   stripeTransactionId?: string;
   stripeProductId?: string;
   purchaseSource: string;
-  notes?: string;
+  currentOffer?: PlanOfferResponse_V1
+  offers?: PlanOfferResponse_V1[]
 }
 
 export interface IBodyweight_Response_V1 {
