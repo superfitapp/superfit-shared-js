@@ -597,11 +597,15 @@ export interface CreatePlanOfferDTO_V1 {
     remoteCoachingEnabled: boolean;
     trainingPlanPrice?: number;
     remoteCoachingPrice?: number;
+    offerStartDate: Date;
+    promoPrice?: number;
+    promoEndDate?: Date;
+    offerEndDate?: Date;
 }
 export interface CreatePlanItemDTO_V1 {
     trainingPlanId: string;
-    feature_title?: string;
-    feature_description?: string;
+    featureTitle?: string;
+    featureDescription?: string;
 }
 export interface CreateFeatureSectionDTO_V1 {
     title: string;
@@ -612,16 +616,20 @@ export interface PlanOfferResponse_V1 {
     creationDate: Date;
     revisionDate: Date;
     remoteCoachingEnabled: boolean;
-    trainingPlanPrice?: number;
     remoteCoachingPrice?: number;
+    trainingPlanPrice?: number;
+    promoPrice?: number;
+    promoEndDate?: Date;
+    offerStartDate: Date;
+    offerEndDate?: Date;
 }
 export interface CatalogItemResponse_V1 {
     id: string;
     creationDate: Date;
     revisionDate: Date;
     trainingPlanId?: string;
-    feature_title?: string;
-    feature_description?: string;
+    featureTitle?: string;
+    featureDescription?: string;
 }
 export interface FeatureSectionResponse_V1 {
     id: string;
