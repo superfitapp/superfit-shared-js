@@ -347,6 +347,11 @@ export interface IFetch_Definitions_Response_v1 {
   total: number;
 }
 
+export interface TrainingPlansResponse_V1 {
+  plans: Journey_Template_Response_V1[];
+  total: number;
+}
+
 export interface Exercise_Definition_Response_V1 {
   id: string;
   title: string;
