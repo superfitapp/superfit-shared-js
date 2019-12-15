@@ -709,7 +709,6 @@ export interface IStartPlanDTO_V1 {
 }
 
 export interface CreatePlanOfferDTO_V1 {
-  remoteCoachingEnabled: boolean;
   trainingPlanPrice?: number;
   remoteCoachingPrice?: number;
   offerStartDate: Date
@@ -733,7 +732,6 @@ export interface PlanOfferResponse_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
-  remoteCoachingEnabled: boolean;
   remoteCoachingPrice?: number;
   trainingPlanPrice?: number;
   promoPrice?: number
