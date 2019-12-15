@@ -627,7 +627,7 @@ export interface PlanOfferResponse_V1 {
     offerStartDate: Date;
     offerEndDate?: Date;
 }
-export interface CatalogItemResponse_V1 {
+export interface FeatureItemResponse_V1 {
     id: string;
     creationDate: Date;
     revisionDate: Date;
@@ -643,5 +643,5 @@ export interface FeatureSectionResponse_V1 {
     description?: string;
     photoImageId?: string;
     iconImageId?: string;
-    catalogItems: CatalogItemResponse_V1[];
+    featureItems: FeatureItemResponse_V1[];
 }
