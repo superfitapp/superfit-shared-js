@@ -608,7 +608,7 @@ export interface CreatePlanOfferDTO_V1 {
     offerEndDate?: Date;
 }
 export interface CreatePlanItemDTO_V1 {
-    trainingPlanId: string;
+    trainingPlan: Journey_Template_Response_V1;
     featureTitle?: string;
     featureDescription?: string;
 }
@@ -631,7 +631,7 @@ export interface CatalogItemResponse_V1 {
     id: string;
     creationDate: Date;
     revisionDate: Date;
-    trainingPlanId?: string;
+    trainingPlan?: Journey_Template_Response_V1;
     featureTitle?: string;
     featureDescription?: string;
 }
