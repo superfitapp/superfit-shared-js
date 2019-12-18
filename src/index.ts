@@ -426,6 +426,7 @@ export interface Journey_Templates_Section_Response {
 export interface Journey_Template_Response_V1 {
   id: string;
   mainImageUrl?: string;
+  mainImagePhotoId?: string;
   creationDate: Date;
   revisionDate: Date;
   publishDate?: Date;
