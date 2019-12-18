@@ -581,8 +581,13 @@ export const convertedWeight = (
   }
 }
 
-export interface ISaveDemo_Dto_V1 {
+export interface ISaveVideo_DTO_V1 {
   masterUrl: string;
+}
+
+export interface ISavePhoto_DTO_V1 {
+  masterUrl: string;
+  filePath: string;
 }
 
 export interface IVideoAsset_Response_V1 {
@@ -672,7 +677,6 @@ export interface IPhotoResponse_V1 {
   id: string;
   masterUrl: string;
   filePath?: string
-  scaledImageUrl?: string;
   creationDate: Date;
   revisionDate: Date;
   originDescription?: string

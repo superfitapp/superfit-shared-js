@@ -485,8 +485,12 @@ export declare const enum PremiumTier {
     coaching = "coaching"
 }
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
-export interface ISaveDemo_Dto_V1 {
+export interface ISaveVideo_DTO_V1 {
     masterUrl: string;
+}
+export interface ISavePhoto_DTO_V1 {
+    masterUrl: string;
+    filePath: string;
 }
 export interface IVideoAsset_Response_V1 {
     id: string;
@@ -563,7 +567,6 @@ export interface IPhotoResponse_V1 {
     id: string;
     masterUrl: string;
     filePath?: string;
-    scaledImageUrl?: string;
     creationDate: Date;
     revisionDate: Date;
     originDescription?: string;
