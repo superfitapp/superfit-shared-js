@@ -562,13 +562,15 @@ export interface IVideoResponse_V1 {
 export interface IPhotoResponse_V1 {
     id: string;
     masterUrl: string;
+    filePath?: string;
     scaledImageUrl?: string;
     creationDate: Date;
     revisionDate: Date;
     originDescription?: string;
 }
-export interface IUploadImageDTO_V1 {
+export interface IUploadPhotoDTO_V1 {
     masterUrl: string;
+    filePath: string;
     originDescription: string;
 }
 export interface IUploadVideoDTO_V1 {
@@ -634,6 +636,7 @@ export interface FeatureItemResponse_V1 {
     trainingPlan?: Journey_Template_Response_V1;
     featureTitle?: string;
     featureDescription?: string;
+    featureOffer?: PlanOfferResponse_V1;
 }
 export interface FeatureSectionResponse_V1 {
     id: string;
