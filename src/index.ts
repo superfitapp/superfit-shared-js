@@ -118,7 +118,11 @@ export interface Phase_Response_V1 {
   order: number;
   creationDate: Date;
   fullDescription?: string;
+
+  // deprecated
   mainImageUrl?: string;
+
+  mainImagePhotoId?: string;
   workoutTemplates: Workout_Template_Response_V1[];
 }
 

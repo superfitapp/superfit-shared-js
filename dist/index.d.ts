@@ -106,6 +106,7 @@ export interface Phase_Response_V1 {
     creationDate: Date;
     fullDescription?: string;
     mainImageUrl?: string;
+    mainImagePhotoId?: string;
     workoutTemplates: Workout_Template_Response_V1[];
 }
 export interface ICreate_Workout_Template_Dto_V1 {
