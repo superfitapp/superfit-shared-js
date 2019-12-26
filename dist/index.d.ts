@@ -392,6 +392,7 @@ export interface Professional_Response_V1 {
     fullDescription?: string;
     title?: string;
     pictureUrl: string;
+    profilePhotoId?: string;
     creationDate: Date;
     revisionDate: Date;
     journeyTemplates?: Journey_Template_Response_V1[];
