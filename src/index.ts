@@ -243,6 +243,7 @@ export interface IAthlete_Response_V1 {
   firstName?: string;
   lastName?: string;
   profileImageUrl?: string;
+  profilePhoto?: IPhotoResponse_V1
   subscriptionEndDate?: Date;
   subscriptionTier?: string;
 }
@@ -503,7 +504,6 @@ export interface ICreatePhaseDto {
   title: string;
   numberOfWeeks: number;
   order: number;
-  mainImageUrl?: string;
 }
 
 export const enum Difficulty {
