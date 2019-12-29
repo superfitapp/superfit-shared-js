@@ -781,5 +781,5 @@ export interface FeatureSectionResponse_V1 {
 }
 
 export interface CurrentPlanResponse_V1 {
-  currentPlan?: Journey_Template_Response_V1;
+  currentPlan?: IJourney_Response_V1;
 }
