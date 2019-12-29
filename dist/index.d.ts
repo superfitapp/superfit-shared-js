@@ -543,7 +543,8 @@ export interface IProPublicInfo {
     name: string;
     title: string;
     description: string;
-    pictureUrl: string;
+    pictureUrl?: string;
+    profilePhotoId?: string;
     youtubeUrl?: string;
     websiteUrl?: string;
     instagramUrl?: string;
