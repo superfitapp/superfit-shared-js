@@ -654,3 +654,6 @@ export interface FeatureSectionResponse_V1 {
     iconImageId?: string;
     featureItems: FeatureItemResponse_V1[];
 }
+export interface CurrentPlanResponse_V1 {
+    currentPlan?: Journey_Template_Response_V1;
+}
