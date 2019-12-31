@@ -71,8 +71,10 @@ export const enum ExerciseInput {
   Reps = "reps",
   Weight = "weight",
   Duration = "duration",
-  Distance = "distance"
+  Distance = "distance",
+  Freeform = "freeform"
 }
+
 export const enum MovementType {
   Static = "static",
   Dynamic = "dynamic",
