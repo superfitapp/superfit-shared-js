@@ -718,9 +718,16 @@ export interface ICoachingPlan_Response_V1 {
   firebaseCoachingPlanId?: string
 }
 
+// deprecated, use IPurchaseCoachingPlanDTO_V1 2/15/20
 export interface IStartCoachingPlanDTO_V1 {
   createJourneyDto: IStartPlanDTO_V1
   paymentMethodId: string
+}
+
+export interface IPurchaseCoachingPlanDTO_V1 {
+  planOfferId: string,
+  createJourneyDto: IStartPlanDTO_V1;
+  paymentMethodId: string;
 }
 
 export interface IStartPlanDTO_V1 {

@@ -603,6 +603,11 @@ export interface IStartCoachingPlanDTO_V1 {
     createJourneyDto: IStartPlanDTO_V1;
     paymentMethodId: string;
 }
+export interface IPurchaseCoachingPlanDTO_V1 {
+    planOfferId: string;
+    createJourneyDto: IStartPlanDTO_V1;
+    paymentMethodId: string;
+}
 export interface IStartPlanDTO_V1 {
     username: string;
     currentBodyweight: number;
