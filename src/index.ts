@@ -716,6 +716,7 @@ export interface ICoachingPlan_Response_V1 {
   trainingPlan: IJourney_Response_V1
   stripePaymentIntentId: string
   firebaseCoachingPlanId?: string
+  planOfferId?: string
 }
 
 // deprecated, use IPurchaseCoachingPlanDTO_V1 2/15/20

@@ -598,6 +598,7 @@ export interface ICoachingPlan_Response_V1 {
     trainingPlan: IJourney_Response_V1;
     stripePaymentIntentId: string;
     firebaseCoachingPlanId?: string;
+    planOfferId?: string;
 }
 export interface IStartCoachingPlanDTO_V1 {
     createJourneyDto: IStartPlanDTO_V1;
