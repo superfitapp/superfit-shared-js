@@ -801,3 +801,8 @@ export interface FeatureSectionResponse_V1 {
 export interface CurrentPlanResponse_V1 {
   currentPlan?: IJourney_Response_V1;
 }
+
+export interface ArchiveDefinitionDTO_V1 {
+  algoliaId?: string
+  definitionId: string
+}
