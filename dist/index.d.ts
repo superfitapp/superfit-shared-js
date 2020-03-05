@@ -76,6 +76,12 @@ export declare const enum MovementType {
     VPull = "vpull",
     VPush = "vpush"
 }
+export declare const enum VisibilityStatus {
+    Public = "public",
+    Follower = "follower",
+    Private = "private",
+    Archived = "archived"
+}
 export interface ISignInDTO_V1 {
     email: string;
     analyticsId: string;
