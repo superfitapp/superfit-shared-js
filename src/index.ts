@@ -384,6 +384,7 @@ export interface Exercise_Definition_Response_V1 {
   unilateral: boolean;
   primaryWeightedEquipment?: Equipment_Response_V1;
   weightedEquipmentCount?: number;
+  visibilityStatus: string
 
   // deprecated 10/31/19
   demoVideo?: IVideoAsset_Response_V1;
