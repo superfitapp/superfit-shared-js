@@ -403,6 +403,10 @@ export interface Professional_Response_V1 {
     profilePhotoId?: string;
     creationDate: Date;
     revisionDate: Date;
+    youtubeUrl?: string;
+    websiteUrl?: string;
+    instagramUrl?: string;
+    twitterUrl?: string;
     journeyTemplates?: Journey_Template_Response_V1[];
     workoutTemplates?: Workout_Template_Response_V1[];
 }
@@ -556,6 +560,7 @@ export interface IProPublicInfo {
     youtubeUrl?: string;
     websiteUrl?: string;
     instagramUrl?: string;
+    twitterUrl?: string;
 }
 export interface IAthletePublicInfo {
     username: string;
