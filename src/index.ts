@@ -672,6 +672,7 @@ export interface IProPublicInfo {
   websiteUrl?: string
   instagramUrl?: string
   twitterUrl?: string
+  facebookUrl?: string
 }
 
 export interface IAthletePublicInfo {
