@@ -388,9 +388,11 @@ export interface Exercise_Definition_Response_V1 {
 
   // deprecated 10/31/19
   demoVideo?: IVideoAsset_Response_V1;
+
   demoVideoId?: string
   video?: IVideoResponse_V1
   owner?: Professional_Response_V1
+  clonedFrom?: Exercise_Definition_Response_V1
 }
 
 export interface Definition_Equipment_Response_V1 {
