@@ -117,7 +117,9 @@ export const enum MovementCategory {
   Strength = "strength",
   Movement = "movement",
   Condition = "condition",
-  SportSpecific = "sport-specific"
+  SportSpecific = "sport-specific",
+  Technique = "technique",
+  Wellness = "wellness"
 }
 export interface Phase_Response_V1 {
   id: string;
