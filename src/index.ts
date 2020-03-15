@@ -645,7 +645,9 @@ export interface IRemoteSubscription {
   stripeProductId: string
   stripePlanId: string
   privateSessionsLimit: number
-  isFreePlan: boolean
+  isFreePlan: boolean,
+  isHobbyPlan: boolean,
+  isProPlan: boolean,
 }
 
 export interface StripeSessionResponse_V1 {
