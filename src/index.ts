@@ -807,6 +807,7 @@ export interface PlanOfferResponse_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
+  internalTitle?: string
   remoteCoachingPrice?: number;
   trainingPlanPrice?: number;
   promoPrice?: number
