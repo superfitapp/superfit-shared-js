@@ -687,6 +687,19 @@ export interface IAthletePublicInfo {
   proProfile?: IProPublicInfo
 }
 
+export interface IPlanPublicInfo {
+  mainImagePhotoId?: string;
+  publishDate?: Date;
+  title: string;
+  shortDescription?: string;
+  fullDescription?: string;
+  sport: string;
+  level: string;
+  phases?: Phase_Response_V1[];
+  currentOffer?: PlanOfferResponse_V1
+  proProfile?: IProPublicInfo
+}
+
 export interface FinalizeConnectDTO {
   authCode: string;
 }
