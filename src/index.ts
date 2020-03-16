@@ -698,7 +698,11 @@ export interface IPlanPublicInfo {
   level: string;
   phases?: Phase_Response_V1[];
   currentOffer?: PlanOfferResponse_V1
-  proProfile?: IProPublicInfo
+}
+
+export interface IPlanAndProPublicInfo {
+  proInfo: IProPublicInfo
+  planInfo: IPlanPublicInfo
 }
 
 export interface FinalizeConnectDTO {
