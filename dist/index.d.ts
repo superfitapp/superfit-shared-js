@@ -559,6 +559,8 @@ export interface SelectPlanDataResponse_V1 {
 export interface IProPublicInfo {
     name: string;
     title: string;
+    username: string;
+    userId: string;
     description: string;
     pictureUrl?: string;
     profilePhotoId?: string;
