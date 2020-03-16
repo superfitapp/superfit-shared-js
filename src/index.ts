@@ -705,6 +705,12 @@ export interface IPlanAndProPublicInfo {
   planInfo: IPlanPublicInfo
 }
 
+export interface IPlanProUserNamePublicInfo {
+  proInfo: IProPublicInfo
+  planInfo: IPlanPublicInfo
+  username: string
+}
+
 export interface FinalizeConnectDTO {
   authCode: string;
 }
