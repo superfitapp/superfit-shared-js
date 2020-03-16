@@ -689,6 +689,7 @@ export interface IAthletePublicInfo {
 }
 
 export interface IPlanPublicInfo {
+  id: string
   mainImagePhotoId?: string;
   publishDate?: Date;
   title: string;

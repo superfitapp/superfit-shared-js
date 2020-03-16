@@ -575,6 +575,7 @@ export interface IAthletePublicInfo {
     proProfile?: IProPublicInfo;
 }
 export interface IPlanPublicInfo {
+    id: string;
     mainImagePhotoId?: string;
     publishDate?: Date;
     title: string;
