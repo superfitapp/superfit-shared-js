@@ -698,7 +698,7 @@ export interface IPlanPublicInfo {
   sport: string;
   level: string;
   phases?: Phase_Response_V1[];
-  currentOffer?: PlanOfferResponse_V1
+  planOffer?: PlanOfferResponse_V1
 }
 
 export interface IPlanAndProPublicInfo {
