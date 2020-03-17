@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/leojkwan/superfit-shared-js#readme",
   "devDependencies": {
-    "typescript": "^3.5.1"
+    "typescript": "~3.5.3"
   }
 }
