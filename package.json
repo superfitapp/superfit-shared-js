@@ -1,7 +1,7 @@
 {
-  "name": "superfitjs",
-  "version": "2.0.0",
-  "description": "shared resources between superfit-api and superfit-website",
+  "name": "hypertrophy",
+  "version": "1.0.0",
+  "description": "Shared frontend resources between onsuperfit.com and superfit web app.",
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build",
@@ -19,12 +19,12 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/superfitapp/superfit-shared-js.git"
+    "url": "git+https://github.com/superfitapp/hypertrophy.git"
   },
   "bugs": {
-    "url": "https://github.com/superfitapp/superfit-shared-js/issues"
+    "url": "https://github.com/superfitapp/hypertrophy/issues"
   },
-  "homepage": "https://github.com/superfitapp/superfit-shared-js#readme",
+  "homepage": "https://github.com/superfitapp/hypertrophy#readme",
   "devDependencies": {
     "typescript": "^3.5.1"
   }
