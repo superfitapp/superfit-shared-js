@@ -19,12 +19,12 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leojkwan/superfit-shared-js.git"
+    "url": "git+https://github.com/superfitapp/superfit-shared-js.git"
   },
   "bugs": {
-    "url": "https://github.com/leojkwan/superfit-shared-js/issues"
+    "url": "https://github.com/superfitapp/superfit-shared-js/issues"
   },
-  "homepage": "https://github.com/leojkwan/superfit-shared-js#readme",
+  "homepage": "https://github.com/superfitapp/superfit-shared-js#readme",
   "devDependencies": {
     "typescript": "^3.5.1"
   }
