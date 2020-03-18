@@ -518,8 +518,7 @@ export interface ICreate_Plan_Pass_DTO_V1 {
   appleReceiptData?: string
   appleTransactionId?: string;
   appleProductId?: string;
-  stripeTransactionId?: string;
-  stripeProductId?: string;
+  stripeTransactionId?: string; // payment intent
   notes?: string;
 }
 
@@ -606,11 +605,11 @@ export interface IVideoAsset_Response_V1 {
 export interface IProduct {
   stripeProductId: string
   title: string
-  availablePlans: IPlan[]
+  availablePlans: IRemotePlan[]
   features: string[]
 }
 
-export interface IPlan {
+export interface IRemotePlan {
   nickname: string;
   stripePlanId: string;
   stripeProductId: string;
@@ -643,9 +642,13 @@ export interface StripePaymentMethodDTO {
   paymentMethod: string
 }
 
-export interface SelectPlanDataResponse_V1 {
+export interface SelectRemotePlanCheckout {
   setupIntentSecret?: string
-  plan: IPlan
+  plan: IRemotePlan
+}
+
+export interface SelectTrainingPlanCheckout {
+  setupIntentSecret?: string
 }
 
 export interface IProPublicInfo {
