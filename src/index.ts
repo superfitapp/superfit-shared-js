@@ -275,19 +275,6 @@ export interface IAthlete_Subscription_V1 {
   notes?: string;
 }
 
-export interface IJourney_Template_Pass_V1 {
-  id: string;
-  creationDate: Date;
-  revisionDate: Date;
-  appleTransactionId?: string;
-  appleProductId?: string;
-  stripeTransactionId?: string;
-  stripeProductId?: string;
-  purchaseSource: string;
-  currentOffer?: PlanOfferResponse_V1
-  offers?: PlanOfferResponse_V1[]
-}
-
 export interface IBodyweight_Response_V1 {
   id: string;
   creationDate: Date;
@@ -540,6 +527,7 @@ export interface IJourney_Template_Pass_Response_V1 {
   revisionDate: Date;
   creationDate: Date;
   journeyTemplateId: string;
+  planOfferId?: string
   purchaseSource: string;
   appleTransactionId?: string;
   appleProductId?: string;
