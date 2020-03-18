@@ -636,7 +636,6 @@ export interface IPurchaseCoachingPlanDTO_V1 {
 export interface IPurchaseTrainingPlanDTO_V1 {
     planId: string;
     planOfferId: string;
-    paymentMethodId: string;
 }
 export interface IStartPlanDTO_V1 {
     username: string;
