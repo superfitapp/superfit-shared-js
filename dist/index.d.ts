@@ -291,14 +291,6 @@ export declare const enum ExerciseGoalType {
     GameTime = "winning-time",
     Custom = "custom"
 }
-export interface MongoSet {
-    rpe: number;
-    status: string;
-    setNumber: number;
-    weight?: number;
-    reps: number;
-    duration?: number;
-}
 export interface IFetch_Definitions_Response_v1 {
     definitions: Exercise_Definition_Response_V1[];
     total: number;
@@ -710,4 +702,7 @@ export interface ArchiveDefinitionDTO_V1 {
     algoliaId?: string;
     definitionId: string;
 }
-export { PlanUtils } from './plan-utils';
+export declare class PlanUtils {
+    static experienceLevelText(planInfo: IPlanPublicInfo): string;
+    static trainingPlanTemplateTotalWeeks(planInfo: IPlanPublicInfo): number;
+}

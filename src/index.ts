@@ -299,6 +299,7 @@ export interface IBodyweight_Response_V1 {
 export interface JSONDict {
   [key: string]: any;
 }
+
 export const enum ExerciseGoalType {
   MoreWeight = "more-weight",
 
@@ -316,7 +317,6 @@ export const enum ExerciseGoalType {
 
   // deprecated
   DynamicMobility = "dynamic-mobility",
-
 
   DynamicStability = "dynamic-stability",
 
@@ -347,15 +347,6 @@ export const enum ExerciseGoalType {
   GameTime = "winning-time",
 
   Custom = "custom"
-}
-
-export interface MongoSet {
-  rpe: number;
-  status: string;
-  setNumber: number;
-  weight?: number;
-  reps: number;
-  duration?: number;
 }
 
 export interface IFetch_Definitions_Response_v1 {
@@ -846,4 +837,27 @@ export interface ArchiveDefinitionDTO_V1 {
   definitionId: string
 }
 
-export { PlanUtils } from './plan-utils'
+export class PlanUtils {
+  public static experienceLevelText(planInfo: IPlanPublicInfo): string {
+    switch (planInfo.level.toLowerCase()) {
+      case Level.Beginner:
+        return "Perfect for all fitness levels"
+      case Level.Intermediate:
+        return "Some training experience preferred"
+      case Level.Advanced:
+        return "Advanced fitness experience preferred"
+      case Level.Pro:
+        return "Advanced movement and strength experience required"
+      default:
+        return "Some training experience preferred"
+    }
+  }
+
+  public static trainingPlanTemplateTotalWeeks(planInfo: IPlanPublicInfo): number {
+    if (!planInfo.phases) {
+      return 0
+    }
+
+    return planInfo.phases.map(x => x.numberOfWeeks).reduce((a, b) => a + b)
+  }
+}
