@@ -543,7 +543,7 @@ export interface SelectTrainingPlanCheckout {
 export interface IProPublicInfo {
     name: string;
     title: string;
-    userId?: string;
+    userId: string;
     description: string;
     pictureUrl?: string;
     profilePhotoId?: string;
