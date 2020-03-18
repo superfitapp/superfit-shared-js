@@ -630,6 +630,11 @@ export interface IPurchaseCoachingPlanDTO_V1 {
     createJourneyDto: IStartPlanDTO_V1;
     paymentMethodId: string;
 }
+export interface IPurchaseTrainingPlanDTO_V1 {
+    planId: string;
+    planOfferId: string;
+    paymentMethodId: string;
+}
 export interface IStartPlanDTO_V1 {
     username: string;
     currentBodyweight: number;
