@@ -440,6 +440,7 @@ export declare const enum Difficulty {
 }
 export interface ICreate_Journey_Template_Pass_DTO_V1 {
     journeyTemplateId: string;
+    planOfferId?: string;
     purchaseSource: string;
     appleReceiptData?: string;
     appleTransactionId?: string;
