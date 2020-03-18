@@ -438,7 +438,7 @@ export declare const enum Difficulty {
     veryHard = "veryHard",
     maxEffort = "maxEffort"
 }
-export interface ICreate_Journey_Template_Pass_DTO_V1 {
+export interface ICreate_Plan_Pass_DTO_V1 {
     journeyTemplateId: string;
     planOfferId?: string;
     purchaseSource: string;
