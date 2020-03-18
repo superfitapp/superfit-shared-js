@@ -15,8 +15,8 @@
   },
   "author": "",
   "license": "ISC",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist",
+  "types": "dist",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leojkwan/superfit-shared-js.git"
