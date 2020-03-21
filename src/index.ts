@@ -691,7 +691,6 @@ export interface IPlanAndProPublicInfo {
 }
 
 export interface IPlanProUsernamePublicInfo {
-  proInfo: IProPublicInfo
   planInfo: IPlanPublicInfo
   username: string
 }
