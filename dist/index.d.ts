@@ -567,6 +567,7 @@ export interface IPlanPublicInfo {
     fullDescription?: string;
     sport: string;
     level: string;
+    owner?: IProPublicInfo;
     phases?: Phase_Response_V1[];
     planOffer?: PlanOfferResponse_V1;
 }
