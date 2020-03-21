@@ -690,7 +690,7 @@ export interface IPlanAndProPublicInfo {
   planInfo: IPlanPublicInfo
 }
 
-export interface IPlanProUsernamePublicInfo {
+export interface IPlanAndUsernameInfo {
   planInfo: IPlanPublicInfo
   username: string
 }

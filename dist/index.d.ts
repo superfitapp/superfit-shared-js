@@ -575,7 +575,7 @@ export interface IPlanAndProPublicInfo {
     proInfo: IProPublicInfo;
     planInfo: IPlanPublicInfo;
 }
-export interface IPlanProUsernamePublicInfo {
+export interface IPlanAndUsernameInfo {
     planInfo: IPlanPublicInfo;
     username: string;
 }
