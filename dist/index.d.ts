@@ -544,7 +544,7 @@ export interface IProPublicInfo {
     name: string;
     title: string;
     userId: string;
-    description: string;
+    shortDescription: string;
     pictureUrl?: string;
     profilePhotoId?: string;
     youtubeUrl?: string;
