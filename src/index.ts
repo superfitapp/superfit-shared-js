@@ -142,7 +142,7 @@ export interface Workout_Template_Response_V1 {
 
   // deprecated 4/18
   type: string;
-
+  owner?: Professional_Response_V1
   workoutType?: WorkoutTemplateTypeResponse;
   publishDate?: Date;
   revisionDate: Date;
@@ -458,6 +458,7 @@ export interface Professional_Response_V1 {
   twitterUrl?: string
   journeyTemplates?: Journey_Template_Response_V1[];
   workoutTemplates?: Workout_Template_Response_V1[];
+  workoutTemplateTypes?: WorkoutTemplateTypeResponse[]
 }
 
 export interface ExerciseCatalog_Response {
