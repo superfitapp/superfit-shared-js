@@ -115,7 +115,7 @@ export const enum MovementCategory {
   Technique = "technique",
   Wellness = "wellness"
 }
-export interface PhasePesponse_V1 {
+export interface Phase_Response_V1 {
   id: string;
   title?: string;
   numberOfWeeks: number;
@@ -128,27 +128,27 @@ export interface PhasePesponse_V1 {
   mainImageUrl?: string;
 
   mainImagePhotoId?: string;
-  workoutTemplates: WorkoutTemplatePesponse_V1[];
+  workoutTemplates: Workout_Template_Response_V1[];
 }
 
-export interface ICreate_WorkoutTemplate_Dto_V1 {
+export interface ICreate_Workout_Template_Dto_V1 {
   type: string;
   day: number;
 }
 
-export interface WorkoutTemplatePesponse_V1 {
+export interface Workout_Template_Response_V1 {
   id: string;
   title: string;
   type: string;
   publishDate?: Date;
   revisionDate: Date;
   creationDate: Date;
-  phase?: PhasePesponse_V1;
-  exerciseTemplates: ExerciseTemplatePesponse_V1[];
-  author?: ProfessionalPesponse_V1;
+  phase?: Phase_Response_V1;
+  exerciseTemplates: Exercise_Template_Response_V1[];
+  author?: Professional_Response_V1;
   day: number;
 }
-export interface ExerciseTemplatePesponse_V1 {
+export interface Exercise_Template_Response_V1 {
   id: string;
   title?: string;
   block: string;
@@ -158,7 +158,7 @@ export interface ExerciseTemplatePesponse_V1 {
   expectedDifficulty: string;
   blockOrder: number;
   priority: number;
-  definition: Exercise_DefinitionPesponse_V1;
+  definition: Exercise_Definition_Response_V1;
   reps?: number;
   repUnit?: string;
   manualWeight?: number;
@@ -168,19 +168,19 @@ export interface ExerciseTemplatePesponse_V1 {
   distance?: number;
   primaryInput: string;
   secondaryInput?: string;
-  workoutTemplate?: WorkoutTemplatePesponse_V1;
+  workout_template?: Workout_Template_Response_V1;
 }
 
-export interface IJourneyPesponse_V1 {
+export interface IJourney_Response_V1 {
   startDate?: Date;
   endDate?: Date;
-  athlete?: IAthletePesponse_V1;
-  workouts: IWorkoutPesponse_V1[];
+  athlete?: IAthlete_Response_V1;
+  workouts: IWorkout_Response_V1[];
   journeyTemplateId: string;
   premiumTier: string
 }
 
-export interface IExercisePesponse_V1 {
+export interface IExercise_Response_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
@@ -189,7 +189,7 @@ export interface IExercisePesponse_V1 {
   blockOrder: number;
   priority: number;
   block: string;
-  sets: IExercise_SetPesponse_V1[];
+  sets: IExercise_Set_Response_V1[];
   weightedEquipmentName?: string;
   weightedEquipmentNumber?: number;
   primaryWeightedEquipment?: string
@@ -198,7 +198,7 @@ export interface IExercisePesponse_V1 {
   userNotes?: string;
 }
 
-export interface IExercise_SetPesponse_V1 {
+export interface IExercise_Set_Response_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
@@ -217,7 +217,7 @@ export interface IExercise_SetPesponse_V1 {
   secondaryInput?: string;
 }
 
-export interface IWorkoutPesponse_V1 {
+export interface IWorkout_Response_V1 {
   id: string;
   name: string;
   type: string;
@@ -227,11 +227,11 @@ export interface IWorkoutPesponse_V1 {
   finishDate?: Date;
   startDate?: Date;
   scheduledDate: Date;
-  exercises: IExercisePesponse_V1[];
+  exercises: IExercise_Response_V1[];
   premiumTier: string;
 }
 
-export interface IAthletePesponse_V1 {
+export interface IAthlete_Response_V1 {
   id: string;
   email: string;
   userId: string;
@@ -239,7 +239,7 @@ export interface IAthletePesponse_V1 {
   username: string;
   creationDate: Date;
   revisionDate: Date;
-  currentJourney?: IJourneyPesponse_V1;
+  currentJourney?: IJourney_Response_V1;
   preferredMassUnit?: MassUnit;
   preferredLengthUnit?: MeasurementSystem;
   currentSubscription?: IAthlete_Subscription_V1;
@@ -269,7 +269,7 @@ export interface IAthlete_Subscription_V1 {
   notes?: string;
 }
 
-export interface IBodyweightPesponse_V1 {
+export interface IBodyweight_Response_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
@@ -330,23 +330,23 @@ export const enum ExerciseGoalType {
   Custom = "custom"
 }
 
-export interface IFetch_DefinitionsPesponse_v1 {
-  definitions: Exercise_DefinitionPesponse_V1[];
+export interface IFetch_Definitions_Response_v1 {
+  definitions: Exercise_Definition_Response_V1[];
   total: number;
 }
 
 export interface TrainingPlansResponse_V1 {
-  plans: JourneyTemplatePesponse_V1[];
+  plans: Journey_Template_Response_V1[];
   total: number;
 }
 
-export interface Exercise_DefinitionPesponse_V1 {
+export interface Exercise_Definition_Response_V1 {
   id: string;
   title: string;
   category: string;
   creationDate: Date;
   revisionDate: Date;
-  definitionEquipment?: Definition_EquipmentPesponse_V1[];
+  definitionEquipment?: Definition_Equipment_Response_V1[];
   movementType?: string;
   plane?: string;
   publishDate?: Date;
@@ -356,25 +356,25 @@ export interface Exercise_DefinitionPesponse_V1 {
   infoUrl?: string;
   youtubeId?: string;
   unilateral: boolean;
-  primaryWeightedEquipment?: EquipmentPesponse_V1;
+  primaryWeightedEquipment?: Equipment_Response_V1;
   weightedEquipmentCount?: number;
   visibilityStatus: string
 
   // deprecated 10/31/19
-  demoVideo?: IVideoAssetPesponse_V1;
+  demoVideo?: IVideoAsset_Response_V1;
 
   demoVideoId?: string
   video?: IVideoResponse_V1
-  owner?: ProfessionalPesponse_V1
-  clonedFrom?: Exercise_DefinitionPesponse_V1
+  owner?: Professional_Response_V1
+  clonedFrom?: Exercise_Definition_Response_V1
 }
 
-export interface Definition_EquipmentPesponse_V1 {
+export interface Definition_Equipment_Response_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
-  equipment?: EquipmentPesponse_V1;
-  definition?: EquipmentPesponse_V1;
+  equipment?: Equipment_Response_V1;
+  definition?: Equipment_Response_V1;
 }
 
 export interface ICreate_Exercise_Definition_Dto_V1 {
@@ -384,10 +384,10 @@ export interface ICreate_Exercise_Definition_Dto_V1 {
   plane: string;
   isBodyweight: boolean;
   unilateral: boolean;
-  primaryWeightedEquipment?: EquipmentPesponse_V1;
+  primaryWeightedEquipment?: Equipment_Response_V1;
   weightedEquipmentCount?: number;
 }
-export interface EquipmentPesponse_V1 {
+export interface Equipment_Response_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
@@ -396,7 +396,7 @@ export interface EquipmentPesponse_V1 {
   mininumWeight?: number;
 }
 
-export interface Create_JourneyTemplates_Section_DTO {
+export interface Create_Journey_Templates_Section_DTO {
   title: string;
   description: string;
   isLive: boolean;
@@ -404,7 +404,7 @@ export interface Create_JourneyTemplates_Section_DTO {
   mainImageUrl: string;
 }
 
-export interface JourneyTemplates_SectionPesponse {
+export interface Journey_Templates_Section_Response {
   id: string;
   creationDate: Date;
   revisionDate: Date;
@@ -413,10 +413,10 @@ export interface JourneyTemplates_SectionPesponse {
   isLive: boolean;
   badgeImageUrl: string;
   mainImageUrl: string;
-  journeyTemplates: JourneyTemplatePesponse_V1[];
+  journeyTemplates: Journey_Template_Response_V1[];
 }
 
-export interface JourneyTemplatePesponse_V1 {
+export interface Journey_Template_Response_V1 {
   id: string;
   mainImageUrl?: string;
   mainImagePhotoId?: string;
@@ -425,8 +425,8 @@ export interface JourneyTemplatePesponse_V1 {
   publishDate?: Date;
   title: string;
   isLive: boolean;
-  phases?: PhasePesponse_V1[];
-  owner?: ProfessionalPesponse_V1;
+  phases?: Phase_Response_V1[];
+  owner?: Professional_Response_V1;
   shortDescription?: string;
   fullDescription?: string;
   sport: string;
@@ -437,7 +437,7 @@ export interface JourneyTemplatePesponse_V1 {
   offers?: PlanOfferResponse_V1[]
 }
 
-export interface ProfessionalPesponse_V1 {
+export interface Professional_Response_V1 {
   id: string;
   name: string;
   athleteUserId?: string;
@@ -452,15 +452,15 @@ export interface ProfessionalPesponse_V1 {
   websiteUrl?: string
   instagramUrl?: string
   twitterUrl?: string
-  journeyTemplates?: JourneyTemplatePesponse_V1[];
-  workoutTemplates?: WorkoutTemplatePesponse_V1[];
+  journeyTemplates?: Journey_Template_Response_V1[];
+  workoutTemplates?: Workout_Template_Response_V1[];
 }
 
-export interface ExerciseCatalogPesponse {
+export interface ExerciseCatalog_Response {
   title: string;
   block: string;
   externalId: string;
-  goal: ExerciseGoalPesponse;
+  goal: ExerciseGoal_Response;
   sets: number;
   rpe: number;
   blockOrder: number;
@@ -472,15 +472,15 @@ export interface ExerciseCatalogPesponse {
   percentBodyweight?: number;
   percentMaxWeight?: number;
   duration?: number;
-  definition: Exercise_DefinitionPesponse_V1;
+  definition: Exercise_Definition_Response_V1;
 }
 
-export interface IAthlete_BodyweightPesponse_V1 {
+export interface IAthlete_Bodyweight_Response_V1 {
   weight: number;
   date: Date;
 }
 
-export interface ExerciseGoalPesponse {
+export interface ExerciseGoal_Response {
   inputs: [string];
   primaryInput: string;
   title: string;
@@ -518,7 +518,7 @@ export interface ICreate_Plan_Pass_DTO_V1 {
   notes?: string;
 }
 
-export interface IJourneyTemplate_PassPesponse_V1 {
+export interface IJourney_Template_Pass_Response_V1 {
   id: string;
   revisionDate: Date;
   creationDate: Date;
@@ -589,7 +589,7 @@ export interface ISavePhoto_DTO_V1 {
   filePath: string;
 }
 
-export interface IVideoAssetPesponse_V1 {
+export interface IVideoAsset_Response_V1 {
   id: string;
   revisionDate: Date;
   creationDate: Date;
@@ -677,7 +677,7 @@ export interface IPlanPublicInfo {
   sport: string;
   level: string;
   owner?: IProPublicInfo
-  phases?: PhasePesponse_V1[];
+  phases?: Phase_Response_V1[];
   planOffer?: PlanOfferResponse_V1
 }
 
@@ -729,15 +729,15 @@ export interface IUploadVideoDTO_V1 {
 
 export interface ISyncWorkoutsDTO_V1 {
   workoutIds: string[]
-  dirtyWorkouts?: IWorkoutPesponse_V1[]
-  dirtyExercises?: IExercisePesponse_V1[]
-  dirtySets?: IExercise_SetPesponse_V1[]
+  dirtyWorkouts?: IWorkout_Response_V1[]
+  dirtyExercises?: IExercise_Response_V1[]
+  dirtySets?: IExercise_Set_Response_V1[]
 }
 
-export interface ICoachingPlanPesponse_V1 {
-  client: IAthletePesponse_V1
-  coach: IAthletePesponse_V1
-  trainingPlan: IJourneyPesponse_V1
+export interface ICoachingPlan_Response_V1 {
+  client: IAthlete_Response_V1
+  coach: IAthlete_Response_V1
+  trainingPlan: IJourney_Response_V1
   stripePaymentIntentId: string
   firebaseCoachingPlanId?: string
   planOfferId?: string
@@ -777,7 +777,7 @@ export interface CreatePlanOfferDTO_V1 {
 }
 
 export interface CreatePlanItemDTO_V1 {
-  trainingPlan: JourneyTemplatePesponse_V1
+  trainingPlan: Journey_Template_Response_V1
   featureTitle?: string
   featureDescription?: string
 }
@@ -804,7 +804,7 @@ export interface FeatureItemResponse_V1 {
   id: string;
   creationDate: Date;
   revisionDate: Date;
-  trainingPlan?: JourneyTemplatePesponse_V1
+  trainingPlan?: Journey_Template_Response_V1
   featureTitle?: string
   featureDescription?: string
   featureOffer?: PlanOfferResponse_V1
@@ -822,7 +822,7 @@ export interface FeatureSectionResponse_V1 {
 }
 
 export interface CurrentPlanResponse_V1 {
-  currentPlan?: IJourneyPesponse_V1;
+  currentPlan?: IJourney_Response_V1;
 }
 
 export interface ArchiveDefinitionDTO_V1 {
@@ -860,9 +860,9 @@ export interface WorkoutTemplatePresetResponse {
   creationDate: Date;
   revisionDate: Date;
   categoryTitle: string;
+  status: string;
   internalTitle?: string;
   categoryPhotoId?: string;
-  status: string;
   sectionOneTitle: string;
   sectionTwoTitle: string;
   sectionThreeTitle: string;
@@ -878,5 +878,11 @@ export interface WorkoutTemplatePresetResponse {
   difficultyThreeRest?: number;
   difficultyFourRest?: number;
   difficultyFiveRest?: number;
-  workoutTemplates?: WorkoutTemplatePesponse_V1[];
+  workoutTemplates?: Workout_Template_Response_V1[];
 }
+
+export interface WorkoutSectionResponse {
+  title: string
+  order: number
+  colorDescription?: string
+} 
