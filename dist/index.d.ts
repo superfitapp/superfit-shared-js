@@ -696,14 +696,14 @@ export declare class PlanUtils {
     static experienceLevelText(planInfo: IPlanPublicInfo): string;
     static trainingPlanTemplateTotalWeeks(planInfo: IPlanPublicInfo): number;
 }
-export interface WorkoutTemplatePresetResponse {
+export interface WorkoutTemplateTypeResponse {
     id: string;
     creationDate: Date;
     revisionDate: Date;
     categoryTitle: string;
     status: string;
     internalTitle?: string;
-    categoryPhotoId?: string;
+    photoId?: string;
     sectionOneTitle: string;
     sectionTwoTitle: string;
     sectionThreeTitle: string;
