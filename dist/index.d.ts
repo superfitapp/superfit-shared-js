@@ -704,7 +704,7 @@ export interface WorkoutTemplateTypeResponse {
     creationDate: Date;
     revisionDate: Date;
     title: string;
-    status: string;
+    visibilityStatus: string;
     internalTitle?: string;
     photoId?: string;
     sectionOneTitle: string;
