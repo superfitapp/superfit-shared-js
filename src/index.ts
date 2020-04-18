@@ -859,7 +859,7 @@ export interface WorkoutTemplateTypeResponse {
   id: string;
   creationDate: Date;
   revisionDate: Date;
-  categoryTitle: string;
+  title: string;
   status: string;
   internalTitle?: string;
   photoId?: string;
