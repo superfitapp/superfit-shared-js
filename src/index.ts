@@ -139,7 +139,11 @@ export interface ICreate_Workout_Template_Dto_V1 {
 export interface Workout_Template_Response_V1 {
   id: string;
   title: string;
+
+  // deprecated 4/18
   type: string;
+
+  workoutType?: WorkoutTemplateTypeResponse;
   publishDate?: Date;
   revisionDate: Date;
   creationDate: Date;

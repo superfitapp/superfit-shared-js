@@ -120,6 +120,7 @@ export interface Workout_Template_Response_V1 {
     id: string;
     title: string;
     type: string;
+    workoutType?: WorkoutTemplateTypeResponse;
     publishDate?: Date;
     revisionDate: Date;
     creationDate: Date;
