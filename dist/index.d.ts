@@ -723,6 +723,7 @@ export interface WorkoutTemplateTypeResponse {
     difficultyFourRest?: number;
     difficultyFiveRest?: number;
     workoutTemplates?: Workout_Template_Response_V1[];
+    owner?: Professional_Response_V1;
 }
 export interface WorkoutSectionResponse {
     title: string;
