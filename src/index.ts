@@ -156,12 +156,13 @@ export interface Exercise_Template_Response_V1 {
   id: string;
   title?: string;
   block: string;
+  blockOrder: number;
+  sectionOrder: number;
+  priority: number;
   goalTitle: string;
   goalSlug: string;
   sets: number;
   expectedDifficulty: string;
-  blockOrder: number;
-  priority: number;
   definition: Exercise_Definition_Response_V1;
   reps?: number;
   repUnit?: string;
