@@ -104,6 +104,7 @@ export const enum MovementPlane {
 }
 
 export const enum MovementCategory {
+  Warmup = "warmup",
   Mobility = "mobility",
   Stability = "stability",
   Plyometric = "plyometric",

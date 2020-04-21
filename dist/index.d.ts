@@ -89,6 +89,7 @@ export declare const enum MovementPlane {
     Multi = "multi"
 }
 export declare const enum MovementCategory {
+    Warmup = "warmup",
     Mobility = "mobility",
     Stability = "stability",
     Plyometric = "plyometric",
