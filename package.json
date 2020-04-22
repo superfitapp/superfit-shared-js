@@ -1,12 +1,15 @@
 {
-  "name": "superfitjs",
-  "version": "2.0.0",
+  "name": "@superfitapp/superfitjs",
+  "version": "2.0.7",
   "description": "shared resources between superfit-api and superfit-website",
   "scripts": {
     "build": "tsc",
-    "prepublish": "npm run build",
-    "update": "npm run prepublish && git commit -am ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update": "npm run build && git commit -am ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && npm publish"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@types/lodash.round": "^4.0.6",
@@ -19,12 +22,12 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leojkwan/superfit-shared-js.git"
+    "url": "git+https://github.com/superfitapp/superfit-shared-js.git"
   },
   "bugs": {
-    "url": "https://github.com/leojkwan/superfit-shared-js/issues"
+    "url": "https://github.com/superfitapp/superfit-shared-js/issues"
   },
-  "homepage": "https://github.com/leojkwan/superfit-shared-js#readme",
+  "homepage": "https://github.com/superfitapp/superfit-shared-js#readme",
   "devDependencies": {
     "typescript": "~3.5.3"
   }
