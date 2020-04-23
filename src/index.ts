@@ -192,6 +192,7 @@ export interface IExercise_Response_V1 {
   revisionDate: Date;
   title: string;
   exerciseTemplateId: string;
+  sectionOrder: number;
   blockOrder: number;
   priority: number;
   block: string;
