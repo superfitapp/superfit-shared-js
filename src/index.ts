@@ -425,6 +425,7 @@ export interface Journey_Templates_Section_Response {
 
 export interface Journey_Template_Response_V1 {
   id: string;
+  planType: string
   mainImageUrl?: string;
   mainImagePhotoId?: string;
   creationDate: Date;
@@ -894,4 +895,9 @@ export interface WorkoutSectionResponse {
   title: string
   order: number
   colorDescription?: string
-} 
+}
+
+export const enum PlanType {
+  Plan = "plan",
+  Class = "class"
+}
