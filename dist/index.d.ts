@@ -117,6 +117,9 @@ export interface ICreate_Workout_Template_Dto_V1 {
     type: string;
     day: number;
 }
+export interface CreateWorkoutTemplateDTO {
+    workoutTypeId: string;
+}
 export interface Workout_Template_Response_V1 {
     id: string;
     title: string;
@@ -356,6 +359,7 @@ export interface Journey_Templates_Section_Response {
 }
 export interface Journey_Template_Response_V1 {
     id: string;
+    planType: string;
     mainImageUrl?: string;
     mainImagePhotoId?: string;
     creationDate: Date;
@@ -567,6 +571,7 @@ export interface IPlanPublicInfo {
     fullDescription?: string;
     sport: string;
     level: string;
+    planType: string;
     owner?: IProPublicInfo;
     phases?: Phase_Response_V1[];
     planOffer?: PlanOfferResponse_V1;
@@ -732,4 +737,8 @@ export interface WorkoutSectionResponse {
     title: string;
     order: number;
     colorDescription?: string;
+}
+export declare const enum PlanType {
+    Plan = "plan",
+    Class = "class"
 }

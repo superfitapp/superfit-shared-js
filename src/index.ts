@@ -132,9 +132,14 @@ export interface Phase_Response_V1 {
   workoutTemplates: Workout_Template_Response_V1[];
 }
 
+// Deprecated
 export interface ICreate_Workout_Template_Dto_V1 {
   type: string;
   day: number;
+}
+
+export interface CreateWorkoutTemplateDTO {
+  workoutTypeId: string;
 }
 
 export interface Workout_Template_Response_V1 {
@@ -685,6 +690,7 @@ export interface IPlanPublicInfo {
   fullDescription?: string;
   sport: string;
   level: string;
+  planType: string;
   owner?: IProPublicInfo
   phases?: Phase_Response_V1[];
   planOffer?: PlanOfferResponse_V1
