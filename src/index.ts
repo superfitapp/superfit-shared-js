@@ -183,12 +183,13 @@ export interface Exercise_Template_Response_V1 {
 }
 
 export interface IJourney_Response_V1 {
-  startDate?: Date;
-  endDate?: Date;
-  athlete?: IAthlete_Response_V1;
   workouts: IWorkout_Response_V1[];
   journeyTemplateId: string;
   premiumTier: string
+  visibilityStatus: VisibilityStatus
+  startDate?: Date;
+  endDate?: Date;
+  athlete?: IAthlete_Response_V1;
 }
 
 export interface IExercise_Response_V1 {
@@ -906,4 +907,45 @@ export interface WorkoutSectionResponse {
 export const enum PlanType {
   Plan = "plan",
   Class = "class"
+}
+
+export class TrainingLevelManager {
+  allLevels(): string[] {
+    return [
+      Level.Beginner,
+      Level.Intermediate,
+      Level.Advanced,
+      Level.Pro
+    ];
+  }
+
+  title(type: string): string | undefined {
+    switch (type) {
+      case Level.Beginner:
+        return "Perfect For All Levels";
+      case Level.Intermediate:
+        return "General Fitness Preferred";
+      case Level.Advanced:
+        return "Athletic Fitness Preferred";
+      case Level.Pro:
+        return "Athletic Fitness Required";
+      default:
+        return undefined;
+    }
+  }
+
+  imageUrl(type: string): string | undefined {
+    switch (type) {
+      case Level.Beginner:
+        return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/easy.png";
+      case Level.Intermediate:
+        return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/medium.png";
+      case Level.Advanced:
+        return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/medium.png";
+      case Level.Pro:
+        return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/hard.png";
+      default:
+        return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/easy.png";
+    }
+  }
 }

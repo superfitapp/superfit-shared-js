@@ -48,3 +48,45 @@ var PlanUtils = /** @class */ (function () {
     return PlanUtils;
 }());
 exports.PlanUtils = PlanUtils;
+var TrainingLevelManager = /** @class */ (function () {
+    function TrainingLevelManager() {
+    }
+    TrainingLevelManager.prototype.allLevels = function () {
+        return [
+            "beginner" /* Beginner */,
+            "intermediate" /* Intermediate */,
+            "advanced" /* Advanced */,
+            "pro" /* Pro */
+        ];
+    };
+    TrainingLevelManager.prototype.title = function (type) {
+        switch (type) {
+            case "beginner" /* Beginner */:
+                return "Perfect For All Levels";
+            case "intermediate" /* Intermediate */:
+                return "General Fitness Preferred";
+            case "advanced" /* Advanced */:
+                return "Athletic Fitness Preferred";
+            case "pro" /* Pro */:
+                return "Athletic Fitness Required";
+            default:
+                return undefined;
+        }
+    };
+    TrainingLevelManager.prototype.imageUrl = function (type) {
+        switch (type) {
+            case "beginner" /* Beginner */:
+                return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/easy.png";
+            case "intermediate" /* Intermediate */:
+                return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/medium.png";
+            case "advanced" /* Advanced */:
+                return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/medium.png";
+            case "pro" /* Pro */:
+                return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/hard.png";
+            default:
+                return "https://superfit.nyc3.cdn.digitaloceanspaces.com/assets/easy.png";
+        }
+    };
+    return TrainingLevelManager;
+}());
+exports.TrainingLevelManager = TrainingLevelManager;

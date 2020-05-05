@@ -158,12 +158,13 @@ export interface Exercise_Template_Response_V1 {
     workout_template?: Workout_Template_Response_V1;
 }
 export interface IJourney_Response_V1 {
-    startDate?: Date;
-    endDate?: Date;
-    athlete?: IAthlete_Response_V1;
     workouts: IWorkout_Response_V1[];
     journeyTemplateId: string;
     premiumTier: string;
+    visibilityStatus: VisibilityStatus;
+    startDate?: Date;
+    endDate?: Date;
+    athlete?: IAthlete_Response_V1;
 }
 export interface IExercise_Response_V1 {
     id: string;
@@ -741,4 +742,9 @@ export interface WorkoutSectionResponse {
 export declare const enum PlanType {
     Plan = "plan",
     Class = "class"
+}
+export declare class TrainingLevelManager {
+    allLevels(): string[];
+    title(type: string): string | undefined;
+    imageUrl(type: string): string | undefined;
 }
