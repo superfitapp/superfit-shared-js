@@ -875,21 +875,21 @@ export class PlanUtils {
   }
 }
 
-export interface ProBioPage_Response {
-  introText?: string
-  shouldHighlightText: boolean
-
-  bioBackgroundColor: string
-  bioBackgroundPhotoId?: string
-  bioBackgroundImageDim: number
-
-  linksBackgroundColor: string
-  linksTextColor: string
-  linksBorderColor: string
-  linksBorderRadius: number
-  linksBorderWidth: number
-
-  linksJson: string
+export interface BioPage_Response {
+  id: string;
+  creationDate: Date;
+  revisionDate: Date;
+  introText?: string;
+  shouldHighlightText: boolean;
+  bioBackgroundColor: string;
+  bioBackgroundPhotoId?: string;
+  bioBackgroundPhotoDim: number;
+  linksBackgroundColor: string;
+  linksTextColor: string;
+  linksBorderColor: string;
+  linksBorderRadius: number;
+  linksBorderWidth: number;
+  linksJson: string;
 }
 
 export interface WorkoutTemplateTypeResponse {

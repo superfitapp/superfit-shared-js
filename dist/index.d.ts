@@ -712,7 +712,10 @@ export declare class PlanUtils {
     static experienceLevelText(planInfo: IPlanPublicInfo): string;
     static trainingPlanTemplateTotalWeeks(planInfo: IPlanPublicInfo): number;
 }
-export interface BioPageConfig_Response {
+export interface ProBioPage_Response {
+    id: string;
+    creationDate: Date;
+    revisionDate: Date;
     introText?: string;
     shouldHighlightText: boolean;
     bioBackgroundColor: string;
