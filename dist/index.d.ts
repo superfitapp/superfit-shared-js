@@ -712,6 +712,19 @@ export declare class PlanUtils {
     static experienceLevelText(planInfo: IPlanPublicInfo): string;
     static trainingPlanTemplateTotalWeeks(planInfo: IPlanPublicInfo): number;
 }
+export interface BioPageConfig_Response {
+    introText?: string;
+    shouldHighlightText: boolean;
+    bioBackgroundColor: string;
+    bioBackgroundPhotoId?: string;
+    bioBackgroundImageDim: number;
+    linksBackgroundColor: string;
+    linksTextColor: string;
+    linksBorderColor: string;
+    linksBorderRadius: number;
+    linksBorderWidth: number;
+    linksJson: string;
+}
 export interface WorkoutTemplateTypeResponse {
     id: string;
     creationDate: Date;
