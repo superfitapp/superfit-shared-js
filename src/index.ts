@@ -458,7 +458,9 @@ export interface Professional_Response_V1 {
   shortDescription: string;
   fullDescription?: string;
   title?: string;
-  pictureUrl: string;
+  pictureUrl: string; // deprecated
+  primaryColor: string;
+  secondaryColor: string;
   profilePhotoId?: string;
   creationDate: Date;
   revisionDate: Date;
@@ -667,6 +669,8 @@ export interface IProPublicInfo {
   title: string
   userId: string
   shortDescription: string
+  primaryColor: string;
+  secondaryColor: string;
   pictureUrl?: string
   profilePhotoId?: string
   youtubeUrl?: string
