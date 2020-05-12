@@ -677,7 +677,8 @@ export interface IProPublicInfo {
   websiteUrl?: string
   instagramUrl?: string
   twitterUrl?: string
-  facebookUrl?: string
+  facebookUrl?: string,
+  bioPage?: BioPage_Response
 }
 
 export interface IAthletePublicInfo {
@@ -890,6 +891,11 @@ export interface BioPage_Response {
   linksBorderRadius: number;
   linksBorderWidth: number;
   linksJson: string;
+}
+
+export interface BioLink {
+  title: string
+  link: string
 }
 
 export interface WorkoutTemplateTypeResponse {

@@ -561,6 +561,7 @@ export interface IProPublicInfo {
     instagramUrl?: string;
     twitterUrl?: string;
     facebookUrl?: string;
+    bioPage?: BioPage_Response;
 }
 export interface IAthletePublicInfo {
     username: string;
@@ -712,7 +713,7 @@ export declare class PlanUtils {
     static experienceLevelText(planInfo: IPlanPublicInfo): string;
     static trainingPlanTemplateTotalWeeks(planInfo: IPlanPublicInfo): number;
 }
-export interface ProBioPage_Response {
+export interface BioPage_Response {
     id: string;
     creationDate: Date;
     revisionDate: Date;
@@ -720,13 +721,17 @@ export interface ProBioPage_Response {
     shouldHighlightText: boolean;
     bioBackgroundColor: string;
     bioBackgroundPhotoId?: string;
-    bioBackgroundImageDim: number;
+    bioBackgroundPhotoDim: number;
     linksBackgroundColor: string;
     linksTextColor: string;
     linksBorderColor: string;
     linksBorderRadius: number;
     linksBorderWidth: number;
     linksJson: string;
+}
+export interface BioLink {
+    title: string;
+    link: string;
 }
 export interface WorkoutTemplateTypeResponse {
     id: string;
