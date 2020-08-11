@@ -978,3 +978,35 @@ export class TrainingLevelManager {
     }
   }
 }
+
+export class ALGExercise {
+  objectID: string // document id
+  ownerId: string
+  version: number
+  title?: string
+  category?: string
+  isBodyweight?: boolean
+  unilateral?: boolean
+  youtubeLink?: string
+  customVideo?: FIRVideo
+
+  constructor(objectID: string, data: { [field: string]: any }) {
+    this.objectID = objectID
+    this.title = data.title
+    this.category = data.title
+    this.ownerId = data.ownerId
+    this.version = data.version
+    this.isBodyweight = data.isBodyweight
+    this.unilateral = data.unilateral
+    this.youtubeLink = data.youtubeLink
+    this.customVideo = data.customVideo
+  }
+}
+
+export interface FIRVideo {
+  masterUrl: string
+  storageFilePath: string
+  muxPlaybackId?: string
+  muxAssetId?: string
+  videoAspectRatio?: number
+}

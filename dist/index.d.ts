@@ -567,6 +567,7 @@ export interface IAthletePublicInfo {
     username: string;
     nickname?: string;
     proProfile?: IProPublicInfo;
+    proPhotoUrl?: string;
 }
 export interface IPlanPublicInfo {
     id: string;
@@ -581,6 +582,7 @@ export interface IPlanPublicInfo {
     owner?: IProPublicInfo;
     phases?: Phase_Response_V1[];
     planOffer?: PlanOfferResponse_V1;
+    planPhotoUrl?: string;
 }
 export interface IPlanAndProPublicInfo {
     proInfo: IProPublicInfo;
