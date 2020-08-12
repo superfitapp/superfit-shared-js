@@ -989,6 +989,7 @@ export class ALGExercise {
   unilateral?: boolean
   youtubeLink?: string
   customVideo?: FIRVideo
+  visibilityStatus: string
 
   constructor(objectID: string, data: { [field: string]: any }) {
     this.objectID = objectID
@@ -1000,7 +1001,21 @@ export class ALGExercise {
     this.unilateral = data.unilateral
     this.youtubeLink = data.youtubeLink
     this.customVideo = data.customVideo
+    this.visibilityStatus = data.visibilityStatus
   }
+}
+
+export interface FIRExercise {
+  created?: any
+  version?: number
+  title?: string
+  ownerId?: string
+  category?: string
+  isBodyweight?: boolean
+  unilateral?: boolean
+  youtubeLink?: string
+  customVideo?: FIRVideo
+  visibilityStatus: string
 }
 
 export interface FIRVideo {
@@ -1014,6 +1029,7 @@ export interface FIRUser {
   userId: string
   email: string
   username: string
+  migratedProData?: boolean
   billingInfo?: FIRBillingInfo
   activeSchedules?: { [key: string]: ActiveScheduleInfo }
 }
@@ -1128,8 +1144,8 @@ export interface IProductPriceInfo {
 }
 
 export interface FIRUserProfile {
+  ownerId: string
   created?: any
-  migratedProData: boolean
   name?: string
   bio?: string
   twitterUrl?: string

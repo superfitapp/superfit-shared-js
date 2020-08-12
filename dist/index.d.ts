@@ -789,10 +789,141 @@ export declare class ALGExercise {
         [field: string]: any;
     });
 }
+export interface FIRExercise {
+    created?: any;
+    version?: number;
+    title?: string;
+    ownerId?: string;
+    category?: string;
+    isBodyweight?: boolean;
+    unilateral?: boolean;
+    youtubeLink?: string;
+    customVideo?: FIRVideo;
+}
 export interface FIRVideo {
     masterUrl: string;
     storageFilePath: string;
     muxPlaybackId?: string;
     muxAssetId?: string;
     videoAspectRatio?: number;
+}
+export interface FIRUser {
+    userId: string;
+    email: string;
+    username: string;
+    migratedProData?: boolean;
+    billingInfo?: FIRBillingInfo;
+    activeSchedules?: {
+        [key: string]: ActiveScheduleInfo;
+    };
+}
+export interface ScheduleEmailInvite {
+    created: any;
+    email: string;
+}
+export interface SignInDTO {
+    email: string;
+    migratedUsername?: string;
+    migratedBillingInfo?: FIRBillingInfo;
+}
+export declare const enum PhotoType {
+    Unsplash = "unsplash",
+    Custom = "custom"
+}
+export interface PhotoInfo {
+    type: PhotoType;
+    unsplashThumbUrl?: string;
+    unsplashRegularUrl?: string;
+}
+export interface FIRSchedule {
+    title: string;
+    color: string;
+    created: any;
+    ownerId: string;
+    photo?: PhotoInfo;
+    ownerDisplayName?: string;
+    roles: {
+        [userId: string]: string;
+    };
+    pendingEmailInvites?: {
+        [userId: string]: ScheduleEmailInvite;
+    };
+}
+export interface CreateScheduleDTO {
+    title: string;
+    photo?: PhotoInfo;
+}
+export interface ActiveScheduleInfo {
+    scheduleId: string;
+    joined: any;
+    role: string;
+}
+export declare const enum ScheduleRole {
+    Member = "member",
+    Owner = "owner"
+}
+export declare const enum DocumentRole {
+    Admin = "admin"
+}
+export interface FIRScheduleMember {
+    scheduleTitle: string;
+    memberRole: string;
+    scheduleId: string;
+    joined: any;
+    userId: string;
+    username: string;
+}
+export interface StripeBillingInfo {
+    customerId?: string;
+    connectId?: string;
+    superfitSubscriptionId?: string;
+    superfitSubscriptionEndedAt?: number;
+}
+export interface AppleBillingInfo {
+    appleProductId?: string;
+    appleTransactionId?: string;
+    endedAt?: number;
+}
+export interface FIRBillingInfo {
+    apple?: AppleBillingInfo;
+    stripe?: StripeBillingInfo;
+    activeSuperFitProducts?: string[];
+    activeConnectProductsIds?: string[];
+    createdConnectProductsIds?: string[];
+}
+export interface FIRSubscription {
+    platform: boolean;
+    email: string;
+    ownerId: string;
+    status: string;
+    endedAt: number;
+    subscriptionId: string;
+}
+export interface IProductPriceInfo {
+    priceId: string;
+    productId: string;
+    unitAmountDecimal?: string;
+    interval?: string;
+    type?: string;
+    intervalCount?: number;
+    productName: string;
+}
+export interface FIRUserProfile {
+    ownerId: string;
+    created?: any;
+    name?: string;
+    bio?: string;
+    twitterUrl?: string;
+    facebookUrl?: string;
+    instagramUrl?: string;
+    youtubeUrl?: string;
+    websiteUrl?: string;
+    primaryColor?: string;
+    secondaryColor: String;
+    backgroundColor?: string;
+    linksTextColor?: string;
+    linksBackgroundColor?: string;
+    linksBorderColor?: string;
+    linkdBorderRadius?: number;
+    linksJson?: string;
 }
