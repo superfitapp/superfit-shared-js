@@ -775,3 +775,24 @@ export declare class TrainingLevelManager {
     title(type: string): string | undefined;
     imageUrl(type: string): string | undefined;
 }
+export declare class ALGExercise {
+    objectID: string;
+    ownerId: string;
+    version: number;
+    title?: string;
+    category?: string;
+    isBodyweight?: boolean;
+    unilateral?: boolean;
+    youtubeLink?: string;
+    customVideo?: FIRVideo;
+    constructor(objectID: string, data: {
+        [field: string]: any;
+    });
+}
+export interface FIRVideo {
+    masterUrl: string;
+    storageFilePath: string;
+    muxPlaybackId?: string;
+    muxAssetId?: string;
+    videoAspectRatio?: number;
+}

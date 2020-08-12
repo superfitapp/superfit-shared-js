@@ -90,3 +90,18 @@ var TrainingLevelManager = /** @class */ (function () {
     return TrainingLevelManager;
 }());
 exports.TrainingLevelManager = TrainingLevelManager;
+var ALGExercise = /** @class */ (function () {
+    function ALGExercise(objectID, data) {
+        this.objectID = objectID;
+        this.title = data.title;
+        this.category = data.title;
+        this.ownerId = data.ownerId;
+        this.version = data.version;
+        this.isBodyweight = data.isBodyweight;
+        this.unilateral = data.unilateral;
+        this.youtubeLink = data.youtubeLink;
+        this.customVideo = data.customVideo;
+    }
+    return ALGExercise;
+}());
+exports.ALGExercise = ALGExercise;
