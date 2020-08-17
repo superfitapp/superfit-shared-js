@@ -785,6 +785,7 @@ export declare class ALGExercise {
     unilateral?: boolean;
     youtubeLink?: string;
     customVideo?: FIRVideo;
+    visibilityStatus: string;
     constructor(objectID: string, data: {
         [field: string]: any;
     });
@@ -794,11 +795,13 @@ export interface FIRExercise {
     version?: number;
     title?: string;
     ownerId?: string;
+    ownerDisplayName?: string;
     category?: string;
     isBodyweight?: boolean;
     unilateral?: boolean;
     youtubeLink?: string;
     customVideo?: FIRVideo;
+    visibilityStatus: string;
 }
 export interface FIRVideo {
     masterUrl: string;

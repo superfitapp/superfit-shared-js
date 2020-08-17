@@ -101,6 +101,7 @@ var ALGExercise = /** @class */ (function () {
         this.unilateral = data.unilateral;
         this.youtubeLink = data.youtubeLink;
         this.customVideo = data.customVideo;
+        this.visibilityStatus = data.visibilityStatus;
     }
     return ALGExercise;
 }());

@@ -1010,6 +1010,7 @@ export interface FIRExercise {
   version?: number
   title?: string
   ownerId?: string
+  ownerDisplayName?: string
   category?: string
   isBodyweight?: boolean
   unilateral?: boolean
