@@ -786,6 +786,9 @@ export declare class ALGExercise {
     youtubeLink?: string;
     customVideo?: FIRVideo;
     visibilityStatus: string;
+    instructionPresets?: {
+        [key: string]: InstructionPreset;
+    };
     constructor(objectID: string, data: {
         [field: string]: any;
     });
@@ -802,6 +805,9 @@ export interface FIRExercise {
     youtubeLink?: string;
     customVideo?: FIRVideo;
     visibilityStatus: string;
+    instructionPresets?: {
+        [key: string]: InstructionPreset;
+    };
 }
 export interface FIRVideo {
     masterUrl: string;
@@ -844,6 +850,7 @@ export interface FIRSchedule {
     created: any;
     ownerId: string;
     photo?: PhotoInfo;
+    visibilityStatus?: string;
     ownerDisplayName?: string;
     roles: {
         [userId: string]: string;
@@ -929,4 +936,19 @@ export interface FIRUserProfile {
     linksBorderColor?: string;
     linkdBorderRadius?: number;
     linksJson?: string;
+}
+export interface InstructionPreset {
+    uniqueId: string;
+    order: number;
+    prompt?: string;
+    primaryInput: string;
+    repeatCount: number;
+    reps?: string;
+    weight?: string;
+    duration?: string;
+    distance?: string;
+    massUnit?: string;
+    distanceUnit?: string;
+    durationUnit?: string;
+    displayedDistanceUnit?: string;
 }

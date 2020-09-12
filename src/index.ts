@@ -1066,9 +1066,28 @@ export interface FIRSchedule {
   created: any
   ownerId: string
   photo?: PhotoInfo
+  visibilityStatus?: string
   ownerDisplayName?: string
   roles: { [userId: string]: string }
+  profile?: ScheduleProfile
   pendingEmailInvites?: { [userId: string]: ScheduleEmailInvite }
+}
+
+export interface ScheduleProfile {
+  about?: string
+  twitterUrl?: string
+  facebookUrl?: string
+  instagramUrl?: string
+  youtubeUrl?: string
+  websiteUrl?: string
+  primaryColor?: string
+  secondaryColor: string
+  backgroundColor?: string
+  linksTextColor?: string
+  linksBackgroundColor?: string
+  linksBorderColor?: string
+  linkdBorderRadius?: number
+  linksJson?: string
 }
 
 export interface CreateScheduleDTO {
