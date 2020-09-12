@@ -82,6 +82,12 @@ export const enum MovementType {
   VPush = "vpush"
 }
 
+export const enum ActivityStatus {
+  Draft = "draft",
+  Published = "published",
+  Archived = "archived"
+}
+
 export const enum VisibilityStatus {
   Public = "public",
   Follower = "follower",
@@ -1060,6 +1066,15 @@ export interface PhotoInfo {
   unsplashRegularUrl?: string
 }
 
+export interface ShowFIRSchedule {
+  title: string
+  created: any
+  photo?: PhotoInfo
+  visibilityStatus?: string
+  ownerDisplayName?: string
+  profile?: ScheduleProfile
+}
+
 export interface FIRSchedule {
   title: string
   color: string
@@ -1071,6 +1086,26 @@ export interface FIRSchedule {
   roles: { [userId: string]: string }
   profile?: ScheduleProfile
   pendingEmailInvites?: { [userId: string]: ScheduleEmailInvite }
+}
+
+export interface FIRActivity {
+    created: any
+    status: string
+    title: string
+    ownerId: string
+    description?: string
+    photo?: PhotoInfo
+    scheduleInfo?: ScheduleInfo
+    scheduledDate?: any
+    allDay?: boolean
+    type?: string
+    instructionSetId?: string
+}
+
+export interface ScheduleInfo {
+  id: string
+  title: string
+  color?: string
 }
 
 export interface ScheduleProfile {

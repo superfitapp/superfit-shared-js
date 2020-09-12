@@ -70,6 +70,11 @@ export declare const enum MovementType {
     VPull = "vpull",
     VPush = "vpush"
 }
+export declare const enum ActivityStatus {
+    Draft = "draft",
+    Published = "published",
+    Archived = "archived"
+}
 export declare const enum VisibilityStatus {
     Public = "public",
     Follower = "follower",
@@ -844,6 +849,14 @@ export interface PhotoInfo {
     unsplashThumbUrl?: string;
     unsplashRegularUrl?: string;
 }
+export interface ShowFIRSchedule {
+    title: string;
+    created: any;
+    photo?: PhotoInfo;
+    visibilityStatus?: string;
+    ownerDisplayName?: string;
+    profile?: ScheduleProfile;
+}
 export interface FIRSchedule {
     title: string;
     color: string;
@@ -855,9 +868,44 @@ export interface FIRSchedule {
     roles: {
         [userId: string]: string;
     };
+    profile?: ScheduleProfile;
     pendingEmailInvites?: {
         [userId: string]: ScheduleEmailInvite;
     };
+}
+export interface FIRActivity {
+    created: any;
+    status: string;
+    title: string;
+    ownerId: string;
+    description?: string;
+    photo?: PhotoInfo;
+    scheduleInfo?: ScheduleInfo;
+    scheduledDate?: any;
+    allDay?: boolean;
+    type?: string;
+    instructionSetId?: string;
+}
+export interface ScheduleInfo {
+    id: string;
+    title: string;
+    color?: string;
+}
+export interface ScheduleProfile {
+    about?: string;
+    twitterUrl?: string;
+    facebookUrl?: string;
+    instagramUrl?: string;
+    youtubeUrl?: string;
+    websiteUrl?: string;
+    primaryColor?: string;
+    secondaryColor: string;
+    backgroundColor?: string;
+    linksTextColor?: string;
+    linksBackgroundColor?: string;
+    linksBorderColor?: string;
+    linkdBorderRadius?: number;
+    linksJson?: string;
 }
 export interface CreateScheduleDTO {
     title: string;
