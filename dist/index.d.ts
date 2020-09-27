@@ -844,6 +844,16 @@ export declare const enum PhotoType {
     Unsplash = "unsplash",
     Custom = "custom"
 }
+export declare const enum DistanceUnit {
+    meters = "meters",
+    feet = "feet",
+    kilometers = "kilometers",
+    miles = "miles"
+}
+export declare const enum DurationUnit {
+    minute = "minute",
+    second = "second"
+}
 export interface PhotoInfo {
     type: PhotoType;
     unsplashThumbUrl?: string;
@@ -852,10 +862,45 @@ export interface PhotoInfo {
 export interface ShowFIRSchedule {
     title: string;
     created: any;
+    color: string;
     photo?: PhotoInfo;
     visibilityStatus?: string;
     ownerDisplayName?: string;
     profile?: ScheduleProfile;
+}
+export interface FIRInstructionSet {
+    id?: string;
+    created?: any;
+    ownerId: string;
+    activityId?: string;
+    instructionBlocks?: {
+        [blockId: string]: InstructionBlock;
+    };
+}
+export interface InstructionBlock {
+    uniqueId: string;
+    order: number;
+    instructions?: {
+        [instructionId: string]: Instruction;
+    };
+    repeatCount?: number;
+    customVideo?: FIRVideo;
+    groupInstruction?: Instruction;
+}
+export interface Instruction {
+    uniqueId: string;
+    order: number;
+    prompt?: string;
+    exercise?: ALGExercise;
+    primaryInput: String;
+    reps?: string;
+    weight?: string;
+    duration?: string;
+    distance?: string;
+    massUnit?: string;
+    distanceUnit?: string;
+    durationUnit?: string;
+    displayedDistanceUnit?: string;
 }
 export interface FIRSchedule {
     title: string;
@@ -874,6 +919,7 @@ export interface FIRSchedule {
     };
 }
 export interface FIRActivity {
+    id?: string;
     created: any;
     status: string;
     title: string;
@@ -904,8 +950,17 @@ export interface ScheduleProfile {
     linksTextColor?: string;
     linksBackgroundColor?: string;
     linksBorderColor?: string;
-    linkdBorderRadius?: number;
-    linksJson?: string;
+    linksBorderWidth?: number;
+    linksBorderRadius?: number;
+    links?: {
+        [uniqueId: string]: WebLink;
+    };
+}
+export interface WebLink {
+    title: string;
+    url: string;
+    order: number;
+    uniqueId: string;
 }
 export interface CreateScheduleDTO {
     title: string;
