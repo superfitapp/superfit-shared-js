@@ -1078,6 +1078,11 @@ export interface PhotoInfo {
   unsplashRegularUrl?: string
 }
 
+export declare const enum ScheduleSignUpType {
+  anyoneCanSignUp = "anyoneCanSignUp",
+  inviteOnly = "inviteOnly"
+}
+
 export interface ShowFIRSchedule {
   title: string
   created: any
@@ -1086,6 +1091,12 @@ export interface ShowFIRSchedule {
   visibilityStatus?: string
   ownerDisplayName?: string
   profile?: ScheduleProfile
+  enableSubscription?: boolean
+  stripeProductId?: string
+  stripeCurrentMonthlyPriceId?: string
+  stripeCurrentYearlyPriceId?: string
+  payToJoin?: boolean
+  signupType?: string
 }
 
 export interface FIRInstructionSet {
@@ -1136,6 +1147,13 @@ export interface FIRSchedule {
   roles: { [userId: string]: string }
   profile?: ScheduleProfile
   pendingEmailInvites?: { [userId: string]: ScheduleEmailInvite }
+  stripeProductId?: string
+  stripeCurrentMonthlyPriceId?: string
+  stripeConnectWebhookId?: string
+  stripeCurrentYearlyPriceId?: string
+  enableSubscription?: boolean
+  payToJoin?: boolean
+  signupType?: string
 }
 
 export interface FIRActivity {
@@ -1214,11 +1232,14 @@ export interface FIRScheduleMember {
   joined: any
   userId: string
   username: string
+  subscriptionId?: string
+  subscriptionStatus?: string
 }
 
 export interface StripeBillingInfo {
   customerId?: string
   connectId?: string
+  connectCustomerIds?: { [key: string]: string }
   superfitSubscriptionId?: string
   superfitSubscriptionEndedAt?: number
   commerceSubscriptionId?: string
@@ -1234,10 +1255,19 @@ export interface AppleBillingInfo {
 export interface FIRBillingInfo {
   apple?: AppleBillingInfo
   stripe?: StripeBillingInfo
+  connectProducts: {
+    [productId: string]: ConnectProduct
+  }
+}
 
-  activeSuperFitProducts?: string[]
-  activeConnectProductsIds?: string[]
-  createdConnectProductsIds?: string[]
+export interface ConnectProduct {
+  productId: string
+  subscriptionStatus?: string
+  invoiceStatus?: string
+  subscriptionEndedAt?: number
+  ownerConnectId: string
+  priceId: string
+  subscriptionId?: string
 }
 
 export interface FIRSubscription {
@@ -1247,9 +1277,6 @@ export interface FIRSubscription {
   status: string
   endedAt: number
   subscriptionId: string
-  // items: {
-  // 	string: IProductPriceInfo,
-  // }
 }
 
 export interface IProductPriceInfo {

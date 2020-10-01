@@ -859,6 +859,10 @@ export interface PhotoInfo {
     unsplashThumbUrl?: string;
     unsplashRegularUrl?: string;
 }
+export declare const enum ScheduleSignUpType {
+    anyoneCanSignUp = "anyoneCanSignUp",
+    inviteOnly = "inviteOnly"
+}
 export interface ShowFIRSchedule {
     title: string;
     created: any;
@@ -867,6 +871,12 @@ export interface ShowFIRSchedule {
     visibilityStatus?: string;
     ownerDisplayName?: string;
     profile?: ScheduleProfile;
+    enableSubscription?: boolean;
+    stripeProductId?: string;
+    stripeCurrentMonthlyPriceId?: string;
+    stripeCurrentYearlyPriceId?: string;
+    payToJoin?: boolean;
+    signupType?: string;
 }
 export interface FIRInstructionSet {
     id?: string;
@@ -917,6 +927,13 @@ export interface FIRSchedule {
     pendingEmailInvites?: {
         [userId: string]: ScheduleEmailInvite;
     };
+    stripeProductId?: string;
+    stripeCurrentMonthlyPriceId?: string;
+    stripeConnectWebhookId?: string;
+    stripeCurrentYearlyPriceId?: string;
+    enableSubscription?: boolean;
+    payToJoin?: boolean;
+    signupType?: string;
 }
 export interface FIRActivity {
     id?: string;
@@ -985,12 +1002,19 @@ export interface FIRScheduleMember {
     joined: any;
     userId: string;
     username: string;
+    subscriptionId?: string;
+    subscriptionStatus?: string;
 }
 export interface StripeBillingInfo {
     customerId?: string;
     connectId?: string;
+    connectCustomerIds?: {
+        [key: string]: string;
+    };
     superfitSubscriptionId?: string;
     superfitSubscriptionEndedAt?: number;
+    commerceSubscriptionId?: string;
+    commerceSubscriptionEndedAt?: number;
 }
 export interface AppleBillingInfo {
     appleProductId?: string;
@@ -1000,9 +1024,18 @@ export interface AppleBillingInfo {
 export interface FIRBillingInfo {
     apple?: AppleBillingInfo;
     stripe?: StripeBillingInfo;
-    activeSuperFitProducts?: string[];
-    activeConnectProductsIds?: string[];
-    createdConnectProductsIds?: string[];
+    connectProducts: {
+        [productId: string]: ConnectProduct;
+    };
+}
+export interface ConnectProduct {
+    productId: string;
+    subscriptionStatus?: string;
+    invoiceStatus?: string;
+    subscriptionEndedAt?: number;
+    ownerConnectId: string;
+    priceId: string;
+    subscriptionId?: string;
 }
 export interface FIRSubscription {
     platform: boolean;
