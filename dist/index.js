@@ -102,6 +102,7 @@ var ALGExercise = /** @class */ (function () {
         this.youtubeLink = data.youtubeLink;
         this.customVideo = data.customVideo;
         this.visibilityStatus = data.visibilityStatus;
+        this.ownerDisplayName = data.ownerDisplayName;
         this.instructionPresets = data.instructionPresets;
     }
     return ALGExercise;

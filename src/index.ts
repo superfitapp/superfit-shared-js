@@ -996,6 +996,7 @@ export class ALGExercise {
   youtubeLink?: string
   customVideo?: FIRVideo
   visibilityStatus: string
+  ownerDisplayName?: string
   instructionPresets?: { [key: string]: InstructionPreset }
 
   constructor(objectID: string, data: { [field: string]: any }) {
@@ -1009,6 +1010,7 @@ export class ALGExercise {
     this.youtubeLink = data.youtubeLink
     this.customVideo = data.customVideo
     this.visibilityStatus = data.visibilityStatus
+    this.ownerDisplayName = data.ownerDisplayName
     this.instructionPresets = data.instructionPresets
   }
 }
@@ -1076,6 +1078,8 @@ export interface PhotoInfo {
   type: PhotoType
   unsplashThumbUrl?: string
   unsplashRegularUrl?: string
+  customPhotoFirPath?: string,
+  customPhotoUrl?: string
 }
 
 export declare const enum ScheduleSignUpType {
@@ -1093,10 +1097,15 @@ export interface ShowFIRSchedule {
   profile?: ScheduleProfile
   enableSubscription?: boolean
   stripeProductId?: string
-  stripeCurrentMonthlyPriceId?: string
-  stripeCurrentYearlyPriceId?: string
+  stripeCurrentMonthlyPrice?: StripePrice
+  stripeCurrentYearlyPrice?: StripePrice
   payToJoin?: boolean
   signupType?: string
+}
+
+export interface StripePrice {
+  priceId: string
+  priceDisplayName: string
 }
 
 export interface FIRInstructionSet {
@@ -1148,9 +1157,9 @@ export interface FIRSchedule {
   profile?: ScheduleProfile
   pendingEmailInvites?: { [userId: string]: ScheduleEmailInvite }
   stripeProductId?: string
-  stripeCurrentMonthlyPriceId?: string
+  stripeCurrentMonthlyPrice?: StripePrice
+  stripeCurrentYearlyPrice?: StripePrice
   stripeConnectWebhookId?: string
-  stripeCurrentYearlyPriceId?: string
   enableSubscription?: boolean
   payToJoin?: boolean
   signupType?: string

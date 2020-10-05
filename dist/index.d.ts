@@ -791,6 +791,7 @@ export declare class ALGExercise {
     youtubeLink?: string;
     customVideo?: FIRVideo;
     visibilityStatus: string;
+    ownerDisplayName?: string;
     instructionPresets?: {
         [key: string]: InstructionPreset;
     };
@@ -873,10 +874,14 @@ export interface ShowFIRSchedule {
     profile?: ScheduleProfile;
     enableSubscription?: boolean;
     stripeProductId?: string;
-    stripeCurrentMonthlyPriceId?: string;
-    stripeCurrentYearlyPriceId?: string;
+    stripeCurrentMonthlyPrice?: StripePrice;
+    stripeCurrentYearlyPrice?: StripePrice;
     payToJoin?: boolean;
     signupType?: string;
+}
+export interface StripePrice {
+    priceId: string;
+    priceDisplayName: string;
 }
 export interface FIRInstructionSet {
     id?: string;
@@ -928,9 +933,9 @@ export interface FIRSchedule {
         [userId: string]: ScheduleEmailInvite;
     };
     stripeProductId?: string;
-    stripeCurrentMonthlyPriceId?: string;
+    stripeCurrentMonthlyPrice?: StripePrice;
+    stripeCurrentYearlyPrice?: StripePrice;
     stripeConnectWebhookId?: string;
-    stripeCurrentYearlyPriceId?: string;
     enableSubscription?: boolean;
     payToJoin?: boolean;
     signupType?: string;
