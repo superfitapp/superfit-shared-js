@@ -495,6 +495,11 @@ export declare const enum PremiumTier {
     sponsored = "sponsored",
     coaching = "coaching"
 }
+export declare const enum AccessLevel {
+    all = "all",
+    members = "members",
+    paidMembers = "paidMembers"
+}
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
 export interface ISaveVideo_DTO_V1 {
     masterUrl: string;
@@ -859,6 +864,8 @@ export interface PhotoInfo {
     type: PhotoType;
     unsplashThumbUrl?: string;
     unsplashRegularUrl?: string;
+    customPhotoFirPath?: string;
+    customPhotoUrl?: string;
 }
 export declare const enum ScheduleSignUpType {
     anyoneCanSignUp = "anyoneCanSignUp",
@@ -940,6 +947,24 @@ export interface FIRSchedule {
     payToJoin?: boolean;
     signupType?: string;
 }
+export declare class ALGActivity {
+    objectID: string;
+    created: any;
+    status: string;
+    title: string;
+    ownerId: string;
+    photo?: PhotoInfo;
+    scheduleInfo?: ScheduleInfo;
+    customVideo?: FIRVideo;
+    scheduledDate?: any;
+    type?: string;
+    youtubeLink?: string;
+    access?: string;
+    tags?: string;
+    constructor(objectID: string, data: {
+        [field: string]: any;
+    });
+}
 export interface FIRActivity {
     id?: string;
     created: any;
@@ -949,10 +974,14 @@ export interface FIRActivity {
     description?: string;
     photo?: PhotoInfo;
     scheduleInfo?: ScheduleInfo;
+    customVideo?: FIRVideo;
     scheduledDate?: any;
     allDay?: boolean;
     type?: string;
     instructionSetId?: string;
+    youtubeLink?: string;
+    access?: string;
+    tags?: string;
 }
 export interface ScheduleInfo {
     id: string;
@@ -1034,6 +1063,7 @@ export interface FIRBillingInfo {
     };
 }
 export interface ConnectProduct {
+    active: boolean;
     productId: string;
     subscriptionStatus?: string;
     invoiceStatus?: string;

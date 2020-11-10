@@ -573,12 +573,19 @@ export const enum MeasurementSystem {
   imperial = "imperial"
 }
 
+// deprecated, use AccessLevel
 export const enum PremiumTier {
   free = "free",
   pro = "pro",
   planPassPurchase = "planPassPurchase",
   sponsored = "sponsored",
   coaching = "coaching"
+}
+
+export const enum AccessLevel {
+  all = "all",
+  members = "members",
+  paidMembers = "paidMembers"
 }
 
 export const convertedWeight = (
@@ -1165,6 +1172,39 @@ export interface FIRSchedule {
   signupType?: string
 }
 
+
+export class ALGActivity {
+  objectID: string // document id
+  created: any
+  status: string
+  title: string
+  ownerId: string
+  photo?: PhotoInfo
+  scheduleInfo?: ScheduleInfo
+  customVideo?: FIRVideo
+  scheduledDate?: any
+  type?: string
+  youtubeLink?: string
+  access?: string
+  tags?: string
+
+  constructor(objectID: string, data: { [field: string]: any }) {
+    this.objectID = objectID
+    this.created = data.created
+    this.status = data.status
+    this.title = data.title
+    this.ownerId = data.ownerId
+    this.photo = data.photo
+    this.scheduleInfo = data.scheduleInfo
+    this.customVideo = data.customVideo
+    this.scheduledDate = data.scheduledDate
+    this.type = data.type
+    this.youtubeLink = data.youtubeLink
+    this.access = data.access
+    this.tags = data.tags
+  }
+}
+
 export interface FIRActivity {
   id?: string
   created: any
@@ -1174,10 +1214,14 @@ export interface FIRActivity {
   description?: string
   photo?: PhotoInfo
   scheduleInfo?: ScheduleInfo
+  customVideo?: FIRVideo
   scheduledDate?: any
   allDay?: boolean
   type?: string
   instructionSetId?: string
+  youtubeLink?: string
+  access?: string
+  tags?: string
 }
 
 export interface ScheduleInfo {
@@ -1270,6 +1314,7 @@ export interface FIRBillingInfo {
 }
 
 export interface ConnectProduct {
+  active: boolean
   productId: string
   subscriptionStatus?: string
   invoiceStatus?: string

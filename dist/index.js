@@ -108,3 +108,22 @@ var ALGExercise = /** @class */ (function () {
     return ALGExercise;
 }());
 exports.ALGExercise = ALGExercise;
+var ALGActivity = /** @class */ (function () {
+    function ALGActivity(objectID, data) {
+        this.objectID = objectID;
+        this.created = data.created;
+        this.status = data.status;
+        this.title = data.title;
+        this.ownerId = data.ownerId;
+        this.photo = data.photo;
+        this.scheduleInfo = data.scheduleInfo;
+        this.customVideo = data.customVideo;
+        this.scheduledDate = data.scheduledDate;
+        this.type = data.type;
+        this.youtubeLink = data.youtubeLink;
+        this.access = data.access;
+        this.tags = data.tags;
+    }
+    return ALGActivity;
+}());
+exports.ALGActivity = ALGActivity;
