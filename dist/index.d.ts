@@ -947,7 +947,27 @@ export interface FIRSchedule {
     payToJoin?: boolean;
     signupType?: string;
 }
-export declare class ALGActivity {
+export declare class IActivity {
+    id?: string;
+    created: any;
+    status: string;
+    title: string;
+    ownerId: string;
+    photo?: PhotoInfo;
+    scheduleInfo?: ScheduleInfo;
+    customVideo?: FIRVideo;
+    scheduledDate?: any;
+    type?: string;
+    instructionSetId?: string;
+    youtubeLink?: string;
+    access?: string;
+    tags?: string;
+    constructor(id: string, data: {
+        [field: string]: any;
+    });
+}
+export declare class ALGActivity implements IActivity {
+    readonly id: string | undefined;
     objectID: string;
     created: any;
     status: string;
@@ -958,6 +978,7 @@ export declare class ALGActivity {
     customVideo?: FIRVideo;
     scheduledDate?: any;
     type?: string;
+    instructionSetId?: string;
     youtubeLink?: string;
     access?: string;
     tags?: string;
@@ -965,7 +986,7 @@ export declare class ALGActivity {
         [field: string]: any;
     });
 }
-export interface FIRActivity {
+export interface FIRActivity extends IActivity {
     id?: string;
     created: any;
     status: string;

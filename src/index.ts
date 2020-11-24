@@ -1172,8 +1172,45 @@ export interface FIRSchedule {
   signupType?: string
 }
 
+export class IActivity {
+  id?: string;
+  created: any
+  status: string
+  title: string
+  ownerId: string
+  photo?: PhotoInfo
+  scheduleInfo?: ScheduleInfo
+  customVideo?: FIRVideo
+  scheduledDate?: any
+  type?: string
+  instructionSetId?: string
+  youtubeLink?: string
+  access?: string
+  tags?: string
 
-export class ALGActivity {
+  constructor(id: string, data: { [field: string]: any }) {
+    this.id = id
+    this.created = data.created
+    this.status = data.status
+    this.title = data.title
+    this.ownerId = data.ownerId
+    this.photo = data.photo
+    this.scheduleInfo = data.scheduleInfo
+    this.customVideo = data.customVideo
+    this.scheduledDate = data.scheduledDate
+    this.type = data.type
+    this.instructionSetId = data.instructionSetId
+    this.youtubeLink = data.youtubeLink
+    this.access = data.access
+    this.tags = data.tags
+  }
+}
+
+export class ALGActivity implements IActivity {
+  get id(): string | undefined {
+    return this.objectID
+  }
+
   objectID: string // document id
   created: any
   status: string
@@ -1184,6 +1221,7 @@ export class ALGActivity {
   customVideo?: FIRVideo
   scheduledDate?: any
   type?: string
+  instructionSetId?: string
   youtubeLink?: string
   access?: string
   tags?: string
@@ -1199,13 +1237,14 @@ export class ALGActivity {
     this.customVideo = data.customVideo
     this.scheduledDate = data.scheduledDate
     this.type = data.type
+    this.instructionSetId = data.instructionSetId
     this.youtubeLink = data.youtubeLink
     this.access = data.access
     this.tags = data.tags
   }
 }
 
-export interface FIRActivity {
+export interface FIRActivity extends IActivity {
   id?: string
   created: any
   status: string

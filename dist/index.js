@@ -108,6 +108,26 @@ var ALGExercise = /** @class */ (function () {
     return ALGExercise;
 }());
 exports.ALGExercise = ALGExercise;
+var IActivity = /** @class */ (function () {
+    function IActivity(id, data) {
+        this.id = id;
+        this.created = data.created;
+        this.status = data.status;
+        this.title = data.title;
+        this.ownerId = data.ownerId;
+        this.photo = data.photo;
+        this.scheduleInfo = data.scheduleInfo;
+        this.customVideo = data.customVideo;
+        this.scheduledDate = data.scheduledDate;
+        this.type = data.type;
+        this.instructionSetId = data.instructionSetId;
+        this.youtubeLink = data.youtubeLink;
+        this.access = data.access;
+        this.tags = data.tags;
+    }
+    return IActivity;
+}());
+exports.IActivity = IActivity;
 var ALGActivity = /** @class */ (function () {
     function ALGActivity(objectID, data) {
         this.objectID = objectID;
@@ -120,10 +140,18 @@ var ALGActivity = /** @class */ (function () {
         this.customVideo = data.customVideo;
         this.scheduledDate = data.scheduledDate;
         this.type = data.type;
+        this.instructionSetId = data.instructionSetId;
         this.youtubeLink = data.youtubeLink;
         this.access = data.access;
         this.tags = data.tags;
     }
+    Object.defineProperty(ALGActivity.prototype, "id", {
+        get: function () {
+            return this.objectID;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return ALGActivity;
 }());
 exports.ALGActivity = ALGActivity;
