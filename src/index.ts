@@ -1009,7 +1009,7 @@ export class ALGExercise {
   constructor(objectID: string, data: { [field: string]: any }) {
     this.objectID = objectID
     this.title = data.title
-    this.category = data.title
+    this.category = data.category
     this.ownerId = data.ownerId
     this.version = data.version
     this.isBodyweight = data.isBodyweight
