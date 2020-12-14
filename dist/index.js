@@ -94,7 +94,7 @@ var ALGExercise = /** @class */ (function () {
     function ALGExercise(objectID, data) {
         this.objectID = objectID;
         this.title = data.title;
-        this.category = data.title;
+        this.category = data.category;
         this.ownerId = data.ownerId;
         this.version = data.version;
         this.isBodyweight = data.isBodyweight;

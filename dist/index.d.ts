@@ -1057,6 +1057,7 @@ export interface FIRScheduleMember {
     joined: any;
     userId: string;
     username: string;
+    name?: string;
     subscriptionId?: string;
     subscriptionStatus?: string;
 }
