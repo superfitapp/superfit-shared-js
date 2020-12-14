@@ -831,6 +831,7 @@ export interface FIRUser {
     userId: string;
     email: string;
     username: string;
+    name?: string;
     migratedProData?: boolean;
     billingInfo?: FIRBillingInfo;
     activeSchedules?: {
