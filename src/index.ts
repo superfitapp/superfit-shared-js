@@ -1360,6 +1360,7 @@ export interface ConnectProduct {
   subscriptionStatus?: string
   invoiceStatus?: string
   subscriptionEndedAt?: number
+  subscriptionCancelAt?: number
   ownerConnectId: string
   priceId: string
   subscriptionId?: string
