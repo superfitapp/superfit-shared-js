@@ -1061,6 +1061,13 @@ export interface FIRScheduleMember {
     name?: string;
     subscriptionId?: string;
     subscriptionStatus?: string;
+    status?: MemberStatus;
+}
+export declare const enum MemberStatus {
+    Active = "active",
+    Inactive = "inactive",
+    Removed = "removed",
+    Blocked = "blocked"
 }
 export interface StripeBillingInfo {
     customerId?: string;

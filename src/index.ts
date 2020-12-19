@@ -1154,6 +1154,7 @@ export interface Instruction {
 }
 
 export interface FIRSchedule {
+  id?: string;
   title: string
   color: string
   created: any
