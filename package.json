@@ -1,6 +1,6 @@
 {
   "name": "@superfitapp/superfitjs",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "shared resources between superfit-api and superfit-website",
   "scripts": {
     "build": "tsc",

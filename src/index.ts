@@ -1169,6 +1169,7 @@ export interface FIRSchedule {
   profile?: ScheduleProfile
   pendingEmailInvites?: { [userId: string]: ScheduleEmailInvite }
   stripeProductId?: string
+  stripeCurrentOneTimePrice?: StripePrice
   stripeCurrentMonthlyPrice?: StripePrice
   stripeCurrentYearlyPrice?: StripePrice
   stripeConnectWebhookId?: string

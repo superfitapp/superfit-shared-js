@@ -282,6 +282,7 @@ export interface ShowFIRSchedule {
     profile?: ScheduleProfile;
     enableSubscription?: boolean;
     stripeProductId?: string;
+    stripeCurrentOneTimePrice?: StripePrice;
     stripeCurrentMonthlyPrice?: StripePrice;
     stripeCurrentYearlyPrice?: StripePrice;
     payToJoin?: boolean;
@@ -342,6 +343,7 @@ export interface FIRSchedule {
         [userId: string]: ScheduleEmailInvite;
     };
     stripeProductId?: string;
+    stripeCurrentOneTimePrice?: StripePrice;
     stripeCurrentMonthlyPrice?: StripePrice;
     stripeCurrentYearlyPrice?: StripePrice;
     stripeConnectWebhookId?: string;
