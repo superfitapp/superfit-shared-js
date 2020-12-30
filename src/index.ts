@@ -1331,9 +1331,12 @@ export interface FIRScheduleMember {
   userId: string
   username: string
   name?: string
+  status?: MemberStatus
+  membershipInfo?: ConnectMembershipInfo
+
+  // deprecated
   subscriptionId?: string
   subscriptionStatus?: string
-  status?: MemberStatus
 }
 
 export declare const enum MemberStatus {
@@ -1362,12 +1365,14 @@ export interface AppleBillingInfo {
 export interface FIRBillingInfo {
   apple?: AppleBillingInfo
   stripe?: StripeBillingInfo
-  connectProducts: {
-    [productId: string]: ConnectProduct
+
+  // deprecated
+  connectProducts?: {
+    [productId: string]: ConnectMembershipInfo
   }
 }
 
-export interface ConnectProduct {
+export interface ConnectMembershipInfo {
   active: boolean
   productId: string
   subscriptionStatus?: string

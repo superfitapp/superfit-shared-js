@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ALGActivity = exports.IActivity = exports.ALGExercise = exports.convertedWeight = void 0;
 var uom_1 = require("uom");
 var lodash_round_1 = __importDefault(require("lodash.round"));
 exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight, levelsOfPrecision) {
@@ -153,7 +154,7 @@ var ALGActivity = /** @class */ (function () {
         get: function () {
             return this.objectID;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return ALGActivity;

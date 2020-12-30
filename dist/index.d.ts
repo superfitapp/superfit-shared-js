@@ -371,7 +371,7 @@ export declare class IActivity {
     });
 }
 export declare class ALGActivity implements IActivity {
-    readonly id: string | undefined;
+    get id(): string | undefined;
     objectID: string;
     created: any;
     status: string;
@@ -462,9 +462,10 @@ export interface FIRScheduleMember {
     userId: string;
     username: string;
     name?: string;
+    status?: MemberStatus;
+    membershipInfo?: ConnectMembershipInfo;
     subscriptionId?: string;
     subscriptionStatus?: string;
-    status?: MemberStatus;
 }
 export declare const enum MemberStatus {
     Active = "active",
@@ -491,11 +492,11 @@ export interface AppleBillingInfo {
 export interface FIRBillingInfo {
     apple?: AppleBillingInfo;
     stripe?: StripeBillingInfo;
-    connectProducts: {
-        [productId: string]: ConnectProduct;
+    connectProducts?: {
+        [productId: string]: ConnectMembershipInfo;
     };
 }
-export interface ConnectProduct {
+export interface ConnectMembershipInfo {
     active: boolean;
     productId: string;
     subscriptionStatus?: string;
