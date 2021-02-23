@@ -497,7 +497,6 @@ export interface FIRBillingInfo {
     };
 }
 export interface ConnectMembershipInfo {
-    active: boolean;
     productId: string;
     subscriptionStatus?: string;
     invoiceStatus?: string;
