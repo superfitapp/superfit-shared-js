@@ -1,6 +1,6 @@
 {
   "name": "@superfitapp/superfitjs",
-  "version": "2.7.4",
+  "version": "2.7.6",
   "description": "shared resources between superfit-api and superfit-website",
   "scripts": {
     "build": "tsc",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@types/lodash.round": "^4.0.6",
     "lodash.round": "^4.0.4",
-    "uom": "^2.3.0"
+    "uom": "^2.5.0"
   },
   "author": "",
   "license": "ISC",
