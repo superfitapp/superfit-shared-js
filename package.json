@@ -1,6 +1,6 @@
 {
   "name": "@superfitapp/superfitjs",
-  "version": "2.7.7",
+  "version": "2.7.8",
   "description": "shared resources between superfit-api and superfit-website",
   "scripts": {
     "build": "tsc",
@@ -9,7 +9,7 @@
     "deploy": "npm run build && npm publish"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "@types/lodash.round": "^4.0.6",
@@ -20,10 +20,7 @@
   "license": "ISC",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/superfitapp/superfit-shared-js.git"
-  },
+  "repository": "git://github.com/superfitapp/superfit-shared-js.git",
   "bugs": {
     "url": "https://github.com/superfitapp/superfit-shared-js/issues"
   },

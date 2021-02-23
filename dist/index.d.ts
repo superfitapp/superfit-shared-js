@@ -48,33 +48,6 @@ export declare const enum MovementCategory {
     Technique = "technique",
     Wellness = "wellness"
 }
-export interface IAthlete_Subscription_V1 {
-    id: string;
-    creationDate: Date;
-    revisionDate: Date;
-    latestSubscriptionEndDate?: string;
-    latestAppleProProductId?: string;
-    latestAppleProTransactionId?: string;
-    latestStripeProProductId?: string;
-    latestStripeProSubscriptionId?: string;
-    latestStripeCoachEndDate?: Date;
-    latestStripeCoachSubscriptionId?: string;
-    stripeCustomerId?: string;
-    stripeConnectId?: string;
-    notes?: string;
-}
-export interface JSONDict {
-    [key: string]: any;
-}
-export declare const enum Gender {
-    Male = "male",
-    Female = "female",
-    Neutral = "neutral"
-}
-export declare const enum MeasurementSystem {
-    metric = "metric",
-    imperial = "imperial"
-}
 export declare const enum AccessLevel {
     all = "all",
     members = "members",
