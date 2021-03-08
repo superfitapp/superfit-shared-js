@@ -3,16 +3,74 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ALGActivity = exports.IActivity = exports.ALGExercise = exports.convertedWeight = exports.AccessLevel = exports.MovementCategory = exports.VisibilityStatus = exports.ActivityStatus = exports.ExerciseInput = exports.LengthUnit = exports.MassUnit = exports.PrivacyStatus = void 0;
 var uom_1 = require("uom");
 var lodash_round_1 = __importDefault(require("lodash.round"));
+var PrivacyStatus;
+(function (PrivacyStatus) {
+    PrivacyStatus["unlisted"] = "unlisted";
+    PrivacyStatus["public"] = "public";
+    PrivacyStatus["private"] = "private";
+})(PrivacyStatus = exports.PrivacyStatus || (exports.PrivacyStatus = {}));
+var MassUnit;
+(function (MassUnit) {
+    MassUnit["Pound"] = "pound";
+    MassUnit["Kilogram"] = "kilogram";
+})(MassUnit = exports.MassUnit || (exports.MassUnit = {}));
+var LengthUnit;
+(function (LengthUnit) {
+    LengthUnit["Yard"] = "yard";
+    LengthUnit["Meter"] = "meter";
+})(LengthUnit = exports.LengthUnit || (exports.LengthUnit = {}));
+var ExerciseInput;
+(function (ExerciseInput) {
+    ExerciseInput["Reps"] = "reps";
+    ExerciseInput["Weight"] = "weight";
+    ExerciseInput["Duration"] = "duration";
+    ExerciseInput["Distance"] = "distance";
+    ExerciseInput["Freeform"] = "freeform";
+})(ExerciseInput = exports.ExerciseInput || (exports.ExerciseInput = {}));
+var ActivityStatus;
+(function (ActivityStatus) {
+    ActivityStatus["Draft"] = "draft";
+    ActivityStatus["Published"] = "published";
+    ActivityStatus["Archived"] = "archived";
+})(ActivityStatus = exports.ActivityStatus || (exports.ActivityStatus = {}));
+var VisibilityStatus;
+(function (VisibilityStatus) {
+    VisibilityStatus["Public"] = "public";
+    VisibilityStatus["Follower"] = "follower";
+    VisibilityStatus["Private"] = "private";
+    VisibilityStatus["Archived"] = "archived";
+})(VisibilityStatus = exports.VisibilityStatus || (exports.VisibilityStatus = {}));
+var MovementCategory;
+(function (MovementCategory) {
+    MovementCategory["Warmup"] = "warmup";
+    MovementCategory["Mobility"] = "mobility";
+    MovementCategory["Stability"] = "stability";
+    MovementCategory["Plyometric"] = "plyometric";
+    MovementCategory["Power"] = "power";
+    MovementCategory["Strength"] = "strength";
+    MovementCategory["Movement"] = "movement";
+    MovementCategory["Condition"] = "condition";
+    MovementCategory["SportSpecific"] = "sport-specific";
+    MovementCategory["Technique"] = "technique";
+    MovementCategory["Wellness"] = "wellness";
+})(MovementCategory = exports.MovementCategory || (exports.MovementCategory = {}));
+var AccessLevel;
+(function (AccessLevel) {
+    AccessLevel["all"] = "all";
+    AccessLevel["members"] = "members";
+    AccessLevel["paidMembers"] = "paidMembers";
+})(AccessLevel = exports.AccessLevel || (exports.AccessLevel = {}));
 exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight, levelsOfPrecision) {
     if (levelsOfPrecision === void 0) { levelsOfPrecision = 1; }
     if (!weight) {
         return null;
     }
-    var unit = (unitToConvertFrom == "kilogram" /* Kilogram */ ? uom_1.Units.Kilogram : uom_1.Units.PoundLb);
+    var unit = unitToConvertFrom == MassUnit.Kilogram ? uom_1.Units.Kilogram : uom_1.Units.PoundLb;
     var amount = uom_1.Amount.create(weight, unit);
-    if (unitToConvertTo == "kilogram" /* Kilogram */) {
+    if (unitToConvertTo == MassUnit.Kilogram) {
         var toKilos = uom_1.Amount.valueAs(uom_1.Units.Kilogram, amount);
         return lodash_round_1.default(toKilos, levelsOfPrecision);
     }
@@ -80,7 +138,7 @@ var ALGActivity = /** @class */ (function () {
         get: function () {
             return this.objectID;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return ALGActivity;

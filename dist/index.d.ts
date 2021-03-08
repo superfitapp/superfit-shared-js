@@ -1,29 +1,29 @@
-export declare const enum PrivacyStatus {
+export declare enum PrivacyStatus {
     unlisted = "unlisted",
     public = "public",
     private = "private"
 }
-export declare const enum MassUnit {
+export declare enum MassUnit {
     Pound = "pound",
     Kilogram = "kilogram"
 }
-export declare const enum LengthUnit {
+export declare enum LengthUnit {
     Yard = "yard",
     Meter = "meter"
 }
-export declare const enum ExerciseInput {
+export declare enum ExerciseInput {
     Reps = "reps",
     Weight = "weight",
     Duration = "duration",
     Distance = "distance",
     Freeform = "freeform"
 }
-export declare const enum ActivityStatus {
+export declare enum ActivityStatus {
     Draft = "draft",
     Published = "published",
     Archived = "archived"
 }
-export declare const enum VisibilityStatus {
+export declare enum VisibilityStatus {
     Public = "public",
     Follower = "follower",
     Private = "private",
@@ -35,7 +35,7 @@ export interface ISignInDTO_V1 {
     preferredMassUnit?: string;
     preferredLengthUnit?: string;
 }
-export declare const enum MovementCategory {
+export declare enum MovementCategory {
     Warmup = "warmup",
     Mobility = "mobility",
     Stability = "stability",
@@ -48,7 +48,7 @@ export declare const enum MovementCategory {
     Technique = "technique",
     Wellness = "wellness"
 }
-export declare const enum AccessLevel {
+export declare enum AccessLevel {
     all = "all",
     members = "members",
     paidMembers = "paidMembers"
@@ -220,17 +220,17 @@ export interface SignInDTO {
     migratedUsername?: string;
     migratedBillingInfo?: FIRBillingInfo;
 }
-export declare const enum PhotoType {
+export declare enum PhotoType {
     Unsplash = "unsplash",
     Custom = "custom"
 }
-export declare const enum DistanceUnit {
+export declare enum DistanceUnit {
     meters = "meters",
     feet = "feet",
     kilometers = "kilometers",
     miles = "miles"
 }
-export declare const enum DurationUnit {
+export declare enum DurationUnit {
     minute = "minute",
     second = "second"
 }
@@ -241,7 +241,7 @@ export interface PhotoInfo {
     customPhotoFirPath?: string;
     customPhotoUrl?: string;
 }
-export declare const enum ScheduleSignUpType {
+export declare enum ScheduleSignUpType {
     anyoneCanSignUp = "anyoneCanSignUp",
     inviteOnly = "inviteOnly"
 }
@@ -344,7 +344,7 @@ export declare class IActivity {
     });
 }
 export declare class ALGActivity implements IActivity {
-    readonly id: string | undefined;
+    get id(): string | undefined;
     objectID: string;
     created: any;
     status: string;
@@ -420,11 +420,11 @@ export interface ActiveScheduleInfo {
     joined: any;
     role: string;
 }
-export declare const enum ScheduleRole {
+export declare enum ScheduleRole {
     Member = "member",
     Owner = "owner"
 }
-export declare const enum DocumentRole {
+export declare enum DocumentRole {
     Admin = "admin"
 }
 export interface FIRScheduleMember {
@@ -440,7 +440,7 @@ export interface FIRScheduleMember {
     subscriptionId?: string;
     subscriptionStatus?: string;
 }
-export declare const enum MemberStatus {
+export declare enum MemberStatus {
     Active = "active",
     Inactive = "inactive",
     Removed = "removed",
