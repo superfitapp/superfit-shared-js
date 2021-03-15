@@ -343,7 +343,7 @@ export declare class IActivity {
     });
 }
 export declare class ALGActivity implements IActivity {
-    get id(): string | undefined;
+    readonly id: string | undefined;
     objectID: string;
     created: any;
     status: string;
@@ -434,16 +434,16 @@ export interface FIRScheduleMember {
     userId: string;
     username: string;
     name?: string;
-    status?: string;
+    status?: MemberStatus;
     membershipInfo?: ConnectMembershipInfo;
     subscriptionId?: string;
     subscriptionStatus?: string;
 }
-export declare namespace MemberStatus {
-    const Active = "active";
-    const Inactive = "inactive";
-    const Removed = "removed";
-    const Blocked = "blocked";
+export declare enum MemberStatus {
+    Active = "active",
+    Inactive = "inactive",
+    Removed = "removed",
+    Blocked = "blocked"
 }
 export interface StripeBillingInfo {
     customerId?: string;

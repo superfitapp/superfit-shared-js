@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MemberStatus = exports.DocumentRole = exports.ScheduleRole = exports.ALGActivity = exports.IActivity = exports.ScheduleSignUpType = exports.DurationUnit = exports.DistanceUnit = exports.PhotoType = exports.ALGExercise = exports.convertedWeight = exports.AccessLevel = exports.MovementCategory = exports.VisibilityStatus = exports.ActivityStatus = exports.ExerciseInput = exports.LengthUnit = exports.MassUnit = exports.PrivacyStatus = void 0;
 var uom_1 = require("uom");
 var lodash_round_1 = __importDefault(require("lodash.round"));
 var PrivacyStatus;
@@ -159,7 +158,7 @@ var ALGActivity = /** @class */ (function () {
         get: function () {
             return this.objectID;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     return ALGActivity;
@@ -176,8 +175,8 @@ var DocumentRole;
 })(DocumentRole = exports.DocumentRole || (exports.DocumentRole = {}));
 var MemberStatus;
 (function (MemberStatus) {
-    MemberStatus.Active = "active";
-    MemberStatus.Inactive = "inactive";
-    MemberStatus.Removed = "removed";
-    MemberStatus.Blocked = "blocked";
+    MemberStatus["Active"] = "active";
+    MemberStatus["Inactive"] = "inactive";
+    MemberStatus["Removed"] = "removed";
+    MemberStatus["Blocked"] = "blocked";
 })(MemberStatus = exports.MemberStatus || (exports.MemberStatus = {}));
