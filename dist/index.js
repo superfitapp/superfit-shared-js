@@ -38,7 +38,6 @@ var ActivityStatus;
 var VisibilityStatus;
 (function (VisibilityStatus) {
     VisibilityStatus["Public"] = "public";
-    VisibilityStatus["Follower"] = "follower";
     VisibilityStatus["Private"] = "private";
     VisibilityStatus["Archived"] = "archived";
 })(VisibilityStatus = exports.VisibilityStatus || (exports.VisibilityStatus = {}));

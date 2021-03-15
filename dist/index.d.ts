@@ -25,7 +25,6 @@ export declare enum ActivityStatus {
 }
 export declare enum VisibilityStatus {
     Public = "public",
-    Follower = "follower",
     Private = "private",
     Archived = "archived"
 }
