@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.MemberStatus = exports.DocumentRole = exports.ScheduleRole = exports.ALGActivity = exports.IActivity = exports.ScheduleSignUpType = exports.DurationUnit = exports.DistanceUnit = exports.PhotoType = exports.ALGExercise = exports.convertedWeight = exports.AccessLevel = exports.MovementCategory = exports.VisibilityStatus = exports.ActivityStatus = exports.ExerciseInput = exports.LengthUnit = exports.MassUnit = exports.PrivacyStatus = void 0;
 var uom_1 = require("uom");
 var lodash_round_1 = __importDefault(require("lodash.round"));
 var PrivacyStatus;
@@ -96,6 +97,28 @@ var ALGExercise = /** @class */ (function () {
     return ALGExercise;
 }());
 exports.ALGExercise = ALGExercise;
+var PhotoType;
+(function (PhotoType) {
+    PhotoType["Unsplash"] = "unsplash";
+    PhotoType["Custom"] = "custom";
+})(PhotoType = exports.PhotoType || (exports.PhotoType = {}));
+var DistanceUnit;
+(function (DistanceUnit) {
+    DistanceUnit["meters"] = "meters";
+    DistanceUnit["feet"] = "feet";
+    DistanceUnit["kilometers"] = "kilometers";
+    DistanceUnit["miles"] = "miles";
+})(DistanceUnit = exports.DistanceUnit || (exports.DistanceUnit = {}));
+var DurationUnit;
+(function (DurationUnit) {
+    DurationUnit["minute"] = "minute";
+    DurationUnit["second"] = "second";
+})(DurationUnit = exports.DurationUnit || (exports.DurationUnit = {}));
+var ScheduleSignUpType;
+(function (ScheduleSignUpType) {
+    ScheduleSignUpType["anyoneCanSignUp"] = "anyoneCanSignUp";
+    ScheduleSignUpType["inviteOnly"] = "inviteOnly";
+})(ScheduleSignUpType = exports.ScheduleSignUpType || (exports.ScheduleSignUpType = {}));
 var IActivity = /** @class */ (function () {
     function IActivity(id, data) {
         this.id = id;
@@ -137,9 +160,25 @@ var ALGActivity = /** @class */ (function () {
         get: function () {
             return this.objectID;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return ALGActivity;
 }());
 exports.ALGActivity = ALGActivity;
+var ScheduleRole;
+(function (ScheduleRole) {
+    ScheduleRole["Member"] = "member";
+    ScheduleRole["Owner"] = "owner";
+})(ScheduleRole = exports.ScheduleRole || (exports.ScheduleRole = {}));
+var DocumentRole;
+(function (DocumentRole) {
+    DocumentRole["Admin"] = "admin";
+})(DocumentRole = exports.DocumentRole || (exports.DocumentRole = {}));
+var MemberStatus;
+(function (MemberStatus) {
+    MemberStatus["Active"] = "active";
+    MemberStatus["Inactive"] = "inactive";
+    MemberStatus["Removed"] = "removed";
+    MemberStatus["Blocked"] = "blocked";
+})(MemberStatus = exports.MemberStatus || (exports.MemberStatus = {}));

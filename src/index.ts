@@ -282,19 +282,19 @@ export interface SignInDTO {
   migratedBillingInfo?: FIRBillingInfo;
 }
 
-export declare enum PhotoType {
+export enum PhotoType {
   Unsplash = "unsplash",
   Custom = "custom",
 }
 
-export declare enum DistanceUnit {
+export enum DistanceUnit {
   meters = "meters",
   feet = "feet",
   kilometers = "kilometers",
   miles = "miles",
 }
 
-export declare enum DurationUnit {
+export enum DurationUnit {
   minute = "minute",
   second = "second",
 }
@@ -307,7 +307,7 @@ export interface PhotoInfo {
   customPhotoUrl?: string;
 }
 
-export declare enum ScheduleSignUpType {
+export enum ScheduleSignUpType {
   anyoneCanSignUp = "anyoneCanSignUp",
   inviteOnly = "inviteOnly",
 }
@@ -526,12 +526,12 @@ export interface ActiveScheduleInfo {
   role: string;
 }
 
-export declare enum ScheduleRole {
+export enum ScheduleRole {
   Member = "member",
   Owner = "owner",
 }
 
-export declare enum DocumentRole {
+export enum DocumentRole {
   Admin = "admin",
 }
 
@@ -552,7 +552,7 @@ export interface FIRScheduleMember {
   subscriptionStatus?: string;
 }
 
-export declare enum MemberStatus {
+export enum MemberStatus {
   Active = "active",
   Inactive = "inactive",
   Removed = "removed",
