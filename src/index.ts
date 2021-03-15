@@ -543,7 +543,7 @@ export interface FIRScheduleMember {
   userId: string;
   username: string;
   name?: string;
-  status?: MemberStatus;
+  status?: string; // MemberStatus
   membershipInfo?: ConnectMembershipInfo;
 
   // deprecated
@@ -551,11 +551,11 @@ export interface FIRScheduleMember {
   subscriptionStatus?: string;
 }
 
-export enum MemberStatus {
-  Active = "active",
-  Inactive = "inactive",
-  Removed = "removed",
-  Blocked = "blocked",
+export namespace MemberStatus {
+  export const Active = "active";
+  export const Inactive = "inactive";
+  export const Removed = "removed";
+  export const Blocked = "blocked";
 }
 
 export interface StripeBillingInfo {
