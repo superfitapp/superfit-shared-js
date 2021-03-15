@@ -176,8 +176,8 @@ var DocumentRole;
 })(DocumentRole = exports.DocumentRole || (exports.DocumentRole = {}));
 var MemberStatus;
 (function (MemberStatus) {
-    MemberStatus.Active = "active";
-    MemberStatus.Inactive = "inactive";
-    MemberStatus.Removed = "removed";
-    MemberStatus.Blocked = "blocked";
+    MemberStatus["Active"] = "active";
+    MemberStatus["Inactive"] = "inactive";
+    MemberStatus["Removed"] = "removed";
+    MemberStatus["Blocked"] = "blocked";
 })(MemberStatus = exports.MemberStatus || (exports.MemberStatus = {}));
