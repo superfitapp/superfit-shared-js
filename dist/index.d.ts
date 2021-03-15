@@ -344,7 +344,7 @@ export declare class IActivity {
     });
 }
 export declare class ALGActivity implements IActivity {
-    get id(): string | undefined;
+    readonly id: string | undefined;
     objectID: string;
     created: any;
     status: string;
