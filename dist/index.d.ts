@@ -323,6 +323,23 @@ export interface FIRSchedule {
     payToJoin?: boolean;
     signupType?: string;
 }
+export interface FIRProgressLog {
+    id?: string;
+    created: any;
+    activityId: string;
+    activityTitle?: string;
+    email: string;
+    ownerId?: string;
+    activityScheduledDate?: any;
+    activityCompletionDate?: any;
+    activityCompleted: boolean;
+    userInfo?: UserInfo;
+    guest?: boolean;
+}
+export interface UserInfo {
+    name?: string;
+    username?: string;
+}
 export declare class IActivity {
     id?: string;
     created: any;
