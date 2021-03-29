@@ -337,12 +337,12 @@ export interface FIRProgressLog {
     userInfo?: UserInfo;
     guest?: boolean;
 }
-interface StripePaymentInfo {
+export interface StripePaymentInfo {
     purchasedAt: any;
-    checkoutSessionId: string;
+    paymentIntentId: string;
     customerId: string;
 }
-interface SignUpInfo {
+export interface SignUpInfo {
     signedUp: boolean;
     stripe?: StripePaymentInfo;
 }
@@ -556,4 +556,3 @@ export interface InstructionPreset {
     durationUnit?: string;
     displayedDistanceUnit?: string;
 }
-export {};
