@@ -395,18 +395,30 @@ export interface FIRProgressLog {
   created: any;
   activityId: string;
   activityTitle?: string;
-  email: string
-  ownerId?: string
-  activityScheduledDate?: any
-  activityCompletionDate?: any
-  activityCompleted: boolean
-  userInfo?: UserInfo
-  guest?: boolean
+  email: string;
+  ownerId?: string;
+  activityScheduledDate?: any;
+  activityCompletionDate?: any;
+  activityCompleted: boolean;
+  signupInfo?: SignUpInfo;
+  userInfo?: UserInfo;
+  guest?: boolean;
+}
+
+interface StripePaymentInfo {
+  purchasedAt: any;
+  checkoutSessionId: string;
+  customerId: string;
+}
+
+interface SignUpInfo {
+  signedUp: boolean;
+  stripe?: StripePaymentInfo;
 }
 
 export interface UserInfo {
-  name?: string
-  username?: string
+  name?: string;
+  username?: string;
 }
 
 export class IActivity {
