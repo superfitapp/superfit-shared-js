@@ -333,8 +333,18 @@ export interface FIRProgressLog {
     activityScheduledDate?: any;
     activityCompletionDate?: any;
     activityCompleted: boolean;
+    signupInfo?: SignUpInfo;
     userInfo?: UserInfo;
     guest?: boolean;
+}
+interface StripePaymentInfo {
+    purchasedAt: any;
+    checkoutSessionId: string;
+    customerId: string;
+}
+interface SignUpInfo {
+    signedUp: boolean;
+    stripe?: StripePaymentInfo;
 }
 export interface UserInfo {
     name?: string;
@@ -546,3 +556,4 @@ export interface InstructionPreset {
     durationUnit?: string;
     displayedDistanceUnit?: string;
 }
+export {};
