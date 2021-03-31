@@ -414,13 +414,14 @@ export interface ScheduleInfo {
 }
 export interface ScheduleProfile {
     about?: string;
-    twitterUrl?: string;
-    facebookUrl?: string;
-    instagramUrl?: string;
+    email?: string;
+    facebookUsername?: string;
+    twitterUsername?: string;
+    instagramUsername?: string;
+    linkedinUsername?: string;
+    tiktokUsername?: string;
     youtubeUrl?: string;
     websiteUrl?: string;
-    primaryColor?: string;
-    secondaryColor: string;
     backgroundColor?: string;
     linksTextColor?: string;
     linksBackgroundColor?: string;
