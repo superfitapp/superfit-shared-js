@@ -315,6 +315,7 @@ export interface ShowFIRSchedule {
   title: string;
   created: any;
   color: string;
+  secondaryColor?: string;
   photo?: PhotoInfo;
   visibilityStatus?: string;
   ownerDisplayName?: string;
