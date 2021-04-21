@@ -422,7 +422,7 @@ export interface UserInfo {
   username?: string;
 }
 
-export interface SignUpConfig {
+export interface SignupConfig {
   signupEnabled: boolean;
   priceAmount?: number;
   priceCurrency?: string;
@@ -436,7 +436,7 @@ export class IActivity {
   ownerId: string;
   photo?: PhotoInfo;
   scheduleInfo?: ScheduleInfo;
-  signUpConfig?: SignUpConfig;
+  signupConfig?: SignupConfig;
   customVideo?: FIRVideo;
   scheduledDate?: any;
   type?: string;
@@ -455,7 +455,7 @@ export class IActivity {
     this.scheduleInfo = data.scheduleInfo;
     this.customVideo = data.customVideo;
     this.scheduledDate = data.scheduledDate;
-    this.signUpConfig = data.signUpConfig;
+    this.signupConfig = data.signupConfig;
     this.type = data.type;
     this.instructionSetId = data.instructionSetId;
     this.youtubeLink = data.youtubeLink;
@@ -476,7 +476,7 @@ export class ALGActivity implements IActivity {
   ownerId: string;
   photo?: PhotoInfo;
   scheduleInfo?: ScheduleInfo;
-  signUpConfig?: SignUpConfig;
+  signupConfig?: SignupConfig;
   customVideo?: FIRVideo;
   scheduledDate?: any;
   type?: string;
@@ -493,7 +493,7 @@ export class ALGActivity implements IActivity {
     this.ownerId = data.ownerId;
     this.photo = data.photo;
     this.scheduleInfo = data.scheduleInfo;
-    this.signUpConfig = data.signUpConfig;
+    this.signupConfig = data.signupConfig;
     this.customVideo = data.customVideo;
     this.scheduledDate = data.scheduledDate;
     this.type = data.type;
@@ -513,7 +513,7 @@ export interface FIRActivity extends IActivity {
   description?: string;
   photo?: PhotoInfo;
   scheduleInfo?: ScheduleInfo;
-  signUpConfig?: SignUpConfig;
+  signupConfig?: SignupConfig;
   customVideo?: FIRVideo;
   scheduledDate?: any;
   allDay?: boolean;

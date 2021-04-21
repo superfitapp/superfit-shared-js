@@ -351,7 +351,7 @@ export interface UserInfo {
     name?: string;
     username?: string;
 }
-export interface SignUpConfig {
+export interface SignupConfig {
     signupEnabled: boolean;
     priceAmount?: number;
     priceCurrency?: string;
@@ -364,7 +364,7 @@ export declare class IActivity {
     ownerId: string;
     photo?: PhotoInfo;
     scheduleInfo?: ScheduleInfo;
-    signUpConfig?: SignUpConfig;
+    signupConfig?: SignupConfig;
     customVideo?: FIRVideo;
     scheduledDate?: any;
     type?: string;
@@ -385,7 +385,7 @@ export declare class ALGActivity implements IActivity {
     ownerId: string;
     photo?: PhotoInfo;
     scheduleInfo?: ScheduleInfo;
-    signUpConfig?: SignUpConfig;
+    signupConfig?: SignupConfig;
     customVideo?: FIRVideo;
     scheduledDate?: any;
     type?: string;
@@ -406,7 +406,7 @@ export interface FIRActivity extends IActivity {
     description?: string;
     photo?: PhotoInfo;
     scheduleInfo?: ScheduleInfo;
-    signUpConfig?: SignUpConfig;
+    signupConfig?: SignupConfig;
     customVideo?: FIRVideo;
     scheduledDate?: any;
     allDay?: boolean;
