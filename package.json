@@ -1,12 +1,12 @@
 {
   "name": "@superfitapp/superfitjs",
-  "version": "2.9.8",
+  "version": "2.9.9",
   "description": "shared resources between superfit-api and superfit-website!",
   "scripts": {
     "build": "tsc",
     "update": "npm run build && git commit -am ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm run build"
+    // "deploy": "npm run build"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
