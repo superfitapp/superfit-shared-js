@@ -513,7 +513,7 @@ export interface FIRActivity extends IActivity {
   description?: string;
   photo?: PhotoInfo;
   scheduleInfo?: ScheduleInfo;
-  signUpConfig?: SignUpConfig
+  signUpConfig?: SignUpConfig;
   customVideo?: FIRVideo;
   scheduledDate?: any;
   allDay?: boolean;
