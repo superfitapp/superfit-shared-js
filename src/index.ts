@@ -414,6 +414,7 @@ export interface StripePaymentInfo {
 
 export interface SignUpInfo {
   signedUp: boolean;
+  accessCode: string;
   stripe?: StripePaymentInfo;
 }
 
