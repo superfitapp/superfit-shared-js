@@ -62,6 +62,7 @@ export enum AccessLevel {
   all = "all",
   members = "members",
   paidMembers = "paidMembers",
+  oneTimePurchase = "oneTimePurchase",
 }
 
 export const convertedWeight = (

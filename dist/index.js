@@ -60,6 +60,7 @@ var AccessLevel;
     AccessLevel["all"] = "all";
     AccessLevel["members"] = "members";
     AccessLevel["paidMembers"] = "paidMembers";
+    AccessLevel["oneTimePurchase"] = "oneTimePurchase";
 })(AccessLevel = exports.AccessLevel || (exports.AccessLevel = {}));
 exports.convertedWeight = function (unitToConvertFrom, unitToConvertTo, weight, levelsOfPrecision) {
     if (levelsOfPrecision === void 0) { levelsOfPrecision = 1; }

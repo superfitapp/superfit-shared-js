@@ -50,7 +50,8 @@ export declare enum MovementCategory {
 export declare enum AccessLevel {
     all = "all",
     members = "members",
-    paidMembers = "paidMembers"
+    paidMembers = "paidMembers",
+    oneTimePurchase = "oneTimePurchase"
 }
 export declare const convertedWeight: (unitToConvertFrom: string, unitToConvertTo: string, weight?: number | undefined, levelsOfPrecision?: number) => number | null;
 export interface ISaveVideo_DTO_V1 {
