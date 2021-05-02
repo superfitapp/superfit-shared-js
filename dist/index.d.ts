@@ -3,6 +3,15 @@ export declare enum PrivacyStatus {
     public = "public",
     private = "private"
 }
+export declare enum ActivityType {
+    event = "event",
+    workout = "workout",
+    meeting = "meeting"
+}
+export declare class ActivityTypeHelper {
+    static title(type: string): string;
+    static shortTitle(type: string): string;
+}
 export declare enum MassUnit {
     Pound = "pound",
     Kilogram = "kilogram"
@@ -567,4 +576,13 @@ export interface InstructionPreset {
     distanceUnit?: string;
     durationUnit?: string;
     displayedDistanceUnit?: string;
+}
+export declare enum SubscriptionStatus {
+    active = "active",
+    past_due = "past_due",
+    unpaid = "unpaid",
+    canceled = "canceled",
+    incomplete = "incomplete",
+    incomplete_expired = "incomplete_expired",
+    trialing = "trialing"
 }

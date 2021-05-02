@@ -7,6 +7,40 @@ export enum PrivacyStatus {
   private = "private",
 }
 
+export enum ActivityType {
+  event = "event",
+  workout = "workout",
+  meeting = "meeting",
+}
+
+export class ActivityTypeHelper {
+  static title(type: string): string {
+    switch (type) {
+      case ActivityType.event:
+        return "In-Person Class/Session";
+      case ActivityType.workout:
+        return "Virtual On-Demand";
+      case ActivityType.meeting:
+        return "Meeting/Zoom";
+      default:
+        return "Activity";
+    }
+  }
+
+  static shortTitle(type: string): string {
+    switch (type) {
+      case ActivityType.event:
+        return "In-Person";
+      case ActivityType.workout:
+        return "Virtual";
+      case ActivityType.meeting:
+        return "Meeting";
+      default:
+        return "Activity";
+    }
+  }
+}
+
 export enum MassUnit {
   Pound = "pound",
   Kilogram = "kilogram",
@@ -696,4 +730,15 @@ export interface InstructionPreset {
   distanceUnit?: string;
   durationUnit?: string;
   displayedDistanceUnit?: string;
+}
+
+// Stripe subscription statuses
+export enum SubscriptionStatus {
+  active = "active",
+  past_due = "past_due",
+  unpaid = "unpaid",
+  canceled = "canceled",
+  incomplete = "incomplete",
+  incomplete_expired = "incomplete_expired",
+  trialing = "trialing",
 }

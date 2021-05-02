@@ -11,6 +11,42 @@ var PrivacyStatus;
     PrivacyStatus["public"] = "public";
     PrivacyStatus["private"] = "private";
 })(PrivacyStatus = exports.PrivacyStatus || (exports.PrivacyStatus = {}));
+var ActivityType;
+(function (ActivityType) {
+    ActivityType["event"] = "event";
+    ActivityType["workout"] = "workout";
+    ActivityType["meeting"] = "meeting";
+})(ActivityType = exports.ActivityType || (exports.ActivityType = {}));
+var ActivityTypeHelper = /** @class */ (function () {
+    function ActivityTypeHelper() {
+    }
+    ActivityTypeHelper.title = function (type) {
+        switch (type) {
+            case ActivityType.event:
+                return "In-Person Class/Session";
+            case ActivityType.workout:
+                return "Virtual On-Demand";
+            case ActivityType.meeting:
+                return "Meeting/Zoom";
+            default:
+                return "Activity";
+        }
+    };
+    ActivityTypeHelper.shortTitle = function (type) {
+        switch (type) {
+            case ActivityType.event:
+                return "In-Person";
+            case ActivityType.workout:
+                return "Virtual";
+            case ActivityType.meeting:
+                return "Meeting";
+            default:
+                return "Activity";
+        }
+    };
+    return ActivityTypeHelper;
+}());
+exports.ActivityTypeHelper = ActivityTypeHelper;
 var MassUnit;
 (function (MassUnit) {
     MassUnit["Pound"] = "pound";
@@ -183,3 +219,14 @@ var MemberStatus;
     MemberStatus["Removed"] = "removed";
     MemberStatus["Blocked"] = "blocked";
 })(MemberStatus = exports.MemberStatus || (exports.MemberStatus = {}));
+// Stripe subscription statuses
+var SubscriptionStatus;
+(function (SubscriptionStatus) {
+    SubscriptionStatus["active"] = "active";
+    SubscriptionStatus["past_due"] = "past_due";
+    SubscriptionStatus["unpaid"] = "unpaid";
+    SubscriptionStatus["canceled"] = "canceled";
+    SubscriptionStatus["incomplete"] = "incomplete";
+    SubscriptionStatus["incomplete_expired"] = "incomplete_expired";
+    SubscriptionStatus["trialing"] = "trialing";
+})(SubscriptionStatus = exports.SubscriptionStatus || (exports.SubscriptionStatus = {}));
