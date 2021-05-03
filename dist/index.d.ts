@@ -353,7 +353,7 @@ export interface FIRProgressLog {
     guest?: boolean;
 }
 export interface StripePaymentInfo {
-    purchasedAt: number;
+    createdAt: number;
     paymentIntentId: string;
     customerId: string;
 }

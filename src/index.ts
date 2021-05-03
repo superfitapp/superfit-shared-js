@@ -452,7 +452,7 @@ export interface FIRProgressLog {
 }
 
 export interface StripePaymentInfo {
-  purchasedAt: number;
+  createdAt: number;
   paymentIntentId: string;
   customerId: string;
 }
