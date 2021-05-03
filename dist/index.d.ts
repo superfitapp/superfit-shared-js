@@ -211,6 +211,7 @@ export interface FIRVideo {
 }
 export interface FIRUser {
     userId: string;
+    createdAt?: number;
     email: string;
     username: string;
     name?: string;
@@ -315,6 +316,7 @@ export interface FIRSchedule {
     title: string;
     color: string;
     created: any;
+    createdAt?: number;
     ownerId: string;
     photo?: PhotoInfo;
     visibilityStatus?: string;
@@ -338,6 +340,7 @@ export interface FIRSchedule {
 export interface FIRProgressLog {
     id?: string;
     created: any;
+    createdAt?: number;
     activityId: string;
     activityTitle?: string;
     email: string;
@@ -350,7 +353,7 @@ export interface FIRProgressLog {
     guest?: boolean;
 }
 export interface StripePaymentInfo {
-    purchasedAt: any;
+    purchasedAt: number;
     paymentIntentId: string;
     customerId: string;
 }
