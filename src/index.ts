@@ -306,7 +306,11 @@ export interface FIRUser {
 }
 
 export interface ScheduleEmailInvite {
+  // deprecated
   created: any;
+
+  // unix timestamp
+  invitedAt: number;
   email: string;
 }
 
@@ -622,6 +626,7 @@ export interface FIRScheduleMember {
   memberRole: string;
   scheduleId: string;
   joined: any;
+  joinedAt?: number;
   userId: string;
   username: string;
   name?: string;

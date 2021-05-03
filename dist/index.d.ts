@@ -222,6 +222,7 @@ export interface FIRUser {
 }
 export interface ScheduleEmailInvite {
     created: any;
+    invitedAt: number;
     email: string;
 }
 export interface SignInDTO {
@@ -479,6 +480,7 @@ export interface FIRScheduleMember {
     memberRole: string;
     scheduleId: string;
     joined: any;
+    joinedAt?: number;
     userId: string;
     username: string;
     name?: string;
