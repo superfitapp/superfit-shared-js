@@ -355,6 +355,8 @@ export enum ScheduleSignUpType {
 export interface ShowFIRSchedule {
   title: string;
   created: any;
+  // unix timestamp
+  createdAt?: number;
   color: string;
   secondaryColor?: string;
   photo?: PhotoInfo;
