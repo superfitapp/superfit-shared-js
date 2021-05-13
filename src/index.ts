@@ -459,6 +459,7 @@ export interface StripePaymentInfo {
   customerId: string;
   amount?: number;
   currency?: string;
+  receiptUrl?: string;
 }
 
 export interface SignUpInfo {
