@@ -357,6 +357,8 @@ export interface StripePaymentInfo {
     createdAt: number;
     paymentIntentId: string;
     customerId: string;
+    amount?: number;
+    currency?: string;
 }
 export interface SignUpInfo {
     signedUp: boolean;
