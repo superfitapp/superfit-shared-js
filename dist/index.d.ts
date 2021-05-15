@@ -371,7 +371,6 @@ export interface UserInfo {
     username?: string;
 }
 export interface SignupConfig {
-    signupEnabled: boolean;
     priceAmount?: number;
     priceCurrency?: string;
 }

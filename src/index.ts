@@ -474,7 +474,6 @@ export interface UserInfo {
 }
 
 export interface SignupConfig {
-  signupEnabled: boolean;
   priceAmount?: number;
   priceCurrency?: string;
 }
