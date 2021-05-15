@@ -364,6 +364,7 @@ export interface StripePaymentInfo {
 export interface SignUpInfo {
     signedUp: boolean;
     accessCode: string;
+    redeemed?: boolean;
     stripe?: StripePaymentInfo;
 }
 export interface UserInfo {
