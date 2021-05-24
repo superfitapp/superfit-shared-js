@@ -365,6 +365,7 @@ export interface SignUpInfo {
     signedUp: boolean;
     accessCode: string;
     redeemed?: boolean;
+    redemptionStatus?: RedemptionStatus;
     stripe?: StripePaymentInfo;
 }
 export interface UserInfo {
@@ -594,4 +595,9 @@ export declare enum SubscriptionStatus {
     incomplete = "incomplete",
     incomplete_expired = "incomplete_expired",
     trialing = "trialing"
+}
+export declare enum RedemptionStatus {
+    redeemed = "redeemed",
+    unredeemed = "unredeemed",
+    rejected = "rejected"
 }

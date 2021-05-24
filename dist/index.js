@@ -230,3 +230,9 @@ var SubscriptionStatus;
     SubscriptionStatus["incomplete_expired"] = "incomplete_expired";
     SubscriptionStatus["trialing"] = "trialing";
 })(SubscriptionStatus = exports.SubscriptionStatus || (exports.SubscriptionStatus = {}));
+var RedemptionStatus;
+(function (RedemptionStatus) {
+    RedemptionStatus["redeemed"] = "redeemed";
+    RedemptionStatus["unredeemed"] = "unredeemed";
+    RedemptionStatus["rejected"] = "rejected";
+})(RedemptionStatus = exports.RedemptionStatus || (exports.RedemptionStatus = {}));
