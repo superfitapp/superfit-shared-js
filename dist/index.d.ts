@@ -343,6 +343,7 @@ export interface FIRProgressLog {
     created: any;
     createdAt?: number;
     activityId: string;
+    activityShortId?: string;
     activityTitle?: string;
     email: string;
     ownerId?: string;

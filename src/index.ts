@@ -442,6 +442,7 @@ export interface FIRProgressLog {
   // unix timestamp
   createdAt?: number;
   activityId: string;
+  activityShortId?: string;
   activityTitle?: string;
   email: string;
   ownerId?: string;
