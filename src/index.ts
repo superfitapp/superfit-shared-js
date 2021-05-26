@@ -483,6 +483,7 @@ export interface SignupConfig {
 
 export class IActivity {
   id?: string;
+  shortId?: string;
   created: any;
   status: string;
   title: string;

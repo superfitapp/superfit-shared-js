@@ -378,6 +378,7 @@ export interface SignupConfig {
 }
 export declare class IActivity {
     id?: string;
+    shortId?: string;
     created: any;
     status: string;
     title: string;
