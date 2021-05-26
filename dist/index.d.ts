@@ -399,6 +399,7 @@ export declare class IActivity {
 }
 export declare class ALGActivity implements IActivity {
     readonly id: string | undefined;
+    shortId?: string;
     objectID: string;
     created: any;
     status: string;
@@ -420,6 +421,7 @@ export declare class ALGActivity implements IActivity {
 }
 export interface FIRActivity extends IActivity {
     id?: string;
+    shortId?: string;
     created: any;
     status: string;
     title: string;

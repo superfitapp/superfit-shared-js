@@ -522,7 +522,7 @@ export class ALGActivity implements IActivity {
   get id(): string | undefined {
     return this.objectID;
   }
-
+  shortId?: string;
   objectID: string; // document id
   created: any;
   status: string;
@@ -560,6 +560,7 @@ export class ALGActivity implements IActivity {
 
 export interface FIRActivity extends IActivity {
   id?: string;
+  shortId?: string;
   created: any;
   status: string;
   title: string;
