@@ -468,6 +468,10 @@ export interface SignUpInfo {
   accessCode: string;
   // deprecated
   redeemed?: boolean;
+
+  // should not be nil
+  type?: SignupType;
+  
   redemptionStatus?: RedemptionStatus;
   stripe?: StripePaymentInfo;
 }
@@ -768,4 +772,9 @@ export enum RedemptionStatus {
   redeemed = "redeemed",
   unredeemed = "unredeemed",
   rejected = "rejected",
+}
+
+export enum SignupType {
+  purchase = "purchase",
+  gift = "gift",
 }

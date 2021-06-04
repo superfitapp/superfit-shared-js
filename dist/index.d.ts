@@ -366,6 +366,7 @@ export interface SignUpInfo {
     signedUp: boolean;
     accessCode: string;
     redeemed?: boolean;
+    type?: SignupType;
     redemptionStatus?: RedemptionStatus;
     stripe?: StripePaymentInfo;
 }
@@ -604,4 +605,8 @@ export declare enum RedemptionStatus {
     redeemed = "redeemed",
     unredeemed = "unredeemed",
     rejected = "rejected"
+}
+export declare enum SignupType {
+    purchase = "purchase",
+    gift = "gift"
 }

@@ -236,3 +236,8 @@ var RedemptionStatus;
     RedemptionStatus["unredeemed"] = "unredeemed";
     RedemptionStatus["rejected"] = "rejected";
 })(RedemptionStatus = exports.RedemptionStatus || (exports.RedemptionStatus = {}));
+var SignupType;
+(function (SignupType) {
+    SignupType["purchase"] = "purchase";
+    SignupType["gift"] = "gift";
+})(SignupType = exports.SignupType || (exports.SignupType = {}));
