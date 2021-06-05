@@ -378,6 +378,10 @@ export interface SignupConfig {
     priceAmount?: number;
     priceCurrency?: string;
 }
+export interface TipConfig {
+    tipEnabled?: boolean;
+    venmoUsername?: string;
+}
 export declare class IActivity {
     id?: string;
     shortId?: string;
@@ -432,6 +436,7 @@ export interface FIRActivity extends IActivity {
     photo?: PhotoInfo;
     scheduleInfo?: ScheduleInfo;
     signupConfig?: SignupConfig;
+    tipConfig?: TipConfig;
     customVideo?: FIRVideo;
     scheduledDate?: any;
     allDay?: boolean;

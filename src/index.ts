@@ -471,7 +471,7 @@ export interface SignUpInfo {
 
   // should not be nil
   type?: SignupType;
-  
+
   redemptionStatus?: RedemptionStatus;
   stripe?: StripePaymentInfo;
 }
@@ -484,6 +484,11 @@ export interface UserInfo {
 export interface SignupConfig {
   priceAmount?: number;
   priceCurrency?: string;
+}
+
+export interface TipConfig {
+  tipEnabled?: boolean;
+  venmoUsername?: string;
 }
 
 export class IActivity {
@@ -574,6 +579,7 @@ export interface FIRActivity extends IActivity {
   photo?: PhotoInfo;
   scheduleInfo?: ScheduleInfo;
   signupConfig?: SignupConfig;
+  tipConfig?: TipConfig;
   customVideo?: FIRVideo;
   scheduledDate?: any;
   allDay?: boolean;
