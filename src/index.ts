@@ -674,6 +674,8 @@ export enum MemberStatus {
 export interface StripeBillingInfo {
   customerId?: string;
   connectId?: string;
+  detailsSubmitted?: boolean;
+  chargesEnabled?: boolean;
   connectCustomerIds?: { [key: string]: string };
   superfitSubscriptionId?: string;
   superfitSubscriptionEndedAt?: number;
