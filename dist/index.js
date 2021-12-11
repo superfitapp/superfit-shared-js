@@ -132,6 +132,11 @@ var ALGExercise = /** @class */ (function () {
     return ALGExercise;
 }());
 exports.ALGExercise = ALGExercise;
+var ScheduleInviteType;
+(function (ScheduleInviteType) {
+    ScheduleInviteType["Invite"] = "invite";
+    ScheduleInviteType["Request"] = "request";
+})(ScheduleInviteType = exports.ScheduleInviteType || (exports.ScheduleInviteType = {}));
 var PhotoType;
 (function (PhotoType) {
     PhotoType["Unsplash"] = "unsplash";

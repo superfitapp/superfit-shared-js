@@ -295,6 +295,7 @@ export interface FIRVideo {
   muxAssetId?: string;
   videoAspectRatio?: number;
 }
+
 export interface FIRUser {
   userId: string;
   // unix timestamp
@@ -307,6 +308,7 @@ export interface FIRUser {
   activeSchedules?: { [key: string]: ActiveScheduleInfo };
 }
 
+// Deprecated for FIRScheduleInvite
 export interface ScheduleEmailInvite {
   // deprecated
   created: any;
@@ -314,6 +316,23 @@ export interface ScheduleEmailInvite {
   // unix timestamp
   invitedAt: number;
   email: string;
+}
+
+export enum ScheduleInviteType {
+  Invite = "invite",
+  Request = "request",
+}
+
+export interface FIRScheduleInvite {
+  scheduleId: string;
+  scheduleInfo: ScheduleInfo;
+  type: ScheduleInviteType;
+  note?: string;
+  recipientId: string;
+  senderId: string;
+
+  // unix timestamp
+  invitedAt: number;
 }
 
 export interface SignInDTO {
@@ -698,7 +717,6 @@ export interface FIRBillingInfo {
     [productId: string]: ConnectMembershipInfo;
   };
 }
-
 export interface ConnectMembershipInfo {
   productId: string;
   subscriptionStatus?: string;
