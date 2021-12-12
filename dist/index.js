@@ -137,6 +137,12 @@ var ScheduleInviteType;
     ScheduleInviteType["Invite"] = "invite";
     ScheduleInviteType["Request"] = "request";
 })(ScheduleInviteType = exports.ScheduleInviteType || (exports.ScheduleInviteType = {}));
+var InviteStatus;
+(function (InviteStatus) {
+    InviteStatus["Pending"] = "pending";
+    InviteStatus["Accepted"] = "accepted";
+    InviteStatus["Rejected"] = "rejected";
+})(InviteStatus = exports.InviteStatus || (exports.InviteStatus = {}));
 var PhotoType;
 (function (PhotoType) {
     PhotoType["Unsplash"] = "unsplash";

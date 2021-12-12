@@ -323,13 +323,19 @@ export enum ScheduleInviteType {
   Request = "request",
 }
 
+export enum InviteStatus {
+  Pending = "pending",
+  Accepted = "accepted",
+  Rejected = "rejected",
+}
+
 export interface FIRScheduleInvite {
-  scheduleId: string;
   scheduleInfo: ScheduleInfo;
   type: ScheduleInviteType;
   note?: string;
   recipientId: string;
   senderId: string;
+  status: InviteStatus;
 
   // unix timestamp
   invitedAt: number;

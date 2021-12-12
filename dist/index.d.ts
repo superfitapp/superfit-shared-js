@@ -230,13 +230,18 @@ export declare enum ScheduleInviteType {
     Invite = "invite",
     Request = "request"
 }
+export declare enum InviteStatus {
+    Pending = "pending",
+    Accepted = "accepted",
+    Rejected = "rejected"
+}
 export interface FIRScheduleInvite {
-    scheduleId: string;
     scheduleInfo: ScheduleInfo;
     type: ScheduleInviteType;
     note?: string;
     recipientId: string;
     senderId: string;
+    status: InviteStatus;
     invitedAt: number;
 }
 export interface SignInDTO {
