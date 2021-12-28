@@ -242,6 +242,7 @@ export interface FIRScheduleInvite {
     recipientId: string;
     senderId: string;
     status: InviteStatus;
+    recipientDisplayName?: string;
     invitedAt: number;
 }
 export interface SignInDTO {
@@ -468,6 +469,7 @@ export interface ScheduleInfo {
     id: string;
     title: string;
     color?: string;
+    ownerDisplayName?: string;
 }
 export interface ScheduleProfile {
     about?: string;

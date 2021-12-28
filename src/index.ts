@@ -336,6 +336,7 @@ export interface FIRScheduleInvite {
   recipientId: string;
   senderId: string;
   status: InviteStatus;
+  recipientDisplayName?: string;
 
   // unix timestamp
   invitedAt: number;
@@ -442,8 +443,10 @@ export interface FIRSchedule {
   title: string;
   color: string;
   created: any;
+
   // unix timestamp
   createdAt?: number;
+
   ownerId: string;
   photo?: PhotoInfo;
   visibilityStatus?: string;
@@ -619,6 +622,7 @@ export interface ScheduleInfo {
   id: string;
   title: string;
   color?: string;
+  ownerDisplayName?: string;
 }
 
 export interface ScheduleProfile {
