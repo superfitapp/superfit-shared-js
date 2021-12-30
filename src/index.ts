@@ -336,7 +336,7 @@ export interface FIRScheduleInvite {
   recipientId: string;
   senderId: string;
   status: InviteStatus;
-  recipientDisplayName?: string;
+  nonMemberDisplayName?: string;
 
   // unix timestamp
   invitedAt: number;

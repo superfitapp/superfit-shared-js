@@ -242,7 +242,7 @@ export interface FIRScheduleInvite {
     recipientId: string;
     senderId: string;
     status: InviteStatus;
-    recipientDisplayName?: string;
+    nonMemberDisplayName?: string;
     invitedAt: number;
 }
 export interface SignInDTO {
