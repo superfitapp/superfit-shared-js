@@ -296,6 +296,7 @@ export interface ShowFIRSchedule {
 export interface StripePrice {
     priceId: string;
     priceDisplayName: string;
+    currency?: string;
 }
 export interface FIRInstructionSet {
     id?: string;
