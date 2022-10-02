@@ -296,6 +296,7 @@ export interface ShowFIRSchedule {
 export interface StripePrice {
     priceId: string;
     priceDisplayName: string;
+    currency?: string;
 }
 export interface FIRInstructionSet {
     id?: string;
@@ -366,6 +367,7 @@ export interface FIRProgressLog {
     activityTitle?: string;
     email: string;
     ownerId?: string;
+    activityOwnerId?: string;
     activityScheduledDate?: any;
     activityCompletionDate?: any;
     activityCompleted: boolean;

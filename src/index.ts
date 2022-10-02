@@ -474,7 +474,13 @@ export interface FIRProgressLog {
   activityShortId?: string;
   activityTitle?: string;
   email: string;
+  /// The ID of the user this entry belongs to, 
+  /// NOT the creator of the associated activity.
   ownerId?: string;
+  
+  /// The ID of the creator of the associated activity.
+  activityOwnerId?: string;
+
   activityScheduledDate?: any;
   activityCompletionDate?: any;
   activityCompleted: boolean;
