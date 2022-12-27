@@ -211,6 +211,7 @@ export interface FIRVideo {
 }
 export interface FIRUser {
     userId: string;
+    appAccountToken?: string;
     createdAt?: number;
     email: string;
     username: string;

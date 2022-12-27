@@ -298,6 +298,7 @@ export interface FIRVideo {
 
 export interface FIRUser {
   userId: string;
+  appAccountToken?: string;
   // unix timestamp
   createdAt?: number;
   email: string;
@@ -477,7 +478,7 @@ export interface FIRProgressLog {
   /// The ID of the user this entry belongs to, 
   /// NOT the creator of the associated activity.
   ownerId?: string;
-  
+
   /// The ID of the creator of the associated activity.
   activityOwnerId?: string;
 
