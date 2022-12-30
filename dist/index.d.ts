@@ -527,8 +527,12 @@ export interface FIRScheduleMember {
     name?: string;
     status?: MemberStatus;
     membershipInfo?: ConnectMembershipInfo;
+    metadata?: ScheduleMemberMetadata;
     subscriptionId?: string;
     subscriptionStatus?: string;
+}
+interface ScheduleMemberMetadata {
+    isFirst?: boolean;
 }
 export declare enum MemberStatus {
     Active = "active",
@@ -640,3 +644,4 @@ export declare enum SignupType {
     purchase = "purchase",
     gift = "gift"
 }
+export {};

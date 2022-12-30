@@ -695,10 +695,15 @@ export interface FIRScheduleMember {
   name?: string;
   status?: MemberStatus;
   membershipInfo?: ConnectMembershipInfo;
+  metadata?: ScheduleMemberMetadata
 
   // deprecated
   subscriptionId?: string;
   subscriptionStatus?: string;
+}
+
+interface ScheduleMemberMetadata {
+  isFirst?: boolean
 }
 
 export enum MemberStatus {
